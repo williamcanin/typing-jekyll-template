@@ -1,4 +1,7 @@
 .resume{
+  @media (max-width: 768px) {
+    padding: 20px;
+  }
   .header{
     .title{
       padding: 0;
@@ -13,13 +16,26 @@
     }
   }
   .content{
+    .table-of-contents{
+      margin-top: 5%;
+      margin-bottom: 10%;
+      margin-left: 0;
+      h1{}
+      ul{
+        li{
+          a{}
+        }
+      }
+    }
     h2{
+      border-bottom: 0.1rem solid #757575;
+      padding-bottom: 5px;
       &:before{
         content: "\f0da"; /* FontAwesome Unicode */
         font-family: FontAwesome;
         display: inline-block;
         font-size: 2.5rem;
-        margin-left: -1.3em; /* same as padding-left set on li */
+        // margin-left: -1.3em; /* same as padding-left set on li */
         width: 1.3em; /* same as padding-left set on li */
         @if $background-featured-enable == true {
           margin-left: -0.8em;

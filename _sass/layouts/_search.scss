@@ -21,6 +21,7 @@
         width: 100%;
         border-radius: 0px;
         font-size: 2rem;
+        margin-bottom: 30px;
         &:focus{
           border-color: rgba($color-links, .4);
           -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba($color-links, .4);
@@ -57,10 +58,14 @@
           list-style: none;
           padding: 1% 0%;
           color: #333;
+          &:before{
+            margin-right: 10px !important;
+          }
           a{
             color: $color-links;
             font-size: 2.8rem;
             text-decoration: underline;
+            font-weight: $links-title-weight !important;
           }
         }
       }

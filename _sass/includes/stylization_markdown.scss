@@ -1,7 +1,11 @@
 .main{
-  .container{
+  .wrapper{
     .row{
       .content{
+        .label-plugin{
+          margin: 10px 0px;
+          display: inline-block;
+        }
         .post{
           .content{
             a:after {
@@ -14,19 +18,17 @@
           }
         }
         blockquote{
-          background-color: #DADADA;
+          background-color: $blockquote-background;
           border-left: 5px solid $color-links;
           border-top-left-radius: 5px;
           border-bottom-left-radius: 5px;
-          border-right: 5px solid $color-links;
-          border-top-right-radius: 5px;
           border-bottom-right-radius: 5px;
         }
         table{
           margin: 2% 0%;
-          background-color: #fff;
+          background-color: $content-background-color;
           thead{
-            background-color: rgba($color-links, .3);
+            background-color: rgba(#C9C9C9, .8);
             tr{
               th{
                 padding: 5px;
@@ -35,12 +37,35 @@
             }
           }
           tbody{
-            background-color:  rgba($color-links, .18);
+            background-color: rgba(#C9C9C9, .5);
             border: 1px solid #fff;
             tr{
               td{
                 padding: 5px;
                 border: 1px solid #fff;
+              }
+            }
+          }
+        }
+        .gist-data{
+         background-color: #F9F9F9;
+         table{
+            background-color: #F9F9F9;
+            thead{
+              background-color: #F9F9F9;
+              tr{
+                th{
+                  border: none;
+                }
+              }
+            }
+            tbody{
+              background-color: #F9F9F9;
+              border: none;
+              tr{
+                td{
+                  border: none;
+                }
               }
             }
           }

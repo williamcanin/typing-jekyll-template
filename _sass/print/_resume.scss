@@ -1,6 +1,6 @@
 @media print {
   .main{
-    .container{
+    .wrapper{
       .sidebar{
         display: none;
       }
@@ -18,6 +18,9 @@
             }
           }
           .content{
+            .table-of-contents{
+              display: none !important;
+            }
             h1{
               font-size: 4.7rem;
               font-weight: 800;

@@ -1,11 +1,13 @@
 ---
 layout: default
-page: search
 ---
+
+<!-- Include Data Base  -->
+{% include dbase/dbase %}
 
 <div class="search">
   <div class="row title">
-     <h1>{{page.title}}</h1>
+    <h1>{{ page.title }}</h1>
   </div>
   <div class="row content">
     {{ content }}
@@ -13,15 +15,15 @@ page: search
       {% capture post_count %} {{ post_count | plus: 1 }} {% endcapture %}
     {% endfor %}
     <form action="" name="searchForm" id="searchForm">
-    <div class="input-group">
-      <input class="form-control search-input" type="text" id="search-input" value="" placeholder="{{page.input.placeholder[0]}} {{ post_count }} {{page.input.placeholder[1]}}" onfocus="this.placeholder = '{{page.input.onfocus}}'" onblur="this.placeholder = '{{page.input.onblur[0]}} {{ post_count }} {{page.input.onblur[1]}}'">
-      <span class="input-group-btn">
-        <button class="btn-clean" id="btn-clean" type="button" onclick="cleanInputSearch()">Clean</button>
-      </span>
-    </div>
-    <div class="searchResults">
-      <ul class="searchResult" id="searchResult"></ul>
-    </div>
+      <div class="input-group">
+        <input class="form-control search-input" type="text" id="search-input" value="" placeholder="{{ dbase.website.strings.search.input.placeholder[0] }} {{ post_count }} {{ dbase.website.strings.search.input.placeholder[1] }}" onfocus="this.placeholder = '{{ dbase.website.strings.search.input.onfocus }}'" onblur="this.placeholder = '{{ dbase.website.strings.search.input.onblur[0] }} {{ post_count }} {{ dbase.website.strings.search.input.onblur[1] }}'">
+        <span class="input-group-btn">
+          <button class="btn-clean" id="btn-clean" type="button" onclick="cleanInputSearch()">Clean</button>
+        </span>
+      </div>
+      <div class="searchResults">
+        <ul class="searchResult" id="searchResult"></ul>
+      </div>
     </form>
   </div>
 </div>

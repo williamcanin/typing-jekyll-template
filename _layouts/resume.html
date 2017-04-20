@@ -1,21 +1,33 @@
 ---
 layout: default
-page: resume
 ---
+
+<!-- Include Data Base  -->
+{% include dbase/dbase %}
 
 <div class="page resume">
   <div class="row header">
     <div class=" {% if page.btnprint == true %} col-sm-10 {% else %} col-sm-12 {% endif %} title">
-      <h1>{{page.title}}</h1>
-      <p>{{page.excerpt}}</p>
+      <h1>{{ page.title }}</h1>
+      <p>{{ page.excerpt }}</p>
     </div>
     {% if page.btnprint == true %}
     <div class="col-sm-2 btn-print">
-      <a id="btn-print" href="">{{site.string.resume.btnprint}}</a>
+      <a id="btn-print" href="">{{ dbase.website.strings.resume.btnprint }}</a>
     </div>
     {% endif %}
   </div>
   <div class="row content">
+    {% if page.tcontents.enable == true %}
+      <div class="row table-of-contents">
+        <h1>{{ page.tcontents.title }}</h1>
+        <ul>
+          {% for items in page.tcontents.links %}
+            <li><a href="{{ items.id }}">{{ items.name }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
     {{ content }}
   </div>
 </div>

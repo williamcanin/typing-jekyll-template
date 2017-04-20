@@ -1,40 +1,49 @@
 ---
 layout: default
-page: postlist
 ---
+
+<!-- Include Data Base  -->
+{% include dbase/dbase %}
 
 {% for post in site.categories.blog %}
   {% capture post_count %} {{ post_count | plus: 1 }} {% endcapture %}
 {% endfor %}
 
 
-<div class="postlist">
+<div class="postlist" itemscope="itemscope" itemtype="http://schema.org/Blog">
   <div class="row title-description">
-    <h1>{{site.string.blog.title}}</h1>
-    <p>{{page.msg_qtd[0]}} <strong>{{ post_count }}</strong> {{page.msg_qtd[1]}} {{content}} </p>
+    <h1>{{ page.title }}</h1>
+    <p>{{ page.msg_qtd[0] }} <strong>{{ post_count }}</strong> {{ page.msg_qtd[1] }} {{ content }} </p>
   </div>
   {% if page.buttons == true %}
   <div class="row meta">
     <div class="col-sm-6">
-      <a href="{{site.url}}{{site.baseurl}}/blog/tags/">Tags Cloud</a>
+      <a href="{{ site.url }}{{ site.baseurl }}/blog/tags/">Tags Cloud</a>
     </div>
     <div class="col-sm-6">
-      <a href="{{site.url}}{{site.baseurl}}/blog/search/">Search</a>
+      <a href="{{ site.url }}{{ site.baseurl }}/blog/search/">Search</a>
     </div>
   </div>
   {% endif %}
   <div class="row content">
     {% for post in site.categories.blog %}
     <div class="wrap">
-      <div class="date" datetime="{{ post.date | date:'%Y-%m-%d' }}">
+      <div class="time-and-count-comments" datetime="{{ post.date | date:'%Y-%m-%d' }}">
         <time class="time">
-          {{ post.date | date_to_long_string }}
+          {% datelang post %}
+          {% include datelang/post %}
         </time>
+        {% if post.comments and dbase.userdata.disqus.username %}
+          <div class="count-comments">
+            {% if site.screen.enable.icons == yes %}<i class="fa fa-comments"></i>{% endif %}<span class="disqus-comment-count" data-disqus-identifier="{{ post.url }}">0</span>
+          </div>
+        {% endif %}
       </div>
       <div class="url">
         <h1>
-          <a href="{{site.url}}{{site.baseurl}}{{ post.url }}">{{ post.title }}</a>
+          <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
         </h1>
+        {% if post.excerpted %}<p class="excerpted">{{ post.excerpted | strip_html | truncatewords:26 }}<a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" class="continue">{{ dbase.website.strings.postlist.continue }}</a></p>{% endif %}
       </div>
     </div>
     {% endfor %}

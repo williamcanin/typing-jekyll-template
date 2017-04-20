@@ -1,0 +1,146 @@
+{
+  "ch_CH":{
+    "DateLang":{
+      "month1": "一月",
+      "month2": "二月",
+      "month3": "三月",
+      "month4": "四月",
+      "month5": "五月",
+      "month6": "六月",
+      "month7": "七月",
+      "month8": "八月",
+      "month9": "九月",
+      "month10": "十月",
+      "month11": "十一月",
+      "month12": "十二月"
+      }
+  },
+  "de_DE":{
+    "DateLang":{
+      "month1": "Januar",
+      "month2": "Februar",
+      "month3": "März",
+      "month4": "April",
+      "month5": "Mai",
+      "month6": "Juni",
+      "month7": "Juli",
+      "month8": "August",
+      "month9": "September",
+      "month10": "Oktober",
+      "month11": "November",
+      "month12": "Dezember"
+      }
+  },
+  "en_US":{
+    "DateLang":{
+      "month1": "January",
+      "month2": "February",
+      "month3": "March",
+      "month4": "April",
+      "month5": "May",
+      "month6": "June",
+      "month7": "July",
+      "month8": "August",
+      "month9": "September",
+      "month10": "October",
+      "month11": "November",
+      "month12": "December"
+      }
+  },
+  "es_ES":{
+    "DateLang":{
+      "month1": "Enero",
+      "month2": "Febrero",
+      "month3": "Marzo",
+      "month4": "Abril",
+      "month5": "Mayo",
+      "month6": "Junio",
+      "month7": "Julio",
+      "month8": "Augusto",
+      "month9": "Setiembre",
+      "month10": "Octubre",
+      "month11": "De noviembre",
+      "month12": "Diciembre"
+      }
+  },
+  "fr_FR":{
+    "DateLang":{
+      "month1": "Janvier",
+      "month2": "Février",
+      "month3": "Mars",
+      "month4": "Avril",
+      "month5": "Mai",
+      "month6": "Juin",
+      "month7": "Juillet",
+      "month8": "Août",
+      "month9": "Septembre",
+      "month10": "Octobre",
+      "month11": "Novembre",
+      "month12": "Décembre"
+      }
+  },
+  "it_IT":{
+    "DateLang":{
+      "month1": "Gennaio",
+      "month2": "Febbraio",
+      "month3": "Marzo",
+      "month4": "Aprile",
+      "month5": "Maggio",
+      "month6": "Giugno",
+      "month7": "Luglio",
+      "month8": "Agosto",
+      "month9": "Settembre",
+      "month10": "Ottobre",
+      "month11": "Novembre",
+      "month12": "Dicembre"
+      }
+  },
+  "ja_JP":{
+    "DateLang":{
+      "month1": "1月",
+      "month2": "2月",
+      "month3": "3月",
+      "month4": "4月",
+      "month5": "5月",
+      "month6": "6月",
+      "month7": "7月",
+      "month8": "8月",
+      "month9": "9月",
+      "month10": "10月",
+      "month11": "11月",
+      "month12": "12月"
+      }
+  },
+  "pt_PT":{
+    "DateLang":{
+      "month1": "Janeiro",
+      "month2": "Fevereiro",
+      "month3": "Março",
+      "month4": "Abril",
+      "month5": "Maio",
+      "month6": "Junho",
+      "month7": "Julho",
+      "month8": "Agosto",
+      "month9": "Setembro",
+      "month10": "Outubro",
+      "month11": "Novembro",
+      "month12": "Dezembro"
+      }
+    },
+  "ru_RU":{
+    "DateLang":{
+      "month1": "января",
+      "month2": "февраль",
+      "month3": "март",
+      "month4": "апреля",
+      "month5": "мая",
+      "month6": "Июнь",
+      "month7": "июль",
+      "month8": "август",
+      "month9": "Сентябрь",
+      "month10": "октября",
+      "month11": "ноября",
+      "month12": "декабрь"
+      }
+  }
+}

@@ -1,39 +1,21 @@
 ---
 layout: compress
-page: default
 ---
 
+<!-- Include Data Base  -->
+{% include dbase/dbase %}
+
 <!DOCTYPE html>
-<html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
   {% include pieces/head.html %}
   <body>
-
-    <div class="main">
-      <div class="container">
+    <div class="main" id="top">
+      <div class="container wrapper">
         <div class="row">
-          <div class="col-sm-3 sidebar">
-            <div class="row header">
-              <h2>{{site.string.menu.title}}</h2>
-            </div>
-            <div class="row menu">
-              <ul>
-                <li>
-                {% if site.enables.icons == "yes" %}<i class="fa fa-home" aria-hidden="true"></i>&nbsp;{% endif %}<a href="{{site.url}}{{site.baseurl}}/">{{site.string.menu.page.home}}</a>
-                </li>
-                 <hr class="small">
-                {% for page in site.pages %}
-                {% if page.title and page.menu == true %}
-                  <li>
-                    {% if page.icon and site.enables.icons == "yes" %}<i class="fa {{ page.icon }}" aria-hidden="true"></i>&nbsp;{% endif %}<a href="{{site.url}}{{site.baseurl}}{{ page.url }}">{{ page.title }}</a>
-                  </li>
-                  {% endif %}
-                {% endfor %}
-              </ul>
-            </div>
-          </div>
+          {% include pieces/sidebar.html %}
           <div class="col-sm-9 content">
               {% if page.url == '/' %}
-                {% include pieces/home.html %}
+                {% include pieces/hello.html %}
               {% else %}
                 {{ content }}
               {% endif %}
@@ -42,37 +24,8 @@ page: default
       </div>
       {% include pieces/footer.html %}
     </div>
-
-  {% include modals/search.html %}
   {% include scripts/src.html %}
-  {% include scripts/simple_jekyll_search.html %}
-
-  <!-- Cursor (pipe) flashing in the page Home -->
-  <script>
-  jQuery(document).ready(function($) {
-    setInterval(function() {
-       $(".cursor").toggle()
-    },600);
-
-  $(".btn-clean").click(function(){
-    $('input[type="text"]').val("");
-   });
-
-  });
-  </script>
-
-<!-- Script for Resume Print Button -->
-  <script>
-  jQuery(document).ready(function() {
-    $("#btn-print").click(function() {
-      window.print();
-      return false;
-    });
-  });
-  </script>
-
+  <!-- Google Analytics  -->
+  {% include scripts/google_analytics.html %}
   </body>
 </html>
-
-
-

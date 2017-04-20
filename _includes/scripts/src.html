@@ -1,9 +1,18 @@
-<!-- File to import JS sources.
-by: William C. Canin -->
-
+<!-- Vendor - Global | Applicable to every website -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<!-- <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script> -->
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script src="{{ "/assets/javascripts/jekyll-search.min.js" | prepend: site.baseurl | prepend: site.url }}"></script>
- <!-- <script type="text/javascript" src="{{ "/search.js" | prepend: site.baseurl | prepend: site.url }}"></script> -->
+
+<!-- Specific for each pages. -->
+{% for script_page in page.script %}
+   <script type="text/javascript" src="{{ '/assets/javascripts/' | prepend: site.baseurl | prepend: site.url  | append: script_page }}"></script>
+{% endfor %}
+
+{% if page.url == '/' %}
+  <script type="text/javascript" src="{{ '/assets/javascripts/hello.js' | prepend: site.baseurl | prepend: site.url }}"></script>
+{% endif %}
+
+<!-- App | Global -->
+<script src="{{ '/assets/javascripts/global.js' | prepend: site.baseurl | prepend: site.url }}"></script>
+
+
 

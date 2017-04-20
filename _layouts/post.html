@@ -1,40 +1,70 @@
 ---
 layout: default
-page: post
 ---
 
+<!-- Include Data Base  -->
+{% include dbase/dbase %}
+
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<!--  Next Version  <div class="readmode">
+    <a id="btn-readmode" class="pull-right btn btn-default btn-readmode" href="">Read Mode</a>
+  </div> -->
   <div class="row title">
-    <h1>{{page.title}}</h1>
+    <h1>{{ page.title }}</h1>
   </div>
   <div class="row meta" datetime="{{ page.date | date:'%Y-%m-%d' }}">
     <time class="col-sm-6 datetime">
-      {% if site.enables.icons == "yes" %}<i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;{% endif %}<span>{{ page.date | date_to_string }}</span>
+      {% if site.screen.enable.icons == yes %}<i class="fa fa-calendar" aria-hidden="true"></i>{% endif %}<span class="text {% if site.screen.enable.icons == yes %} tmargin {% endif %}">{% datelang page %}{% include datelang/page %}</span>
     </time>
-    {% if page.comments and site.disqus.username %}
+    {% if page.comments and dbase.userdata.disqus.username %}
     <div class="col-sm-6 count-comments">
-      <span class="wrap">{% if site.enables.icons == "yes" %}<i class="fa fa-comments" aria-hidden="true"></i>&nbsp;{% endif %}<a href="#comments" data-disqus-identifier="{{page.url}}">{{site.string.post.comments_count}}</a></span>
-      {% include scripts/disqus_count.html %}
+      <span class="wrap">{% if site.screen.enable.icons == yes %}<i class="fa fa-comments" aria-hidden="true"></i>&nbsp;{% endif %}<a href="#comments" data-disqus-identifier="{{ page.url }}">0</a></span>
     </div>
     {% endif %}
   </div>
   <div class="row tag-list">
-    {% if site.enables.icons == "yes" %}<i class="fa fa-tags" aria-hidden="true"></i>{% else %}Tags: {% endif %}
+    {% if site.screen.enable.icons == yes %}<i class="fa fa-tags" aria-hidden="true"></i>{% else %}Tags: {% endif %}
     {% for tag in page.tags %}
-      <a href="{{ "/blog/tags/" | prepend: site.baseurl | prepend: site.url }}/{{tag}}">{{tag}}</a>
+      <a href="{{ '/blog/tags/' | prepend: site.baseurl | prepend: site.url }}/{{ tag }}">{{ tag }}</a>
     {% endfor %}
+  </div>
+  <div class="row">
+    {{ page.content | reading_time }}
   </div>
   <div class="row content">
     {{ content }}
-    {% if page.comments and site.disqus.username %}
-    <div class="disqus" id="comments">
-    <div class="title">
-      <h3>{{site.string.disqus.title}}</h3>
+    {% include pieces/share_social.html %}
+    <div class="day-quote">
+      <div class="title">
+        {{ page.day_quote.title }}
+      </div>
+      <div class="content">
+        {{ page.day_quote.content }}
+      </div>
     </div>
+    <div class="row author">
+      <div class="col-sm-2 image">
+        <img class="img-responsive center-block" src="{{ '/assets/images/author' | prepend: site.baseurl | prepend: site.url }}/{{ dbase.website.author.image }}" alt="">
+      </div>
+      <div class="col-sm-10 bio">
+        <p class="title">{{ dbase.website.strings.post.author.title }}</p>
+        <p class="name">{{ dbase.website.strings.post.author.name }}</p>
+        <p class="content">{{ dbase.website.strings.post.author.bio }}</p>
+      </div>
+    </div>
+    <div class="disqus" id="comments">
+    {% if page.comments and dbase.userdata.disqus.username %}
+      <div class="title">
+        <h3><i class="fa fa-comments" aria-hidden="true"></i>&nbsp;{{ dbase.website.strings.comments.title }}</h3>
+      </div>
       <div class="content">
         {% include scripts/disqus_comments.html %}
       </div>
-    </div>
+    {% else %}
+      <div class="title">
+        <h3><i class="fa fa-comments" aria-hidden="true"></i>&nbsp;{{ dbase.website.strings.comments.disable }}</h3>
+      </div>
     {% endif %}
+    </div>
   </div>
 </article>

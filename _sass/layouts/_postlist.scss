@@ -34,7 +34,7 @@
           background-color: transparent;
         }
       }
-      .date{
+      .time-and-count-comments{
         @media (max-width: 768px) {
           display: none;
         }
@@ -46,14 +46,25 @@
             background-color: transparent;
           }
         }
+        .count-comments{
+          float: right;
+          i{
+            margin-right: 5px;
+          }
+          span{}
+        }
       }
       .url{
         h1{
           margin: 0px;
           font-size: 2.8rem;
           line-height: 4rem;
+          font-weight: $links-title-weight;
           @media (max-width: 768px) {
-            font-size: 2.1rem;
+            font-weight: $links-title-weight;
+            padding: 12px 0px;
+            font-size: 2.68rem;
+            float: left;
             .fa-book{
               display: none;
             }
@@ -61,8 +72,16 @@
           a{
             color: $color-links;
             text-decoration: underline;
-            font-weight: 600;
-            letter-spacing: 0.2rem;
+            // font-weight: 800;
+          }
+        }
+        .excerpted{
+          @media (max-width: 768px) {
+            display: none;
+          }
+          .continue{
+            padding: 10px;
+            font-size: 1.5rem;
           }
         }
       }

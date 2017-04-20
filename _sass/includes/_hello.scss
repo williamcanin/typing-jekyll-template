@@ -1,9 +1,10 @@
-.home{
+.hello{
   font-family: $font-family-primary;
   padding: 3%;
   a{
     color: $color-links;
     text-decoration: underline;
+    // font-weight: 800;
   }
   .title{
     h1{
@@ -18,9 +19,19 @@
   }
   .content{
     padding: 2% 0%;
-    .brand{
+    .avatar{
       margin-right: 15px;
-      border-radius: 0%;
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+    p{
+      line-height: 3rem;
+    }
+    blockquote{
+      background-color: #F5F5F5 !important;
+      border: 0.1rem solid #F5F5F5 !important;
+      border-radius: 0px !important;
     }
   }
 }

@@ -12,7 +12,7 @@
   }
   .copyright{}
   .message{
-    @media (max-width: 768px) {
+    @media (max-width: 480px) {
       display: none;
     }
   }
@@ -23,5 +23,12 @@
         text-decoration: underline;
       }
     }
+  }
+  .top{
+    color: $color-links;
+    font-size: 4rem;
+    position: absolute;
+    right: 10px;
+    bottom: 0px;
   }
 }

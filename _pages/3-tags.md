@@ -8,6 +8,9 @@ icon: fa-tags
 # Enable / Disable this page in the main menu.
 menu: true
 
+# Does not change and does not remove 'script' variables
+script: [tags.js]
+
 permalink: /blog/tags/
 ---
 

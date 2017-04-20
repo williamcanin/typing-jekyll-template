@@ -9,6 +9,10 @@ icon: fa-briefcase
 menu: true
 
 published: true
+
+# Does not change and does not remove 'script' variables
+script: [projects.js]
+
 permalink: /projects/
 ---
 

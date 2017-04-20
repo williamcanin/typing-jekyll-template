@@ -1,0 +1,26 @@
+<div class="col-sm-3 sidebar">
+  {% if site.avatar.sidebar == true %}
+    <div class="row avatar">
+      <img {% if site.avatar.border.enable == true %} style="border: {{ site.avatar.border.value }}px solid #333; border-radius: {{ site.avatar.border.radius }}%;" {% endif %} class="img-responsive center-block avatar-img" src="{{ '/assets/images/avatar'  | prepend: site.baseurl | prepend: site.url }}/{{ dbase.website.avatar }}" {%if site.avatar.size.enable == true %} height="{{ site.avatar.size.value }}" width="{{ site.avatar.size.value }}" {% endif %} alt="{{ dbase.website.title }}">
+    </div>
+  {% endif %}
+  <div class="row header">
+    <h2>{{ dbase.website.strings.sidebar.title }}</h2>
+  </div>
+  <div class="row menu">
+    <ul>
+      <li>
+        {% if site.screen.enable.icons == yes %}<i class="fa fa-home" aria-hidden="true"></i>&nbsp;{% endif %}<a href="{{ site.url }}{{ site.baseurl }}/">{{ dbase.website.strings.sidebar.links.home }}</a>
+      </li>
+      <hr class="breakline">
+      {% for page in site.pages %}
+        {% if page.title and page.menu == true %}
+          <li>
+            {% if page.icon and site.screen.enable.icons == yes %}<i class="fa {{ page.icon }}" aria-hidden="true"></i>&nbsp;{% endif %}<a href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+    {% include pieces/socials.html %}
+  </div>
+</div>

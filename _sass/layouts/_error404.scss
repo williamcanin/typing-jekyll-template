@@ -6,6 +6,7 @@
     text-decoration: underline;
   }
   .title{
+    text-align: center;
     h1{
       font-weight: 800;
       @media (max-width: 480px) {
@@ -14,6 +15,7 @@
     }
   }
   .content{
+    text-align: left;
     padding: 15px 0px;
   }
 }

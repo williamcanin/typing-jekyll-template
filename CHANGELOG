@@ -1,0 +1,52 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+This project adheres to [Semantic Versioning](http://semver.org/).
+
+CHANGELOG - Portuguese - Brazil
+
+## [0.0.9] - 2017-04-01
+### Vendors
+- Jekyll 3.4.3 CDN
+- Bootstrap 3.3.4 CDN [https://github.com/twbs/bootstrap/archive/v3.3.4.tar.gz]
+- Font Awesome CDN [icones]
+- Fonte Space Mono [principal]
+- Fonte Open Sans CDN
+- Para ver os demais, acesse o arquivo "Gemfile".
+- Iniciando o projeto.
+
+## [1.0.0] - 2017-04-13
+### Adicionado
+- Lançanmento da Pre-release (Beta).
+
+## [1.0.1] - 2016-04-16
+### Adicionado
+- Icone de rede sociais na barra lateral abaixo do menu.
+- Listagem de Posts com texto de excerpt.
+- O post obteve seções de autor e mensagem do dia, alem de uma linha horizontal para
+  encerrar a postagem.
+- Contador de comentários na listagem de posts.
+- Plugins na pasta "_plugins"
+- Plugin "imager", um plugin para inserir imagens responsivas nas postagens. Opção de
+  escolher o comportamento da imagem: left, right ou center.
+- Plugin DateLang, com prioridade de inserir Data por extensa em diversos idiomas.
+- Plugin ReadingTime, sua função é mostrar uma mensagem informando o leitor o tempo de leitura
+  aproximado que ele terá no texto.
+- Plugin "Fa", sua ação é inserir icones usando o Font Awesome nas postagens. Tem a opção de escolher o
+  configurar do tamanho do ícone.
+- Arquivos de configurações de plugins, adicionados na pasta: "src".
+- Recurso de criação de cabeçalho de posts para Blog e para página Hello, através Rakefile (Ruby).
+- Recurso de gerenciar projeto com o script "typing.sh". Esse script fará praticamente quase
+  toda ação do projeto, caso o usuário use S.O Unix.
+- Avatar na sidebar e na página de Hello.
+- Google Analytics.
+- Botões de compartilhamento do post. [Facebook, LinkedIn, Google+, Twitter ]
+- Plugin "jekyll-coffeescript" e "jekyll-jsminify"
+- Indice na página de "Resume".
+- Arquivo "robots.txt" e imagem "screenshot.png"
+### Alterando
+- Alguns blocos do arquivo "_config.yml".
+- Estrutura de string do website, foram mudados para o "_data/dbase.yml".
+- Página de Error 404, como animação de gif.
+- MetaTags Head foram melhoradas (SEO).
+- Path de idiomas dos plugins "DateLang" e "ReadingTime" adicionados no diretório "_plugins" ocultamente.

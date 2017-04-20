@@ -1,17 +1,16 @@
 ---
 layout: default
-page: list_tags
 ---
 
 <!-- Method 1 - Use plugin jekyll-tagging -->
 <div class="list-tags">
   <div class="row title">
-    <h1>{{page.title}}</h1>
-    <p>{{page.content}}</p>
+    <h1>{{ page.title }}</h1>
+    <p>{{ content }}</p>
   </div>
   <div class="row content">
    {% for tag in site.tags %}
-    <span class="label label-default cloud"><a href="{{ "/blog/tags/" | prepend: site.baseurl | prepend: site.url }}/{{ tag[0] }}">{{ tag[0] }}</a></span>
+    <span class="label label-default cloud"><a href="{{ '/blog/tags/' | prepend: site.baseurl | prepend: site.url }}/{{ tag[0] }}">{{ tag[0] }}</a></span>
    {% endfor %}
   </div>
 </div>
@@ -20,8 +19,8 @@ page: list_tags
 <!-- Method 2 - Does not use jekyll-tagging plugins -->
 <!-- <div class="list-tags">
   <div class="row title">
-    <h1>{{page.title}}</h1>
-    <p>{{page.content}}</p>
+    <h1>{{ page.title }}</h1>
+    <p>{{ content }}</p>
   </div>
   <div class="row content">
     <div class="panel-group" id="accordion">

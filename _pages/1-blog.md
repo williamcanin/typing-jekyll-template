@@ -15,6 +15,10 @@ buttons: false
 menu: true
 
 published: true
+
+# Does not change and does not remove 'script' variables
+script: [postlist.js]
+
 permalink: /blog/
 ---
 

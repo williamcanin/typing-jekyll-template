@@ -1,13 +1,43 @@
 /* Enable / Disable Background Featured All Site */
-$background-featured-enable: true;
+$background-featured-enable: false;
 
 /* Variables Colors Screen */
+
+/* Theme: Light - Default */
 $background-featured: #EEEEEE;
-$content-background-color: #fff;
+$content-background-color: #FFFFF2;
 $sidebar-background-color: #F4F4F4;
 $footer-background-color: #FFF8F8;
 $footer-border-color: #E8E8E8;
-$color-links: #B62B2B; /* Secondary: #546897; */
-$color: #272A3F;
-$highlight-background-color: #fff;
+$blockquote-background: #D1D1D1;
+$links-title-weight: 800;
+$color-links: #D7101E;
+$color: #000000;
+$highlight-background-color: #DFDFDF;
 $highlight-border-color: #E8E8E8;
+
+/* Theme: Darkness Blood */
+// $background-featured: #151515;
+// $content-background-color: #000;
+// $sidebar-background-color: #000;
+// $footer-background-color: #000;
+// $footer-border-color: #000;
+// $blockquote-background: #2D2D2D;
+// $links-title-weight: 800;
+// $color-links: #D7101E;
+// $color: #fff;
+// $highlight-background-color: #131313;
+// $highlight-border-color: #131313;
+
+/* Theme: Darkness Linux */
+// $background-featured: #151515;
+// $content-background-color: #000;
+// $sidebar-background-color: #000;
+// $footer-background-color: #0E0E0E;
+// $footer-border-color: #0E0E0E;
+// $blockquote-background: #2D2D2D;
+// $links-title-weight: 800;
+// $color-links: #B9A600;
+// $color: #fff;
+// $highlight-background-color: #131313;
+// $highlight-border-color: #131313;

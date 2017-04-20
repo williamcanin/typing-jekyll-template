@@ -1,8 +1,9 @@
 ---
 layout: default
-page: tag_page
 ---
 
+<!-- Include Data Base  -->
+{% include dbase/dbase %}
 
 <div class="tag-page">
   <div class="row title">
@@ -15,15 +16,18 @@ page: tag_page
         <div class="wrap">
           <div class="meta-list">
             <div class="col-sm-6 datetime">
-              <span>{{ post.date | date_to_string }}</span>
+              <span>
+                {% datelang post %}
+                {% include datelang/post %}
+              </span>
             </div>
             <div class="col-sm-6 tags-this">
-            {% if site.enables.icons == "yes" %}<i class="fa fa-tags" aria-hidden="true"></i>{% else %}Tags: {% endif %}
+            {% if site.screen.enable.icons == yes %}<i class="fa fa-tags" aria-hidden="true"></i>{% else %}Tags: {% endif %}
               <span>{{ post | tags }}</span>
             </div>
           </div>
           <div class="title">
-            <h1><a href="{{site.url}}{{site.baseurl}}{{ post.url }}">{{ post.title }}</a></h1>
+            <h1><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
           </div>
         </div>
     {% endfor %}

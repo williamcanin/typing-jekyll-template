@@ -10,52 +10,13 @@ html,body{
 .main{
   font-family: $font-family-primary;
   background-color: transparent;
-  .container{
-    .sidebar{
-      @if $background-featured-enable == true {
-        background-color: $background-featured;
-      } @else {
-        background-color: transparent;
-      }
-      border-bottom-left-radius: 50px;
-      @media (max-width: 767px) {
-        border-bottom-left-radius: 0px;
-      }
-      padding-bottom: 3%;
-      .header{
-        padding: 3% 0%;
-        text-align: center;
-        h2{
-          line-height: 4rem;
-          font-size: 2.8rem;
-        }
-      }
-      .menu{
-        ul{
-          padding-left: 10px;
-          li{
-            list-style: none;
-            a{
-              font-size: 1.9rem;
-              color: $color-links;
-              text-decoration: underline;
-              font-weight: 300;
-            }
-          }
-          .small{
-            display: block;
-            height: 0.1rem;
-            width: 300px;
-            @media (max-width: 1024px) {
-              width: 240px;
-            }
-            border: 0;
-            border-top: 1px solid #B3B3B3;
-            margin: 1em 0;
-            padding: 0%;
-          }
-        }
-      }
+
+  .wrapper{
+    @media (min-width: 1122px) {
+      padding: 0% 5%;
+    }
+    .sidebar-redmode{
+      display: none;
     }
     .content{
       background-color: $content-background-color;
@@ -63,4 +24,8 @@ html,body{
       font-size: 1.7rem;
     }
   }
+}
+
+.full-redmode{
+  width: 100%;
 }

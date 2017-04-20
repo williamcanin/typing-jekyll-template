@@ -9,6 +9,10 @@ icon: fa-envelope
 menu: true
 
 published: true
+
+# Does not change and does not remove 'script' variables
+script: [contact.js]
+
 permalink: /contact/
 ---
 

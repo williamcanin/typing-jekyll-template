@@ -14,7 +14,30 @@ btnprint: true
 excerpt: |
     This is my resume. On this page you can print using the browser shortcut (Ctrl + P) or using the 'Print' Button as well.
 
+tcontents:
+  enable: true
+  title: Table Of Contents
+  links:
+    - name: Personal Data
+      id: "#personal-data"
+    - name: Biography
+      id: "#biography"
+    - name: Objetive
+      id: "#objetive"      
+    - name: Education
+      id: "#education"
+    - name: Skills
+      id: "#skills"
+    - name: Projects
+      id: "#projects"
+    - name: Languages
+      id: "#languages"   
+
 published: true
+
+# Does not change and does not remove 'script' variables
+script: [resume.js]
+
 permalink: /resume/
 ---
 
@@ -29,7 +52,8 @@ permalink: /resume/
 **Date of Birth**: 2017/04/05   
 **Marital Status**: Single   
 **Home Address**: Lorem, Lorem Ipsum, 789 / Dolor  
-**City/State**: Lorem Ipsum/LI   
+**Country**: Brazil   
+**Province**: Lorem Ipsum/LI   
 **Telephone**: +55 011 1234 5678   
 **Email**: your-email@example.com   
 **Website**: [my-web-site.domain](http://williamcanin.com)   
@@ -54,15 +78,32 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias eum, quae delect
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias quod voluptatum earum asperiores esse labore impedit eos cum obcaecati unde sequi ad beatae magni aut iure, dolorum doloribus nulla, officia!
 
-### Fairport High School
+### Ipsum Dolor
 
-*Fairport, New York — Regents Diploma with Honors ‘10*
+*Lorem, Lorem — Lorem Ipsum ‘14*
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias quod voluptatum earum asperiores esse labore impedit eos cum obcaecati unde sequi ad beatae magni aut iure, dolorum doloribus nulla, officia!
 
 ## Skills
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil magni incidunt commodi quod libero atque architecto, vero est unde, qui inventore assumenda quaerat perferendis ab reprehenderit quis excepturi dolores, labore.
 
->  **Jekyll, Ruby, NodeJS, Gulp**
+**Web Development:**   
+
+{% label HTML|16px %}
+{% label Bootstrap|16px %}
+{% label CSS3|16px %}
+{% label JQuery|16px %}
+{% label LESS|16px %}
+{% label Angular|16px %}
+{% label SCSS|16px %}
+
+
+**Back-End:**
+
+{% label Ruby|16px %}
+{% label Java|16px %}
+
 
 
 ### Lorem Ipsum
@@ -73,16 +114,16 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil magni incidunt c
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut architecto quis sit in qui, omnis repudiandae nam excepturi veritatis enim expedita voluptates repellat. Ipsam quae tempore nihil, quos voluptates commodi.
 
-### Lorem Ipsum
+## Projects
 
-*Lorem ipsum dolor sit amet*
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus ab odit sed maxime possimus ducimus doloribus minima dolore quaerat, consequatur repellat eius saepe, nisi architecto nemo animi, et quidem. At!
 
-*November 2013 - July 2014*
+* [Lorem](http://williamcanin.github.io/typing-theme){:target="_blank"} - Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+* [Lorem](http://williamcanin.github.io/typing-theme){:target="_blank"} - Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id aliquam, vel asperiores culpa incidunt, pariatur tenetur ea dolorum vitae voluptas ipsa omnis, saepe dolor esse ipsum! Dolor, mollitia, quia. Tenetur.
 
 ## Languages
 
 * **English** - Intermediary
-* **Latim** - Fluent
+* **Latim** - I do not know Latin, it was only for testing.
 * **Portuguese** - Native

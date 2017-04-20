@@ -5,6 +5,25 @@
     color: $color-links;
     text-decoration: underline;
   }
+  .readmode{
+    position: fixed;
+    float: right;
+    .btn-readmode {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        border-radius: 0px;
+        color: white;
+        padding: 11px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        position: fixed;
+        float: right;
+        right: 0;
+        top: 0;
+    }
+  }
   .title{
     h1{
       font-weight: 800;
@@ -18,13 +37,17 @@
     .datetime{
       font-size: 1.9rem;
       padding: 0px;
-      span{
+      .text{
         @if $background-featured-enable == true {
           background-color: $background-featured;
         } @else {
           background-color: transparent;
         }
         padding: 5px;
+      }
+      .tmargin{
+        margin-left: 15px;
+        padding-right: 15px;
       }
     }
     .count-comments{
@@ -43,6 +66,10 @@
      padding: 2% 0%;
      a{
        text-decoration: underline;
+       &:after{
+        content: ".";
+        margin-right: 10px;
+       }
      }
   }
   .content{
@@ -60,8 +87,44 @@
         font-weight: 600;
       }
     }
+    .day-quote{
+      margin: 5% auto;
+      .title{
+        font-size: 2.5rem;
+      }
+      .content{
+        padding: 0;
+        margin: 10px 0px;
+      }
+    }
+    .author{
+      margin: 15px 0px;
+      .image{
+        img{
+          @media (max-width: 480px) {
+            max-width: 100px;
+          }
+          border: 0.1rem solid #CACACA;
+        }
+      }
+      .bio{
+        .title{
+          font-size: 1.3rem;
+        }
+        .name{
+          font-weight: 800;
+          font-size: 3rem;
+        }
+        .content{
+          padding: 0;
+          margin: 0;
+          background-color: transparent;
+          font-size: 1.6rem;
+        }
+      }
+    }
     .disqus{
-      padding: 5% 0%;
+      padding-top: 2%;
       .title{
         text-align: center;
         h3{
