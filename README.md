@@ -1,21 +1,21 @@
-# Typing Theme <img src="https://rawgit.com/williamcanin/typing-theme/master/assets/images/home/brand/typing.svg" alt="Typing Theme" width="120px" height="120px"/>
+# Typing Jekyll Template <img src="https://rawgit.com/williamcanin/typing-jekyll-template/master/assets/images/home/brand/typing.svg" alt="Typing Jekyll Template" width="120px" height="120px"/>
 
 ## Table of Contents
 
-* [Introduction](https://github.com/williamcanin/typing-theme/tree/master/#introduction)
-* [Requeriments](https://github.com/williamcanin/typing-theme/tree/master/#requeriments)
-* [Usage](https://github.com/williamcanin/typing-theme/tree/master/#usage)
-* [Deploy](https://github.com/williamcanin/typing-theme/tree/master/#deploy)
-* [Demo](https://github.com/williamcanin/typing-theme/tree/master/#demo)
-* [Questions](https://github.com/williamcanin/typing-theme/tree/master/#questions)
-* [Versions](https://github.com/williamcanin/typing-theme/tree/master/#versions)
-* [License and Copyrights](https://github.com/williamcanin/typing-theme/tree/master/#license-and-copyrights)
-* [Credits](https://github.com/williamcanin/typing-theme/tree/master/#credits)
+* [Introduction](https://github.com/williamcanin/typing-jekyll-template/tree/master/#introduction)
+* [Requeriments](https://github.com/williamcanin/typing-jekyll-template/tree/master/#requeriments)
+* [Usage](https://github.com/williamcanin/typing-jekyll-template/tree/master/#usage)
+* [Deploy](https://github.com/williamcanin/typing-jekyll-template/tree/master/#deploy)
+* [Demo](https://github.com/williamcanin/typing-jekyll-template/tree/master/#demo)
+* [Questions](https://github.com/williamcanin/typing-jekyll-template/tree/master/#questions)
+* [Versions](https://github.com/williamcanin/typing-jekyll-template/tree/master/#versions)
+* [License and Copyrights](https://github.com/williamcanin/typing-jekyll-template/tree/master/#license-and-copyrights)
+* [Credits](https://github.com/williamcanin/typing-jekyll-template/tree/master/#credits)
 
 
 ## Introduction
 
-**Typing Theme**, is a template for [Jekyll](http://jekyllrb.com) built especially for those who want to have a blog and pages quickly and lightly.
+**Typing Jekyll Template**, is a template for [Jekyll](http://jekyllrb.com) built especially for those who want to have a blog and pages quickly and lightly.
 
 Its interface is part of the "Keep It Simple" philosophy, precisely to have a high performance in all types of browsers and mobile devices.
 
@@ -41,11 +41,11 @@ The contact page uses the Formspree feature, you will have to have an account in
 1 - Cloning and entering the folder:
 
 ```
-$ git clone https://github.com/williamcanin/typing-theme.git "typing-theme"
-$ cd "typing-theme"
+$ git clone https://github.com/williamcanin/typing-jekyll-template.git "typing-jekyll-template"
+$ cd "typing-jekyll-template"
 ```
 
-2 - Downloading Gems and Jekyll dependencies for Typing Theme:
+2 - Downloading Gems and Jekyll dependencies for Typing Jekyll Template:
 
 ```
 $ bundle install
@@ -74,17 +74,17 @@ Variables: **url** and **baseurl** in the `_config.yml` file according to url Wh
 
 ## Demo
 
-If you want to see the project in action, go here > [Demo](http://williamcanin.github.io/typing-theme/)
+If you want to see the project in action, go here > [Demo](http://williamcanin.github.io/typing-jekyll-template/)
 
 
 ## Questions
 
-Make your opinions on Typing Theme, in:
-[Typing Theme - Issues](https://github.com/williamcanin/typing-theme/issues)
+Make your opinions on Typing Jekyll Template, in:
+[Typing Jekyll Template - Issues](https://github.com/williamcanin/typing-jekyll-template/issues)
 
 ## Versions
 
-You can download the versions without making a clone with Git. Go to [Releases](https://github.com/williamcanin/typing-theme/releases)
+You can download the versions without making a clone with Git. Go to [Releases](https://github.com/williamcanin/typing-jekyll-template/releases)
 
 
 ## License and Copyrights
@@ -93,7 +93,7 @@ License: [MIT License (MIT)](https://opensource.org/licenses/MIT)
 
 Copyrights: William C. Canin | Copyright © 2017
 
-*You can change the structure of Typing Theme as you wish, as long as you do not manipulate the copyrights of William C.Canin in the project*
+*You can change the structure of Typing Jekyll Template as you wish, as long as you do not manipulate the copyrights of William C.Canin in the project*
 
 
 ## Credits
