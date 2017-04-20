@@ -1,0 +1,121 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+title: Typing
+debutyear: 2016
+description: > # this means to ignore newlines until "baseurl:"
+  Typing - A Theme for Jekyll
+baseurl: "/typing-theme" # the subpath of your site, e.g. /blog
+url: "https://williamcanin.com" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Your email
+email: youremail@domain.com
+
+# Meta Tag Settings
+head:
+  meta:
+    google-site-verification:
+    type: "website"
+    expires: "" # E.g: "Sat, 24 Dec 2017 00:10:00 GMT"
+    cache-control: "" # E.g: "max-age=29030400, public" # Default: public / max-age=29030400
+    tags: "Typing, Theme, Jekyll"
+    refresh-time: 5
+
+# String for every website.
+string:
+  menu:
+    title: Hey, I'm Typing.
+    page:
+      title: Pages
+      home: Home
+      blog: Blog
+      search: Search
+      feed: Feed
+  blog:
+    title: Blog
+    description: |
+      Lorem ipsum dolor sit {{ post_count }} amet, consectetur adipisicing elit. Sint repellendus fugit aliquid delectus necessitatibus assumenda molestiae voluptates doloribus quod eum sunt, fugiat vel obcaecati libero iure, itaque eius, perferendis architecto.
+  footer:
+    message: Simplicity is fashionable.
+  disqus:
+    title: Leave a comment on this post :)
+  # The Contact, uses the Formspree service. Need to register for the service.
+  contact:
+    btn-send: Go, message!
+    placeholder:
+      name: Your full name
+      email: Your email
+      message: What would you like to say?
+  resume:
+    btnprint: Print
+  post:
+    comments_count: Comments
+  error404:
+    title: Error 404
+    content: |
+      This page you are looking for was not found :(
+
+# Enable or disable icons on every website. Use:  "yes" | "no"
+enables:
+  icons: "yes"
+
+# Disqus username
+disqus:
+  username: # Yout user Disqus. e.g: angusyoung
+
+# Config for Google Analytics.  Note: Must have Google Analytics Tracking ID.
+google:
+  analytics:
+    enable: "no" # Use: "yes" | "no"
+    id: "" # tracking id, e.g. "UA-000000-01"
+
+
+#  --- SESSION PRIVATE ---
+
+# Settings Default
+include: ['_pages','_blog','_home']
+markdown: kramdown
+highlighter: pygments
+permalink: /blog/:title/
+gems: ["jekyll-gist","jekyll-paginate","jekyll-youtube","jekyll-feed", "jemoji"]
+destination: _site
+port: 4000
+host: localhost
+
+# Config for Compress HTML
+compress_html:
+  clippings: all
+  comments: all
+  endings: []
+  profile: false
+
+# Config plugin 'jekyll-tagging'
+tag_page_layout: tag_page
+tag_page_dir: blog/tags
+tag_permalink_style: pretty
+
+# Config for plugin 'jekyll-gist'
+gist:
+  noscript: false
+
+# Exclude files (or folders) in compilation.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - "**/*.txt"
+  - README.md
+
+#  --- SESSION PRIVATE ---

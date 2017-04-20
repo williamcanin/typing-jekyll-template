@@ -1,0 +1,73 @@
+.post{
+  font-family: $font-family-primary;
+  padding: 3%;
+  a{
+    color: $color-links;
+    text-decoration: underline;
+  }
+  .title{
+    h1{
+      font-weight: 800;
+      @media (max-width: 767px) {
+        font-size: 3rem;
+      }
+    }
+  }
+  .meta{
+    padding: 2% 0%;
+    .datetime{
+      font-size: 1.9rem;
+      padding: 0px;
+      span{
+        @if $background-featured-enable == true {
+          background-color: $background-featured;
+        } @else {
+          background-color: transparent;
+        }
+        padding: 5px;
+      }
+    }
+    .count-comments{
+      margin: 0px;
+      padding: 0px;
+      .wrap{
+        @media (min-width: 1024px) {
+          float: right;
+          padding: 0px;
+        }
+      }
+    }
+  }
+  .tag-list{
+     text-align: left;
+     padding: 2% 0%;
+     a{
+       text-decoration: underline;
+     }
+  }
+  .content{
+    margin-top: 5%;
+    @media (max-width: 768px) {
+      h1{
+        font-size: 2.7rem;
+        font-weight: 800;
+      }
+      h2{
+        font-size: 2.1rem;
+        font-weight: 600;
+      }
+      h3,h4{
+        font-weight: 600;
+      }
+    }
+    .disqus{
+      padding: 5% 0%;
+      .title{
+        text-align: center;
+        h3{
+          padding: 3% 0%;
+        }
+      }
+     }
+  }
+}

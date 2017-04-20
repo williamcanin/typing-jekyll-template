@@ -1,0 +1,40 @@
+---
+layout: default
+page: post
+---
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="row title">
+    <h1>{{page.title}}</h1>
+  </div>
+  <div class="row meta" datetime="{{ page.date | date:'%Y-%m-%d' }}">
+    <time class="col-sm-6 datetime">
+      {% if site.enables.icons == "yes" %}<i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;{% endif %}<span>{{ page.date | date_to_string }}</span>
+    </time>
+    {% if page.comments and site.disqus.username %}
+    <div class="col-sm-6 count-comments">
+      <span class="wrap">{% if site.enables.icons == "yes" %}<i class="fa fa-comments" aria-hidden="true"></i>&nbsp;{% endif %}<a href="#comments" data-disqus-identifier="{{page.url}}">{{site.string.post.comments_count}}</a></span>
+      {% include scripts/disqus_count.html %}
+    </div>
+    {% endif %}
+  </div>
+  <div class="row tag-list">
+    {% if site.enables.icons == "yes" %}<i class="fa fa-tags" aria-hidden="true"></i>{% else %}Tags: {% endif %}
+    {% for tag in page.tags %}
+      <a href="{{ "/blog/tags/" | prepend: site.baseurl | prepend: site.url }}/{{tag}}">{{tag}}</a>
+    {% endfor %}
+  </div>
+  <div class="row content">
+    {{ content }}
+    {% if page.comments and site.disqus.username %}
+    <div class="disqus" id="comments">
+    <div class="title">
+      <h3>{{site.string.disqus.title}}</h3>
+    </div>
+      <div class="content">
+        {% include scripts/disqus_comments.html %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</article>

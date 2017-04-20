@@ -1,0 +1,42 @@
+---
+layout: default
+page: postlist
+---
+
+{% for post in site.categories.blog %}
+  {% capture post_count %} {{ post_count | plus: 1 }} {% endcapture %}
+{% endfor %}
+
+
+<div class="postlist">
+  <div class="row title-description">
+    <h1>{{site.string.blog.title}}</h1>
+    <p>{{page.msg_qtd[0]}} <strong>{{ post_count }}</strong> {{page.msg_qtd[1]}} {{content}} </p>
+  </div>
+  {% if page.buttons == true %}
+  <div class="row meta">
+    <div class="col-sm-6">
+      <a href="{{site.url}}{{site.baseurl}}/blog/tags/">Tags Cloud</a>
+    </div>
+    <div class="col-sm-6">
+      <a href="{{site.url}}{{site.baseurl}}/blog/search/">Search</a>
+    </div>
+  </div>
+  {% endif %}
+  <div class="row content">
+    {% for post in site.categories.blog %}
+    <div class="wrap">
+      <div class="date" datetime="{{ post.date | date:'%Y-%m-%d' }}">
+        <time class="time">
+          {{ post.date | date_to_long_string }}
+        </time>
+      </div>
+      <div class="url">
+        <h1>
+          <a href="{{site.url}}{{site.baseurl}}{{ post.url }}">{{ post.title }}</a>
+        </h1>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>

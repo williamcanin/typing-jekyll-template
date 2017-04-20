@@ -1,0 +1,56 @@
+@media print {
+  .main{
+    .container{
+      .sidebar{
+        display: none;
+      }
+      .content{ /* CONTENT MAIN */
+        font-family: $font-family-secondary;
+        .resume{
+          .header{
+            .title{
+              display: none;
+              h1{}
+            }
+            .btn-print{
+              display: none;
+              a{}
+            }
+          }
+          .content{
+            h1{
+              font-size: 4.7rem;
+              font-weight: 800;
+            }
+            h2{
+              font-size: 3.7rem;
+            }
+            h3{
+              font-size: 3rem;
+            }
+            h3,h2{
+              font-weight: 600;
+            }
+            h3,h4{
+              font-weight: 600;
+            }
+            /* Avoid printing hrefs when this class is applied */
+            a[href]:after {
+              content: none !important;
+            }
+            p,li{
+              font-size: 22px !important;
+            }
+            blockquote{
+              border: none;
+              background-color: transparent;
+            }
+          }
+        }
+      }
+    }
+    .footer{
+      display: none;
+    }
+  }
+}

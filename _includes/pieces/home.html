@@ -1,0 +1,13 @@
+{% for home in site.categories.home %}
+  <div class="home">
+    <div class="row title">
+      <h1>{{ home.title }}<span class="cursor">|</span></h1>
+    </div>
+    <div class="row content">
+      {% if home.image %}
+        <img class="pull-left brand" src="{{ "/assets/images/home/brand"  | prepend: site.baseurl | prepend: site.url }}/{{ home.image }}" height="150" width="150" alt="">
+      {% endif %}
+      {{ home.content }}
+    </div>
+  </div>
+{% endfor %}

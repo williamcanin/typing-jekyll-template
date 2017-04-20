@@ -1,0 +1,47 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{% if page.title %}{{page.title}} | {{ site.title }} {% else %} {{ site.title }} | {{ site.description }} {% endif %}</title>
+  <meta name=description content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta name=viewport content="width=device-width, initial-scale=1">
+  {% if site.head.meta.google-site-verification %}
+  <meta name="google-site-verification" content="{{ site.meta.google-site-verification }}">
+  {% endif %}
+  {% if  site.head.meta.expires %}
+  <meta http-equiv="expires" content="{{ site.meta.expires }}">
+  {% endif %}
+  {% if  site.head.meta.cache-control %}
+  <meta http-equiv="cache-control" content="{{ site.meta.cache-control }}"/>
+  {% else %}
+  <meta http-equiv="cache-control" content="public"/>
+  {% endif %}
+  <meta http-equiv="Pragma" content="public">
+  <meta name="keywords" content="{{ site.head.meta.tags }}" />
+  <meta property="og:type" content="{{ site.head.meta.type }}" />
+  <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
+  <meta property="og:title" content="{{ page.title }} - {{ site.title }}" />
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+  {% if page.url == "/404.html" %}
+  <meta http-equiv="refresh" content="{{site.head.meta.refresh-time}}; url={{ site.url }}{{ site.baseurl }}/">
+  {% endif %}
+
+  <script type="text/javascript">
+  var GLOBAL_BASEURL = "{{ site.url }}{{ site.baseurl }}";
+  </script>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ "/assets/images/favicon/favicon-32x32.ico" | prepend: site.baseurl | prepend: site.url }}">
+
+  <!-- Bootstrap 3 -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+  <!-- Bootstrap 4 -->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> -->
+
+  <!-- Fonts  -->
+  <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,600i,700,700i,800,800i" rel="stylesheet">
+
+  <!-- Style Default -->
+  <link rel="stylesheet" href="{{ "/assets/stylesheets/main.css" | prepend: site.baseurl | prepend: site.url }}">
+</head>

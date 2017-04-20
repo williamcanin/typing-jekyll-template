@@ -1,0 +1,34 @@
+---
+layout: default
+page: contact
+---
+
+{% if site.email %}
+<div class="contact">
+  <div class="row title">
+    <h1>{{ page.title }} <span>use: <a href="https://formspree.io/" target="_blank">Formspree</a></span> </h1>
+  </div>
+  <div class="row content">
+    {{ content }}
+    <form method="POST" action="http://formspree.io/{{ site.email }}">
+      <div class="row name">
+        <input id="form-input-name" type="text" class="form-control typing" name="Name" placeholder="{{ site.string.contact.placeholder.name }}" required autofocus>
+      </div>
+    <div class="row email">
+      <input type="email" class="form-control typing" name="Email" placeholder="{{ site.string.contact.placeholder.email }}" required>
+    </div>
+    <div class="row message">
+      <textarea name="Message" class="form-control typing" rows="7" cols="50" placeholder="{{ site.string.contact.placeholder.message }}" required></textarea>
+    </div>
+    <div class="row btn-send">
+      <button type="submit">{{ site.string.contact.btn-send }}</button>
+    </div>
+    <input type="hidden" name="_next" value="{{ site.url }}{{ site.baseurl }}/">
+    <input type="hidden" id="form-input-subject" name="_subject" value="Subject: {{ site.url }}{{ site.baseurl }}{{ page.url }}" />
+    <input type="text" name="_gotcha" style="display:none" />
+    </form>
+  </div>
+</div>
+{% else %}
+<h1 style="color: red; text-align: center;">Error: To use the contact page, you must have it enabled and put your email in the '_config.yml' file.</h1>
+{% endif %}
