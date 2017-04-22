@@ -11,7 +11,7 @@ layout: default
   </div>
   <div class="row content">
     {{ content }}
-    <form method="POST" action="http://formspree.io/{{ dbase.userdata.email | encode_email }}">
+    <form action="https://formspree.io/{{ dbase.userdata.email | encode_email }}" method="POST">
       <div class="row name">
         <input id="form-input-name" type="text" class="form-control typing" name="Name" placeholder="{{ dbase.website.strings.contact.placeholder.name }}" required autofocus>
       </div>
