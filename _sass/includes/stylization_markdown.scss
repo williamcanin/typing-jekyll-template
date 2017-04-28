@@ -9,20 +9,29 @@
         .post{
           .content{
             a:after {
-                content: "\f08e"; /* FontAwesome Unicode */
-                font-family: FontAwesome;
-                display: inline-block;
-                margin-left: 0.2em; /* same as padding-left set on li */
-                width: 1.3em; /* same as padding-left set on li */
+              content: "\f08e"; /* FontAwesome Unicode */
+              font-family: FontAwesome;
+              display: inline-block;
+              margin-left: 0.2em; /* same as padding-left set on li */
+              width: 1.3em; /* same as padding-left set on li */
+            }
+            ul{
+              li{
+                a:after {
+                  content: "" !important; /* FontAwesome Unicode */
+                  margin-left: 0 !important; /* same as padding-left set on li */
+                  width: 0em !important; /* same as padding-left set on li */
+                }
+              }
             }
           }
         }
         blockquote{
           background-color: $blockquote-background;
           border-left: 5px solid $color-links;
-          border-top-left-radius: 5px;
-          border-bottom-left-radius: 5px;
-          border-bottom-right-radius: 5px;
+          border-top-left-radius: 0px;
+          border-bottom-left-radius: 0px;
+          border-bottom-right-radius: 0px;
         }
         table{
           margin: 2% 0%;
@@ -70,21 +79,21 @@
             }
           }
         }
-        ul {
-          list-style: none;
-          padding: 0;
-          li{
-            padding-left: 1.3em;
-            &:before {
-              content: "\f069"; /* FontAwesome Unicode */
-              font-family: FontAwesome;
-              display: inline-block;
-              font-size: 1.4rem;
-              margin-left: -1.3em; /* same as padding-left set on li */
-              width: 1.3em; /* same as padding-left set on li */
-            }
-          }
-        }
+        // ul {
+        //   list-style: none;
+        //   padding: 0;
+        //   li{
+        //     padding-left: 1.3em;
+        //     &:before {
+        //       content: "\f111"; /* FontAwesome Unicode */
+        //       font-family: FontAwesome;
+        //       display: inline-block;
+        //       font-size: 1rem;
+        //       margin-left: -1.3em; /* same as padding-left set on li */
+        //       width: 1.5em; /* same as padding-left set on li */
+        //     }
+        //   }
+        // }
       }
     }
   }
