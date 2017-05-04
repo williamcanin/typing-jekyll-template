@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/typing-jekyll-template" # the subpath of your site, e.g. /blog
 url: "https://williamcanin.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Add Avatar in: Sidebar or page Hello, and configure.
