@@ -26,7 +26,7 @@
   <meta property="og:title" content="{{ page.title }} - {{ dbase.website.title }}" />
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ dbase.website.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
-  {% if page.url == "/404.html" and site.head.meta.refresh-time %}
+  {% if page.url == "/404.html" and dbase.website.metatag.refresh-time %}
   <meta http-equiv="refresh" content="{{ dbase.website.metatag.refresh-time }}; url={{ site.url }}{{ site.baseurl }}/">
   {% endif %}
   <script type="application/ld+json">
