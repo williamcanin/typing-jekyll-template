@@ -5,20 +5,20 @@ Do not change this file. It will be generated every time it is not present.
 Thank you. :) att. William Canin
 {% endcomment %}
 
+{{ page.date | date: "%d" }}
 {% assign m = page.date | date: "%-m" %}
 {% case m %}
-  {% when '1' %}January
-  {% when '2' %}February
-  {% when '3' %}March
-  {% when '4' %}April
-  {% when '5' %}May
-  {% when '6' %}June
-  {% when '7' %}July
-  {% when '8' %}August
-  {% when '9' %}September
-  {% when '10' %}October
-  {% when '11' %}November
-  {% when '12' %}December
+  {% when '1' %}Janeiro,
+  {% when '2' %}Fevereiro,
+  {% when '3' %}Março,
+  {% when '4' %}Abril,
+  {% when '5' %}Maio,
+  {% when '6' %}Junho,
+  {% when '7' %}Julho,
+  {% when '8' %}Agosto,
+  {% when '9' %}Setembro,
+  {% when '10' %}Outubro,
+  {% when '11' %}Novembro,
+  {% when '12' %}Dezembro,
 {% endcase %}
-{{ page.date | date: "%d," }}
 {{ page.date | date: "%-Y" }}

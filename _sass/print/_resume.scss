@@ -4,8 +4,7 @@
       .sidebar{
         display: none;
       }
-      .content{ /* CONTENT MAIN */
-        font-family: $font-family-secondary;
+      .content-main{ /* CONTENT MAIN */
         .resume{
           .header{
             .title{
@@ -18,6 +17,7 @@
             }
           }
           .content{
+            font-family: $font-family-secondary !important;
             .table-of-contents{
               display: none !important;
             }

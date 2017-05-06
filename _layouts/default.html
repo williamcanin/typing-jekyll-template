@@ -9,11 +9,13 @@ layout: compress
 <html lang="en" itemscope itemtype="http://schema.org/WebPage">
   {% include pieces/head.html %}
   <body>
+  <!-- Google Analytics  -->
+  {% include scripts/google_analytics.html %}
     <div class="main" id="top">
       <div class="container wrapper">
         <div class="row">
           {% include pieces/sidebar.html %}
-          <div class="col-sm-9 content">
+          <div class="col-sm-9 content-main">
               {% if page.url == '/' %}
                 {% include pieces/hello.html %}
               {% else %}
@@ -25,7 +27,5 @@ layout: compress
       {% include pieces/footer.html %}
     </div>
   {% include scripts/src.html %}
-  <!-- Google Analytics  -->
-  {% include scripts/google_analytics.html %}
   </body>
 </html>
