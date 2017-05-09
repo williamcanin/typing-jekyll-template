@@ -14,16 +14,16 @@ layout: default
   </div>
   <div class="row meta" datetime="{{ page.date | date:'%Y-%m-%d' }}">
     <time class="col-sm-6 datetime">
-      {% if site.screen.enable.icons == yes %}<i class="fa fa-calendar" aria-hidden="true"></i>{% endif %}<span class="text {% if site.screen.enable.icons == yes %} tmargin {% endif %}">{% datelang page %}{% include datelang/page %}</span>
+      {% if site.screen.icons.enable == true %}<i class="fa fa-calendar" aria-hidden="true"></i>{% endif %}<span class="text {% if site.screen.icons.enable == true %} tmargin {% endif %}">{% datelang page %}{% include datelang/page %}</span>
     </time>
     {% if page.comments and dbase.userdata.disqus.username %}
     <div class="col-sm-6 count-comments">
-      <span class="wrap">{% if site.screen.enable.icons == yes %}<i class="fa fa-comments" aria-hidden="true"></i>&nbsp;{% endif %}<a href="#comments" data-disqus-identifier="{{ page.url }}">0</a></span>
+      <span class="wrap">{% if site.screen.icons.enable == true %}<i class="fa fa-comments" aria-hidden="true"></i>&nbsp;{% endif %}<a href="#comments" data-disqus-identifier="{{ page.url }}">0</a></span>
     </div>
     {% endif %}
   </div>
   <div class="row tag-list">
-    {% if site.screen.enable.icons == yes %}<i class="fa fa-tags" aria-hidden="true"></i>{% else %}Tags: {% endif %}
+    {% if site.screen.icons.enable == true %}<i class="fa fa-tags" aria-hidden="true"></i>{% else %}Tags: {% endif %}
     {% for tag in page.tags %}
       <a href="{{ '/blog/tags/' | prepend: site.baseurl | prepend: site.url }}/{{ tag }}">{{ tag }}</a>
     {% endfor %}

@@ -35,7 +35,7 @@ layout: default
         </time>
         {% if post.comments and dbase.userdata.disqus.username %}
           <div class="count-comments">
-            {% if site.screen.enable.icons == yes %}<i class="fa fa-comments"></i>{% endif %}<span class="disqus-comment-count" data-disqus-identifier="{{ post.url }}">0</span>
+            {% if site.screen.icons.enable == true %}<i class="fa fa-comments"></i>{% endif %}<span class="disqus-comment-count" data-disqus-identifier="{{ post.url }}">0</span>
           </div>
         {% endif %}
       </div>

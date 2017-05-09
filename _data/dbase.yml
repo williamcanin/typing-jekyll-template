@@ -19,7 +19,7 @@ website:
   # Config for Google Analytics.  Note: Must have Google Analytics Tracking ID.
   google:
     analytics:
-      enable: no # Use: yes | no
+      enable: false # Use: true | false
       id: "" # tracking id, e.g. "UA-000000-01"
   author:
     image: typing.svg

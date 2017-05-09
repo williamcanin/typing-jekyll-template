@@ -38,10 +38,10 @@ share_social:
   googleplus: true
 
 
-# Enable or disable icons on every website. Use:  "yes" | "no"
+# Enable or disable icons on every website. Use:  true | false
 screen:
   icons:
-    enable: yes
+    enable: true
 
 # Settings for the plugins in the _plugins folder.
 plugin:
@@ -57,8 +57,9 @@ plugin:
 
 # Plugin music.
 spotify:
-  theme: "light" # dark | light
+  enable: true
   open: true
+  theme: "light" # dark | light
   sass:
     jekyll: true
     dir: "_sass"

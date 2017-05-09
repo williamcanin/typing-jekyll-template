@@ -12,13 +12,13 @@
   <div class="row menu">
     <ul>
       <li>
-        {% if site.screen.enable.icons == yes %}<i class="fa fa-home" aria-hidden="true"></i>&nbsp;{% endif %}<a href="{{ site.url }}{{ site.baseurl }}/">{{ dbase.website.strings.sidebar.links.home }}</a>
+        {% if site.screen.icons.enable == true %}<i class="fa fa-home" aria-hidden="true"></i>&nbsp;{% endif %}<a href="{{ site.url }}{{ site.baseurl }}/">{{ dbase.website.strings.sidebar.links.home }}</a>
       </li>
       <hr class="breakline">
       {% for page in site.pages %}
         {% if page.title and page.menu == true %}
           <li>
-            {% if page.icon and site.screen.enable.icons == yes %}<i class="fa {{ page.icon }}" aria-hidden="true"></i>&nbsp;{% endif %}<a href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a>
+            {% if page.icon and site.screen.icons.enable == true %}<i class="fa {{ page.icon }}" aria-hidden="true"></i>&nbsp;{% endif %}<a href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a>
           </li>
         {% endif %}
       {% endfor %}

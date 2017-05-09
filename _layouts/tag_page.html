@@ -22,7 +22,7 @@ layout: default
               </span>
             </div>
             <div class="col-sm-6 tags-this">
-            {% if site.screen.enable.icons == yes %}<i class="fa fa-tags" aria-hidden="true"></i>{% else %}Tags: {% endif %}
+            {% if site.screen.icons.enable == true %}<i class="fa fa-tags" aria-hidden="true"></i>{% else %}Tags: {% endif %}
               <span>{{ post | tags }}</span>
             </div>
           </div>
