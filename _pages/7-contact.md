@@ -2,6 +2,9 @@
 layout: contact
 title: Contact
 
+# Enable / Disable events Google Analytics for this link page.
+ga_event: false
+
 # Icon feature uses Font Awesome
 icon: fa-envelope
 

@@ -6,6 +6,9 @@ sitemap:
   changefreq: 'monthly'
   lastmod: 2017-05-04T12:49:30-05:00
 
+# Enable / Disable events Google Analytics for this link page.
+ga_event: true
+
 # Icon feature uses Font Awesome
 icon: fa-file-text-o
 

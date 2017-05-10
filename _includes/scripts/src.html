@@ -3,8 +3,6 @@
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script src="{{ '/assets/javascripts/jekyll-spotify-plugin.min.js' | prepend: site.baseurl | prepend: site.url }}"></script>
 
-
-
 <!-- Specific for each pages. -->
 {% for script_page in page.script %}
    <script type="text/javascript" src="{{ '/assets/javascripts/' | prepend: site.baseurl | prepend: site.url  | append: script_page }}"></script>
@@ -12,6 +10,23 @@
 
 {% if page.url == '/' %}
   <script type="text/javascript" src="{{ '/assets/javascripts/hello.js' | prepend: site.baseurl | prepend: site.url }}"></script>
+{% endif %}
+
+<!-- Add 'ga' function from Google Analytics to certain site links in Posts  -->
+{% if dbase.website.google.analytics.events == true %}
+<script type="text/javascript">
+  jQuery(document).ready(function($) {
+
+    $('.post > .row.content a').addClass('ga-event');
+
+    $('.page.spage > .row.content th a').addClass('ga-event');
+
+    $('.row.content li a').removeClass('ga-event');
+
+    $('a.ga-event').attr('onclick', 'ga(\'send\',\'event\',\'linkTo\',this.href,\'{{ site.url }}{{ site.baseurl }}{{ page.url }}\');');
+
+  });
+</script>
 {% endif %}
 
 <!-- App | Global -->

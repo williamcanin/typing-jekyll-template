@@ -30,7 +30,7 @@ The contact page uses the Formspree feature, you will need to have an account in
 
 ## Feature
 
-- [x] **Google Analytics**
+- [x] **Google Analytics (Event and Pageview)**
 - [x] **Google Fonts**
 - [x] **Jekyll Search on Blog Page**
 - [x] **Print page resume**
