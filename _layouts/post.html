@@ -32,6 +32,7 @@ layout: default
     {{ page.content | reading_time }}
   </div>
   <div class="row content">
+    <div id="toc"></div>
     {{ content }}
     {% include pieces/share_social.html %}
     <div class="day-quote">
@@ -68,3 +69,11 @@ layout: default
     </div>
   </div>
 </article>
+
+<sript src="{{ '/assets/javascripts/toc.js' | prepend: site.baseurl | prepend: site.url }}"></sript>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#toc').toc();
+  });
+</script>

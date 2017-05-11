@@ -73,6 +73,26 @@
      }
   }
   .content{
+
+    // Adding 'Contents' headline to the TOC
+    #markdown-toc::before {
+      content: $title-toc;
+      font-weight: bold;
+      font-size: 3.5rem;
+    }
+    // Using numbers instead of bullets for listing
+    #markdown-toc ul {
+      list-style: decimal;
+    }
+    #markdown-toc {
+      padding: 3.5em;
+      @media (max-width: 480px) {
+        padding: 0% 10%;
+      }
+      list-style: decimal;
+      display: inline-block;
+    }
+
     margin-top: 5%;
     @media (max-width: 768px) {
       h1{

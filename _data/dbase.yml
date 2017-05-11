@@ -20,7 +20,7 @@ website:
   google:
     analytics:
       enable: false # Use: true | false
-      id: "" # tracking id, e.g. "UA-000000-01"
+      id:  # tracking id, e.g. "UA-000000-01"
       events: true # Use: true | false . Events Google Analytics
   author:
     image: typing.svg

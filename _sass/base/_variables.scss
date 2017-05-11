@@ -1,6 +1,12 @@
 /* Enable / Disable Background Featured All Site */
 $background-featured-enable: false;
 
+/* Border Dashed avatar and dividing content */
+$border-dashed: true;
+
+/* Title for TOC */
+$title-toc: "Contents";
+
 /* Variables Colors Screen */
 
 /* Theme: Light - Default */
@@ -16,7 +22,7 @@ $color: #000000;
 $highlight-background-color: #DFDFDF;
 $highlight-border-color: #E8E8E8;
 $border-dashed-color: #ACACAC;
-$border-dashed: true;
+
 
 /* Theme: Darkness Blood */
 // $background-featured: #151515;
@@ -31,7 +37,7 @@ $border-dashed: true;
 // $highlight-background-color: #131313;
 // $highlight-border-color: #131313;
 // $border-dashed-color: #D7101E;
-// $border-dashed: false;
+
 
 /* Theme: Darkness Linux */
 // $background-featured: #151515;
@@ -46,4 +52,3 @@ $border-dashed: true;
 // $highlight-background-color: #0C0C0C;
 // $highlight-border-color: #202020;
 // $border-dashed-color: #B9A600;
-// $border-dashed: false;

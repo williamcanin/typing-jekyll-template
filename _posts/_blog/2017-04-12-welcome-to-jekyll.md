@@ -18,6 +18,9 @@ day_quote:
 script: [post.js]
 ---
 
+* Do not remove this line (it will not be displayed)
+{: toc}
+
 Hi! :hand:
 
 [Emoji Syntax](https://www.webpagefx.com/tools/emoji-cheat-sheet/){:target="_blank"}
@@ -38,18 +41,18 @@ print_hi('Tom')
 
 Check out the [Jekyll docs][jekyll-docs]{:target="_blank"} for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]{:target="_blank"}. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk]{:target="_blank"}.
 
-# Examples:
+# Examples
 <br>
 **Titles with icon - Plugin Fa**
 
-{% fa fa-table|20px %} **Table:**   
+## {% fa fa-table|20px %} Table
 
 First Header | Second Header
 ------------ | -------------
 Content from cell 1 | Content from cell 2
 Content in the first column | Content in the second column
 
-{% fa fa-list|20px %} **List:**
+## {% fa fa-list|20px %} List
 
 - [x] @mentions, #refs, [links](){:target="_blank"}, **formatting**, and <del>tags</del> supported
 - [x] list syntax required (any unordered or ordered list supported)
@@ -72,7 +75,7 @@ Content in the first column | Content in the second column
 > We're living the future so
 > the present is our past.
 
-{% fa fa-file-image-o|20px %} **Image responsive plugin (Imager)**
+## {% fa fa-file-image-o|20px %} Image responsive (plugin Imager)
 
 {% imager typing_logotype.png|center %}
 
@@ -104,11 +107,11 @@ Commodi eaque, temporibus quia praesentium dolores repellat minus corporis illo 
 <br>
 <br>
 
-**Code in one line - Text:**
+## Code in one line - Text
 
 `Featured`
 
-**Unlighted code:**
+## Unlighted code
 
 ``` javascript
 function fancyAlert(arg) {
@@ -118,6 +121,8 @@ function fancyAlert(arg) {
 }
 ```
 
+## Gist code
+
 {% gist a3672f19f0f2ac35810b %}
 
 [jekyll-docs]: https://jekyllrb.com/docs/home 
@@ -126,16 +131,15 @@ function fancyAlert(arg) {
 
 <br>
 
-Goodbye! :wink:
-
-{% endpost #9D9D9D %}
-
-{% fa fa-music|20px %}  **Music**:
+## {% fa fa-music|20px %}  Music
 
 To use, see:[Jekyll Spotify Plugin - Doc](http://williamcanin.com/jekyll-spotify-plugin){:target="_blank"}
 
-
 {% spotify spotify/track/62qsgMnY4wg8nE5qjyOdWO %}
+
+Goodbye! :wink:
+
+{% endpost #9D9D9D %}
 
 
 

@@ -22,7 +22,7 @@ html,body{
       background-color: $content-background-color;
       margin-bottom: 3%;
       font-size: 1.7rem;
-      min-height: 700px;
+      min-height: 720px;
       @media (min-width: 769px) {
         @if $border-dashed == true {
           border-left: 2px dashed $border-dashed-color;
