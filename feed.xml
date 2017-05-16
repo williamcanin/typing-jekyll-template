@@ -2,13 +2,11 @@
 layout: null
 ---
 
-<!-- Include Data Base  -->
-{% include dbase/dbase %}
-
-
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
+    <!-- Include Data Base  -->
+    {% include dbase/dbase %}
     <title>{{ dbase.website.title | xml_escape }}</title>
     <description>{{ dbase.website.description | xml_escape }}</description>
     <link>{{ site.url }}{{ site.baseurl }}/</link>
