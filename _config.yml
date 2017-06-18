@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 
 baseurl: "/typing-jekyll-template" # the subpath of your site, e.g. /blog
-url: "https://williamcanin.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://williamcanin.me" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Add Avatar in: Sidebar or page Hello, and configure.
 avatar:
