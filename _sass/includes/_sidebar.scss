@@ -87,5 +87,10 @@
         padding: 0%;
       }
     }
+    .li-fa-search,.li-fa-tags{
+      @media (min-width: 768px) {
+        padding-left: 15px;
+      }
+    }
   }
 }

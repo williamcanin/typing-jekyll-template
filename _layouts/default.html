@@ -5,6 +5,8 @@ layout: compress
 <!-- Include Data Base  -->
 {% include dbase/dbase %}
 
+{% if dbase.website.under_maintenance.enable == false %}
+
 <!DOCTYPE html>
 <html lang="en" itemscope itemtype="http://schema.org/WebPage">
   {% include pieces/head.html %}
@@ -25,5 +27,10 @@ layout: compress
       {% include pieces/footer.html %}
     </div>
   {% include scripts/src.html %}
+
   </body>
 </html>
+
+{% else if  dbase.website.under_maintenance.enable == true %}
+  {% include pieces/under_maintenance.html %}
+{% endif %}

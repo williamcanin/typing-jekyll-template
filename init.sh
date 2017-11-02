@@ -46,7 +46,7 @@ source "./sources/lib/shell/global/functions/utils.lib"
 # Menu
 case $1 in
   install )
-    gem install bundle
+    gem install bundler --pre
     bundle install
     msg_finish "Done!"
   ;;

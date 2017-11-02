@@ -50,3 +50,7 @@ CHANGELOG - Portuguese - Brazil
 - Página de Error 404, como animação de gif.
 - MetaTags Head foram melhoradas (SEO).
 - Path de idiomas dos plugins "DateLang" e "ReadingTime" adicionados no diretório "_plugins" ocultamente.
+## [1.0.2] - 2017-08-22]
+### Adicionado
+- Menu "Search" e "Tags" passam a ser submenu do menu "Blog"
+- Novo recurso para deixar o website em modo de manutenção.
