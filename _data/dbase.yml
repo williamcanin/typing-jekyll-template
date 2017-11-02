@@ -92,17 +92,16 @@ userdata:
       - title: GitHub
         id: github
         icon: fa-github
-        url: https://github.com/williamcanin/typing-theme
+        url: https://github.com
       - title: Twitter
         id: twitter
         icon: fa-twitter
-        url: https://github.com/williamcanin/typing-theme
+        url: https://twitter.com
       - title: Google Plus
         id: gplus
         icon: fa-google-plus
-        url: https://github.com/williamcanin/typing-theme
+        url: https://plus.google.com
       - title: LinkedIn
         id: linkedin
         icon: fa-linkedin
-        url: https://github.com/williamcanin/typing-theme
-
+        url: https://linkedin.com
