@@ -1,0 +1,25 @@
+<!-- Include Data Base  -->
+{% include dbase/dbase %}
+
+<!DOCTYPE html>
+<html>
+  {% include pieces/head.html%}
+  <body>
+    <div class="maintenance">
+       <div class="container wrapper">
+         <div style="margin-top: 20px;" align="center" class="row">
+           <i style="font-size: 5rem;" class="fa fa-wrench"></i>
+         </div>
+         <div align="center" class="row">
+            <h1>{{ dbase.website.under_maintenance.title }}</h1>
+            <h3>{{ dbase.website.under_maintenance.subtitle }}</h3>
+            <div class="row">
+             <div style="margin: 0%;" class="socials">
+              {% include pieces/socials.html %}
+             </div>
+            </div>
+         </div>
+       </div>
+    </div>
+  </body>
+</html>
