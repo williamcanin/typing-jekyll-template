@@ -1,13 +1,13 @@
 <div class="col-sm-3 sidebar">
   {% if site.avatar.sidebar == true %}
     <div class="row avatar">
-    <a href="{{ site.url }}{{ site.baseurl }}">
+    <a href="{{ site.url }}{{ site.baseurl }}/">
       <img {% if site.avatar.border.enable == true %} style="border: {{ site.avatar.border.value }}px solid #333; border-radius: {{ site.avatar.border.radius }}%;" {% endif %} class="img-responsive center-block avatar-img" src="{{ '/assets/images/avatar'  | prepend: site.baseurl | prepend: site.url }}/{{ dbase.website.avatar }}" {%if site.avatar.size.enable == true %} height="{{ site.avatar.size.value }}" width="{{ site.avatar.size.value }}" {% endif %} alt="{{ dbase.website.title }}">
     </a>
     </div>
   {% endif %}
   <div class="row header">
-    <h2><a href="{{ site.url }}{{ site.baseurl }}">{{ dbase.website.strings.sidebar.title }}</a></h2>
+    <h2><a href="{{ site.url }}{{ site.baseurl }}/">{{ dbase.website.strings.sidebar.title }}</a></h2>
   </div>
   <div class="row menu">
     <ul>

@@ -46,16 +46,30 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicon/favicon-32x32.png' | prepend: site.baseurl | prepend: site.url }}">
 
-  <!-- Bootstrap 3 -->
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+{% if site.vendor-off == true %}
+  <!-- #### VENDOR OFFLINE #### -->
+    <!-- Bootstrap 3.3.6 - Offline  -->
+    <link rel="stylesheet" href="{{ '/assets/vendor-off/bootstrap/css/bootstrap.min.css' | prepend: site.baseurl | prepend: site.url }}">
+    <!-- Font Awesome 4.1.0 - Offline -->
+    <link rel="stylesheet" href="{{ '/assets/vendor-off/font-awesome/css/font-awesome.min.css' | prepend: site.baseurl | prepend: site.url }}">
+    <!-- Fonts - Offline -->
+    <link rel="stylesheet" href="{{ '/assets/vendor-off/fonts/space-mono/space-mono.min.css' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="stylesheet" href="{{ '/assets/vendor-off/fonts/open-sans/open-sans.min.css' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="stylesheet" href="{{ '/assets/vendor-off/fonts/gloria-hallelujah/gloria-hallelujah.min.css' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="stylesheet" href="{{ '/assets/vendor-off/fonts/helvetica/helvetica.min.css' | prepend: site.baseurl | prepend: site.url }}">
+{% else %}
+  <!-- #### VENDOR ONLINE #### -->
+    <!-- Bootstrap 3.3.4 - Online -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <!-- Bootstrap 4.0.0 - Online [DEV]-->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> -->
 
-  <!-- Bootstrap 4 -->
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> -->
-
-  <!-- Fonts  -->
-  <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,600i,700,700i,800,800i" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+    <!-- Fonts - Online -->
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/assets/stylesheets/vendors.css' | prepend: site.baseurl | prepend: site.url }}">
+{% endif %}
 
   <!-- Style Default -->
   <link rel="stylesheet" href="{{ '/assets/stylesheets/main.css' | prepend: site.baseurl | prepend: site.url }}">

@@ -9,59 +9,122 @@ $title-toc: "Índice";
 
 /* Variables Colors Screen */
 
-/* Theme: Light - Default */
-$background-featured: #EEEEEE;
+/* Theme:  Pergamin - Default*/
+$background-color: #f3e8ba;
+$background-featured: #f3e8ba;
+$avatar-background-color: #FFF;
 $content-background-color: #FFFFF2;
 $sidebar-background-color: #F4F4F4;
 $footer-background-color: #FFF8F8;
 $footer-border-color: #E8E8E8;
-$blockquote-background: rgba(209, 209, 209, 0.4);
+$blockquote-background: rgba(209, 209, 209, 0.4) !important;
 $links-title-weight: 800;
 $color-links: #D7101E;
 $color: #000000;
+$highlight-color: inherit;
 $highlight-background-color: #DFDFDF;
 $highlight-border-color: #E8E8E8;
 $border-dashed-color: #ACACAC;
+$table-head-background-color: #BEBEBE;
+$table-head-border-color: #FFF;
+$table-body-background-color: #D6D6D6;
+$table-body-border-color: #FFF;
+$contact-boxs-background-color: #FFF;
+$contact-boxs-color: #181818;
+$contact-button-submit-color: #FFF;
 
+/* Theme: Light */
+// $background-color: #FFFFF2;
+// $background-featured: #EEEEEE;
+// $avatar-background-color: #FFFFF2;
+// $content-background-color: #FFFFF2;
+// $sidebar-background-color: #F4F4F4;
+// $footer-background-color: #FFF8F8;
+// $footer-border-color: #E8E8E8;
+// $blockquote-background: rgba(209, 209, 209, 0.4) !important;
+// $links-title-weight: 800;
+// $color-links: #D7101E;
+// $color: #000000;
+// $highlight-color: inherit;
+// $highlight-background-color: #DFDFDF;
+// $highlight-border-color: #E8E8E8;
+// $border-dashed-color: #ACACAC;
+// $table-head-background-color: #BEBEBE;
+// $table-head-border-color: #FFF;
+// $table-body-background-color: #D6D6D6;
+// $table-body-border-color: #FFF;
+// $contact-boxs-background-color: #FFF;
+// $contact-boxs-color: #181818;
+// $contact-button-submit-color: #FFF;
 
 /* Theme: Darkness Blood */
+// $background-color: #151515;
 // $background-featured: #151515;
+// $avatar-background-color: #000;
 // $content-background-color: #000;
 // $sidebar-background-color: #000;
 // $footer-background-color: #000;
 // $footer-border-color: #000;
-// $blockquote-background: #2D2D2D;
+// $blockquote-background: #090b17!important;
 // $links-title-weight: 800;
 // $color-links: #D7101E;
 // $color: #fff;
+// $highlight-color: #dadada;
 // $highlight-background-color: #131313;
 // $highlight-border-color: #131313;
 // $border-dashed-color: #D7101E;
+// $table-head-background-color: rgba(32, 36, 64, 0.8);
+// $table-head-border-color: #000;
+// $table-body-background-color: #2e2d42;
+// $table-body-border-color: #000;
+// $contact-boxs-background-color: transparent;
+// $contact-boxs-color: #FFF;
+// $contact-button-submit-color: #FFF;
 
 /* Theme: Hacker */
+// $background-color: #151515;
 // $background-featured: #151515;
+// $avatar-background-color: #000;
 // $content-background-color: #000;
 // $sidebar-background-color: #000;
 // $footer-background-color: #000;
 // $footer-border-color: #000;
-// $blockquote-background: #2D2D2D;
+// $blockquote-background: #090b17!important;
 // $links-title-weight: 800;
 // $color-links: #109E07;
 // $color: #fff;
+// $highlight-color: #dadada;
 // $highlight-background-color: #0F0F0F;
 // $highlight-border-color: #131313;
 // $border-dashed-color: #109E07;
+// $table-head-background-color: rgba(32, 36, 64, 0.8);
+// $table-head-border-color: #000;
+// $table-body-background-color: #2e2d42;
+// $table-body-border-color: #000;
+// $contact-boxs-background-color: transparent;
+// $contact-boxs-color: #FFF;
+// $contact-button-submit-color: #000;
 
 /* Theme: Darkness Linux */
+// $background-color: #151515;
 // $background-featured: #151515;
+// $avatar-background-color: #FFF;
 // $content-background-color: #000;
 // $sidebar-background-color: #000;
 // $footer-background-color: #0E0E0E;
 // $footer-border-color: #0E0E0E;
-// $blockquote-background: #2D2D2D;
+// $blockquote-background: #090b17!important;
 // $links-title-weight: 800;
 // $color-links: #B9A600;
 // $color: #fff;
+// $highlight-color: #dadada;
 // $highlight-background-color: #0C0C0C;
 // $highlight-border-color: #202020;
 // $border-dashed-color: #B9A600;
+// $table-head-background-color: rgba(32, 36, 64, 0.8);
+// $table-head-border-color: #000;
+// $table-body-background-color: #2e2d42;
+// $table-body-border-color: #000;
+// $contact-boxs-background-color: transparent;
+// $contact-boxs-color: #FFF;
+// $contact-button-submit-color: #000;

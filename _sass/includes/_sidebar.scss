@@ -18,6 +18,7 @@
     .avatar-img{
       border-radius: 50%;
       @include box-shadow(0px, 0px, 20px, rgba(0, 0, 0, 0.2));
+      background-color: $avatar-background-color;
       @if $border-dashed == true {
         border: 2px dashed $border-dashed-color;
       }

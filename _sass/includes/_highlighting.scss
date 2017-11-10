@@ -8,6 +8,7 @@
     padding: 2%;
     border: 1px solid $highlight-border-color;
     code{
+      color: $highlight-color;
       white-space: pre;
       word-wrap: normal;
       overflow-x: auto;

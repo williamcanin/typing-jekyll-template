@@ -28,6 +28,8 @@
           width: 100%;
           border-radius: 0px;
           font-size: 2rem;
+          background-color: $contact-boxs-background-color;
+          color: $contact-boxs-color;
           &:focus{
             border-color: rgba($color-links, .4);
             -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba($color-links, .4);
@@ -36,6 +38,17 @@
         }
         textarea{
           resize: vertical;
+        }
+      }
+      .btn-send{
+        button{
+          color: $contact-button-submit-color;
+          border: none;
+          background-color: $color-links;
+          padding: 10px;
+          &:hover{
+            opacity: 0.7;
+          }
         }
       }
     }

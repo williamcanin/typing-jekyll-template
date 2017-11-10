@@ -27,8 +27,9 @@
           }
         }
         blockquote{
+          border: none !important;
           background-color: $blockquote-background;
-          border-left: 5px solid $color-links;
+          border-left: 5px solid $color-links !important;
           border-top-left-radius: 0px;
           border-bottom-left-radius: 0px;
           border-bottom-right-radius: 0px;
@@ -37,21 +38,24 @@
           margin: 2% 0%;
           background-color: $content-background-color;
           thead{
-            background-color: rgba(#C9C9C9, .8);
+            background-color: $table-head-background-color;
             tr{
               th{
                 padding: 5px;
-                border: 1px solid #fff;
+                border: 2px solid $table-head-border-color;
               }
             }
           }
           tbody{
-            background-color: rgba(#C9C9C9, .5);
-            border: 1px solid #fff;
+            background-color: $table-body-background-color;
+            // border: 1px solid #fff;
             tr{
               td{
                 padding: 5px;
-                border: 1px solid #fff;
+                border: 2px solid $table-body-border-color;
+                code{
+                  background-color: transparent;
+                }
               }
             }
           }

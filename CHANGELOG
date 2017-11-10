@@ -54,3 +54,11 @@ CHANGELOG - Portuguese - Brazil
 ### Adicionado
 - Menu "Search" e "Tags" passam a ser submenu do menu "Blog"
 - Novo recurso para deixar o website em modo de manutenção.
+## [1.0.3] - 2017-11-08]
+### Alterando
+- Correção de estrutura nos SCSS.
+### Adicionado
+- Novo tema "pergamin" como padrão.
+- Melhorias na folha de estilo.
+- "Vendor Offline" é um recurso para desenvolver o projeto com seus arquivos de fornecedores
+  sem uma conexão com a internet. Você pode saber mais acessando o arquivo: "assets/vendor-off/README.txt".

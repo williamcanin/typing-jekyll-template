@@ -12,7 +12,15 @@
       @media (max-width: 1023px) {
         display: none;
       }
-      a{}
+      a{
+        padding: 10px;
+        background-color: $color-links;
+        color: #FFF;
+        text-decoration: none;
+        &:hover{
+          opacity: 0.7;
+        }
+      }
     }
   }
   .content{
