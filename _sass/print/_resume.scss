@@ -17,13 +17,12 @@
             }
           }
           .content{
-            font-family: $font-family-secondary !important;
+            font-family: $font-family-third;
             .table-of-contents{
               display: none !important;
             }
             h1{
               font-size: 4.7rem;
-              font-weight: 800;
             }
             h2{
               font-size: 3.7rem;
@@ -31,18 +30,18 @@
             h3{
               font-size: 3rem;
             }
-            h3,h2{
-              font-weight: 600;
-            }
-            h3,h4{
-              font-weight: 600;
-            }
             /* Avoid printing hrefs when this class is applied */
             a[href]:after {
               content: none !important;
             }
             p,li{
               font-size: 22px !important;
+            }
+            p{
+              strong{
+                font-weight: 600;
+                font-style: normal;
+              }
             }
             blockquote{
               border: none;

@@ -57,6 +57,7 @@ CHANGELOG - Portuguese - Brazil
 ## [1.0.3] - 2017-11-08]
 ### Alterando
 - Correção de estrutura nos SCSS.
+- Corrigido bug na impressão do CV.
 ### Adicionado
 - Novo tema "pergamin" como padrão.
 - Melhorias na folha de estilo.
