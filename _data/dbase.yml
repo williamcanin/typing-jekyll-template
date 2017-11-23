@@ -84,7 +84,7 @@ userdata:
   twitter: "@my_twitter"
   disqus:
     username:
-  # You can add at most 4 social.
+  # You can add at most 4 social. If you do not want 4, you can remove the block containing: title, id, icon, url.
   socials:
     title: Follow Me!
     ga_event: true # Google Analytics Event (Hit). Usage: true | false
@@ -93,14 +93,17 @@ userdata:
         id: github
         icon: fa-github
         url: https://github.com
+
       - title: Twitter
         id: twitter
         icon: fa-twitter
         url: https://twitter.com
+
       - title: Google Plus
         id: gplus
         icon: fa-google-plus
         url: https://plus.google.com
+
       - title: LinkedIn
         id: linkedin
         icon: fa-linkedin

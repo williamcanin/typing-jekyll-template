@@ -81,7 +81,7 @@ $ cd "typing-jekyll-template"
 $ bundle install
 ```
 
-3 - Compiling project:
+3 - Compiling project for deploy:
 
 ```
 $ bundle exec jekyll b
@@ -117,6 +117,8 @@ Your site will be generated in the `_site` folder. Deploy these files to your ho
 
 **Note:** Before deploying to the server, you have to edit the
 Variables: **url** and **baseurl** in the `_config.yml` file according to url Where your site is crooked. You can get more information on how to set up at: [Jekyll Configuration](https://jekyllrb.com/docs/configuration/#serve-command-options)
+
+After doing all the configuration, compile the project with the command "bundle exec jekyll b" and your project can already be sender to your hosting server.
 
 ## Demo
 
