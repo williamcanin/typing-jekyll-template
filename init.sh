@@ -42,6 +42,72 @@
 
 # Import LIBs
 source "./sources/lib/shell/global/functions/utils.lib"
+source "./deploy.conf"
+
+  # Verify exists .git
+function _add_repo_git(){
+  if [[ ! -d "./.git" ]]; then
+    git init
+  fi
+}
+
+# Function to capture Jekyll's build folder.
+function _get_destination(){
+  if [[ -f "$1" ]]; then
+   destination_build="$(cat "$1" | grep destination | cut -d':' -f2 | cut -d' ' -f2)"
+  fi
+}
+
+# Function add/verify remote url
+function _add_remoteurl(){
+  rem_verify="$(sed -n '/url/p' .git/config | cut -d'=' -f2 | cut -d' ' -f2)"
+  if [[ ! -n $rem_verify ]]; then
+    git remote add origin $remoteURL
+  fi
+}
+
+# Enter a specific folder
+function _enter_folder(){
+  if [[ -d "$1" ]]; then
+    cd $1
+  fi
+}
+
+# Function execute pull before push
+function _pull_execute(){
+  if [[ $pull == "yes" ]]; then
+    git pull origin $1
+  fi
+}
+
+# Function build project and deploy project build
+function _deploy_site(){
+
+  if [[ $compile == "yes" ]]; then
+    bundle exec jekyll b
+  fi
+
+  _get_destination "_config.yml"
+  _enter_folder $destination_build
+  _add_repo_git
+  _add_remoteurl
+  exit
+  msg_header "Deploy source files. Wait ..."
+  git add .
+  git  commit -m "$commit - $(date)"
+  git push origin -u $built
+  msg_finish "Done!"
+}
+
+function _deploy_source(){
+  _add_repo_git
+  _add_remoteurl
+  msg_header "Deploy source files. Wait ..."
+  git add .
+  git  commit -m "$commit - $(date)"
+  git push origin -u $source
+  msg_finish "Done!"
+}
 
 # Menu
 case $1 in
@@ -92,17 +158,26 @@ case $1 in
       fi
     fi
     ;;
-  clean_production)
-    msg_header "Clearing compiled project. Wait ..."
+  reset)
+    msg_header "Reset all the pure settings. Wait ..."
+    rm -rf ".git"
     rm -rf "Gemfile.lock"
     rm -rf "_vendor"
-    rm -rf "_site/*"
+    rm -rf "_site"
     rm -rf "assets/javascripts"
     rm -rf "assets/stylesheets"
     msg_finish "Done!"
   ;;
+  deploy:source)
+    _pull_execute $source
+    _deploy_source
+  ;;
+  deploy:site)
+    _pull_execute $built
+    _deploy_site
+  ;;
   *|help)
-     msg_warning "Usage: $0 { install | build | serve | post:blog | post:hello | clean_production }"
+     msg_warning "Usage: $0 { install | build | serve | post:blog | post:hello | deploy:source | deploy:site | reset }"
   ;;
 esac
 
