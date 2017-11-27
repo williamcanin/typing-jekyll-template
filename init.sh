@@ -5,7 +5,7 @@
 #
 #
 # Supported: Unix
-# Release State: 1.0.0
+# Release State: 1.0.1
 # Script Name: init.sh
 
 # Author: William C. Canin
@@ -82,11 +82,11 @@ function _pull_execute(){
 
 # Function get branch for create checkout or no
 function _git_checkout(){
-  branch_get="$(git branch --list | sed -n '/$1/p' | cut -d'*' -f2 | awk '{ gsub (" ", "", $0); print}')"
-  if [[ -n $branch_get ]]; then
+  branch_get="$(git branch --list | sed -n "/$1/p" | cut -d'*' -f2 | awk '{ gsub (" ", "", $0); print}')"
+  if [[ -z $branch_get ]]; then
     git checkout -b $1
   else
-    git checkout $1
+    git checkout $branch_get
   fi
 }
 
@@ -101,6 +101,7 @@ function _deploy_site(){
   _enter_folder $destination_build
   _add_repo_git
   _add_remoteurl
+  _pull_execute $built
   msg_header "Deploy source files. Wait ..."
   _git_checkout $built
   git add .
@@ -185,7 +186,6 @@ case $1 in
     _deploy_source
   ;;
   deploy:site)
-    _pull_execute $built
     _deploy_site
   ;;
   *|help)
@@ -193,3 +193,4 @@ case $1 in
   ;;
 esac
 
+# END

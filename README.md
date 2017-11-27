@@ -125,7 +125,15 @@ After doing all the configuration, compile the project with the command "bundle 
 If you use a UNIX-based operating system, you can deploy the source code and compiled site very simply with the "init.sh" script. 
 You must first configure the "**deploy.conf**" file for your repository settings.
 
-I - *deploy.conf*
+I) After performing the project clone, empty the factory settings with the "reset" command:
+
+**[NOTE IMPORTANT]: Be careful when using this option because it deletes everything that has already been configured. If you do this after you have set up the Git repository (.git), you may need to manually reconcile the GIT commands with pull and fetch. The "init.sh" script does not resolve this issue.**
+
+```
+$ bash init.sh reset
+```
+
+II - *deploy.conf*
 
 [GENERAL]
 
@@ -142,15 +150,15 @@ I - *deploy.conf*
 
 * **compile** - Before deploying the compiled site, it will compile the project. Leave it as "yes" if you want to do this.
 
-II - Commands:
+III - Commands:
 
-1) Deploy source files:
+2) Deploy source files:
 
 ```
 $ bash init.sh deploy:source
 ```
 
-2) Deploy the built site:
+3) Deploy the built site:
 
 ```
 $ bash init.sh deploy:site
