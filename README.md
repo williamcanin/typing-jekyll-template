@@ -71,8 +71,8 @@ The contact page uses the Formspree feature, you will need to have an account in
 1 - Cloning and entering the folder:
 
 ```
-$ git clone https://github.com/williamcanin/typing-jekyll-template.git "typing-jekyll-template"
-$ cd "typing-jekyll-template"
+$ git clone https://github.com/williamcanin/typing-jekyll-template.git "my-site"
+$ cd "my-site"
 ```
 
 2 - Downloading Gems and Jekyll dependencies for Typing:
@@ -119,6 +119,42 @@ Your site will be generated in the `_site` folder. Deploy these files to your ho
 Variables: **url** and **baseurl** in the `_config.yml` file according to url Where your site is crooked. You can get more information on how to set up at: [Jekyll Configuration](https://jekyllrb.com/docs/configuration/#serve-command-options)
 
 After doing all the configuration, compile the project with the command "bundle exec jekyll b" and your project can already be sender to your hosting server.
+
+**O.S Unix**
+
+If you use a UNIX-based operating system, you can deploy the source code and compiled site very simply with the "init.sh" script. 
+You must first configure the "**deploy.conf**" file for your repository settings.
+
+I - *deploy.conf*
+
+[GENERAL]
+
+* **remoteURL** - Put here the git's remote URL.
+* **commit** - Customize the first commit message. By default, you will add the committee date and time.
+* **pull** - If left with the value of "yes", the pull will be performed before the push.
+
+# [ BRANCH CONFIG NAMES ]
+
+* **source** - Put the branch where the project source code file will be.
+* **built** - Put the compiled website branch.
+
+[ BEFORE RAISING THE SITE ]
+
+* **compile** - Before deploying the compiled site, it will compile the project. Leave it as "yes" if you want to do this.
+
+II - Commands:
+
+1) Deploy source files:
+
+```
+$ bash init.sh deploy:source
+```
+
+2) Deploy the built site:
+
+```
+$ bash init.sh deploy:site
+```
 
 ## Demo
 
