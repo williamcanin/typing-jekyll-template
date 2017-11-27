@@ -114,6 +114,7 @@ function _deploy_site(){
 function _deploy_source(){
   _add_repo_git
   _add_remoteurl
+  _pull_execute $source
   _git_checkout $source
   msg_header "Deploy source files. Wait ..."
   git add .
@@ -182,7 +183,6 @@ case $1 in
     msg_finish "Done!"
   ;;
   deploy:source)
-    _pull_execute $source
     _deploy_source
   ;;
   deploy:site)
