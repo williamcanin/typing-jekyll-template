@@ -131,7 +131,8 @@ exclude:
   - init.sh
   - Rakefile
   - dev/
-  - src/
+  - sources/
+  - deploy.conf
 
 #  --- SESSION PRIVATE ---
 

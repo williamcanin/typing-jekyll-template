@@ -69,6 +69,5 @@ CHANGELOG - Portuguese - Brazil
 - Implementando novas instruções no arquivo README.md
 ### Adicionado
 - Novo tema "Light Linux".
-- Recurso de Flip no avatar da sidebar.
 - Script para realizar deploy nas branchs de código fonte e website construido.
 
