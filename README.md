@@ -133,7 +133,7 @@ I - *deploy.conf*
 * **commit** - Customize the first commit message. By default, you will add the committee date and time.
 * **pull** - If left with the value of "yes", the pull will be performed before the push.
 
-# [ BRANCH CONFIG NAMES ]
+[ BRANCH CONFIG NAMES ]
 
 * **source** - Put the branch where the project source code file will be.
 * **built** - Put the compiled website branch.
