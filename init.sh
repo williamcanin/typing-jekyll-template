@@ -80,6 +80,16 @@ function _pull_execute(){
   fi
 }
 
+# Function get branch for create checkout or no
+function _git_checkout(){
+  branch_get="$(git branch --list | sed -n '/$1/p' | cut -d'*' -f2 | awk '{ gsub (" ", "", $0); print}')"
+  if [[ -n $branch_get ]]; then
+    git checkout -b $1
+  else
+    git checkout $1
+  fi
+}
+
 # Function build project and deploy project build
 function _deploy_site(){
 
@@ -91,17 +101,19 @@ function _deploy_site(){
   _enter_folder $destination_build
   _add_repo_git
   _add_remoteurl
-  exit
   msg_header "Deploy source files. Wait ..."
+  _git_checkout $built
   git add .
   git  commit -m "$commit - $(date)"
   git push origin -u $built
   msg_finish "Done!"
 }
 
+# Function start deploy source files
 function _deploy_source(){
   _add_repo_git
   _add_remoteurl
+  _git_checkout $source
   msg_header "Deploy source files. Wait ..."
   git add .
   git  commit -m "$commit - $(date)"
