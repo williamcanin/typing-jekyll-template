@@ -81,7 +81,7 @@ spotify:
 # Settings Default
 include: ['_pages','_blog','_hello']
 markdown: kramdown
-highlighter: pygments
+# highlighter: pygments [DEPRECATED]
 permalink: /blog/:title/
 
 # Build local / Server
