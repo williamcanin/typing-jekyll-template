@@ -7,20 +7,20 @@
 source 'https://rubygems.org'
 ruby RUBY_VERSION
 
-gem 'json'
-gem 'rake'
-gem 'pygments.rb'
-gem 'jekyll'
+gem 'json', '~> 2.1.0'
+gem 'rake', '~> 12.2.1'
+gem 'pygments.rb', '~> 1.2.0'
+gem 'jekyll', '~> 3.4.5'
 group :jekyll_plugins do
-   gem 'jekyll-coffeescript'
-   gem 'jekyll-jsminify'
-   gem 'jekyll-paginate'
-   gem 'jekyll-gist'
-   gem 'jekyll-youtube'
-   gem 'jekyll-tagging'
-   gem 'jemoji'
-   gem 'jekyll-email-protect'
-   gem 'jekyll-spotify-plugin'
+   gem 'jekyll-coffeescript', '~> 1.0.2'
+   gem 'jekyll-jsminify', '~> 0.3.0'
+   gem 'jekyll-paginate', '~> 1.1.0'
+   gem 'jekyll-gist', '~> 1.4.1'
+   gem 'jekyll-youtube', '~> 1.0.0'
+   gem 'jekyll-tagging', '~> 1.1.0'
+   gem 'jemoji', '~> 0.8.1'
+   gem 'jekyll-email-protect', '~> 1.0.3'
+   gem 'jekyll-spotify-plugin', '~> 2.3.6'
 end
 
 # END
