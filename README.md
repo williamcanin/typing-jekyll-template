@@ -24,9 +24,9 @@ Its interface is part of the "Keep It Simple" philosophy, precisely to have a hi
 
 You already have a template page for ‘Blog’, ‘Projects’, ‘Search’, ‘Contact’, ‘Tags’ and ‘Resume’, but you can leave as you want, modifying strings.
 
-The page ‘resume’, you can print using the browser’s Ctrl + P shortcut. The printout will use the Open Sans font and will delete useless parts such as sidebar. You’ll also have templates for posts, and you’ll have to follow model the header the post’s.
+The page ‘resume’, you can print using the browser’s Ctrl + P shortcut. Printing will eliminate useless parts, such as the sidebar. You’ll also have templates for posts, and you’ll have to follow model the header the post’s.
 
-The contact page uses the Formspree feature, you will need to have an account in the service and add your **e-mail** to the `_data / dbase.yml` file. In addition, the entire contents of the `_data / dbase.yml` file should be changed as needed.
+The contact page uses the Formspree feature, you will need to have an account in the service and add your **e-mail** to the `_data/dbase.yml` file. In addition, the entire contents of the `_data/dbase.yml` file should be changed as needed.
 
 ## Feature
 
