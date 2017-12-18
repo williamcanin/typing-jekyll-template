@@ -37,7 +37,7 @@
 # ******************************************************************************
 #
 # Note: Not use with root.
-# Usage: bash ghoost help
+# Usage: bash init.sh help
 #
 
 # Import LIBs
