@@ -70,4 +70,6 @@ CHANGELOG - Portuguese - Brazil
 ### Adicionado
 - Novo tema "Light Linux".
 - Script para realizar deploy nas branchs de código fonte e website construido.
-
+## [1.0.5] - 2017-01-03]
+### Alterando
+- Correção de compatibilidade de gems no arquivo Gemfile
