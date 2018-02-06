@@ -2,12 +2,24 @@
 layout: default
 ---
 
-<div class="page spage">
-  <div class="row title">
-    <h1>{{ page.title }}</h1>
-  </div>
-  <div class="row content">
-    {{ content }}
+<!-- Include Data Base  -->
+{% include liquid/data %}
+
+
+<div class="p-lg-4 layout_page">
+  <div class="container-fluid">
+
+    <div class="layout_page__header">
+      <div class="row">
+        <h1 class="font-weight-bold layout_page__header-title">{{ page.title }}</h1>
+      </div>
+    </div>
+
+    <div class="layout_page__content">
+      <div class="row d-block">
+        {{ content }}
+      </div>
+    </div>
+
   </div>
 </div>
-

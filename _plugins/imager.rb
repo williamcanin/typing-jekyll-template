@@ -21,7 +21,7 @@ module Jekyll
         config_yml = YAML::load_file(File.join(File.dirname(File.expand_path(__FILE__)), '../_config.yml'))
         # Add some of these settings to variables
         @url_website = config_yml['baseurl']
-        @get_dir_img_posts = config_yml['plugin']['imager']['dir_posts']
+        @get_dir_img_posts = config_yml['_plugins']['imager']['dir_posts']
       end
       def initialize(tag_name, input, tokens)
         super
@@ -49,10 +49,10 @@ module Jekyll
         # Creating the structure for image layout. Using Bootstrap.
         if align == "center"
           %(<div class="row imager" style="margin: 40px 0px;">
-            <img class="img-responsive center-block" src="#{@url_website}/#{@get_dir_img_posts}/#{img}" title="#{img}" alt="#{img}">
+            <img class="img-fluid mx-auto d-block" src="#{@url_website}/#{@get_dir_img_posts}/#{img}" title="#{img}" alt="#{img}">
           </div>)
          else
-          %(<img style="float: #{align};" class="img-responsive" src="#{@url_website}/#{@get_dir_img_posts}/#{img}" title="#{img}" alt="#{img}">)
+          %(<img style="float: #{align};" class="img-fluid" src="#{@url_website}/#{@get_dir_img_posts}/#{img}" title="#{img}" alt="#{img}">)
          end
       end
       def split_params(params)

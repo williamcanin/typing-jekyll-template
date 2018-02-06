@@ -3,34 +3,44 @@ layout: compress
 ---
 
 <!-- Include Data Base  -->
-{% include dbase/dbase %}
+{% include liquid/data %}
 
-{% if dbase.website.under_maintenance.enable == false %}
+
+{% if site.maintenance.enable == true %}
+
+  {% include maintenance.html %}
+
+{% else %}
 
 <!DOCTYPE html>
-<html lang="en" itemscope itemtype="http://schema.org/WebPage">
-  {% include pieces/head.html %}
-  <body>
-    <div class="main" id="top">
-      <div class="container wrapper">
-        <div class="row">
-          {% include pieces/sidebar.html %}
-          <div class="col-sm-9 content-main">
-              {% if page.url == '/' %}
-                {% include pieces/hello.html %}
-              {% else %}
-                {{ content }}
-              {% endif %}
-          </div>
-        </div>
-      </div>
-      {% include pieces/footer.html %}
-    </div>
-  {% include scripts/src.html %}
+<html>
+  {% include partials/head.html %}
+<body id="top">
 
-  </body>
+  <div class="layout_default layout_default__bg">
+
+    <div class="container layout_default__container">
+
+      <div class="row">
+
+        <div class="p-0 col-lg-3 sidebar sidebar__bg">
+          {% include partials/sidebar.html %}
+        </div>
+
+        <div class="pt-4 pt-lg-0 col-lg-9 border-l-dashed border-r-dashed layout_default__content">
+          {{ content }}
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+  {% include partials/footer.html %}
+  {% include partials/scripts.html %}
+</body>
 </html>
 
-{% else if  dbase.website.under_maintenance.enable == true %}
-  {% include pieces/under_maintenance.html %}
 {% endif %}

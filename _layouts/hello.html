@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<!-- Include Data Base  -->
+{% include liquid/data %}
+
+<div class="p-lg-4 layout_hello">
+
+  <div class="layout_hello__header">
+
+    <div class="container-fluid">
+      <div class="row">
+        <h1 class="mb-4 font-weight-bold layout_hello__title">{{ page.title }}<span class="layout_hello__cursor">|</span></h1>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="layout_hello__content">
+
+    <div class="container-fluid">
+      <div class="d-block row">
+        {{ content }}
+      </div>
+    </div>
+
+  </div>
+
+</div>

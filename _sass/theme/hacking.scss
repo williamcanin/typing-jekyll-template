@@ -1,0 +1,35 @@
+/* Theme Hacking
+––––––––––––––––––––––––––––––––––––––––––––––––––  */
+
+// Colors
+$bg__full: #212121;
+$bg__elements: #2e2e2e;
+$color-text: #fff;
+$highlight__bgcolor: #0f0f0f;
+$highlight__bordercolor: #000;
+$highlight__color: #fff;
+$layout_postlist__bg: #2a2a2a;
+$dashed_color: #fff;
+$color__links: #ff091b;
+$sidebar__bg: #2e2e2e;
+$sidebar__title-color: #fff;
+$sidebar__img-bg: #302f2f;
+$blockquote__bg: #4e4e4e;
+$table__bg: #494949;
+$thead__bg: #2a2a2a;
+$th__bordercolor: #202020;
+$tbody__bg: #141414;
+$td__bordercolor: #4e4e4e;
+$footer__bg: #111111;
+$footer__bordertop: 0.1rem solid #111111;
+
+
+// Enables functions for theme - true | false
+$hr-dashed-enable: true;
+$border-dashed-enable: true;
+$border-r-dashed-enable: true;
+$border-l-dashed-enable: true;
+$elements__bg-enable: true;
+$layout_postlist__bg-enable: true;
+$layout_default__bg-enable: true;
+$sidebar__bg-enable: true;

@@ -40,8 +40,14 @@
 # Usage: bash init.sh help
 #
 
+# Global variables
+LIB_DIR="./src/lib"
+GETGEMS_PATH="_gems"
+CSS_PATH="assets/css"
+JS_PATH="assets/js"
+
 # Import LIBs
-source "./sources/lib/shell/global/functions/utils.lib"
+source "$LIB_DIR/shell/global/functions/utils.lib"
 source "./deploy.conf"
 
   # Verify exists .git
@@ -138,8 +144,8 @@ case $1 in
       bundle exec jekyll b
       msg_finish "Done!"
     ;;
-  post:blog)
-    if [[ ! -f "$(ls _vendor/bundle/ruby/*/bin/rake)" ]]; then
+  post)
+    if [[ ! -f "$(ls $GETGEMS_PATH/bundle/ruby/*/bin/rake)" ]]; then
       msg_warning "You need Rake to continue. Install the project dependencies first."
       msg_warning "Command: $0 install"
       exit 1
@@ -150,36 +156,37 @@ case $1 in
       if [[ -z "${title_}" ]]; then
         msg_error "The TITLE variable is required! Try again."
       else
-        bundle exec rake post:blog TITLE="${title_}"
+        bundle exec rake post TITLE="${title_}"
         msg_finish "Done!"
       fi
     fi
     ;;
-  post:hello)
-    if [[ ! -f "$(ls _vendor/bundle/ruby/*/bin/rake)" ]]; then
-      msg_warning "You need Rake to continue. Install the project dependencies first."
-      msg_warning "Command: $0 install"
-      exit 1
-    else
-      msg_header "Creating new post \"HELLO\""
-      msg_header "Add TITLE:"
-      read -p "> " title_
-      if [[ -z "${title_}" ]]; then
-        msg_error "The TITLE variable is required! Try again."
+    page)
+      if [[ ! -f "$(ls $GETGEMS_PATH/bundle/ruby/*/bin/rake)" ]]; then
+        msg_warning "You need Rake to continue. Install the project dependencies first."
+        msg_warning "Command: $0 install"
+        exit 1
       else
-        bundle exec rake post:hello TITLE="${title_}"
-        msg_finish "Done!"
+        msg_header "Creating new post \"BLOG\""
+        msg_header "Add TITLE:"
+        read -p "> " title_
+        if [[ -z "${title_}" ]]; then
+          msg_error "The TITLE variable is required! Try again."
+        else
+          bundle exec rake page TITLE="${title_}"
+          msg_finish "Done!"
+        fi
       fi
-    fi
-    ;;
+      ;;
   reset)
     msg_header "Reset all the pure settings. Wait ..."
     rm -rf ".git"
     rm -rf "Gemfile.lock"
-    rm -rf "_vendor"
-    rm -rf "_site"
-    rm -rf "assets/javascripts"
-    rm -rf "assets/stylesheets"
+    rm -rf "$GETGEMS_PATH"
+    _get_destination "_config.yml"
+    rm -rf "$destination_build"
+    rm -rf "$CSS_PATH"
+    rm -rf "$JS_PATH"
     msg_finish "Done!"
   ;;
   deploy:source)
@@ -189,7 +196,7 @@ case $1 in
     _deploy_site
   ;;
   *|help)
-     msg_warning "Usage: $0 { install | build | serve | post:blog | post:hello | deploy:source | deploy:site | reset }"
+     msg_warning "Usage: $0 { install | build | serve | post:blog | deploy:source | deploy:site | reset }"
   ;;
 esac
 

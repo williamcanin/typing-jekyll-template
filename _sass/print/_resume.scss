@@ -1,61 +1,58 @@
+/* Stylesheets for print page Resume
+---------------------------------------------------------------*/
+
 @media print {
-  .main{
-    .wrapper{
-      .sidebar{
-        display: none;
+  .sidebar,.footer, #markdown-toc{
+    display: none;
+  }
+  .layout_default__content{
+    border: none;
+  }
+
+  .layout_resume{
+    &__header, &__excerpt{
+      display: none;
+    }
+    &__content{
+      font-family: $font-family__third;
+      color: $color-text;
+      a,code{
+        color: $color-text;
       }
-      .content-main{ /* CONTENT MAIN */
-        width: auto;
-        margin: 0px auto;
-        padding: 0;
-        border: none;
-        .resume{
-          .header{
-            .title{
-              display: none;
-              h1{}
-            }
-            .btn-print{
-              display: none;
-              a{}
-            }
-          }
-          .content{
-            font-family: $font-family-third;
-            .table-of-contents{
-              display: none !important;
-            }
-            h1{
-              font-size: 4.7rem;
-            }
-            h2{
-              font-size: 3.7rem;
-            }
-            h3{
-              font-size: 3rem;
-            }
-            /* Avoid printing hrefs when this class is applied */
-            a[href]:after {
-              content: none !important;
-            }
-            p,li{
-              font-size: 22px !important;
-            }
-            p{
-              strong{
-                font-style: normal;
-              }
-            }
-            blockquote{
-              border: none;
-              background-color: transparent;
-            }
-          }
+      /* Avoid printing hrefs when this class is applied */
+      a[href]:after {
+        content: none !important;
+      }
+      .badge-plugin{
+        box-shadow: none !important;
+        border: 1px solid $color-text !important;
+        color: $color-text !important;
+        background-color: white !important;
+      }
+      li{
+        margin: 8px 0px;
+      }
+      p{
+        strong{
+          font-style: normal;
         }
       }
-    }
-    .footer, .license{
-      display: none;
+      blockquote{
+        border: none;
+        background-color: transparent;
+      }
+      h1,h2,h3{
+        font-weight: bold;
+      }
+      h1{
+        font-size: 2.9rem;
+      }
+      h2{
+        font-size: 2.4rem;
+      }
+      h3{
+        font-size: 1.79rem;
+      }
     }
   }
 }

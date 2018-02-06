@@ -1,0 +1,85 @@
+---
+layout: default
+---
+
+<!-- Include Data Base  -->
+{% include liquid/data %}
+
+<div class="p-lg-4 layout_tag">
+
+    <div class="layout_tag__header">
+      <div class="container-fluid">
+        <div class="row">
+          <h1 class="font-weight-bold layout_tag__title">{{ loadData.website.content.tag.header.title }}&nbsp;{{ page.tag }}</h1>
+        </div>
+
+        {% if loadData.website.content.tag.header.description %}
+        <div class="row d-block">
+          <div class="layout_tag__description">
+            {{ loadData.website.content.tag.header.description }}
+          </div>
+        </div>
+        {% endif %}
+
+      </div>
+    </div>
+
+  <!-- Loop of posts -->
+      {% for post in page.posts %}
+      <div class="mt-4 mb-4 layout_tag__content">
+
+        <div class="container-fluid">
+
+          <div class="row">
+
+            {% if site.content.tagpost.date.enable == true %}
+            <div class="col-8 col-lg-4 offset-lg-0 col-sm-6">
+              <div class="row justify-content-start">
+                <time class="layout_tag__time">
+                  {% if site.content.icons.enable == true %}<i class="far fa-calendar-alt"></i>{% endif %}
+                  {% datelang post %}
+                  {% include datelang/post %}
+                </time>
+              </div>
+            </div>
+            {% endif %}
+
+            {% if jekyll.environment == 'production' and
+            site.content.tagpost.comments.enable == true and
+            page.comments != false and
+            loadData.userdata.disqus.username %}
+            <div class="col-4 col-lg-3 offset-lg-5 col-sm-6">
+              <div class="row justify-content-end">
+                <div class="layout_tag__comments">
+                    {% if site.content.icons.enable == true %}<i class="fas fa-comments"></i>{% endif %}
+                    <span class="disqus-comment-count" data-disqus-identifier="{{ post.url }}"></span>
+                </div>
+              </div>
+            </div>
+            {% endif %}
+          </div>
+
+          <div class="row">
+            <a class="layout_tag__link" href="{{ post.url | prepend: site.baseurl }}"><h1 class="font-weight-bold">{{ post.title }}</h1></a>
+          </div>
+
+          {% if site.content.tagpost.tags.enable == true %}
+          <div class="mt-3 mb-3 row">
+            {% if site.content.icons.enable == true %}<i class="fa fa-tags"></i>{% endif %}&nbsp;Tags:&nbsp;
+            <span class="layout_tag__tags">{{ post | tags }}</span>
+          </div>
+          {% endif %}
+
+          {% if site.content.tagpost.comments.enable == true %}
+          <div class="row">
+            <p class="layout_tag__excerpted">{{ post.excerpted | strip_html | truncatewords:26 }}
+              <a href="{{ post.url | prepend: site.baseurl }}">Continue</a>
+            </p>
+          </div>
+          {% endif %}
+
+        </div>
+      </div>
+      {% endfor %}
+
+</div>

@@ -1,55 +1,16 @@
-.resume{
-  @media (max-width: 768px) {
-    padding: 20px;
+/* Stylesheets for layout Resume
+––––––––––––––––––––––––––––––––––––––––––––––––––  */
+
+.layout_resume{
+  &__excerpt{
+    margin: 5% 0% 15% 0%;
+    &-text{}
   }
-  .header{
-    .title{
-      padding: 0;
-       h1{}
-    }
-    .btn-print{
-      text-align: center;
-      @media (max-width: 1023px) {
-        display: none;
-      }
-      a{
-        padding: 10px;
-        background-color: $color-links;
-        color: #FFF;
-        text-decoration: none;
-        &:hover{
-          opacity: 0.7;
-        }
-      }
-    }
-  }
-  .content{
-    .table-of-contents{
-      margin-top: 5%;
-      margin-bottom: 10%;
-      margin-left: 0;
-      h1{}
-      ul{
-        li{
-          a{}
-        }
-      }
-    }
+  &__content{
+    font-size: 1.2rem;
     h2{
-      border-bottom: 0.1rem solid #757575;
+      border-bottom: 1px solid $color-text;
       padding-bottom: 5px;
-      &:before{
-        content: "\f0da"; /* FontAwesome Unicode */
-        font-family: FontAwesome;
-        display: inline-block;
-        font-size: 2.5rem;
-        // margin-left: -1.3em; /* same as padding-left set on li */
-        width: 1.3em; /* same as padding-left set on li */
-        @if $background-featured-enable == true {
-          margin-left: -0.8em;
-          width: 0.8em;
-        }
-      }
     }
   }
 }

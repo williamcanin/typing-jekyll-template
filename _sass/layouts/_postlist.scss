@@ -1,90 +1,31 @@
-.postlist{
-  padding: 3%;
-  a{
-    color: $color-links;
+/* Stylesheets for layout Postlist - Blog Home
+––––––––––––––––––––––––––––––––––––––––––––––––––  */
+
+.layout_postlist{
+
+  background-color: $layout_postlist__bg;
+
+  &__header{}
+  &__description{
+    font-size: 1.2rem;
+  }
+  &__content{
+    @if $layout_postlist__bg-enable == true {
+      background-color: $bg__elements;
+      padding: 1.5rem !important;
+    }
+  }
+
+  &__link{
     text-decoration: underline;
-  }
-  .title-description{
+    letter-spacing: 0.15rem;
     h1{
-      font-weight: 800;
-    }
-    p{}
-  }
-  .meta{
-    .col-sm-6{
-      text-align: center;
-      padding: 2% 0% 8%;
-      a{
-        font-size: 2rem;
-      }
+      font-size: 2.1rem;
     }
   }
-  .content{
-    .wrap{
-      @media (max-width: 1023px){
-        margin: 5% 0%;
-      }
-      @media (min-width: 1024px) {
-        margin: 1.3% 0%;
-        padding: 15px 0px;
-        @if $background-featured-enable == true {
-          background-color: $background-featured;
-          padding: 15px 10px;
-        } @else {
-          background-color: transparent;
-        }
-      }
-      .time-and-count-comments{
-        @media (max-width: 768px) {
-          display: none;
-        }
-        .time{
-          padding: 5px;
-          @if $background-featured-enable == true {
-            background-color: $background-featured;
-          } @else {
-            background-color: transparent;
-          }
-        }
-        .count-comments{
-          float: right;
-          i{
-            margin-right: 5px;
-          }
-          span{}
-        }
-      }
-      .url{
-        h1{
-          margin: 0px;
-          font-size: 2.8rem;
-          line-height: 4rem;
-          font-weight: $links-title-weight;
-          @media (max-width: 768px) {
-            font-weight: $links-title-weight;
-            padding: 12px 0px;
-            font-size: 2.68rem;
-            float: left;
-            .fa-book{
-              display: none;
-            }
-          }
-          a{
-            color: $color-links;
-            text-decoration: underline;
-            // font-weight: 800;
-          }
-        }
-        .excerpted{
-          @media (max-width: 768px) {
-            display: none;
-          }
-          .continue{
-            padding: 10px;
-            font-size: 1.5rem;
-          }
-        }
-      }
-    }
+
+  &__excerpted{
+    font-size: 1.1rem;
   }
+
 }

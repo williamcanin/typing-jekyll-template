@@ -1,56 +1,20 @@
-.contact{
-  font-family: $font-family-primary;
-  padding: 3%;
-  a{
-    color: $color-links;
-    text-decoration: underline;
+/* Stylesheets for layout Contact
+––––––––––––––––––––––––––––––––––––––––––––––––––  */
+
+.layout_contact{
+  &__description{
+    font-size: 1.2rem;
   }
-  .title{
-    h1{
-      font-weight: 800;
-      @media (max-width: 480px) {
-        font-size: 2.9rem;
-      }
-      span{
-        font-size: 10px;
-        float: right;
-      }
+  &__input,&__textarea{
+    margin: 8px 0px;
+    border: 1px solid $color__links;
+    border-radius: 0px;
+    &:focus,&:hover,&:active,&:visited{
+      box-shadow: none !important;
+      border: 1px solid $color__links !important;
     }
   }
-  .content{
-    padding: 15px 5px;
-    form{
-        margin: 10px 10px;
-      .row{
-        padding: 10px 0px;
-        .typing{
-          display: block;
-          width: 100%;
-          border-radius: 0px;
-          font-size: 2rem;
-          background-color: $contact-boxs-background-color;
-          color: $contact-boxs-color;
-          &:focus{
-            border-color: rgba($color-links, .4);
-            -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba($color-links, .4);
-            box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba($color-links, .4);
-          }
-        }
-        textarea{
-          resize: vertical;
-        }
-      }
-      .btn-send{
-        button{
-          color: $contact-button-submit-color;
-          border: none;
-          background-color: $color-links;
-          padding: 10px;
-          &:hover{
-            opacity: 0.7;
-          }
-        }
-      }
-    }
+  &__vendor{
+    font-size: 0.8rem;
   }
 }

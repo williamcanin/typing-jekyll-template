@@ -1,0 +1,20 @@
+/*
+––––––––––––––––––––––––––––––––––––––––––––––––––  */
+
+
+@media (max-width: 768px){
+  // <hr> - dashed
+  .hr-dashed{
+    display: none;
+  }
+  // border-right - dashed
+  .border-r-dashed, .border-l-dashed{
+    border: none !important;
+  }
+
+  .btn-typing{
+    min-width: 80px;
+    padding: 5px;
+    margin: 4px auto;
+  }
+}

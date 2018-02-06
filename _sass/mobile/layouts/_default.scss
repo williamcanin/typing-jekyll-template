@@ -1,0 +1,13 @@
+/* Stylesheets for layout Default - Mobile
+––––––––––––––––––––––––––––––––––––––––––––––––––  */
+
+@media (max-width: 768px){
+  .layout_default{
+    &__dashed{
+      border: none;
+    }
+    &__container{
+      max-width: 100%;
+    }
+  }
+}

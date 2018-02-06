@@ -17,81 +17,122 @@
 baseurl: "/typing-jekyll-template" # the subpath of your site, e.g. /blog
 url: "https://williamcanin.me" # the base hostname & protocol for your site, e.g. http://example.com
 
-# Add Avatar in: Sidebar or page Hello, and configure.
-avatar:
-  sidebar: true
-  hello: false
-  size:
+
+### BEGIN - This property enables and disables template features. Use to taste.
+maintenance:
+  enable: false
+google:
+  analytics:
     enable: true
-    value: 165
-  border:
-    enable: false
-    radius: 50
-    value: 1
-
-# Settings to share the post on the social networks below.
-share_social:
-  enable: true
-  facebook: true
-  linkedin: true
-  twitter: true
-  googleplus: true
-
-
-# Enable or disable icons on every website. Use:  true | false
-screen:
+sidebar:
+  avatar:
+    enable: true
   icons:
     enable: true
+  socials:
+    enable: true
+content:
+  icons:
+    enable: true
+  postlist:
+    date:
+      enable: true
+    expected:
+      enable: true
+    tags:
+      enable: true
+    comments:
+      enable: true
+  tagpost:
+    date:
+      enable: true
+    expected:
+      enable: true
+    tags:
+      enable: true
+    comments:
+      enable: true
+  post:
+    author:
+      enable: true
+      avatar:
+        enable: true
+    share:
+      enable: true
+      facebook:
+        enable: true
+      linkedin:
+        enable: true
+      twitter:
+        enable: true
+      googleplus:
+        enable: true
+    day_quote:
+      enable: true
+    comments:
+      enable: true
+### END - This property enables and disables template features. Use to taste.
+
+
+
+
+
+
+
+
+### EXTRA BEGIN - These properties are extra features, such as built-in third-party plugins.
+jektify:
+  enable: true
+  open: true
+  toggle:
+    enable: true
+  spotify:
+    user: williamcanin
+    text: See me no Spotify
+  sass:
+    jekyll: true
+    other:
+      dir: "way/to/your/SASS"
+  title:
+    enable: true
+    text: "Jektify"
+  description:
+    enable: true
+    text: |
+      Jekyll plugin to generate html snippets for embedding Spotify Musics.
+      To listen to the full song, open your Spotify and start these musics.
 
 # Settings for the plugins in the _plugins folder.
-plugin:
+_plugins:
   imager:
-    dir_posts: assets/images/posts
+    dir_posts: "assets/images/posts"
   # To see language support, go to the plugin "_plugins/reading_time.rb"
   reading_time:
     locale: en_US
   # To see language support, go to the plugin "_plugins/datelang.rb"
   datelang:
     locale: en_US
-    reload: true
-
-# Plugin music.
-spotify:
-  enable: true
-  open: true
-  theme: "light" # dark | light
-  sass:
-    jekyll: true
-    dir: "_sass"
-  title:
-    enable: true
-    text: "Jekyll Spotify Plugin"
-  content:
-    enable: true
-    text: |
-      Jekyll plugin to generate html snippets for embedding Spotify Musics.
-      To listen to the full song, open your Spotify and start these musics.
+    reload: false
+### EXTRA END - These properties are extra features, such as built-in third-party plugins.
 
 
 
 
 
-#  --- SESSION PRIVATE [Do not change anything in the private session unless you know what you are doing.] ---
+
+
+### BEGIN - [IRRELEVANT PROPERTIES] - These properties have no need to change unless you know what you are doing. WATCH OUT!
 
 # Settings Default
-include: ['_pages','_blog','_hello']
+include: ['_pages']
 markdown: kramdown
-# highlighter: pygments [DEPRECATED]
+highlighter: pygments
 permalink: /blog/:title/
 
 # Build local / Server
 destination: _site
 port: 4000
 host: localhost
-
-# [ Vendor Off ]
-# Using: true | false
-vendor-off: true
 
 # Config SASS
 sass:
@@ -110,7 +151,7 @@ compress_html:
   profile: false
 
 # Config plugin 'jekyll-tagging'
-tag_page_layout: tag_page
+tag_page_layout: tag
 tag_page_dir: blog/tags
 tag_permalink_style: pretty
 
@@ -120,6 +161,9 @@ gist:
 
 # Exclude files (or folders) in compilation.
 exclude:
+  - development
+  - src
+  - vendor
   - Gemfile
   - Gemfile.lock
   - screenshot.png
@@ -130,12 +174,5 @@ exclude:
   - README.md
   - init.sh
   - Rakefile
-  - dev/
-  - sources/
   - deploy.conf
-
-#  --- SESSION PRIVATE ---
-
-
-
-
+### END - [IRRELEVANT PROPERTIES] - These properties have no need to change unless you know what you are doing. WATCH OUT!

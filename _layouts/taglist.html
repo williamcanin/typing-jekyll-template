@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+{% include liquid/data %}
+
+<div class="p-lg-4 layout_taglist">
+  <div class="container-fluid">
+
+    <div class="row">
+      <h1 class="font-weight-bold layout_taglist__title">{{ page.title }}</h1>
+    </div>
+
+    <div class="row d-block">
+      <div class="layout_taglist__description">{{ content }}</div>
+    </div>
+
+    <div class="layout_taglist__content">
+
+      <div class="row justify-content-md-center">
+        {% for tag in site.tags %}
+         <a class="m-1 btn btn-link btn-typing layout_taglist__link" href="{{ '/blog/tags/' | prepend: site.baseurl | prepend: site.url }}/{{ tag[0] }}"><span class="mr-2 badge badge-pill badge-light layout_taglist__badge">{{ tag[1].size }}</span>{{ tag[0] }}</a>
+        {% endfor %}
+      </div>
+
+    </div>
+
+  </div>
+</div>

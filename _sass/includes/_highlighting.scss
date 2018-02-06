@@ -1,14 +1,17 @@
+/* Stylesheets for include Highlight
+--------------------------------------------------------*/
+
 .highlight{
   margin: 3% 0%;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
   pre{
-    background-color: $highlight-background-color;
+    background-color: $highlight__bgcolor;
     border-radius: 0px;
     padding: 2%;
-    border: 1px solid $highlight-border-color;
+    border: 1px solid $highlight__bordercolor;
     code{
-      color: $highlight-color;
+      color: $highlight__color;
       white-space: pre;
       word-wrap: normal;
       overflow-x: auto;
@@ -97,4 +100,3 @@
       .il { color: #666666 } /* Literal.Number.Integer.Long */
     }
   }
-

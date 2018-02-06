@@ -1,0 +1,25 @@
+/* Stylesheets for layout Search - Mobile
+––––––––––––––––––––––––––––––––––––––––––––––––––  */
+
+@media (max-width: 768px) {
+  .layout-search{
+    &__input{
+      font-size: 1.37rem;
+    }
+    &__data{
+      list-style: none;
+      margin: 12px 0px;
+      font-size: 1.3rem;
+      padding: 0 15px;
+      li{
+        margin: 12px 0px;
+      }
+      &__entry-date{
+        font-size: 0.8rem;
+        padding: 4px;
+        margin-left: 8px;
+        border-radius: 0px;
+      }
+    }
+  }
+}

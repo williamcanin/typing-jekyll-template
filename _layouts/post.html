@@ -3,70 +3,150 @@ layout: default
 ---
 
 <!-- Include Data Base  -->
-{% include dbase/dbase %}
+{% include liquid/data %}
 
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-<!--  Next Version  <div class="readmode">
-    <a id="btn-readmode" class="pull-right btn btn-default btn-readmode" href="">Read Mode</a>
-  </div> -->
-  <div class="row title">
-    <h1>{{ page.title }}</h1>
-  </div>
-  <div class="row meta" datetime="{{ page.date | date:'%Y-%m-%d' }}">
-    <time class="col-sm-6 datetime">
-      {% if site.screen.icons.enable == true %}<i class="fa fa-calendar" aria-hidden="true"></i>{% endif %}<span class="text {% if site.screen.icons.enable == true %} tmargin {% endif %}">{% datelang page %}{% include datelang/page %}</span>
-    </time>
-    {% if page.comments and dbase.userdata.disqus.username %}
-    <div class="col-sm-6 count-comments">
-      <span class="wrap">{% if site.screen.icons.enable == true %}<i class="fa fa-comments" aria-hidden="true"></i>&nbsp;{% endif %}<a href="#comments" data-disqus-identifier="{{ page.url }}">0</a></span>
+<div class="p-lg-4 mt-4 mt-lg-0 layout_post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <div class="container-fluid">
+
+    <div class="row">
+      <h1 class="font-weight-bold layout_post__title">{{ page.title }}</h1>
+    </div>
+
+    <div class="mb-2 mt-2 mb-lg-4 mt-lg-4 layout_post__date">
+      <div class="row">
+        <div class="{% if site.content.post.comments.enable == true and page.comments != false and loadData.userdata.disqus.username %} col-8 col-lg-4 offset-lg-0 col-sm-6 {% else %} col-12 col-lg-12 offset-lg-0 col-sm-12 {% endif %}">
+          <div class="row justify-content-start">
+            <time class="layout_post__time">
+              {% if site.content.icons.enable == true %}<i class="far fa-calendar-alt"></i>{% endif %}
+              {% datelang page %}{% include datelang/page %}
+            </time>
+          </div>
+        </div>
+
+        {% if jekyll.environment == 'production' and
+        site.content.post.comments.enable == true and
+        page.comments != false and
+        loadData.userdata.disqus.username %}
+        <div class="col-4 col-lg-4 offset-lg-4 col-sm-6">
+          <div class="row justify-content-end">
+            <div class="layout_postlist__comments">
+              <a href="#layout_post__disqus" data-disqus-identifier="{{ page.url }}"></a></span>
+            </div>
+          </div>
+        </div>
+        {% endif %}
+
+      </div>
+    </div>
+
+    <div class="layout_post__tags">
+      <div class="row">
+        {% if site.content.icons.enable == true %}<i class="fa fa-tags"></i>{% endif %}&nbsp;Tags:&nbsp;
+        {% for tag in page.tags %}
+          <a class="layout-post__tags-link" href="{{ '/blog/tags/' | prepend: site.baseurl | prepend: site.url }}/{{ tag }}">{{ tag }}</a>,&nbsp;
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="layout-post__reading_time">
+      <div class="row">
+        {{ page.content | reading_time }}
+      </div>
+    </div>
+
+    <div class="layout_post__content">
+      <div class="row d-block">
+        {{ content }}
+      </div>
+    </div>
+
+
+    {% if site.content.post.day_quote.enable == true  %}
+    <div class="layout_post__dayquote">
+      <div class="row">
+        <h2 class="layout_post__dayquote-title">{{ page.day_quote.title }}</h2>
+      </div>
+      <div class="row">
+        <p class="layout_post__dayquote-description">{{ page.day_quote.description }}</p>
+      </div>
     </div>
     {% endif %}
-  </div>
-  <div class="row tag-list">
-    {% if site.screen.icons.enable == true %}<i class="fa fa-tags" aria-hidden="true"></i>{% else %}Tags: {% endif %}
-    {% for tag in page.tags %}
-      <a href="{{ '/blog/tags/' | prepend: site.baseurl | prepend: site.url }}/{{ tag }}">{{ tag }}</a>
-    {% endfor %}
-  </div>
-  <div class="row">
-    {{ page.content | reading_time }}
-  </div>
-  <div class="row content">
-    {{ content }}
-    {% include pieces/share_social.html %}
 
-    <div class="day-quote">
-      <div class="title">
-        {{ page.day_quote.title }}
+
+    {% if site.content.post.share.enable == true  %}
+    <div class="layout_post__share">
+      <div class="row justify-content-center">
+        <h2>{{ loadData.website.content.post.share.title }}</h2>
       </div>
-      <div class="content">
-        {{ page.day_quote.content }}
+      <div class="row justify-content-center">
+        <div class="offset-0 offset-sm-0 offset-md-0 offset-lg-2"></div>
+
+        {% if site.content.post.share.facebook.enable == true %}
+        <div class="text-center col-12 col-sm-3 col-md-3 col-lg-2">
+          <a class="btn btn-link btn-typing layout_post__share-fb" href="#" title="{{ dbase.website.strings.share_social.facebook.title }}" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),'facebook-share-dialog','width=626,height=436');return false;">Facebook</a>
+        </div>
+        {% endif %}
+
+        {% if site.content.post.share.linkedin.enable == true %}
+        <div class="text-center col-12 col-sm-3 col-md-3 col-lg-2">
+          <a class="btn btn-link btn-typing layout_post__share-ln" href="http://www.linkedin.com/cws/share?url={{ page.url | prepend: site.baseurl | prepend: site.url }}" onclick="window.open(this.href,&quot;popupwindow&quot;,&quot;status=0,height=500,width=700,resizable=0,top=50,left=100&quot;);return false;" target="_blank" title="{{ dbase.website.strings.share_social.linkedin.title }}">Linkedin</a>
+        </div>
+        {% endif %}
+
+        {% if site.content.post.share.twitter.enable == true %}
+        <div class="text-center col-12 col-sm-3 col-md-3 col-lg-2">
+          <a class="btn btn-link btn-typing layout_post__share-tw" href="https://twitter.com/intent/tweet?text={{ page.url | prepend: site.baseurl | prepend: site.url }} - {{ page.title }} by {{ dbase.userdata.twitter }}" target="_blank" title="{{ dbase.website.strings.share_social.twitter.title }}">Twitter</a>
+        </div>
+        {% endif %}
+
+        {% if site.content.post.share.googleplus.enable == true %}
+        <div class="text-center col-12 col-sm-3 col-md-3 col-lg-2">
+          <a class="btn btn-link btn-typing layout_post__share-gp" href="https://plus.google.com/share?url={{ page.url | prepend: site.baseurl | prepend: site.url }}" onclick="window.open(this.href,&quot;popupwindow&quot;,&quot;status=0,height=500,width=700,resizable=0,top=50,left=100&quot;);return false;" target="_blank" title="{{ dbase.website.strings.share_social.gplus.title }}">Google+</a>
+        </div>
+        {% endif %}
+
+        <div class="offset-0 offset-sm-0 offset-md-0 offset-lg-2"></div>
       </div>
     </div>
-    <div class="row author">
-      <div class="col-sm-2 image">
-        <img class="img-responsive center-block" src="{{ '/assets/images/author' | prepend: site.baseurl | prepend: site.url }}/{{ dbase.website.author.image }}" alt="">
-      </div>
-      <div class="col-sm-10 bio">
-        <p class="title">{{ dbase.website.strings.post.author.title }}</p>
-        <p class="name">{{ dbase.website.strings.post.author.name }}</p>
-        <p class="content">{{ dbase.website.strings.post.author.bio }}</p>
-      </div>
-    </div>
-    <div class="disqus" id="comments">
-    {% if page.comments and dbase.userdata.disqus.username %}
-      <div class="title">
-        <h3><i class="fa fa-comments" aria-hidden="true"></i>&nbsp;{{ dbase.website.strings.comments.title }}</h3>
-      </div>
-      <div class="content">
-        {% include scripts/disqus_comments.html %}
-      </div>
-    {% else %}
-      <div class="title">
-        <h3><i class="fa fa-comments" aria-hidden="true"></i>&nbsp;{{ dbase.website.strings.comments.disable }}</h3>
-      </div>
     {% endif %}
-    </div>
 
-  </div>
-</article>
+
+    {% if site.content.post.author.enable == true and
+      loadData.website.content.post.author.title and
+      loadData.website.content.post.author.name and
+      loadData.website.content.post.author.description %}
+    <div class="layout_post__author">
+      <div class="row">
+        {% if site.content.post.author.avatar.enable == true and loadData.website.content.post.author.avatar %}
+        <div class="p-0 col-6 offset-3 col-lg-2 offset-lg-0">
+          <img class="img-fluid border-dashed layout_post__author-img" src="{{ '/assets/images/author' | prepend: site.baseurl }}/typing.svg" width="140" height="auto" alt="{{ loadData.website.content.post.author.name }}">
+        </div>
+        {% endif %}
+        <div class="col-12 {% if site.content.post.author.avatar.enable == true and loadData.website.content.post.author.avatar %} col-lg-10 {% else %} p-0 col-lg-12 {% endif %}">
+          <p class="layout_post__author-title">{{ loadData.website.content.post.author.title }}</p>
+          <h2 class="font-weight-bold layout_post__author-name">{{ loadData.website.content.post.author.name }}</h2>
+          <p class="layout_post__author-description">{{ loadData.website.content.post.author.description }}</p>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+    {% if jekyll.environment == 'production' and
+    site.content.post.comments.enable == true and
+    page.comments != false and
+    loadData.userdata.disqus.username %}
+    <div id="layout_post__disqus" class="layout_post__disqus">
+      <div class="mt-4 mb-4 row justify-content-center">
+        {% if site.content.icons.enable == true %}<i class="fas fa-comments layout_post__disqus-icon"></i>{% endif %}
+        <h2 class="ml-3 layout_post__disqus-title">{{ loadData.website.content.post.comments.title }}</h2>
+      </div>
+      <div class="layout_post__disqus-content">
+          <div id="disqus_thread"></div>
+          <script src="{{ '/assets/js/disqus_comments.js' | prepend: site.baseurl | prepend: site.url }}" charset="utf-8"></script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+      </div>
+    </div>
+    {% endif %}
+
+</div>

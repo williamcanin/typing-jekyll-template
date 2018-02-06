@@ -1,37 +1,21 @@
-html,body{
-  background-color: $background-color;
-  color: $color;
-  a{
-    &:focus,&:active,&:hover{
-      outline: none;
+/* Stylesheets for layout Default
+––––––––––––––––––––––––––––––––––––––––––––––––––  */
+
+.layout_default{
+  padding-bottom: 40px !important;
+  font-family: $font-family__primary;
+
+  &__bg{
+    @if $layout_default__bg-enable == true {
+      background-color: $bg__full;
     }
   }
-}
-.main{
-  font-family: $font-family-primary;
-  background-color: transparent;
 
-  .wrapper{
-    @media (min-width: 1122px) {
-      padding: 0% 5%;
-    }
-    .sidebar-redmode{
-      display: none;
-    }
-    .content-main{
-      background-color: $content-background-color;
-      margin-bottom: 3%;
-      font-size: 1.7rem;
-      min-height: 720px;
-      @media (min-width: 769px) {
-        @if $border-dashed == true {
-          border-left: 2px dashed $border-dashed-color;
-        }
-      }
+  &__content{
+    background-color: $layout_postlist__bg;
+    p{
+      font-size: 1.2rem;
     }
   }
-}
 
-.full-redmode{
-  width: 100%;
 }

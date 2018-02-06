@@ -22,7 +22,7 @@ module Jekyll
       # Loading and Capture config file _config.yml
       data_hash_yml = YAML::load_file(File.join(File.dirname(File.expand_path(__FILE__)), '../_config.yml'))
       # Captures informed locale for plugin
-      locale = data_hash_yml['plugin']['reading_time']['locale']
+      locale = data_hash_yml['_plugins']['reading_time']['locale']
 
       # Capture data
       longtext = data_hash_json[locale]['ReadingTime']['longtext']

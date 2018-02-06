@@ -1,8 +1,7 @@
-_site
-node_modules
-.sass-cache
-_vendor
-dev
-.jekyll-metadata
-Gemfile.lock
-deploy/deploy
+/_gems/
+/_site/
+/temp/
+/node_modules/
+/.sass-cache/
+/.jekyll-metadata/
+/Gemfile.lock

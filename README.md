@@ -24,17 +24,17 @@ Its interface is part of the "Keep It Simple" philosophy, precisely to have a hi
 
 You already have a template page for ‘Blog’, ‘Projects’, ‘Search’, ‘Contact’, ‘Tags’ and ‘Resume’, but you can leave as you want, modifying strings.
 
-The page ‘resume’, you can print using the browser’s Ctrl + P shortcut. Printing will eliminate useless parts, such as the sidebar. You’ll also have templates for posts, and you’ll have to follow model the header the post’s.
+The 'resume' page, you can print using the browser's Ctrl + P shortcut or the push button. Printing will eliminate useless parts, such as the sidebar. You'll also have a template for post (welcome-tot-jekyll), and you'll have to follow that template header.
 
-The contact page uses the Formspree feature, you will need to have an account in the service and add your **e-mail** to the `_data/dbase.yml` file. In addition, the entire contents of the `_data/dbase.yml` file should be changed as needed.
+The contact page uses the [Formspree](https://formespree.io){: target="_blank"} feature, you will need to have an account in the service and add your **e-mail** to the `_data/data.yml` file. In addition, the entire contents of the `_data/dbase.yml` file should be changed as needed.
 
 ## Feature
 
-- [x] **Google Analytics (Event and Pageview)**
+- [x] **Google Analytics**
 - [x] **Google Fonts**
 - [x] **Jekyll Search on Blog Page**
 - [x] **Print page resume**
-- [x] **Avatar on sidebar and on Hello page**
+- [x] **Avatar on sidebar**
 - [x] **404 Error Page**
 - [x] **Disqus [Accountant and Comments]**
 - [x] **Social buttons**
@@ -50,16 +50,18 @@ The contact page uses the Formspree feature, you will need to have an account in
     - jekyll-tagging
     - jemoji
     - jekyll-email-protect
-    - jekyll-spotify-plugin
+    - jektify
 * From the project itself:
     - Readingtime [Estimated reading time]
     - Imager [Responsive Images]
-    - DateLang [Responsive Images]
+    - DateLang [Complete dates in each languages]
+    - Label [Add labels]
+    - Endpost [Creates a horizontal line]
 
 ## Requeriments
 
 | Requerid        | How to check        | How to install  |
-| --------------- | ------------------- | -------------- | 
+| --------------- | ------------------- | -------------- |
 | Git             | `git --version`     | [Git](http://git-scm.com/) |
 | Ruby            | `ruby -v`           | [Ruby](https://www.ruby-lang.org) |
 | Gem             | `gem -v`            | **Ruby** contains **Gem** |
@@ -101,15 +103,76 @@ If you use a Unix O.S, you can perform from step 2, all action through the `init
 $ bash init.sh help
 ```
 
-## Custom Appearance
+## Structure
 
-You can change the colors of **Typing Jekyll Template** by editing the `_sass/base/_variables.scss` file, using the values of the variables contained in it.
+### Home pages
 
-If you want to change the font, change the values of the variables in the `_sass/base/_fonts.scss` file.
+Now the home page is in the "**index.md**" file in the project root folder. Write a good opening.
 
-I was forgetting ... there are some extra themes in the `_sass/base/_variables.scss` file disabled. You can leave only one theme, and uncomment the same. 
+### Pages Blog / Tags / Search
+
+The description of the Blog, Tags and Search pages are in their respective folders in the "**index.md**" file:
+
+- blog/index.md
+- blog/tags/index.md
+- blog/search/index.md
+
+Edit the values of the properties as desired.
+
+## Custom
+
+### Resources
+
+In the file "**_config.yml**" contains a session where you can activate and deactivate some features of the template. By the way
+, everything to remove from the template, is in this file and what is related to appearance, is in the file "**_data/data.yml**".
+
+**Disqus**
+
+To have the comments feature, you must inform your Disqus user in file "**_data/data.yml**":
+
+```yaml
+userdata:
+  disqus:
+    username: "myname"
+```
+
+> NOTE: Only the comment feature will appear, if the Jekyll environment is production, not development, that is, when executing the command "bundle exec jekyll b".  
+
+### Appearance
+
+You can change the colors of the Typing Jekyll Template with a simple line changes. In the "**_data/data**" file, change the "`website => theme`" property as listed the themes available in the comment. Example:
+
+```yaml
+website:
+  theme: "whiteglass"
+```
+
+Currently, there are 4(four) that *Typing* supports:
+
+- typing (default)
+- hacking
+- whiteglass
+- littlegirl
 
 Feel free to configure as you want. :)
+
+## Post and Page
+
+You can create posts and page headers with only one line in the terminal.
+
+post:
+
+```bash
+$ bundle exec rake post TITLE="My title"
+```
+
+page:
+
+```bash
+$ bundle exec rake page TITLE="My title"
+```
+
+If you use unix / darwin, you can use the script "*init.sh help*".
 
 ## Deploy
 
@@ -124,7 +187,7 @@ After doing all the configuration, compile the project with the command "bundle 
 
 **O.S Unix**
 
-If you use a UNIX-based operating system, you can deploy the source code and compiled site very simply with the "init.sh" script. 
+If you use a UNIX-based operating system, you can deploy the source code and compiled site very simply with the "init.sh" script.
 You must first configure the "**deploy.conf**" file for your repository settings.
 
 I) After performing the project clone, empty the factory settings with the "reset" command:
@@ -183,13 +246,13 @@ You can download the versions without making a clone with Git. Go to [Releases](
 
 License: [MIT License (MIT)](https://opensource.org/licenses/MIT)
 
-Copyrights: William C. Canin | Copyright © 2017
+Copyrights: William C. Canin | Copyright © 2017-2018
 
 *You can change the structure of Typing Jekyll Template as you wish, as long as you do not manipulate the copyrights of William C.Canin in the project*
 
 ## Credits
 
-* Name: William C. Canin 
+* Name: William C. Canin
 * Country: Brazil - SP
 * EMail: william.costa.canin@gmail.com    
 * GitHub: [William Canin](http://github.com/williamcanin)

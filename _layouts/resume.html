@@ -3,31 +3,41 @@ layout: default
 ---
 
 <!-- Include Data Base  -->
-{% include dbase/dbase %}
+{% include liquid/data %}
 
-<div class="page resume">
-  <div class="row header">
-    <div class=" {% if page.btnprint == true %} col-sm-10 {% else %} col-sm-12 {% endif %} title">
-      <h1>{{ page.title }}</h1>
-      <p>{{ page.excerpt }}</p>
-    </div>
-    {% if page.btnprint == true %}
-    <div class="col-sm-2 btn-print">
-      <a id="btn-print" href="">{{ dbase.website.strings.resume.btnprint }}</a>
-    </div>
-    {% endif %}
-  </div>
-  <div class="row content">
-    {% if page.tcontents.enable == true %}
-      <div class="row table-of-contents">
-        <h1>{{ page.tcontents.title }}</h1>
-        <ul>
-          {% for items in page.tcontents.links %}
-            <li><a href="{{ items.id }}">{{ items.name }}</a></li>
-          {% endfor %}
-        </ul>
+<div class="p-lg-4 layout_resume">
+
+    <div class="layout_resume__header">
+      <div class="container-fluid">
+
+        <div class="row">
+          <div class="p-0 col-8 col-lg-3 offset-lg-0 col-sm-6">
+            <h1 class="font-weight-bold layout_resume__title">{{ page.title }}</h1>
+          </div>
+          <div class="col-4 col-lg-3 offset-lg-6 col-sm-6 d-none d-lg-block">
+            <div class="row justify-content-end">
+              <button id="layout_resume__btnprint" type="button" name="button" class="btn btn-link btn-typing layout_resume__btnprint">{{ loadData.website.content.resume.button.text }}</button>
+            </div>
+          </div>
+        </div>
+
       </div>
-    {% endif %}
-    {{ content }}
+    </div>
+
+    <div class="layout_resume__excerpt">
+      <div class="container-fluid">
+        <div class="row d-block">
+          <div class="layout_resume__excerpt-text">{{ page.excerpt }}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="layout_resume__content">
+      <div class="container-fluid">
+        <div class="row d-block">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+
   </div>
-</div>

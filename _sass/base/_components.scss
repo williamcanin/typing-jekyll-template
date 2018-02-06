@@ -1,0 +1,79 @@
+/* Components
+––––––––––––––––––––––––––––––––––––––––––––––––––  */
+
+// <hr> - dashed
+.hr-dashed{
+  @if $hr-dashed-enable == true {
+    display: block;
+    height: 0.1rem;
+    width: 250px;
+    border: 0;
+    border-top: 2px dashed $dashed_color;
+    margin: 1em 0;
+    padding: 0%;
+  }
+}
+
+// List style none
+.list-none{
+  list-style: none !important;
+}
+
+// Text decoration - none
+.text-d-none{
+  text-decoration: none !important;
+}
+
+// Text decoration - underline
+.text-d-u{
+  text-decoration: underline !important;
+}
+
+// border-right - dashed
+.border-dashed{
+  @if $border-dashed-enable == true {
+    border: 2px dashed $dashed_color;
+  }
+}
+
+// border-right - dashed
+.border-r-dashed{
+  @if $border-r-dashed-enable == true {
+    border-right: 2px dashed $dashed_color;
+  }
+}
+
+// border-left - dashed
+.border-l-dashed{
+  @if $border-l-dashed-enable == true {
+    border-left: 2px dashed $dashed_color;
+  }
+}
+
+// badge class plugin badge.rb
+.badge-plugin{
+  margin: 10px 0px;
+  display: inline-block;
+  padding: 10px;
+  font-weight: lighter;
+  border-radius: 0px;
+}
+
+
+ // button typing
+.btn-typing{
+  padding: 10px;
+  background-color: $color__links;
+  color: #fff;
+  text-decoration: none;
+  min-width: 120px;
+  margin: 5px auto;
+  border-radius: 0px;
+  &:hover,&:active,&:focus{
+    background-color: $color__links;
+    opacity: 0.95;
+    box-shadow: none !important;
+    color: #fff;
+    text-decoration: none;
+  }
+}

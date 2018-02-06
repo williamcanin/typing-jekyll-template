@@ -1,156 +1,35 @@
-.post{
-  font-family: $font-family-primary;
-  padding: 3%;
-  a{
-    color: $color-links;
-    text-decoration: underline;
-  }
-  .readmode{
-    position: fixed;
-    float: right;
-    .btn-readmode {
-        background-color: #4CAF50; /* Green */
-        border: none;
-        border-radius: 0px;
-        color: white;
-        padding: 11px 20px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        position: fixed;
-        float: right;
-        right: 0;
-        top: 0;
-    }
-  }
-  .title{
-    h1{
-      font-weight: 800;
-      @media (max-width: 767px) {
-        font-size: 3rem;
-      }
-    }
-  }
-  .meta{
-    padding: 2% 0%;
-    .datetime{
-      font-size: 1.9rem;
-      padding: 0px;
-      .text{
-        @if $background-featured-enable == true {
-          background-color: $background-featured;
-        } @else {
-          background-color: transparent;
-        }
-        padding: 5px;
-      }
-      .tmargin{
-        margin-left: 15px;
-        padding-right: 15px;
-      }
-    }
-    .count-comments{
-      margin: 0px;
-      padding: 0px;
-      .wrap{
-        @media (min-width: 1024px) {
-          float: right;
-          padding: 0px;
-        }
-      }
-    }
-  }
-  .tag-list{
-     text-align: left;
-     padding: 2% 0%;
-     a{
-       text-decoration: underline;
-       &:after{
-        content: ".";
-        margin-right: 10px;
-       }
-     }
-  }
-  .content{
+/* Stylesheets for layout Post
+––––––––––––––––––––––––––––––––––––––––––––––––––  */
 
-    // Adding 'Contents' headline to the TOC
-    #markdown-toc::before {
-      content: $title-toc;
-      font-weight: bold;
-      font-size: 3.5rem;
+.layout_post{
+  font-size: 1.2rem;
+  &__time{
+    font-size: 1rem;
+    @if $elements__bg-enable == true {
+      background-color: $bg__elements;
+      padding: 15px;
     }
-    // Using numbers instead of bullets for listing
-    #markdown-toc ul {
-      list-style: decimal;
+  }
+  &__tags{
+    padding-bottom: 15px;
+    &-link{
+      font-size: 1.1rem;
     }
-    #markdown-toc {
-      padding: 3.5em;
-      @media (max-width: 480px) {
-        padding: 0% 10%;
-      }
-      list-style: decimal;
-      display: inline-block;
+  }
+  &__dayquote, &__share, &__author{
+    margin: 8% 0%;
+  }
+  &__author{
+    &-title{
+      font-size: 1rem;
     }
-
-    margin-top: 5%;
-    @media (max-width: 768px) {
-      h1{
-        font-size: 2.7rem;
-        font-weight: 800;
-      }
-      h2{
-        font-size: 2.1rem;
-        font-weight: 600;
-      }
-      h3,h4{
-        font-weight: 600;
-      }
+  }
+  &__content{
+    padding-top: 15%;
+  }
+  &__disqus{
+    &-icon{
+      font-size: 1.7rem;
     }
-    .day-quote{
-      margin: 5% auto;
-      .title{
-        font-size: 2.5rem;
-      }
-      .content{
-        padding: 0;
-        margin: 10px 0px;
-      }
-    }
-    .author{
-      margin: 15px 0px;
-      .image{
-        img{
-          @media (max-width: 480px) {
-            max-width: 100px;
-          }
-          border: 0.1rem solid #CACACA;
-        }
-      }
-      .bio{
-        .title{
-          font-size: 1.3rem;
-        }
-        .name{
-          font-weight: 800;
-          font-size: 3rem;
-        }
-        .content{
-          padding: 0;
-          margin: 0;
-          background-color: transparent;
-          font-size: 1.6rem;
-        }
-      }
-    }
-    .disqus{
-      padding-top: 2%;
-      .title{
-        text-align: center;
-        h3{
-          padding: 3% 0%;
-        }
-      }
-     }
   }
 }

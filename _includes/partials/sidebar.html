@@ -1,0 +1,79 @@
+<!-- Include Data Base  -->
+{% include liquid/data %}
+
+<div class="container-fluid">
+
+  <div class="sidebar__header">
+    <div class="mt-4 row">
+
+      {% if site.sidebar.avatar.enable == true and loadData.website.sidebar.avatar %}
+      <div class="mb-0 mb-lg-4 col-3 col-sm-3 col-lg-12">
+        <a class="sidebar__img" href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">
+          <img class="img-fluid mx-auto d-block border-dashed" src="{{ '/assets/images/avatar' | prepend: site.baseurl }}/{{ loadData.website.sidebar.avatar }}" width="165" height="165" alt="Avatar">
+        </a>
+      </div>
+      {% endif %}
+
+      <div class="{% if site.sidebar.avatar.enable == true and loadData.website.sidebar.avatar %} col-9 col-sm-9 {% else %} col-12 col-sm-12 {% endif %} col-lg-12">
+        <a class="text-d-none sidebar__title" href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">
+          <h1 class="sidebar__title--text">{{ loadData.website.sidebar.title }}</h1>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="font-weight-bold mt-4 sidebar__menu">
+    <div class="row">
+
+      <ul class="px-3 mx-2 px-lg-3 mx-lg-3 sidebar__menu-list">
+
+        <li class="mr-3 mr-lg-0 float-left float-lg-none sidebar__menu-item">
+          {% if site.sidebar.icons.enable == true %}<i class="mr-1 fas fa-home"></i>{% endif %}
+          <a class="sidebar__menu-item__link" href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">{{ loadData.website.sidebar.menu.home.text }}</a>
+        </li>
+
+        <hr class="hr-dashed">
+
+        <li class="mr-3 mr-lg-0 float-left float-lg-none sidebar__menu-item">
+          {% if site.sidebar.icons.enable == true %}<i class="mr-1 fas fa-edit"></i>{% endif %}
+          <a class="sidebar__menu-item__link" href="{{ '/blog/' | prepend: site.baseurl | prepend: site.url }}">{{ loadData.website.sidebar.menu.blog.text }}</a>
+        </li>
+
+        <li class="ml-0 ml-lg-3 mr-3 mr-lg-0 float-left float-lg-none sidebar__menu-item">
+          {% if site.sidebar.icons.enable == true %}<i class="mr-1 fas fa-search"></i>{% endif %}
+          <a class="sidebar__menu-item__link" href="{{ '/blog/search/' | prepend: site.baseurl | prepend: site.url }}">{{ loadData.website.sidebar.menu.blog.search.text }}</a>
+        </li>
+
+        <li class="ml-0 ml-lg-3 mr-3 mr-lg-0 float-left float-lg-none sidebar__menu-item">
+          {% if site.sidebar.icons.enable == true %}<i class="mr-1 fas fa-tags"></i>{% endif %}
+          <a class="sidebar__menu-item__link" href="{{ '/blog/tags/' | prepend: site.baseurl | prepend: site.url }}">{{ loadData.website.sidebar.menu.blog.tags.text }}</a>
+        </li>
+
+
+
+
+        {% for page in site.pages %}
+          {% if page.title and page.in_menu == true %}
+            <li class="mr-3 mr-lg-0 float-left float-lg-none sidebar__menu-item">
+              {% if site.sidebar.icons.enable == true %}<i class="mr-1 fas {{ page.icon }}"></i>{% endif %}
+              <a class="sidebar__menu-item__link" href="{{ page.url | prepend: site.baseurl | prepend: site.url }}">{{ page.title }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+
+        <li class="mr-3 mr-lg-0 float-left float-lg-none sidebar__menu-item">
+          {% if site.sidebar.icons.enable == true %}<i class="mr-1 fas fa-rss"></i>{% endif %}
+          <a class="sidebar__menu-item__link" href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}" target="_blank">{{ loadData.website.sidebar.menu.blog.feed.text }}</a>
+        </li>
+
+      </ul>
+
+    </div>
+  </div>
+
+  {% if site.sidebar.socials.enable == true %}
+    {% include partials/sidebar__socials.html %}
+  {% endif %}
+
+</div>

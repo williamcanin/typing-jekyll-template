@@ -3,27 +3,49 @@ layout: default
 ---
 
 <!-- Include Data Base  -->
-{% include dbase/dbase %}
+{% include liquid/data %}
 
-<div class="search">
-  <div class="row title">
-    <h1>{{ page.title }}</h1>
-  </div>
-  <div class="row content">
-    {{ content }}
+<div class="p-lg-4 layout-search">
+
+  <div class="container-fluid">
+
+    <div class="row">
+      <h1 class="font-weight-bold layout-search__title">{{ page.title }}</h1>
+    </div>
+
+    <div class="row d-block">
+      <div class="layout-search__description">{{ content }}</div>
+    </div>
+
     {% for post in site.categories.blog %}
       {% capture post_count %} {{ post_count | plus: 1 }} {% endcapture %}
     {% endfor %}
-    <form action="" name="searchForm" id="searchForm">
-      <div class="input-group">
-        <input class="form-control search-input" type="text" id="search-input" value="" placeholder="{{ dbase.website.strings.search.input.placeholder[0] }} {{ post_count }} {{ dbase.website.strings.search.input.placeholder[1] }}" onfocus="this.placeholder = '{{ dbase.website.strings.search.input.onfocus }}'" onblur="this.placeholder = '{{ dbase.website.strings.search.input.onblur[0] }} {{ post_count }} {{ dbase.website.strings.search.input.onblur[1] }}'">
-        <span class="input-group-btn">
-          <button class="btn-clean" id="btn-clean" type="button" onclick="cleanInputSearch()">Clean</button>
-        </span>
-      </div>
-      <div class="searchResults">
-        <ul class="searchResult" id="searchResult"></ul>
-      </div>
-    </form>
+
+    <div class="row">
+      <form id="layout-search__form" action="" class="form-control layout-search__form">
+        <div class="input-group layout-search__form-group">
+          <input id="layout-search__input" class="form-control layout-search__input" type="text"
+          placeholder="
+          {{ loadData.website.content.search.input.placeholder[0] }}
+          {{ post_count }}
+          {{ loadData.website.content.search.input.placeholder[1] }}"
+          onfocus="this.placeholder =
+          '{{ loadData.website.content.search.input.onfocus }}'"
+          onblur="this.placeholder =
+          '{{ loadData.website.content.search.input.onblur[0] }}
+          {{ post_count }}
+          {{ loadData.website.content.search.input.onblur[1] }}'">
+          <span class="input-group-btn layout-search__input-group">
+            <button id="btn-clean" class="btn btn-typing layout-search__button" type="button" onclick="ClearFieldSearch();">{{ loadData.website.content.search.button.text }}</button>
+          </span>
+        </div>
+      </form>
+    </div>
+
+    <div class="row">
+      <ul id="layout-search__data" class="layout-search__data"></ul>
+    </div>
+
   </div>
+
 </div>

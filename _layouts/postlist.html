@@ -3,49 +3,91 @@ layout: default
 ---
 
 <!-- Include Data Base  -->
-{% include dbase/dbase %}
+{% include liquid/data %}
 
-{% for post in site.categories.blog %}
+{% for post in site.posts %}
   {% capture post_count %} {{ post_count | plus: 1 }} {% endcapture %}
 {% endfor %}
 
+<div class="p-lg-4 layout_postlist" itemscope="itemscope" itemtype="http://schema.org/Blog">
 
-<div class="postlist" itemscope="itemscope" itemtype="http://schema.org/Blog">
-  <div class="row title-description">
-    <h1>{{ page.title }}</h1>
-    <p>{{ page.msg_qtd[0] }} <strong>{{ post_count }}</strong> {{ page.msg_qtd[1] }} {{ content }} </p>
-  </div>
-  {% if page.buttons == true %}
-  <div class="row meta">
-    <div class="col-sm-6">
-      <a href="{{ site.url }}{{ site.baseurl }}/blog/tags/">Tags Cloud</a>
-    </div>
-    <div class="col-sm-6">
-      <a href="{{ site.url }}{{ site.baseurl }}/blog/search/">Search</a>
-    </div>
-  </div>
-  {% endif %}
-  <div class="row content">
-    {% for post in site.categories.blog %}
-    <div class="wrap">
-      <div class="time-and-count-comments" datetime="{{ post.date | date:'%Y-%m-%d' }}">
-        <time class="time">
-          {% datelang post %}
-          {% include datelang/post %}
-        </time>
-        {% if post.comments and dbase.userdata.disqus.username %}
-          <div class="count-comments">
-            {% if site.screen.icons.enable == true %}<i class="fa fa-comments"></i>{% endif %}<span class="disqus-comment-count" data-disqus-identifier="{{ post.url }}">0</span>
+    <!-- This is a Blog Title -->
+    <div class="layout_postlist__header">
+      <div class="container-fluid">
+        <div class="row">
+          <h1 class="font-weight-bold layout_postlist__title">{{ page.title }}</h1>
+        </div>
+
+        <!-- This is a Blog description -->
+        <div class="row d-block">
+          <div class="layout_postlist__description">
+            {{ page.msg_qtd[0] }} <strong>{{ post_count }}</strong> {{ page.msg_qtd[1] }}
+            {{ content }}
           </div>
-        {% endif %}
-      </div>
-      <div class="url">
-        <h1>
-          <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-        </h1>
-        {% if post.excerpted %}<p class="excerpted">{{ post.excerpted | strip_html | truncatewords:26 }}<a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" class="continue">{{ dbase.website.strings.postlist.continue }}</a></p>{% endif %}
+        </div>
       </div>
     </div>
-    {% endfor %}
-  </div>
+
+  <!-- Loop of posts -->
+    {% if site.posts.size > 0 %}
+
+      {% for post in site.posts %}
+      <div class="mt-4 mb-4 layout_postlist__content">
+
+        <div class="container-fluid">
+
+          <div class="row">
+
+            {% if site.content.postlist.date.enable == true %}
+            <div class="col-8 col-lg-4 offset-lg-0 col-sm-6">
+              <div class="row justify-content-start">
+                <time class="layout_postlist__time">
+                  {% if site.content.icons.enable == true %}<i class="far fa-calendar-alt"></i>{% endif %}
+                  {% datelang post %}
+                  {% include datelang/post %}
+                </time>
+              </div>
+            </div>
+            {% endif %}
+
+            {% if jekyll.environment == 'production' and
+            site.content.postlist.comments.enable == true and
+            page.comments != false and
+            loadData.userdata.disqus.username %}
+            <div class="col-4 col-lg-3 offset-lg-5 col-sm-6">
+              <div class="row justify-content-end">
+                <div class="layout_postlist__comments">
+                    {% if site.content.icons.enable == true %}<i class="fas fa-comments"></i>{% endif %}
+                    <span class="disqus-comment-count" data-disqus-identifier="{{ post.url }}"></span>
+                </div>
+              </div>
+            </div>
+            {% endif %}
+          </div>
+
+          <div class="row">
+            <a class="layout_postlist__link" href="{{ post.url | prepend: site.baseurl }}"><h1 class="font-weight-bold">{{ post.title }}</h1></a>
+          </div>
+
+          {% if site.content.postlist.tags.enable == true %}
+          <div class="mt-3 mb-3 row">
+            {% if site.content.icons.enable == true %}<i class="fa fa-tags"></i>{% endif %}&nbsp;Tags:&nbsp;
+            <span class="layout_taglist__tags">{{ post | tags }}</span>
+          </div>
+          {% endif %}
+
+          {% if site.content.postlist.comments.enable == true %}
+          <div class="row">
+            <p class="layout_postlist__excerpted">{{ post.excerpted | strip_html | truncatewords:26 }}
+              <a href="{{ post.url | prepend: site.baseurl }}">Continue</a>
+            </p>
+          </div>
+          {% endif %}
+
+        </div>
+      </div>
+      {% endfor %}
+
+    {% endif %}
+
 </div>

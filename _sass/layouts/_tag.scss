@@ -1,0 +1,31 @@
+/* Stylesheets for layout Tag - Plugin jekyll-tagging
+––––––––––––––––––––––––––––––––––––––––––––––––––  */
+
+.layout_tag{
+
+  background-color: $layout_postlist__bg;
+
+  &__header{}
+  &__description{
+    font-size: 1.2rem;
+  }
+  &__content{
+    @if $layout_postlist__bg-enable == true {
+      background-color: $bg__elements;
+      padding: 1.5rem !important;
+    }
+  }
+
+  &__link{
+    text-decoration: underline;
+    letter-spacing: 0.15rem;
+    h1{
+      font-size: 2.1rem;
+    }
+  }
+
+  &__excerpted{
+    font-size: 1.1rem;
+  }
+
+}

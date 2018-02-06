@@ -1,0 +1,82 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Title Site
+  ___________________________________________ -->
+  <title>{% if page.title %}{{ page.title }} | {{ loadData.website.description }} {% else %} {{ loadData.website.title }} | {{ loadData.website.description }} {% endif %}</title>
+
+  <!-- Metatags
+  ___________________________________________ -->
+  <meta name=description content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ loadData.website.description }}{% endif %}">
+
+
+  {% if loadData.website.metatag.google-site-verification %}
+  <meta name="google-site-verification" content="{{ loadData.website.metatag.google-site-verification }}">
+  {% endif %}
+
+  {% if loadData.website.metatag.expires %}
+  <meta http-equiv="expires" content="{{ loadData.website.metatag.expires }}">
+  {% endif %}
+
+  {% if loadData.website.metatag.cache-control %}
+  <meta http-equiv="cache-control" content="{{ loadData.website.metatag.cache-control }}"/>
+  {% else %}
+  <meta http-equiv="cache-control" content="public"/>
+  {% endif %}
+
+  <meta http-equiv="pragma" content="public">
+
+  <meta name="keywords" content="{{ loadData.website.metatag.tags }}" />
+
+  <meta name="author" content="{{ loadData.website.content.post.author.name }}" />
+
+  <meta http-equiv="Content-Language" content="{{ loadData.website.metatag.locale }}">
+
+  <!-- Open Graph -->
+  <meta property="og:locale" content="{{ loadData.website.metatag.locale }}" />
+
+  <meta property="og:site_name" content="{{ loadData.website.title }}" />
+
+  <meta property="og:type" content="{{ loadData.website.metatag.type }}" />
+
+  <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url }}" />
+
+  <meta property="og:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ loadData.website.description }}{% endif %}" />
+
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ loadData.website.title }}{% endif %}" />
+
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+  <link rel="alternate" type="application/rss+xml" title="{{ loadData.website.title }}" href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicon/favicon-32x32.png' | prepend: site.baseurl | prepend: site.url }}">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Space+Mono:400,400i,700,700i" rel="stylesheet">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+  <!-- Vendor -->
+  <link rel="stylesheet" href="{{ '/assets/css/vendor.css' | prepend: site.baseurl }}">
+
+  <!-- Select theme  -->
+  {% if loadData.website.theme == "typing" %}
+  <link rel="stylesheet" href="{{ '/assets/css/typing.css' | prepend: site.baseurl }}">
+  {% elsif loadData.website.theme == "hacking" %}
+  <link rel="stylesheet" href="{{ '/assets/css/hacking.css' | prepend: site.baseurl }}">
+  {% elsif loadData.website.theme == "whiteglass" %}
+  <link rel="stylesheet" href="{{ '/assets/css/whiteglass.css' | prepend: site.baseurl }}">
+  {% elsif loadData.website.theme == "littlegirl" %}
+  <link rel="stylesheet" href="{{ '/assets/css/littlegirl.css' | prepend: site.baseurl }}">
+  {% else %}
+  <link rel="stylesheet" href="{{ '/assets/css/typing.css' | prepend: site.baseurl }}">
+  {% endif %}
+
+  {% if jekyll.environment == 'production' and loadData.website.google.analytics.id and site.google.analytics.enable == true %}
+    <script src="{{ '/assets/js/google_analytics.js' | prepend: site.baseurl | prepend: site.url }}" charset="utf-8"></script>
+  {% endif %}
+
+</head>

@@ -2,34 +2,69 @@
 layout: default
 ---
 <!-- Include Data Base  -->
-{% include dbase/dbase %}
+{% include liquid/data %}
 
-{% if dbase.userdata.email %}
-<div class="contact">
-  <div class="row title">
-    <h1>{{ page.title }} <span>by: <a href="https://formspree.io/" target="_blank">Formspree</a></span> </h1>
-  </div>
-  <div class="row content">
-    {{ content }}
-    <form action="https://formspree.io/{{ dbase.userdata.email | encode_email }}" method="POST">
-      <div class="row name">
-        <input id="form-input-name" type="text" class="form-control typing" name="Name" placeholder="{{ dbase.website.strings.contact.placeholder.name }}" required autofocus>
+{% if loadData.userdata.email %}
+
+  <div class="p-lg-4 layout_contact">
+
+    <div class="layout_contact__header">
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="p-0 col col-lg-7">
+            <h1 class="font-weight-bold layout_contact__title">{{ page.title }}</h1>
+          </div>
+          <div class="p-0 col col-lg-5 text-right">
+            <span class="text-right layout_contact__vendor">Service provided by:<a href="https://formspree.io/" target="_blank">Formspree</a></span>
+          </div>
+        </div>
+
+        <div class="row d-block">
+          <div class="layout_contact__description">{{ content }}</div>
+        </div>
       </div>
-    <div class="row email">
-      <input type="email" class="form-control typing" name="Email" placeholder="{{ dbase.website.strings.contact.placeholder.email }}" required>
+
+      <div class="container-fluid">
+        <div class="row d-block">
+          <form class="layout_contact__form" action="https://formspree.io/{{ loadData.userdata.email | encode_email }}" method="POST">
+
+            <div class="container-fluid">
+
+              <div class="row">
+                <input type="text" class="form-control layout_contact__input" name="Name" placeholder="{{ loadData.website.content.contact.placeholder.name }}" required autofocus>
+              </div>
+
+              <div class="row">
+                <input type="text" class="form-control layout_contact__input" name="Subject" placeholder="{{ loadData.website.content.contact.placeholder.subject }}" required autofocus>
+              </div>
+
+              <div class="row">
+                <input type="text" class="form-control layout_contact__input" name="Email" placeholder="{{ loadData.website.content.contact.placeholder.email }}" required autofocus>
+              </div>
+
+              <div class="row">
+                <textarea  class="form-control layout_contact__textarea" name="Message" rows="7" cols="50" placeholder="{{ loadData.website.content.contact.placeholder.message }}" required></textarea>
+              </div>
+
+              <div class="row">
+                <button class="m-0 btn btn-link btn-typing layout_contact__form-button" type="submit">{{ loadData.website.content.contact.btn_send }}</button>
+              </div>
+
+              <input type="hidden" name="_next" value="{{ '/' | prepend: site.baseurl | prepend: site.url }}">
+              <input type="hidden" id="form-input-subject" name="_subject" value="Subject: {{ page.url | prepend: site.baseurl | prepend: site.url }}" />
+              <input type="text" name="_gotcha" style="display:none" />
+
+            </div>
+
+          </form>
+        </div>
+      </div>
+
     </div>
-    <div class="row message">
-      <textarea name="Message" class="form-control typing" rows="7" cols="50" placeholder="{{ dbase.website.strings.contact.placeholder.message }}" required></textarea>
-    </div>
-    <div class="row btn-send">
-      <button type="submit">{{ dbase.website.strings.contact.btn-send }}</button>
-    </div>
-    <input type="hidden" name="_next" value="{{ site.url }}{{ site.baseurl }}/">
-    <input type="hidden" id="form-input-subject" name="_subject" value="Subject: {{ site.url }}{{ site.baseurl }}{{ page.url }}" />
-    <input type="text" name="_gotcha" style="display:none" />
-    </form>
+
   </div>
-</div>
+
 {% else %}
-<h1 style="color: red; text-align: center;">Error: To use the contact page, you must have it enabled and put your email in the '_data' folder.</h1>
+<p style="color: yellow; background-color: black; padding: 5px;"> Warning! Email not informed "usedata => email" in file 'data.yml'.</p>
 {% endif %}

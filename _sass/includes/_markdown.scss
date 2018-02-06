@@ -1,0 +1,75 @@
+/* Stylesheets for include Markdown
+––––––––––––––––––––––––––––––––––––––––––––––––––  */
+
+#markdown-toc{
+  margin-bottom: 100px;
+  &:before{
+    content: $markdown-toc__title;
+    font-weight: bold;
+    font-size: 1.8rem;
+  }
+}
+
+blockquote{
+  border: none !important;
+  background-color: $blockquote__bg;
+  border-left: 5px solid $color__links !important;
+  padding: 10px 10px 0px 10px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  p{
+    padding-bottom: 10px;
+  }
+}
+
+table{
+  margin: 2% 0%;
+  background-color: $table__bg;
+  thead{
+    background-color: $thead__bg;
+    tr{
+      th{
+        padding: 5px;
+        border: 2px solid $th__bordercolor;
+      }
+    }
+  }
+  tbody{
+    background-color: $tbody__bg;
+    tr{
+      td{
+        padding: 5px;
+        border: 2px solid $td__bordercolor;
+        code{
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}
+
+
+.gist-data{
+ background-color: #F9F9F9;
+ table{
+    background-color: #F9F9F9;
+    thead{
+      background-color: #F9F9F9;
+      tr{
+        th{
+          border: none;
+        }
+      }
+    }
+    tbody{
+      background-color: #F9F9F9;
+      border: none;
+      tr{
+        td{
+          border: none;
+        }
+      }
+    }
+  }
+}

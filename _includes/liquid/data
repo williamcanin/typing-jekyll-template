@@ -1,0 +1,16 @@
+{% comment %}
+Variable to load website data. The file that contains this data is in the _data directory at the root of the project.It is in this file that you have to modify the strings and concepts.
+{% endcomment %}
+
+{% assign loadData = site.data.data %}
+
+{% comment %}
+The variables below are the names of the pages. Variables are for performing activation or non-feature comparisons in HTML. Attention! If you change the permalink on the page, you will have to change the permalink here as well, because these variants are the mirror of the page's permalink.
+Ao alterar os valores aqui, terá que alterar no arquivo Javascript: "src/js/global.js" também.
+{% endcomment %}
+
+{% assign resumePage = "/cv/" %}
+{% assign blogPage = "/blog/" %}
+{% assign errorPage = "/404.html" %}
+{% assign feedPage = "/feed.xml" %}
+{% assign tagsPage = "/blog/tags/" %}

@@ -57,8 +57,8 @@ module Jekyll
         @config_json_read = File.read(@config_json)
         @data_hash_json = JSON.parse(@config_json_read)
         @data_hash_yml = YAML::load_file(File.join(File.dirname(File.expand_path(__FILE__)), '../_config.yml'))
-        @locale = @data_hash_yml['plugin']['datelang']['locale']
-        @reload = @data_hash_yml['plugin']['datelang']['reload']
+        @locale = @data_hash_yml['_plugins']['datelang']['locale']
+        @reload = @data_hash_yml['_plugins']['datelang']['reload']
         @path_datelang = File.join("./", "_includes/datelang")
       end # end get_configs
      def tplate(path,fileC,data_hash_json,locale, reload)

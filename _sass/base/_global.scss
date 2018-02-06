@@ -1,0 +1,20 @@
+/* Stylesheets for global elements
+––––––––––––––––––––––––––––––––––––––––––––––––––  */
+
+html,body{
+  color: $color-text;
+  @if $layout_default__bg-enable == true{
+    background-color: $bg__full;
+  }
+
+  font: 100% verdana, arial, tahoma, sans-serif;
+  *{
+    a{
+      color: $color__links;
+      text-decoration: underline;
+      &:hover{
+        color: $color__links;
+      }
+    }
+  }
+}

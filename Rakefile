@@ -5,23 +5,29 @@
 # Page author: http://williamcanin.com
 # Description: Task creation file for the 'config.rb' file.
 
-require './sources/lib/rb/config.rb'
+LIB_DIR = "./src/lib"
+
+require "#{LIB_DIR}/rb/config.rb"
+
+# require "./src/lib/rb/config.rb"
 
 
 # Task create header Post
-# Example1: rake post:blog TITLE="First post"
-# Example2: rake post:hello TITLE="Hello"
+# Example1: rake post TITLE="First post"
 # Note: TITLE is Required
 desc "Create new post"
-namespace :post do
-  task :blog do
-    confs = Main.new
-    confs.post_create('postsDirBlog')
-  end
-  task :hello do
-    confs = Main.new
-    confs.post_create('postsDirHello')
-  end
+task :post do
+  confs = Main.new
+  confs.post_create('postsDir')
+end
+
+# Task create header Page
+# Example1: rake page TITLE="First page"
+# Note: TITLE is Required
+desc "Create new page"
+task :page do
+  confs = Main.new
+  confs.page_create('pageDir')
 end
 
 
