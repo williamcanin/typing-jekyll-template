@@ -65,12 +65,15 @@ website:
         title: "Leave a comment on this post"
 # Contact
     contact:
-      btn_send: "Go, message!"
+      language: "pt-BR"
       placeholder:
         name: "Your full name"
         subject: "Subject matter"
         email: "Your email"
         message: "What would you like to say?"
+      send:
+        permalink: "/contact/sent/successful/"
+        button: "Go, message!"
 # Resume
     resume:
       button:
@@ -86,7 +89,7 @@ website:
     message: "Simplicity is fashionable."
 # User data
 userdata:
-  email: # E.g: youremail@domain.com
+  email: william.costa.canin@gmail.com # E.g: youremail@domain.com
   twitter: # E.g: "@my_twitter"
   disqus:
     username: # E.g: myuser

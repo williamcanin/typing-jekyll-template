@@ -42,7 +42,7 @@ layout: default
 
     <div class="layout_post__tags">
       <div class="row">
-        {% if site.content.icons.enable == true %}<i class="fa fa-tags"></i>{% endif %}&nbsp;Tags:&nbsp;
+        {% if site.content.icons.enable == true %}<i class="fa fa-tags"></i>&nbsp;{% endif %}Tags:&nbsp;
         {% for tag in page.tags %}
           <a class="layout-post__tags-link" href="{{ '/blog/tags/' | prepend: site.baseurl | prepend: site.url }}/{{ tag }}">{{ tag }}</a>,&nbsp;
         {% endfor %}

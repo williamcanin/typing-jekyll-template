@@ -82,6 +82,8 @@ CHANGELOG - Portuguese - Brazil
 - Fonts online. Google Fonts.
 - JQuery cdn.
 - Icons CDN by Fontawesome.io
+- Corrigindo erro no arquivo feed.xml
 ### Adicionando
 - Recursos de habilitar/desabilitar funções no template.
 - Inserção de 4(quatro) temas.
+- Layout para mensagem de envio com sucesso de contato.

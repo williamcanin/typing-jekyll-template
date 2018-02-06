@@ -10,7 +10,9 @@
     border: 0;
     border-top: 2px dashed $dashed_color;
     margin: 1em 0;
-    padding: 0%;
+    padding: 0%; }
+    @else {
+    display: none;
   }
 }
 

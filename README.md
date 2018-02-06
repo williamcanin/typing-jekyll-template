@@ -109,7 +109,7 @@ $ bash init.sh help
 
 Now the home page is in the "**index.md**" file in the project root folder. Write a good opening.
 
-### Pages Blog / Tags / Search
+### Pages Blog / Tags / Search / Sent
 
 The description of the Blog, Tags and Search pages are in their respective folders in the "**index.md**" file:
 
@@ -118,6 +118,10 @@ The description of the Blog, Tags and Search pages are in their respective folde
 - blog/search/index.md
 
 Edit the values of the properties as desired.
+
+The same goes for the contact sending page.
+
+- contact/send/index.md
 
 ## Custom
 

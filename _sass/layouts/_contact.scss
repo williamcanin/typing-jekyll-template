@@ -11,7 +11,7 @@
     border-radius: 0px;
     &:focus,&:hover,&:active,&:visited{
       box-shadow: none !important;
-      border: 1px solid $color__links !important;
+      border: 1px solid $color-text !important;
     }
   }
   &__vendor{

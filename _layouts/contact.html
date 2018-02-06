@@ -48,11 +48,12 @@ layout: default
               </div>
 
               <div class="row">
-                <button class="m-0 btn btn-link btn-typing layout_contact__form-button" type="submit">{{ loadData.website.content.contact.btn_send }}</button>
+                <button class="m-0 btn btn-link btn-typing layout_contact__form-button" type="submit">{{ loadData.website.content.contact.send.button }}</button>
               </div>
 
-              <input type="hidden" name="_next" value="{{ '/' | prepend: site.baseurl | prepend: site.url }}">
-              <input type="hidden" id="form-input-subject" name="_subject" value="Subject: {{ page.url | prepend: site.baseurl | prepend: site.url }}" />
+              <input type="hidden" name="_next" value="{{ loadData.website.content.contact.send.permalink | prepend: site.baseurl | prepend: site.url }}">
+              <input type="hidden" name="_language" value="{{ loadData.website.content.contact.language }}" />
+              <input type="hidden" name="_subject" value="Subject: {{ page.url | prepend: site.baseurl | prepend: site.url }}" />
               <input type="text" name="_gotcha" style="display:none" />
 
             </div>
@@ -66,5 +67,5 @@ layout: default
   </div>
 
 {% else %}
-<p style="color: yellow; background-color: black; padding: 5px;"> Warning! Email not informed "usedata => email" in file 'data.yml'.</p>
+<p style="color: yellow; background-color: black; padding: 5px;"> Warning! Email not informed "usedata => email" in file '_data/data.yml'.</p>
 {% endif %}
