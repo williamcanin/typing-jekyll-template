@@ -73,7 +73,15 @@ CHANGELOG - Portuguese - Brazil
 ## [1.0.5] - 2017-01-03]
 ### Alterando
 - Correção de compatibilidade de gems no arquivo Gemfile
-## [1.0.6] - 2018-02-10]
+## [2.0.0] - 2018-02-06]
 ### Alterando
-- Novas melhorias no código.
+- Novas melhorias no código e na estrutura.
 - Meotdologia BEM.
+- Bootstrap 4
+- Substituição do plugin "jekyll-spotify-plugin" por "jektify"
+- Fonts online. Google Fonts.
+- JQuery cdn.
+- Icons CDN by Fontawesome.io
+### Adicionando
+- Recursos de habilitar/desabilitar funções no template.
+- Inserção de 4(quatro) temas.
