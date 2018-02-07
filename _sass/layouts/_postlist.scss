@@ -7,7 +7,7 @@
 
   &__header{}
   &__description{
-    font-size: 1.2rem;
+    font-size: $font-size__content;
   }
   &__content{
     @if $layout_postlist__bg-enable == true {
@@ -20,7 +20,8 @@
     text-decoration: underline;
     letter-spacing: 0.15rem;
     h1{
-      font-size: 2.1rem;
+      font-size: $font-size__layout_postlist-link;
+      font-weight: $font-weight__layout_postlist-link;
     }
   }
 

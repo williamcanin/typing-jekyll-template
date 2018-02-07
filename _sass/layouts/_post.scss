@@ -2,7 +2,6 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––  */
 
 .layout_post{
-  font-size: 1.2rem;
   &__time{
     font-size: 1rem;
     @if $elements__bg-enable == true {
@@ -26,6 +25,7 @@
   }
   &__content{
     padding-top: 15%;
+    font-size: $font-size__content;
   }
   &__disqus{
     &-icon{

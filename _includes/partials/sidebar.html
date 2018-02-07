@@ -15,7 +15,7 @@
       {% endif %}
 
       <div class="{% if site.sidebar.avatar.enable == true and loadData.website.sidebar.avatar %} col-9 col-sm-9 {% else %} col-12 col-sm-12 {% endif %} col-lg-12">
-        <a class="text-d-none sidebar__title" href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">
+        <a class="text-d-none {% if site.sidebar.avatar.enable != true %} text-left {% endif %} sidebar__title" href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">
           <h1 class="sidebar__title--text">{{ loadData.website.sidebar.title }}</h1>
         </a>
       </div>
@@ -23,7 +23,7 @@
     </div>
   </div>
 
-  <div class="font-weight-bold mt-4 sidebar__menu">
+  <div class="mt-4 sidebar__menu">
     <div class="row">
 
       <ul class="px-3 mx-2 px-lg-3 mx-lg-3 sidebar__menu-list">

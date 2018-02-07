@@ -20,7 +20,8 @@
     text-decoration: underline;
     letter-spacing: 0.15rem;
     h1{
-      font-size: 2.1rem;
+      font-size: $font-size__layout_postlist-link;
+      font-weight: $font-weight__layout_postlist-link;
     }
   }
 

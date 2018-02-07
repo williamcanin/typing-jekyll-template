@@ -48,9 +48,10 @@
   }
 
   &__menu{
+    font-weight: $font-weight__sidebar-menu;
+    font-size: $font-size__sidebar-menu;
     &-item{
       &__link{
-        font-size: 1.2rem;
         text-decoration: underline;
         &:hover{
           color: inherit;
@@ -59,7 +60,7 @@
     }
   }
 
-  &__socials{
+  &__socials{ 
     &-item{
       float: left;
     }

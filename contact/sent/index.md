@@ -8,4 +8,4 @@ published: true
 permalink: /contact/sent/successful/
 ---
 
-## Your message was sent! I will contact you as soon as possible.
+Your message was sent! I will contact you as soon as possible.
