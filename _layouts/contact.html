@@ -36,7 +36,7 @@ layout: default
               </div>
 
               <div class="row">
-                <input type="text" class="form-control layout_contact__input" name="Subject" placeholder="{{ loadData.website.content.contact.placeholder.subject }}" required autofocus>
+                <input type="text" class="form-control layout_contact__input" name="_subject" placeholder="{{ loadData.website.content.contact.placeholder.subject }}" required autofocus>
               </div>
 
               <div class="row">
@@ -53,7 +53,6 @@ layout: default
 
               <input type="hidden" name="_next" value="{{ loadData.website.content.contact.send.permalink | prepend: site.baseurl | prepend: site.url }}">
               <input type="hidden" name="_language" value="{{ loadData.website.content.contact.language }}" />
-              <input type="hidden" name="_subject" value="Subject: {{ page.url | prepend: site.baseurl | prepend: site.url }}" />
               <input type="text" name="_gotcha" style="display:none" />
 
             </div>
