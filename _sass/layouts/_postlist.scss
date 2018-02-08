@@ -17,8 +17,14 @@
   }
 
   &__link{
-    text-decoration: underline;
     letter-spacing: 0.15rem;
+    text-decoration: $layout_postlist__title-decoration;
+    &:hover{
+      text-decoration: $layout_postlist__hover-title-decoration;
+      h1{
+        color: $layout_postlist__hover-title-color;
+      }
+    }
     h1{
       font-size: $font-size__layout_postlist-link;
       font-weight: $font-weight__layout_postlist-link;

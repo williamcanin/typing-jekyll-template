@@ -5,3 +5,4 @@
 /.sass-cache/
 /.jekyll-metadata/
 /Gemfile.lock
+**/*/*.bak

@@ -144,12 +144,13 @@ userdata:
 
 ### Appearance
 
-You can change the colors of the Typing Jekyll Template with a simple line changes. In the "**_data/data**" file, change the "`website => theme`" property as listed the themes available in the comment. Example:
+You can change the colors of the Typing Jekyll Template with a simple line changes. In the "**_data/data.yml**" file, change the "`website => theme`" property as listed the themes available in the comment. Example:
 
 ```yaml
 website:
   theme: "whiteglass"
 ```
+If you want to customize the theme, choose "**custom**" and customize the style sheet "**_sass/theme/custom.scss**" to your liking.
 
 Currently, there are 4(four) that *Typing* supports:
 
@@ -157,6 +158,9 @@ Currently, there are 4(four) that *Typing* supports:
 - hacking
 - whiteglass
 - littlegirl
+
+
+
 
 Feel free to configure as you want. :)
 

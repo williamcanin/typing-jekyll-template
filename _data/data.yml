@@ -9,7 +9,7 @@ website:
       Sorry :(  The domain of my site is under maintenance.
     subtitle: |
       It will not have forecast of return. Meanwhile, follow me on the social networks below.
-# Theme - Values [ typing | whiteglass | hacking | littlegirl ]
+# Theme - Values [ typing | whiteglass | hacking | littlegirl | custom ]
   theme: "typing"
 # Configuration default
   title: Typing
@@ -93,7 +93,7 @@ userdata:
   twitter: # E.g: "@my_twitter"
   disqus:
     username: # E.g: myuser
-  # You can add at most 4 social. If you do not want 4, you can remove the block containing: title, id, icon, url.
+  # You can add at most 5 social. If you do not want 5, you can remove the block containing: title, id, icon, url.
   socials:
     title: Follow Me!
     links:

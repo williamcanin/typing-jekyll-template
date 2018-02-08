@@ -87,3 +87,8 @@ CHANGELOG - Portuguese - Brazil
 - Recursos de habilitar/desabilitar funções no template.
 - Inserção de 4(quatro) temas.
 - Layout para mensagem de envio com sucesso de contato.
+## [2.1.1] - 2018-02-08]
+### Alterando
+- Adicionando opções de mudança nas fontes por scss
+- Melhorias em html.
+- Opção de customizar o tema com o style custom.scss.

@@ -52,15 +52,16 @@
     font-size: $font-size__sidebar-menu;
     &-item{
       &__link{
-        text-decoration: underline;
+        text-decoration: $sidebar__menu-decoration;
         &:hover{
-          color: inherit;
+          color: $sidebar__menu-hover-color;
+          text-decoration: $sidebar__menu-hover-decoration !important;
         }
       }
     }
   }
 
-  &__socials{ 
+  &__socials{
     &-item{
       float: left;
     }
