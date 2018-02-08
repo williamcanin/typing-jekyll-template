@@ -5,7 +5,17 @@
 
   <!-- Title Site
   ___________________________________________ -->
-  <title>{% if page.title %}{{ page.title }} | {{ loadData.website.description }} {% else %} {{ loadData.website.title }} | {{ loadData.website.description }} {% endif %}</title>
+  <title>
+    {% if page.url == "/" %}
+        {{ loadData.website.title }} - {{ loadData.website.description }}
+      {% else %}
+        {% if page.title %}
+          {{ page.title }} | {{ loadData.website.title }} - {{ loadData.website.description }}
+        {% else %}
+          {{ loadData.website.title }} | {{ loadData.website.description }}
+        {% endif %}
+    {% endif %}
+  </title>
 
   <!-- Metatags
   ___________________________________________ -->
