@@ -92,3 +92,7 @@ CHANGELOG - Portuguese - Brazil
 - Adicionando opções de mudança nas fontes por scss
 - Melhorias em html.
 - Opção de customizar o tema com o style custom.scss.
+
+## [2.1.2] - 2018-02-11]
+### Alterando
+- Correção de código no arquivo "init.sh" e alteração nO REDME.md (doc).

@@ -86,13 +86,13 @@ $ bundle install
 3 - Compiling project for deploy:
 
 ```
-$ bundle exec jekyll b
+$ JEKYLL_ENV=production bundle exec jekyll b
 ```
 
 4 - Starting Jekyll serve:
 
 ```
-$ bundle exec jekyll s
+$ JEKYLL_ENV=development bundle exec jekyll s
 ```
 
 **O.S Unix**
