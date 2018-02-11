@@ -95,4 +95,5 @@ CHANGELOG - Portuguese - Brazil
 
 ## [2.1.2] - 2018-02-11]
 ### Alterando
-- Correção de código no arquivo "init.sh" e alteração nO REDME.md (doc).
+- Correção de código no arquivo "init.sh" e alteração no REDME.md (doc).
+- Correção de bug ao incorporar scripts Google Analitics e Disqus.

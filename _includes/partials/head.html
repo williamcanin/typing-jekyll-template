@@ -81,12 +81,14 @@
   <link rel="stylesheet" href="{{ '/assets/css/whiteglass.css' | prepend: site.baseurl }}">
   {% elsif loadData.website.theme == "littlegirl" %}
   <link rel="stylesheet" href="{{ '/assets/css/littlegirl.css' | prepend: site.baseurl }}">
+  {% elsif loadData.website.theme == "custom" %}
+  <link rel="stylesheet" href="{{ '/assets/css/custom.css' | prepend: site.baseurl }}">
   {% else %}
   <link rel="stylesheet" href="{{ '/assets/css/typing.css' | prepend: site.baseurl }}">
   {% endif %}
 
   {% if jekyll.environment == 'production' and loadData.website.google.analytics.id and site.google.analytics.enable == true %}
-    <script src="{{ '/assets/js/google_analytics.js' | prepend: site.baseurl | prepend: site.url }}" charset="utf-8"></script>
+    {% include partials/scripts/google_analytics.html %}
   {% endif %}
 
 </head>

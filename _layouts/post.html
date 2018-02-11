@@ -31,7 +31,7 @@ layout: default
         <div class="col-4 col-lg-4 offset-lg-4 col-sm-6">
           <div class="row justify-content-end">
             <div class="layout_postlist__comments">
-              <a href="#layout_post__disqus" data-disqus-identifier="{{ page.url }}"></a></span>
+              {% if site.content.icons.enable == true %}<i class="fas fa-comments"></i>{% else %}{{ loadData.website.content.post.count_comments.text }}&nbsp;{% endif %}<a href="#layout_post__disqus" data-disqus-identifier="{{ page.url }}">0</a>
             </div>
           </div>
         </div>
@@ -142,9 +142,7 @@ layout: default
         <h2 class="ml-3 layout_post__disqus-title">{{ loadData.website.content.post.comments.title }}</h2>
       </div>
       <div class="layout_post__disqus-content">
-          <div id="disqus_thread"></div>
-          <script src="{{ '/assets/js/disqus_comments.js' | prepend: site.baseurl | prepend: site.url }}" charset="utf-8"></script>
-          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+          {% include partials/scripts/disqus_comments.html %}
       </div>
     </div>
     {% endif %}

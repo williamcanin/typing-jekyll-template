@@ -40,12 +40,12 @@
           <a class="sidebar__menu-item__link" href="{{ '/blog/' | prepend: site.baseurl | prepend: site.url }}">{{ loadData.website.sidebar.menu.blog.text }}</a>
         </li>
 
-        <li class="ml-0 ml-lg-3 mr-3 mr-lg-0 float-left float-lg-none sidebar__menu-item">
+        <li class="mr-3 mr-lg-0 float-left float-lg-none sidebar__menu-item">
           {% if site.sidebar.icons.enable == true %}<i class="mr-1 fas fa-search"></i>{% endif %}
           <a class="sidebar__menu-item__link" href="{{ '/blog/search/' | prepend: site.baseurl | prepend: site.url }}">{{ loadData.website.sidebar.menu.blog.search.text }}</a>
         </li>
 
-        <li class="ml-0 ml-lg-3 mr-3 mr-lg-0 float-left float-lg-none sidebar__menu-item">
+        <li class="mr-3 mr-lg-0 float-left float-lg-none sidebar__menu-item">
           {% if site.sidebar.icons.enable == true %}<i class="mr-1 fas fa-tags"></i>{% endif %}
           <a class="sidebar__menu-item__link" href="{{ '/blog/tags/' | prepend: site.baseurl | prepend: site.url }}">{{ loadData.website.sidebar.menu.blog.tags.text }}</a>
         </li>

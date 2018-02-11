@@ -53,6 +53,8 @@ website:
         notfound: "Oh heavens, no results :("
 # Post
     post:
+      count_comments:
+        text: "Comments:"
       author:
         avatar: typing.svg
         title: Author
