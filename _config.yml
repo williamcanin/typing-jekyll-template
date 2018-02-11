@@ -129,6 +129,11 @@ markdown: kramdown
 highlighter: pygments
 permalink: /blog/:title/
 
+# Load plugins [gems]
+plugins:
+  - jektify
+  - bootstrap
+
 # Build local / Server
 destination: _site
 port: 4000
