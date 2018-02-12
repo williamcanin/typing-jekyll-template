@@ -50,11 +50,11 @@ CHANGELOG - Portuguese - Brazil
 - Página de Error 404, como animação de gif.
 - MetaTags Head foram melhoradas (SEO).
 - Path de idiomas dos plugins "DateLang" e "ReadingTime" adicionados no diretório "_plugins" ocultamente.
-## [1.0.2] - 2017-08-22]
+## [1.0.2] - 2017-08-22
 ### Adicionado
 - Menu "Search" e "Tags" passam a ser submenu do menu "Blog"
 - Novo recurso para deixar o website em modo de manutenção.
-## [1.0.3] - 2017-11-08]
+## [1.0.3] - 2017-11-08
 ### Alterando
 - Correção de estrutura nos SCSS.
 - Corrigido bug na impressão do CV.
@@ -63,17 +63,17 @@ CHANGELOG - Portuguese - Brazil
 - Melhorias na folha de estilo.
 - "Vendor Offline" é um recurso para desenvolver o projeto com seus arquivos de fornecedores
   sem uma conexão com a internet. Você pode saber mais acessando o arquivo: "assets/vendor-off/README.txt".
-## [1.0.4] - 2017-11-23]
+## [1.0.4] - 2017-11-23
 ### Alterando
 - Retirando "div" de licença do arquivo pieces/footer.html
 - Implementando novas instruções no arquivo README.md
 ### Adicionado
 - Novo tema "Light Linux".
 - Script para realizar deploy nas branchs de código fonte e website construido.
-## [1.0.5] - 2017-01-03]
+## [1.0.5] - 2017-01-03
 ### Alterando
 - Correção de compatibilidade de gems no arquivo Gemfile
-## [2.0.0] - 2018-02-06]
+## [2.0.0] - 2018-02-06
 ### Alterando
 - Novas melhorias no código e na estrutura.
 - Meotdologia BEM.
@@ -87,13 +87,16 @@ CHANGELOG - Portuguese - Brazil
 - Recursos de habilitar/desabilitar funções no template.
 - Inserção de 4(quatro) temas.
 - Layout para mensagem de envio com sucesso de contato.
-## [2.1.1] - 2018-02-08]
+## [2.1.1] - 2018-02-08
 ### Alterando
 - Adicionando opções de mudança nas fontes por scss
 - Melhorias em html.
 - Opção de customizar o tema com o style custom.scss.
 
-## [2.1.2] - 2018-02-11]
+## [2.1.2] - 2018-02-11
 ### Alterando
 - Correção de código no arquivo "init.sh" e alteração no REDME.md (doc).
 - Correção de bug ao incorporar scripts Google Analitics e Disqus.
+## [2.1.3] - 2018-02-11
+### Alterando
+- Arrumando bug no layout 'postlist.html' no excerpted.
