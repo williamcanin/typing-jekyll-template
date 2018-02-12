@@ -76,7 +76,7 @@ layout: default
           </div>
           {% endif %}
 
-          {% if site.content.postlist.comments.enable == true %}
+          {% if site.content.postlist.expected.enable == true %}
           <div class="row">
             <p class="layout_postlist__excerpted">{{ post.excerpted | strip_html | truncatewords:26 }}
               <a href="{{ post.url | prepend: site.baseurl }}">Continue</a>
