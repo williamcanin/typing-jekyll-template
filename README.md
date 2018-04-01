@@ -174,8 +174,11 @@ O Typing possui a configuraçao do idioma para a data e uma mensagem nas postage
 
 To change the phrase of Reading time, go to the section 'To see language support, go to the plugin '_plugins/reading_time.rb'', change the value of 'reading_time > locale' to your locality*.
 
- E.g: reading_time:
+ E.g: 
+```yaml
+ reading_time:
         locale: en_US
+```
 
 ### Datelang
 
@@ -183,9 +186,12 @@ To change the date language to extensive, search for the section 'To see languag
 
 Change the 'datelang > reload' to 'true', compile the project (./init.sh build or bundle exec jekyll build). After compiling, return the value of 'datelang > reload' to 'false'.
 
- E.g: datelang:
+ E.g:
+```yaml
+ datelang:
         locale: en_US
         reload: true
+```
 
 * The languages supported are:
 
