@@ -164,6 +164,41 @@ Currently, there are 4(four) that *Typing* supports:
 
 Feel free to configure as you want. :)
 
+
+## Date and 'Reading time' Language
+
+O Typing possui a configuraçao do idioma para a data e uma mensagem nas postagem para tempo de leitura. Essas configuraçoes estao disponuvel no arquivo "_config.yml"
+
+
+### Reading time
+
+To change the phrase of Reading time, go to the section 'To see language support, go to the plugin '_plugins/reading_time.rb'', change the value of 'reading_time > locale' to your locality*.
+
+ E.g: reading_time:
+        locale: en_US
+
+### Datelang
+
+To change the date language to extensive, search for the section 'To see language support, go to the plugin '_plugins/datelang.rb'' ', change the value 'datelang > locale' to your locality*.
+
+Change the 'datelang > reload' to 'true', compile the project (./init.sh build or bundle exec jekyll build). After compiling, return the value of 'datelang > reload' to 'false'.
+
+ E.g: datelang:
+        locale: en_US
+        reload: true
+
+* The languages supported are:
+
+    * ch_CH - Chinese
+    * de_DE - Deutschland 
+    * en_US - English
+    * es_ES - Spanish
+    * fr_FR - French
+    * it_IT - Italian
+    * ja_JP - Japan
+    * pt_PT - Portuguese
+    * ru_RU - Russian
+
 ## Post and Page
 
 You can create posts and page headers with only one line in the terminal.
