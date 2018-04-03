@@ -167,7 +167,7 @@ Feel free to configure as you want. :)
 
 ## Date and 'Reading time' Language
 
-O Typing possui a configuraçao do idioma para a data e uma mensagem nas postagem para tempo de leitura. Essas configuraçoes estao disponuvel no arquivo "_config.yml"
+Typing has the language setting for the date and a message in the post for read time. These settings are available in the "**_config.yml**"
 
 
 ### Reading time
