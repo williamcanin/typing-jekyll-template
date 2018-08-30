@@ -100,3 +100,6 @@ CHANGELOG - Portuguese - Brazil
 ## [2.1.3] - 2018-02-11
 ### Alterando
 - Arrumando bug no layout 'postlist.html' no excerpted.
+## [2.1.4] - 2018-08-27
+### Alterando
+- Arrumando bug no layout de print no arquivo '_resume.scss_'.
