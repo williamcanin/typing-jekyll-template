@@ -10,12 +10,14 @@
   }
 
   .layout_resume{
+
     &__header, &__excerpt{
       display: none;
     }
     &__content{
       font-family: $font-family__third;
       color: $color-text;
+
       a,code{
         color: $color-text;
       }
@@ -28,12 +30,13 @@
         border: 1px solid $color-text !important;
         color: $color-text !important;
         background-color: white !important;
+        font-weight: bold;
       }
       li{
         margin: 8px 0px;
       }
       p{
-        font-size: 1.2rem;
+        font-size: inherit;        
         strong{
           font-style: normal;
         }
@@ -46,13 +49,13 @@
         font-weight: bold;
       }
       h1{
-        font-size: 2.9rem;
+        font-size: 2.5rem;
       }
       h2{
-        font-size: 2.4rem;
+        font-size: 2rem;
       }
       h3{
-        font-size: 1.79rem;
+        font-size: 1.75rem;
       }
     }
   }

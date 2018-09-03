@@ -2,39 +2,46 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––  */
 
 // Colors
-$bg__full: white;
+$bg__full: #fcfcfc;
 $bg__elements: $bg__full;
-$color-text: black;
-$highlight__bgcolor: white;
-$highlight__bordercolor: white;
-$highlight__color: black;
+$color-text: #000;
+$highlight__bgcolor: #d9d9d9;
+$highlight__bordercolor: #d0d0d0;
+$highlight__color: #373737;
 $layout_postlist__bg: $bg__full;
 $dashed_color: $bg__full;
-$color__links: black;
+$color__links: #b1333d;
 $sidebar__bg: $bg__full;
 $sidebar__title-color: $color-text;
-$sidebar__img-bg: white;
-$blockquote__bg: white;
-$table__bg: white;
-$thead__bg: white;
-$th__bordercolor: white;
-$tbody__bg: white;
-$td__bordercolor: white;
+$sidebar__img-bg: #FFF;
+$blockquote__bg: #f0f0f0;
+$table__bg: #dddddd;
+$thead__bg: #dddddd;
+$th__bordercolor: #dddddd;
+$tbody__bg: #dddddd;
+$td__bordercolor: #dddddd;
 $footer__bg: $bg__full;
 $footer__bordertop: 0.1rem solid $bg__full;
+$layout-search__input-bgcolor: #FFF;
+$layout-search__input-color: #000;
+$btn-typing__color: #FFF;
+
 
 // Fonts
-$font-size__content: 1.2rem;
-$font-size__sidebar-menu: 1.2rem;
-$font-weight__sidebar-menu: lighter;
-$font-size__layout_postlist-link: 2rem;
-$font-weight__layout_postlist-link: lighter;
+$font-weight__all-links: bold; 
+$font-size__content: 17px;
+$font-size__sidebar-menu: 20px;
+$font-weight__sidebar-menu: bold;
+$font-size__layout_postlist-link: 25px;
+$font-size__layout_resume_content: 17px;
+$font-weight__layout_postlist-link: bold;
+
 
 // Hover / decoration
-$sidebar__menu-hover-color: $color__links;
+$sidebar__menu-hover-color: black;
 $sidebar__menu-decoration: underline;
 $sidebar__menu-hover-decoration: underline;
-$layout_postlist__hover-title-color: $color__links;
+$layout_postlist__hover-title-color: black;
 $layout_postlist__title-decoration: underline;
 $layout_postlist__hover-title-decoration: underline;
 

@@ -100,3 +100,12 @@ CHANGELOG - Portuguese - Brazil
 ## [2.1.3] - 2018-02-11
 ### Alterando
 - Arrumando bug no layout 'postlist.html' no excerpted.
+## [2.1.4] - 2018-08-27
+### Adicionando
+- Nova mensagem de NOTA no final da página de contato.
+- Fonte Open Sans incluida no projeto.
+- Componente para markdown: markdown_mt, markdown_bt.
+### Alterando
+- Arrumando bug no layout de print com font-size.
+- Impressão com font Open Sans.
+- Correação de bug no input do layout search.

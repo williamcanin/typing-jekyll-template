@@ -10,7 +10,7 @@ $highlight__bordercolor: #000;
 $highlight__color: #fff;
 $layout_postlist__bg: #2a2a2a;
 $dashed_color: #fff;
-$color__links: #ff091b;
+$color__links: #26ff09;
 $sidebar__bg: #2e2e2e;
 $sidebar__title-color: #fff;
 $sidebar__img-bg: #302f2f;
@@ -22,12 +22,17 @@ $tbody__bg: #141414;
 $td__bordercolor: #4e4e4e;
 $footer__bg: #111111;
 $footer__bordertop: 0.1rem solid #111111;
+$layout-search__input-bgcolor: $bg__full;
+$layout-search__input-color: #FFF;
+$btn-typing__color: #000;
 
 // Fonts
-$font-size__content: 1rem;
-$font-size__sidebar-menu: 1.2rem;
-$font-weight__sidebar-menu: lighter;
-$font-size__layout_postlist-link: 2.1rem;
+$font-weight__all-links: lighter; 
+$font-size__content: 17px;
+$font-size__sidebar-menu: 20px;
+$font-weight__sidebar-menu: bold;
+$font-size__layout_postlist-link: 25px;
+$font-size__layout_resume_content: 17px;
 $font-weight__layout_postlist-link: bold;
 
 // Hover / decoration

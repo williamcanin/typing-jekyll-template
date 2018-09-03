@@ -144,6 +144,19 @@ userdata:
 
 ### Appearance
 
+**Demos theme**
+
+![Typing](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/README/images/typing.png)
+
+![Whiteglass](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/README/images/whiteglass.png)
+
+![Hacking](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/README/images/hacking.png)
+
+![Littlegirl](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/README/images/littlegirl.png)
+
+![Custom](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/README/images/custom.png)
+
+
 You can change the colors of the Typing Jekyll Template with a simple line changes. In the "**_data/data.yml**" file, change the "`website => theme`" property as listed the themes available in the comment. Example:
 
 ```yaml
@@ -158,8 +171,6 @@ Currently, there are 4(four) that *Typing* supports:
 - hacking
 - whiteglass
 - littlegirl
-
-
 
 
 Feel free to configure as you want. :)
