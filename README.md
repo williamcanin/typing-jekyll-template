@@ -144,15 +144,23 @@ userdata:
 
 ### Appearance
 
-**Demos theme**
+**Typing**
 
 ![Typing](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/README/images/typing.png)
 
+**Whiteglass**
+
 ![Whiteglass](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/README/images/whiteglass.png)
+
+**Hacking**
 
 ![Hacking](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/README/images/hacking.png)
 
+**Littlegirl**
+
 ![Littlegirl](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/README/images/littlegirl.png)
+
+**Custom** (This is not a theme, just for you to customize to taste.)
 
 ![Custom](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/README/images/custom.png)
 
