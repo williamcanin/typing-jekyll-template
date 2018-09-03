@@ -90,7 +90,7 @@ jektify:
   toggle:
     enable: true
   spotify:
-    user: williamcanin
+    user: you_user
     text: See me no Spotify
   sass:
     jekyll: true
