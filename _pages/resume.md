@@ -22,8 +22,7 @@ excerpt: |
 
 ### A theme for Jekyll
 
-<br>
-
+{:.markdown__mt40}
 ## Personal Data
 
 **Nationality**: Brazilian   

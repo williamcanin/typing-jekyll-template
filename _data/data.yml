@@ -76,6 +76,10 @@ website:
       send:
         permalink: "/contact/sent/successful/"
         button: "Go, message!"
+      note:
+        title: "NOTE"
+        description: |
+          DO NOT PASS on my cell phone number.         
 # Resume
     resume:
       button:

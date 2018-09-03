@@ -71,6 +71,9 @@ content:
       enable: true
     comments:
       enable: true
+  contact:
+    note:
+      enable: true
 ### END - This property enables and disables template features. Use to taste.
 
 

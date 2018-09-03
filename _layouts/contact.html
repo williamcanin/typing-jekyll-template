@@ -59,6 +59,11 @@ layout: default
 
           </form>
         </div>
+        {% if site.content.contact.note.enable == true %}
+        <div class="row d-block">
+          <p class="layout_contact__note">{{ loadData.website.content.contact.note.title }}: {{ loadData.website.content.contact.note.description }}</p>
+        </div>
+        {% endif %}
       </div>
 
     </div>

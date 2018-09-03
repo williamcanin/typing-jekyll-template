@@ -1,6 +1,12 @@
 /* Fonts
 ––––––––––––––––––––––––––––––––––––––––––––––––––  */
 
-$font-family__primary: 'Space Mono', monospace;
-$font-family__secondary: 'Gloria Hallelujah', cursive;
-$font-family__third: sans-serif;
+// Loading.
+$font-family__load1: 'Space Mono', monospace;
+$font-family__load2: 'Gloria Hallelujah', cursive;
+$font-family__load3: 'Open Sans', sans-serif;
+
+// Set
+$font-family__primary: $font-family__load3;
+$font-family__secondary: $font-family__load2;
+$font-family__third: $font-family__load3;

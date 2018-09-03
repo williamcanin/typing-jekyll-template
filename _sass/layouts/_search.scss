@@ -5,6 +5,7 @@
   &__form{
     border: 1px solid $color__links;
     border-radius: 0px;
+    background-color: $layout-search__input-bgcolor;
     &-group{
       &:hover,&:focus,&:active,&:visited{
         box-shadow: none !important;
@@ -17,17 +18,19 @@
     font-size: 1.2rem;
   }
   &__input{
+    background-color: $layout-search__input-bgcolor;
     font-size: 1.8rem;
     box-shadow: none !important;
     border: none !important;
     outline: none !important;
     border-radius: 0px;
-    color: $color-text;
+    color: $layout-search__input-color;
     &:hover,&:focus,&:active,&:visited{
       box-shadow: none !important;
       border: none !important;
       outline: none !important;
-      color: $color-text;
+      background-color: $layout-search__input-bgcolor;
+      color: $layout-search__input-color;
     }
   }
 
@@ -42,7 +45,7 @@
       font-size: 0.9rem;
       padding: 5px;
       background-color: $color__links;
-      color: #fff;
+      color: $btn-typing__color;
       margin-left: 10px;
       border-radius: 0px;
     }

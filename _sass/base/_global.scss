@@ -12,6 +12,7 @@ html,body{
     a{
       color: $color__links;
       text-decoration: underline;
+      font-weight: $font-weight__all-links;
       &:hover{
         color: $color__links;
       }
