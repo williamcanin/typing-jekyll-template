@@ -23,8 +23,6 @@ group :jekyll_plugins do
   gem 'jemoji', '~> 0.10.1'
   gem 'jekyll-email-protect', '~> 1.1.0'
   gem 'jektify', '~> 1.0.3'
-  ## Dev
-  # gem "jektify", '~> 1.0.3', :path => "/home/william/github/jektify/pkg"
 end
 
 # END
