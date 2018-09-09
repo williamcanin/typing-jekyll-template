@@ -109,3 +109,7 @@ CHANGELOG - Portuguese - Brazil
 - Arrumando bug no layout de print com font-size.
 - Impressão com font Open Sans.
 - Correação de bug no input do layout search.
+## [2.1.5] - 2018-09-09
+### Adicionando
+- Compatibilidade com Jekyll 3.8.2
+- Compatibilidade com Jektify 1.0.3.
