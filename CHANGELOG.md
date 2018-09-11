@@ -113,3 +113,6 @@ CHANGELOG - Portuguese - Brazil
 ### Adicionando
 - Compatibilidade com Jekyll 3.8.2
 - Compatibilidade com Jektify 1.0.3.
+## [2.1.6] - 2018-09-15
+### Alterando
+- Corrigido bug (print) na página de resume.
