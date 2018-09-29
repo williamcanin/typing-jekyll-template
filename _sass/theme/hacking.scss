@@ -10,16 +10,11 @@ $highlight__bordercolor: #000;
 $highlight__color: #fff;
 $layout_postlist__bg: #2a2a2a;
 $dashed_color: #fff;
-$color__links: #26ff09;
+$color__links: #26ff09; /* default: #26ff09 */
 $sidebar__bg: #2e2e2e;
 $sidebar__title-color: #fff;
 $sidebar__img-bg: #302f2f;
 $blockquote__bg: #4e4e4e;
-$table__bg: #494949;
-$thead__bg: #2a2a2a;
-$th__bordercolor: #202020;
-$tbody__bg: #141414;
-$td__bordercolor: #4e4e4e;
 $footer__bg: #111111;
 $footer__bordertop: 0.1rem solid #111111;
 $layout-search__input-bgcolor: $bg__full;
@@ -44,11 +39,19 @@ $layout_postlist__title-decoration: underline;
 $layout_postlist__hover-title-decoration: underline;
 
 // Enables functions for theme - true | false
-$hr-dashed-enable: true;
-$border-dashed-enable: true;
-$border-r-dashed-enable: true;
-$border-l-dashed-enable: true;
-$elements__bg-enable: true;
-$layout_postlist__bg-enable: true;
+$hr-dashed-enable: false;
+$border-dashed-enable: false;
+$border-r-dashed-enable: false;
+$border-l-dashed-enable: false;
+$elements__bg-enable: false;
+$layout_postlist__bg-enable: false;
 $layout_default__bg-enable: true;
 $sidebar__bg-enable: true;
+
+// Table color
+$table-thead-tr-th-border:#26ff09; /* default: #26ff09 */
+$table-thead-tr-th-color: black;
+$table-thead-tr-th-bg: #26ff09;
+$table-tbody-tr-td-border: #26ff09;
+$table-tbody-tr-td-color: white;
+$table-tbody-tr-td-bg: #191919;

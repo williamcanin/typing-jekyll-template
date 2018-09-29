@@ -116,3 +116,4 @@ CHANGELOG - Portuguese - Brazil
 ## [2.1.6] - 2018-09-15
 ### Alterando
 - Corrigido bug (print) na página de resume.
+- Add cores para table no markdown.

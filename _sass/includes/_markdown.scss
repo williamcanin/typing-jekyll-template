@@ -25,22 +25,25 @@ blockquote{
 
 table{
   margin: 2% 0%;
-  background-color: $table__bg;
+  width: 100%;
   thead{
-    background-color: $thead__bg;
-    tr{
+    tr{ 
       th{
         padding: 5px;
-        border: 2px solid $th__bordercolor;
+        border: 1px solid $table-thead-tr-th-border;
+        color: $table-thead-tr-th-color;
+        background-color: $table-thead-tr-th-bg;
       }
     }
   }
   tbody{
-    background-color: $tbody__bg;
+    background-color: $table-tbody-tr-td-bg;
     tr{
       td{
         padding: 5px;
-        border: 2px solid $td__bordercolor;
+        border: 1px solid $table-tbody-tr-td-border;
+        color: $table-tbody-tr-td-color;
+        background-color: $table-tbody-tr-td-bg;
         code{
           background-color: transparent;
         }
