@@ -117,3 +117,4 @@ CHANGELOG - Portuguese - Brazil
 ### Alterando
 - Corrigido bug (print) na página de resume.
 - Add cores para table no markdown.
+- Correção de classes .scss.
