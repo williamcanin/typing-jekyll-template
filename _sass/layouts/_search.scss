@@ -6,6 +6,7 @@
     border: 1px solid $color__links;
     border-radius: 0px;
     background-color: $layout-search__input-bgcolor;
+    height: auto;
     &-group{
       &:hover,&:focus,&:active,&:visited{
         box-shadow: none !important;
@@ -25,6 +26,7 @@
     outline: none !important;
     border-radius: 0px;
     color: $layout-search__input-color;
+    height: auto;
     &:hover,&:focus,&:active,&:visited{
       box-shadow: none !important;
       border: none !important;

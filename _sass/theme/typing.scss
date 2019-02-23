@@ -15,11 +15,6 @@ $sidebar__bg: #f3e8ba !default;
 $sidebar__title-color: #000 !default;
 $sidebar__img-bg: #fff !default;
 $blockquote__bg: #cdcdcd !default;
-$table__bg: #FFFFF2 !default;
-$thead__bg: #BEBEBE !default;
-$th__bordercolor: #fff !default;
-$tbody__bg: #D6D6D6 !default;
-$td__bordercolor: #fff !default;
 $footer__bg: #fff !default;
 $footer__bordertop: 1px solid #dfd4a4;
 $layout-search__input-bgcolor: #FFF;
@@ -39,6 +34,7 @@ $font-weight__layout_postlist-link: bold;
 $sidebar__menu-hover-color: inherit;
 $sidebar__menu-decoration: underline;
 $sidebar__menu-hover-decoration: none;
+$sidebar__img-shadow: 0px 0px 20px rgba(0,0,0,0.2);
 $layout_postlist__hover-title-color: $color__links;
 $layout_postlist__title-decoration: underline;
 $font-size__layout_resume_content: 12pt;
@@ -53,3 +49,25 @@ $elements__bg-enable: true !default;
 $layout_postlist__bg-enable: true !default;
 $layout_default__bg-enable: true !default;
 $sidebar__bg-enable: true !default;
+
+// Table color
+$table-thead-tr-th-border: #fcf4d7;
+$table-thead-tr-th-color: black;
+$table-thead-tr-th-bg: #f3e8ba;
+$table-tbody-tr-td-border: #f3e8ba;
+$table-tbody-tr-td-color: black;
+$table-tbody-tr-td-bg: #f7ecc4;
+
+// Gist theme
+$gist-bg: #f7ecc4;
+$gist-code-color: black;
+$gist-border: #dfce93 #dfce93 #dfce93;
+$gist-line-number-bg: #dfce93;
+$gist-line-number-color: black;
+$gist-meta-color: black;
+$gist-meta-link-color: #1c9feb;
+$gist-comment-color: #386931;
+$gist-function-color: #246194;
+$gist-function-name-color: #ad8500;
+$gist-string-color: #c55829;
+$gist-variables-color: #132b44;

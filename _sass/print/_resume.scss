@@ -16,10 +16,10 @@
     }
     &__content{
       font-family: $font-family__third;
-      color: $color-text;
+      color: black;
 
       a,code{
-        color: $color-text;
+        color: black;
       }
       /* Avoid printing hrefs when this class is applied */
       a[href]:after {
@@ -27,8 +27,8 @@
       }
       .badge-plugin{
         box-shadow: none !important;
-        border: 1px solid $color-text !important;
-        color: $color-text !important;
+        border: 1px solid black !important;
+        color: black !important;
         background-color: white !important;
         font-weight: bold;
       }

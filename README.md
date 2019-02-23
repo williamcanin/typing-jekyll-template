@@ -28,7 +28,9 @@ You already have a template page for ‘Blog’, ‘Projects’, ‘Search’, �
 
 The 'resume' page, you can print using the browser's Ctrl + P shortcut or the push button. Printing will eliminate useless parts, such as the sidebar. You'll also have a template for post (welcome-tot-jekyll), and you'll have to follow that template header.
 
-The contact page uses the [Formspree](https://formespree.io){: target="_blank"} feature, you will need to have an account in the service and add your **e-mail** to the `_data/data.yml` file. In addition, the entire contents of the `_data/dbase.yml` file should be changed as needed.
+The contact page uses the [Formspree](https://formespree.io) feature, you will need to have an account in the service and add your **e-mail** to the `_data/data.yml` file. In addition, the entire contents of the `_data/dbase.yml` file should be changed as needed.
+
+> NOTE: **Typing Jekyll Template** uses plugins and features to generate the site. So you can not clone this repository in your github and change just a few features.
 
 ## Feature
 

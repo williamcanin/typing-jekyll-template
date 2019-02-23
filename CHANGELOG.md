@@ -113,3 +113,12 @@ CHANGELOG - Portuguese - Brazil
 ### Adicionando
 - Compatibilidade com Jekyll 3.8.2
 - Compatibilidade com Jektify 1.0.3.
+## [2.1.6] - 2019-02-23
+### Alterando
+- Corrigido bug (print) na página de resume.
+- Add cores para table no markdown.
+- Correção de classes .scss.
+### Adicionando
+- Novo tema para codigos embutidos do Gist.
+
+## [2.1.7] - Não definido
