@@ -1,0 +1,59 @@
+/* Gist Theme
+––––––––––––––––––––––––––––––––––––––––––––––––––  */
+
+.gist{
+    .gist-file{
+        border-color: $gist-border !important;
+    }
+    .blob-code, .blob-num{
+        color: $gist-code-color !important;
+        border: 0.1rem solid $gist-bg !important;
+        background: $gist-bg !important;
+    }
+    .js-line-number{
+        background: $gist-line-number-bg !important;
+        color: $gist-line-number-color !important;
+    }
+    .gist-meta{
+        background-color: $gist-bg !important;
+        color: $gist-meta-color !important;
+        /* Link meta */
+        a{
+            color: $gist-meta-link-color !important;
+        }
+    }
+
+     /* Comments */
+    .pl-c{
+    color: $gist-comment-color !important;
+    }
+
+    /* Function */
+    .pl-k, tbody tr:first-child .blob-code, tbody tr:last-child .blob-code{
+    color: $gist-function-color !important;
+    }
+
+    /* Function Name */
+    .pl-en{
+    color: $gist-function-name-color !important;
+    }
+
+    /* Function Method */
+    .pl-c1{
+    color: $gist-function-name-color !important;
+    }
+    /* "'s around Strings */
+    .pl-pds{
+    color: $gist-string-color !important;
+    }
+
+    /* Strings */
+    .pl-s{
+    color: $gist-string-color !important;
+    }
+
+    .pl-smi{
+        color: $gist-variables-color !important;
+    }
+
+}
