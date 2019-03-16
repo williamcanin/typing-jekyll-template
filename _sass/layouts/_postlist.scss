@@ -34,13 +34,22 @@
   }
 
   &__pagination{
+    .page-link:focus, .page-link:visited, .page-link:active{
+      outline: 0 !important;
+      box-shadow: none !important;
+    }
+
     &-newer{
       background-color: $pagination-newer-bg;
       color: $pagination-newer-color;
       border: 1px solid $pagination-newer-bg;
       text-decoration: $pagination-text-decoration;
+      opacity: 1;
+      border-radius: 0px !important;    
       &:hover{
-        background-color: $pagination-newer-bg-hover;
+        background-color: $pagination-newer-bg;
+        border: 1px solid $pagination-newer-bg;
+        opacity: 0.8;
         color: $pagination-newer-color-hover;
       }
     }
@@ -48,6 +57,7 @@
       background-color: $pagination-counter-bg;
       color: $pagination-counter-color;
       border: 1px solid $pagination-newer-bg;
+      border-radius: 0px !important;
       &:hover{
         background-color: $pagination-counter-bg-hover;
         color: $pagination-counter-color-hover;
@@ -60,8 +70,12 @@
       color: $pagination-older-color;
       text-decoration: $pagination-text-decoration;
       border: 1px solid $pagination-older-bg;
+      border-radius: 0px !important;
+      opacity: 1; 
       &:hover{
-        background-color: $pagination-older-bg-hover;
+        opacity: 0.8;
+        background-color: $pagination-older-bg;
+        border: 1px solid $pagination-older-bg;
         color: $pagination-older-color-hover;
       }
     }

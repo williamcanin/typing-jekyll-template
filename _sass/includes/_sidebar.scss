@@ -21,9 +21,10 @@
   &__bg{
     @if $sidebar__bg-enable == true {
       background-color: $sidebar__bg;
-      @if $terminal_is_enable == "yes" {
-        background-color: $terminal-light-around !important;
-      }
+      //// DEPRECATED
+      // @if $terminal_is_enable == "true" {
+      //   background-color: $terminal-light-around !important;
+      // }
     }
   }
 

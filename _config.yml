@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/typing-jekyll-template" # the subpath of your site, e.g. /blog
 url: "https://williamcanin.me" # the base hostname & protocol for your site, e.g. http://example.com
 
 
@@ -25,16 +25,18 @@ google:
   analytics:
     enable: true
 home:
+  # NEW!
   terminal:
-    enable: true
+    enable: false
 sidebar:
   avatar:
     enable: true
-    flip: true
+    # NEW!
+    flip: false
   icons:
     enable: true
   socials:
-    enable: false
+    enable: true
 content:
   icons:
     enable: true
@@ -69,8 +71,6 @@ content:
         enable: true
       twitter:
         enable: true
-      googleplus:
-        enable: true
     day_quote:
       enable: true
     comments:
@@ -94,8 +94,8 @@ jektify:
   toggle:
     enable: true
   spotify:
-    user: "williamcanin"
-    text: "Veja-me no Spotify"
+    user: # "you_user"
+    text: "See me no Spotify"
   sass:
     jekyll: true
     other:
@@ -106,7 +106,8 @@ jektify:
   description:
     enable: false
     text: |
-      Sonzera que ouço.
+      Jekyll plugin to generate html snippets for embedding Spotify Musics.
+      To listen to the full song, open your Spotify and start these musics.
 
 plugins:
   - jemoji
@@ -118,10 +119,10 @@ _plugins:
     dir_posts: "assets/images/posts"
   # To see language support, go to the plugin "_plugins/reading_time.rb"
   reading_time:
-    locale: pt_PT
+    locale: en_US
   # To see language support, go to the plugin "_plugins/datelang.rb"
   datelang:
-    locale: pt_PT
+    locale: en_US
     reload: false
 ### EXTRA END - These properties are extra features, such as built-in third-party plugins.
 
@@ -165,6 +166,7 @@ tag_page_layout: tag
 tag_page_dir: blog/tags
 tag_permalink_style: pretty
 
+# NEW!
 # Pagination
 # https://github.com/sverrirs/jekyll-paginate-v2
 # NOTE: To disable paging, leave "enabled" for "false", 
@@ -179,7 +181,7 @@ pagination:
   per_page: 5
   permalink: '/blog/:num/'
   locale: ''
-  title: ':title - Página :num'
+  title: ':title - Page :num'
   limit: 0
   extension: html
   indexpage: 'index'

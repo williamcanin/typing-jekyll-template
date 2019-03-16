@@ -75,8 +75,8 @@ $gist-variables-color: #132b44;
 
 
 // Terminal home (if enabled)
-$terminal_is_enable: "yes"; // yes / no
-$terminal-light-around: #f3e8ba;
+// $terminal_is_enable: "false"; // true / false DEPRECATED
+$terminal-light-around: #f8f0cf;
 $terminal-text-color: #3bff1a;
 $terminal-link-color: #3BB662;
 $terminal-font-font-weight: 400;

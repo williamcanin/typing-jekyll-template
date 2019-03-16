@@ -10,11 +10,11 @@ $highlight__bordercolor: #d0d0d0;
 $highlight__color: #373737;
 $layout_postlist__bg: $bg__full;
 $dashed_color: $bg__full;
-$color__links: #353535; // Default: #353535; Blue: #1a73c5;
+$color__links: #D7101E; // Default: Blue: #1a73c5;
 $sidebar__bg: $bg__full;
 $sidebar__title-color: $color-text;
-$sidebar__img-bg: #333;
-$sidebar__img-rounded: "circle"; // Options: circle | square
+$sidebar__img-bg: #FFF;
+$sidebar__img-rounded: "square"; // Options: circle | square
 $blockquote__bg: #f0f0f0;
 $footer__bg: $bg__full;
 $footer__bordertop: 0.1rem solid $bg__full;
@@ -41,14 +41,14 @@ $layout_postlist__title-decoration: underline;
 $layout_postlist__hover-title-decoration: underline;
 
 // Enables functions for theme - true | false
-$hr-dashed-enable: false;
-$border-dashed-enable: false;
-$border-r-dashed-enable: false;
-$border-l-dashed-enable: false;
-$elements__bg-enable: false;
-$layout_postlist__bg-enable: false;
-$layout_default__bg-enable: false;
-$sidebar__bg-enable: false;
+$hr-dashed-enable: true !default;
+$border-dashed-enable: true !default;
+$border-r-dashed-enable: true !default;
+$border-l-dashed-enable: true !default;
+$elements__bg-enable: true !default;
+$layout_postlist__bg-enable: true !default;
+$layout_default__bg-enable: true !default;
+$sidebar__bg-enable: true !default;
 
 // Table color
 $table-thead-tr-th-border: #202020;
@@ -73,7 +73,7 @@ $gist-string-color: #D69D85;
 $gist-variables-color: #a4c9ef;
 
 // Terminal home (if enabled)
-$terminal_is_enable: "yes"; // yes / no
+// $terminal_is_enable: "false"; // true / false DEPRECATED
 $terminal-light-around: #FFF;
 $terminal-text-color: #38f020;
 $terminal-link-color: #9fff92;
@@ -89,16 +89,14 @@ $badge-resume-color: #1f1f1f;
 // Pagination
 $pagination-text-decoration: none;
 $pagination-newer-bg: #e0e0e0;
-$pagination-newer-color: #353535;
-$pagination-newer-bg-hover: #FFF;
+$pagination-newer-color: $color__links;
 $pagination-newer-color-hover: #000; 
 $pagination-counter-bg: #FFF;
-$pagination-counter-color: #353535;
+$pagination-counter-color: $color__links;
 $pagination-counter-bg-hover: #FFF;
-$pagination-counter-color-hover: #353535;
+$pagination-counter-color-hover: $color__links;
 $pagination-older-bg: #e0e0e0;
-$pagination-older-color: #353535;
-$pagination-older-bg-hover: #FFF;
+$pagination-older-color: $color__links;
 $pagination-older-color-hover: #000; 
 
 

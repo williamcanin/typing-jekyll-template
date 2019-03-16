@@ -10,11 +10,11 @@ $highlight__bordercolor: #000;
 $highlight__color: #fff;
 $layout_postlist__bg: #2a2a2a;
 $dashed_color: #fff;
-$color__links: #ffe609; /* default: #26ff09 */
-$sidebar__bg: #2e2e2e; /* default: #2e2e2e*/
+$color__links: #26ff09; /* default: #26ff09 */
+$sidebar__bg: #212121; /* default: #2e2e2e*/
 $sidebar__title-color: #fff;
 $sidebar__img-bg: transparent;
-$sidebar__img-rounded: "circle"; // Options: circle | square
+$sidebar__img-rounded: "square"; // Options: circle | square
 $blockquote__bg: #4e4e4e;
 $footer__bg: #111111;
 $footer__bordertop: 0.1rem solid #111111;
@@ -41,20 +41,20 @@ $layout_postlist__title-decoration: underline;
 $layout_postlist__hover-title-decoration: underline;
 
 // Enables functions for theme - true | false
-$hr-dashed-enable: false;
-$border-dashed-enable: false;
-$border-r-dashed-enable: false;
-$border-l-dashed-enable: false;
-$elements__bg-enable: false;
-$layout_postlist__bg-enable: false;
-$layout_default__bg-enable: true;
-$sidebar__bg-enable: true;
+$hr-dashed-enable: true !default;
+$border-dashed-enable: true !default;
+$border-r-dashed-enable: true !default;
+$border-l-dashed-enable: true !default;
+$elements__bg-enable: true !default;
+$layout_postlist__bg-enable: true !default;
+$layout_default__bg-enable: true !default;
+$sidebar__bg-enable: true !default;
 
 // Table color
-$table-thead-tr-th-border: #ffe50c; /* default: #26ff09 */
+$table-thead-tr-th-border:  $color__links; /* default: #26ff09 */
 $table-thead-tr-th-color: black;
-$table-thead-tr-th-bg: #ffe50b;
-$table-tbody-tr-td-border: #ffe50c;
+$table-thead-tr-th-bg:  $color__links;
+$table-tbody-tr-td-border:  $color__links;
 $table-tbody-tr-td-color: white;
 $table-tbody-tr-td-bg: #191919;
 
@@ -73,10 +73,10 @@ $gist-string-color: #D69D85;
 $gist-variables-color: #a4c9ef;
 
 // Terminal home (if enabled)
-$terminal_is_enable: "yes"; // yes / no
+// $terminal_is_enable: "false"; // true / false DEPRECATED
 $terminal-light-around: #2a2a2a;
-$terminal-text-color: #3bff1a;
-$terminal-link-color: #ffe609;
+$terminal-text-color: $color__links;
+$terminal-link-color:  $color__links;
 $terminal-font-font-weight: 400;
 $terminal-header-bg: #000;
 $terminal-content-bg: #000;
@@ -89,21 +89,19 @@ $badge-resume-color: #ffffff;
 // Pagination
 $pagination-btn-bg: #212121;
 $pagination-btn-bg-hover: #2e2e2e;
-$pagination-color: #ffe609;
-$pagination-color-hover: #fae84a;
+$pagination-color:  $color__links;
+$pagination-color-hover:  $color__links;
 $pagination-text-decoration: none;
 
 // Pagination
 $pagination-text-decoration: none;
 $pagination-newer-bg: #212121;
 $pagination-newer-color: $color__links;
-$pagination-newer-bg-hover: #2e2e2e;
-$pagination-newer-color-hover: #fae84a; 
+$pagination-newer-color-hover:  $color__links; 
 $pagination-counter-bg: transparent;
-$pagination-counter-color: #fae84a; 
+$pagination-counter-color:  $color__links; 
 $pagination-counter-bg-hover: transparent;
-$pagination-counter-color-hover: #fae84a;
+$pagination-counter-color-hover:  $color__links;
 $pagination-older-bg: #212121;
 $pagination-older-color: $color__links;
-$pagination-older-bg-hover: #2e2e2e;
-$pagination-older-color-hover: #fae84a; 
+$pagination-older-color-hover:  $color__links; 

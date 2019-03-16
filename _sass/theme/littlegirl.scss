@@ -3,7 +3,7 @@
 
 // Colors
 $bg__full: #faafce;
-$bg__elements: #faafce;
+$bg__elements: #eecedb;
 $color-text: #2b2b2b;
 $highlight__bgcolor: #d9d9d9;
 $highlight__bordercolor: #d0d0d0;
@@ -42,14 +42,14 @@ $font-size__layout_resume_content: 12pt;
 $layout_postlist__hover-title-decoration: underline;
 
 // Enables functions for theme - true | false
-$hr-dashed-enable: true;
-$border-dashed-enable: true;
-$border-r-dashed-enable: true;
-$border-l-dashed-enable: true;
-$elements__bg-enable: true;
-$layout_postlist__bg-enable: true;
-$layout_default__bg-enable: true;
-$sidebar__bg-enable: true;
+$hr-dashed-enable: true !default;
+$border-dashed-enable: true !default;
+$border-r-dashed-enable: true !default;
+$border-l-dashed-enable: true !default;
+$elements__bg-enable: true !default;
+$layout_postlist__bg-enable: true !default;
+$layout_default__bg-enable: true !default;
+$sidebar__bg-enable: true !default;
 
 // Table color
 $table-thead-tr-th-border: #faafce;
@@ -83,7 +83,7 @@ $gist-string-color: #c55829;
 $gist-variables-color: #132b44;
 
 // Terminal home (if enabled)
-$terminal_is_enable: "yes"; // yes / no
+// $terminal_is_enable: "false"; // true / false DEPRECATED
 $terminal-light-around: #dba6a6;
 $terminal-text-color: #3bff1a;
 $terminal-link-color: #3BB662;

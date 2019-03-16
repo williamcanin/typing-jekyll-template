@@ -100,12 +100,6 @@ layout: default
         </div>
         {% endif %}
 
-        {% if site.content.post.share.googleplus.enable == true %}
-        <div class="text-center col-12 col-sm-3 col-md-3 col-lg-2">
-          <a class="btn btn-link btn-typing layout_post__share-gp" href="https://plus.google.com/share?url={{ page.url | prepend: site.baseurl | prepend: site.url }}" onclick="window.open(this.href,&quot;popupwindow&quot;,&quot;status=0,height=500,width=700,resizable=0,top=50,left=100&quot;);return false;" target="_blank" title="{{ dbase.website.strings.share_social.gplus.title }}">Google+</a>
-        </div>
-        {% endif %}
-
         <div class="offset-0 offset-sm-0 offset-md-0 offset-lg-2"></div>
       </div>
     </div>
