@@ -17,7 +17,7 @@ layout: default
 
     <div class="layout_taglist__content">
 
-      <div class="row justify-content-md-center">
+      <div class="row justify-content-start">
         {% for tag in site.tags %}
          <a class="m-1 btn btn-link btn-typing layout_taglist__link" href="{{ '/blog/tags/' | prepend: site.baseurl | prepend: site.url }}{{ tag[0] }}"><span class="mr-2 badge badge-pill badge-light layout_taglist__badge">{{ tag[1].size }}</span>{{ tag[0] }}</a>
         {% endfor %}

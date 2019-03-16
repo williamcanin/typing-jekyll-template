@@ -19,7 +19,7 @@
       color: black;
 
       a,code{
-        color: black;
+        color: #000;
       }
       /* Avoid printing hrefs when this class is applied */
       a[href]:after {
@@ -36,7 +36,7 @@
         margin: 8px 0px;
       }
       p{
-        font-size: inherit;        
+        font-size: inherit;     
         strong{
           font-style: normal;
         }

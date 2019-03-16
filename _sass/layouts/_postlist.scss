@@ -20,10 +20,8 @@
     letter-spacing: 0.15rem;
     text-decoration: $layout_postlist__title-decoration;
     &:hover{
+      color: $layout_postlist__hover-title-color;
       text-decoration: $layout_postlist__hover-title-decoration;
-      h1{
-        color: $layout_postlist__hover-title-color;
-      }
     }
     h1{
       font-size: $font-size__layout_postlist-link;
@@ -33,6 +31,41 @@
 
   &__excerpted{
     font-size: 1.1rem;
+  }
+
+  &__pagination{
+    &-newer{
+      background-color: $pagination-newer-bg;
+      color: $pagination-newer-color;
+      border: 1px solid $pagination-newer-bg;
+      text-decoration: $pagination-text-decoration;
+      &:hover{
+        background-color: $pagination-newer-bg-hover;
+        color: $pagination-newer-color-hover;
+      }
+    }
+    &-counter{
+      background-color: $pagination-counter-bg;
+      color: $pagination-counter-color;
+      border: 1px solid $pagination-newer-bg;
+      &:hover{
+        background-color: $pagination-counter-bg-hover;
+        color: $pagination-counter-color-hover;
+        border: 1px solid $pagination-newer-bg;   
+      }
+    }
+
+    &-older{
+      background-color: $pagination-older-bg;
+      color: $pagination-older-color;
+      text-decoration: $pagination-text-decoration;
+      border: 1px solid $pagination-older-bg;
+      &:hover{
+        background-color: $pagination-older-bg-hover;
+        color: $pagination-older-color-hover;
+      }
+    }
+
   }
 
 }

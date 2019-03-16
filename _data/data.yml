@@ -6,37 +6,43 @@
 website:
   under_maintenance:
     title: |
-      Sorry :(  The domain of my site is under maintenance.
+      Desculpe :(  O domínio do meu site está em manutenção.
     subtitle: |
-      It will not have forecast of return. Meanwhile, follow me on the social networks below.
+      Não terá previsão de volta. Enquanto isso, me acompanhe nas rede sociais abaixo.
 # Theme - Values [ typing | whiteglass | hacking | littlegirl | custom ]
-  theme: "typing"
+  theme: "whiteglass"
 # Configuration default
-  title: Typing
-  description: Typing - A Theme for Jekyll
-  launch: 2016
+  title: "William Canin"
+  description: "Developer_"
+  launch: 2015
   metatag:
-    google-site-verification:
+    google-site-verification: "kFisEN5aqITDKsnq2_HXHtxA8ygFVE95XlKapU7Kz_I"
     type: "WebSite"
-    locale: "en"
+    locale: "pt-BR"
     expires:  # E.g: "Sat, 24 Dec 2017 00:10:00 GMT"
-    cache-control:  # E.g: "max-age=29030400, public" # Default: public / max-age=29030400
-    tags: "Typing, Theme, Jekyll"
+    cache-control: "max-age=29030400" # E.g: "max-age=29030400, public" # Default: public / max-age=29030400
+    tags: "William, Canin, Analista, Desenvolvedor, Programador, WebDesign, Geek"
   # Config for Google Analytics.  Note: Must have Google Analytics Tracking ID.
   google:
     analytics:
-      id: # tracking id, e.g. "UA-000000-01"
+      id: "UA-101186555-1" # tracking id, e.g. "UA-000000-01"
+  # Terminal for theme Hacking.
+  terminal:
+    text:
+      user: william
+      os: linux
 # Sidebar
   sidebar:
-    avatar: typing.svg
-    title: "Hey, <br> I'm Typing."
+    avatar: "avatar.svg"
+    flip-img: "avatar_flip.jpg"
+    title:  "Hey, <br> I'm William."
     menu:
       home:
-        text: "Hello!"
+        text: "Olá!"
       blog:
         text: "Blog"
         search:
-          text: "Search"
+          text: "Pesquisar"
         tags:
           text: "Tags"
         feed:
@@ -45,81 +51,84 @@ website:
   content:
     search:
       button:
-        text: "Clean"
+        text: "Limpar"
       input:
-        placeholder: ['Search in','article(s)']
-        onfocus: "Search by: title or tags"
-        onblur: ['Search in','article(s)']
-        notfound: "Oh heavens, no results :("
+        placeholder: ['Pesquisar em','artigo(s)']
+        onfocus: "Pesquisar por: título ou tags"
+        onblur:  ['Pesquisar em','artigo(s)']
+        notfound: "Oh céus, nenhum resultado :("
 # Post
     post:
       count_comments:
-        text: "Comments:"
+        text: "Comentários:"
       author:
-        avatar: typing.svg
-        title: Author
-        name: Typing Theme
+        avatar: "williamcanin.jpg"
+        title: "Autor"
+        name: "William Canin"
         description: |
-          Hi! I'm the Typing theme. :)
+          Formado em Analise de Sistemas; fascinado pelo mundo do Linux e programação geral.
       share:
-        title: "Share this post"
+        title: "Compartilhe!"
       comments:
-        title: "Leave a comment on this post"
+        title: "Deixe seu comentário"
+  
+# Postlist
+    postlist:
+      pagination:
+        newer_text: "Mais recentes"
+        counter: ['Página', 'de']
+        older_text: "Mais velhos"
+
 # Contact
     contact:
       language: "pt-BR"
       placeholder:
-        name: "Your full name"
-        subject: "Subject matter"
-        email: "Your email"
-        message: "What would you like to say?"
+        name: "Seu nome completo"
+        subject: "Qual assunto?"
+        email: "Seu Email"
+        message: "O que você gostaria de dizer?"
       send:
         permalink: "/contact/sent/successful/"
-        button: "Go, message!"
+        button: "Vai, mensagem!"
       note:
-        title: "NOTE"
+        title: "NOTA"
         description: |
-          DO NOT PASS on my cell phone number.         
+          NÃO PASSO meu número de celular para desconhecidos em Internet. 
 # Resume
     resume:
       button:
-        text: "Print"
+        text: "Imprimir"
 # Tags
     tag:
       header:
-        title: "Posts by tag:"
+        title: "Posts por tag:"
         description: |
-          Here you find the posts related to the specified tag.
+          Aqui você encontra as postagens relacionadas a essa tag especificada.
 # Footer
   footer:
-    message: "Simplicity is fashionable."
+    message: "In Jesus I Trust."
 # User data
 userdata:
-  email: william.costa.canin@gmail.com # E.g: youremail@domain.com
+  email: "contato@williamcanin.me" # E.g: youremail@domain.com
   twitter: # E.g: "@my_twitter"
   disqus:
-    username: # E.g: myuser
-  # You can add at most 5 social. If you do not want 5, you can remove the block containing: title, id, icon, url.
+    username: "williamcanin" # E.g: myuser
+  # You can add at most 4 social. If you do not want 4, you can remove the block containing: title, id, icon, url.
   socials:
     title: Follow Me!
     links:
       - title: GitHub
         id: github
         icon: fa-github
-        url: https://github.com
+        url: https://github.com/williamcanin
 
-      - title: Twitter
-        id: twitter
-        icon: fa-twitter
-        url: https://twitter.com
-
-      - title: Google Plus
-        id: gplus
-        icon: fa-google-plus
-        url: https://plus.google.com
+      - title: GitLab
+        id: gitlab
+        icon: fa-gitlab
+        url: https://gitlab.com/williamcanin
 
       - title: LinkedIn
         id: linkedin
         icon: fa-linkedin
-        url: https://linkedin.com
+        url: https://br.linkedin.com/in/williamcostacanin
 ### END Config

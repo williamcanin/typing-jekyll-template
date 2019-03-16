@@ -29,9 +29,16 @@ layout: default
     </div>
 
   <!-- Loop of posts -->
-    {% if site.posts.size > 0 %}
 
-      {% for post in site.posts %}
+      {% if site.posts.size > 0 %}
+
+      {% if page.pagination.enabled == true and site.pagination.enabled == true %}
+        {% assign style_page = paginator.posts %}
+      {% else %}
+        {% assign style_page = site.posts %}
+      {% endif %}
+
+      {% for post in style_page %}
       <div class="mt-4 mb-4 layout_postlist__content">
 
         <div class="container-fluid">
@@ -66,7 +73,7 @@ layout: default
           </div>
 
           <div class="row">
-            <a class="layout_postlist__link" href="{{ post.url | prepend: site.baseurl }}"><h1>{{ post.title }}</h1></a>
+            <a class="layout_postlist__link" href="{{ post.url | prepend: site.baseurl }}"><h1 class="font-weight-lighter_bak">{{ post.title }}</h1></a>
           </div>
 
           {% if site.content.postlist.tags.enable == true %}
@@ -88,6 +95,40 @@ layout: default
       </div>
       {% endfor %}
 
+      {% endif %}
+
+    {% assign total_page = paginator.total_pages %}
+    {% if total_page > 1 %}
+      <nav>
+        <ul class="pagination justify-content-center layout_postlist__pagination">
+          {% if paginator.previous_page %}
+          <li class="page-item">
+            <a class="page-link layout_postlist__pagination-newer" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">
+              {{ loadData.website.content.postlist.pagination.newer_text }}
+            </a>
+          </li>
+          {% endif %}
+
+          {% if total_page > 1 %}
+            <li class="page-item">
+              <span class="page-link layout_postlist__pagination-counter">
+                {{ loadData.website.content.postlist.pagination.counter[0] }}
+                {{ paginator.page }}
+                {{ loadData.website.content.postlist.pagination.counter[1] }}
+                {{ total_page }}
+              </span>
+            </li>          
+          {% endif %}
+          
+          {% if paginator.next_page %}        
+          <li class="page-item">
+            <a class="page-link layout_postlist__pagination-older" href="{{ paginator.next_page_path | prepend: site.baseurl }}">
+              {{ loadData.website.content.postlist.pagination.older_text }}
+            </a>
+          </li>
+          {% endif %}
+        </ul>
+      </nav>
     {% endif %}
 
 </div>

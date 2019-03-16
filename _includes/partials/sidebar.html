@@ -8,9 +8,24 @@
 
       {% if site.sidebar.avatar.enable == true and loadData.website.sidebar.avatar %}
       <div class="mb-0 mb-lg-4 col-3 col-sm-3 col-lg-12">
-        <a class="sidebar__img" href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">
-          <img class="img-fluid mx-auto d-block border-dashed" src="{{ '/assets/images/avatar' | prepend: site.baseurl }}/{{ loadData.website.sidebar.avatar }}" width="165" height="165" alt="Avatar">
-        </a>
+
+        {% if site.sidebar.avatar.flip == true and loadData.website.sidebar.avatar %}
+          <div class="sidebar__img">
+            <div class="sidebar__img-card">
+              <a class="sidebar__img-front sidebar__img-face" href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">
+                <img class="img-fluid mx-auto d-block border-dashed" src="{{ '/assets/images/avatar' | prepend: site.baseurl }}/{{ loadData.website.sidebar.avatar }}" width="165" height="165" alt="Avatar">
+              </a>
+              <a class="sidebar__img-back sidebar__img-face" href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">
+                <img class="img-fluid mx-auto d-block border-dashed" src="{{ '/assets/images/avatar' | prepend: site.baseurl }}/{{ loadData.website.sidebar.flip-img }}" width="165" height="165" alt="Avatar">
+              </a>
+            </div>
+          </div>
+        {% else %}
+          <a class="sidebar__img sidebar__img-noflip" href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">
+            <img class="img-fluid mx-auto d-block border-dashed" src="{{ '/assets/images/avatar' | prepend: site.baseurl }}/{{ loadData.website.sidebar.avatar }}" width="165" height="165" alt="Avatar">
+          </a>
+        {% endif %}
+
       </div>
       {% endif %}
 

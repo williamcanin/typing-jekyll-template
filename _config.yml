@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-baseurl: "/typing-jekyll-template" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://williamcanin.me" # the base hostname & protocol for your site, e.g. http://example.com
 
 
@@ -24,13 +24,17 @@ maintenance:
 google:
   analytics:
     enable: true
+home:
+  terminal:
+    enable: true
 sidebar:
   avatar:
     enable: true
+    flip: true
   icons:
     enable: true
   socials:
-    enable: true
+    enable: false
 content:
   icons:
     enable: true
@@ -56,7 +60,7 @@ content:
     author:
       enable: true
       avatar:
-        enable: true
+        enable: false
     share:
       enable: true
       facebook:
@@ -73,7 +77,7 @@ content:
       enable: true
   contact:
     note:
-      enable: true
+      enable: true      
 ### END - This property enables and disables template features. Use to taste.
 
 
@@ -90,20 +94,23 @@ jektify:
   toggle:
     enable: true
   spotify:
-    user: you_user
-    text: See me no Spotify
+    user: "williamcanin"
+    text: "Veja-me no Spotify"
   sass:
     jekyll: true
     other:
       dir: "way/to/your/SASS"
   title:
-    enable: true
-    text: "Jektify"
+    enable: false
+    text: "Música"
   description:
-    enable: true
+    enable: false
     text: |
-      Jekyll plugin to generate html snippets for embedding Spotify Musics.
-      To listen to the full song, open your Spotify and start these musics.
+      Sonzera que ouço.
+
+plugins:
+  - jemoji
+  - jekyll-paginate-v2
 
 # Settings for the plugins in the _plugins folder.
 _plugins:
@@ -111,10 +118,10 @@ _plugins:
     dir_posts: "assets/images/posts"
   # To see language support, go to the plugin "_plugins/reading_time.rb"
   reading_time:
-    locale: en_US
+    locale: pt_PT
   # To see language support, go to the plugin "_plugins/datelang.rb"
   datelang:
-    locale: en_US
+    locale: pt_PT
     reload: false
 ### EXTRA END - These properties are extra features, such as built-in third-party plugins.
 
@@ -127,7 +134,7 @@ _plugins:
 ### BEGIN - [IRRELEVANT PROPERTIES] - These properties have no need to change unless you know what you are doing. WATCH OUT!
 
 # Settings Default
-include: ['_blog', '_contact', '_pages']
+include: ['_blog','_pages','_contact']
 markdown: kramdown
 highlighter: pygments
 permalink: /blog/:title/
@@ -158,14 +165,33 @@ tag_page_layout: tag
 tag_page_dir: blog/tags
 tag_permalink_style: pretty
 
+# Pagination
+# https://github.com/sverrirs/jekyll-paginate-v2
+# NOTE: To disable paging, leave "enabled" for "false", 
+#       and in the "_blog/index.md" file, also leave "enabled"
+#       for "false."
+pagination:
+  enabled: true
+  debug: false
+  collection: 'posts'
+  sort_field: 'date'
+  sort_reverse: true
+  per_page: 5
+  permalink: '/blog/:num/'
+  locale: ''
+  title: ':title - Página :num'
+  limit: 0
+  extension: html
+  indexpage: 'index'
+
 # Config for plugin 'jekyll-gist'
 gist:
   noscript: false
 
 # Exclude files (or folders) in compilation.
 exclude:
+  - docs
   - development
-  - temp
   - src
   - vendor
   - Gemfile

@@ -12,6 +12,10 @@
 
   &__content{
     background-color: $layout_postlist__bg;
+    @if $terminal_is_enable == "yes"{
+      background-color: $terminal-light-around !important;
+      border-bottom-right-radius: 30px !important;
+    }
     p{
       font-size: $font-size__content;
     }

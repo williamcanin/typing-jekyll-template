@@ -14,6 +14,7 @@ $color__links: #8a0daf;
 $sidebar__bg: #faafce;
 $sidebar__title-color: $color-text;
 $sidebar__img-bg: #FFF;
+$sidebar__img-rounded: "square"; // Options: circle | square
 $blockquote__bg: #f0f0f0;
 $footer__bg: #fff;
 $footer__bordertop: 0.1rem solid #FFF;
@@ -22,7 +23,7 @@ $layout-search__input-color: #000;
 $btn-typing__color: #FFF;
 
 // Fonts
-$font-weight__all-links: lighter; 
+$font-weight__all-links: bold; 
 $font-size__content: 17px;
 $font-size__sidebar-menu: 20px;
 $font-weight__sidebar-menu: bold;
@@ -80,3 +81,32 @@ $gist-function-color: #246194;
 $gist-function-name-color: #ad8500;
 $gist-string-color: #c55829;
 $gist-variables-color: #132b44;
+
+// Terminal home (if enabled)
+$terminal_is_enable: "yes"; // yes / no
+$terminal-light-around: #dba6a6;
+$terminal-text-color: #3bff1a;
+$terminal-link-color: #3BB662;
+$terminal-font-font-weight: 400;
+$terminal-header-bg: #000;
+$terminal-content-bg: #000;
+$terminal-title-color: #FFF;
+
+// Resume
+$badge-resume-bg: #979797;
+$badge-resume-color: #1f1f1f;
+
+// Pagination
+$pagination-text-decoration: none;
+$pagination-newer-bg: $color__links;
+$pagination-newer-color: #fff;
+$pagination-newer-bg-hover: #a32cc7;
+$pagination-newer-color-hover: #fff; 
+$pagination-counter-bg: #FFF;
+$pagination-counter-color: #353535;
+$pagination-counter-bg-hover: #FFF;
+$pagination-counter-color-hover: #353535;
+$pagination-older-bg: $color__links;
+$pagination-older-color: #fff;
+$pagination-older-bg-hover: #a32cc7;
+$pagination-older-color-hover: #fff; 
