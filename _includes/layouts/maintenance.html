@@ -1,0 +1,26 @@
+<!-- Include Data Base  -->
+{% include liquid/data %}
+
+<!DOCTYPE html>
+<html>
+  {% include partials/head.html%}
+  <body>
+    <div class="mt-4 maintenance">
+      <div class="container">
+        <div class="row">
+          <div class="offset-5"></div>
+          <div class="col-2 text-center">
+            <i style="font-size: 5rem;" class="fa fa-wrench"></i>
+          </div>
+          <div class="offset-5"></div>
+        </div>
+        <div class="row justify-content-center">
+          <h1>{{ load_data.website.under_maintenance.title }}</h1>
+        </div>
+        <div class="row justify-content-center">
+          <h3>{{ load_data.website.under_maintenance.subtitle }}</h3>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

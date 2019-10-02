@@ -1,0 +1,6 @@
+.layout_taglist{
+    @extend .elements_box;
+    &__link{
+        @extend .buttons_style;
+    }
+}

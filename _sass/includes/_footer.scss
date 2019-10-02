@@ -1,0 +1,13 @@
+/* Stylesheets for include Footer
+––––––––––––––––––––––––––––––––––––––––––––––––––  */
+
+.footer{
+  background-color: $footer__bg;
+  font-size: 0.8rem;
+  color: $color__text;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+}

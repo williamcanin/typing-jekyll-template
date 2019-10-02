@@ -1,0 +1,34 @@
+/* Stylesheets for global elements
+––––––––––––––––––––––––––––––––––––––––––––––––––  */
+
+html,body{
+  color: $color__text;
+
+  font: 100% verdana, arial, tahoma, sans-serif;
+  *{
+    a{
+      color: $color__links;
+      text-decoration: none;
+      font-weight: $font-weight__all-links;
+      &:hover{
+        color: $color__links;
+        text-decoration: none;
+      }
+      @extend .element_opacity;
+    }
+    a:focus {outline:0 !important;}
+    button:focus {outline:0 !important;}
+    input:focus {outline:0 !important;}
+  }
+  @extend .scrollbar_modern;
+}
+
+body{
+  font-family: $font-family__primary;
+  background-color: $background__full;
+  overflow-x: hidden;
+}
+
+hr{
+  border-top: 1px solid $color__text;
+}

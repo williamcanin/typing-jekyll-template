@@ -1,0 +1,83 @@
+.layout_default{
+    .sidebar{
+        background-color: $background__full;
+        &__wrapper{}
+        &__img{
+            // AVATAR FLIP: http://css3.bradshawenterprises.com/flip/
+            position: relative;
+            margin: 10px auto;
+            width: 165px;
+            height: 165px;
+            @media (min-width: 320px) and (max-width: 991px){ 
+              width: 80px;
+              height: 80px;
+            }
+            z-index: 1;
+            perspective: 1000;
+        
+            &-card{
+              width: 100%;
+              height: 100%;
+              transform-style: preserve-3d;
+              transition: all 1.0s linear;
+            }
+        
+            @media (min-width: 768px){
+              &:hover .sidebar__img-card {
+                transform: rotateY(180deg);
+              }
+            }
+        
+            &-face{
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              backface-visibility: hidden;
+            }
+        
+            img{
+              // -webkit-box-shadow: $sidebar__img-shadow;
+              // -moz-box-shadow: $sidebar__img-shadow;
+              // box-shadow: $sidebar__img-shadow;        
+              //// background-color: $sidebar__img-bg;
+            }
+            // -webkit-box-shadow: $sidebar__img-shadow;
+            // -moz-box-shadow: $sidebar__img-shadow;
+            // box-shadow: $sidebar__img-shadow;     
+            //// background-color: $sidebar__img-bg;
+          }
+        &__avatar{
+          z-index: 1;
+          img{
+              @media (max-width: 992px){
+                  width: 90px;
+              }
+          }
+        }
+        &__title{
+            font-family: $font-family__secondary;
+            background-color: $sidebar__title_bg;
+            border-radius: 20px;
+            color: $sidebar__title_color;
+            @media (max-width: 992px){
+                font-size: 1.9rem;
+                text-align: left !important;
+            }
+        }
+        &__menu{
+            font-family: $font-family__secondary;
+            background-color: $sidebar__menu_bg;
+            border-radius: 20px;
+            &-title{
+              font-size: $sidebar__menu_font_size;
+            }
+            &-link{
+              font-size: $sidebar__menu_font_size;
+              line-height: $sidebar__menu_line-height;
+              &:hover{
+                text-decoration: underline;
+              }
+            }
+        }
+    }
+}

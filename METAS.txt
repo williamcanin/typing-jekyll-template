@@ -1,0 +1,18 @@
+> Blog options true
+> Maintanence
+> Flip avatar.
+> Disqus
+> Button top (soft)
+>> Post/Page:
+    > Markdown
+    > Gist
+    > Table
+    > Highlight
+    > Linenos
+    > Image
+>> Themes:
+    > Whiteglass
+    > Hacking
+    > Littlegirl
+
+># Upgrade Jektify

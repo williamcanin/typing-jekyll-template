@@ -1,0 +1,11 @@
+.layout_tag{
+    &__header, &__content{
+        @extend .elements_box;
+    }
+    &__time{
+        background-color: $postlist_time_background;
+        opacity: 0.77;
+        color: #080808;
+        border-radius: 5px;
+    }
+}

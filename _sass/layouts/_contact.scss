@@ -1,0 +1,15 @@
+.layout_contact{
+    &__header, &__form, &__note{
+        @extend .elements_box;
+    }
+    &__input{
+        @extend .inputs_style;
+        font-size: 1.3rem;
+    }
+    &__textarea{
+        @extend .textarea_style;
+    }
+    &__form-button{
+        @extend .buttons_style;
+    }
+}

@@ -1,0 +1,64 @@
+---
+layout: default
+---
+
+<!-- Include Data Base  -->
+{% include liquid/data %}
+
+{% if load_options.home.terminal.enable == true %}
+  <div class="p-3 layout_hello" style="background-color: transparent !important;">
+{% else %}
+  <div class="p-3 layout_hello {% if load_options.home.animation == true %} animation__content {% endif %}">
+{% endif %}
+
+  {% if load_options.home.terminal.enable != true %}
+  <div class="layout_hello__header">
+
+    <div class="container-fluid">
+      <div class="row">
+        <h2 class="mb-4 font-weight-bold layout_hello__title">{{ page.title }}<span class="layout_hello__cursor">|</span></h2>
+      </div>
+    </div>
+
+  </div>
+  {% endif %}
+
+
+  <div class="layout_hello__content">
+
+    {% if load_options.home.terminal.enable != true %}
+
+    <div class="container-fluid">
+      <div class="d-block row">
+        {{ content }}
+      </div>
+    </div>
+
+    {% else %}
+
+    <div class="d-block row">
+    <div class="wow fadeInRight intro__terminal {% if load_options.home.terminal.animation == true %} animation__terminal {% endif %}">
+      <header class="header">
+        <div class="btn header__btn header__btn--red" style="cursor: pointer;"></div>
+        <div class="btn header__btn header__btn--yellow" style="cursor: pointer;"></div>
+        <div class="btn header__btn header__btn--green" style="cursor: pointer;"></div>
+        <div class="title">
+          <span class="title__text">{{ load_data.website.terminal.text.user }}@{{ load_data.website.terminal.text.os }}:/home/{{ load_data.website.terminal.text.user }}</span>
+        </div>
+      </header>
+      <section class="body">
+        {% comment %} ./brief_description.py {% endcomment %}
+        <p>{{ load_data.website.terminal.text.user }}@{{ load_data.website.terminal.text.os }}:~$ python brief_description.py</p>
+        {{ content }}
+        <p class="body__output"><span>{{ load_data.website.terminal.text.user }}@{{ load_data.website.terminal.text.os }}:~$</span>
+          <span class="layout_hello__cursor">_</span>
+        </p>
+      </section>
+    </div>
+  </div>
+  
+  {% endif %}
+
+  </div>
+
+</div>

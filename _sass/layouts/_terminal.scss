@@ -1,0 +1,108 @@
+/* 
+––––––––––––––––––––––––––––––––––––––––––––––––––  */
+
+.intro{
+    &__terminal{
+        @media (max-width: 768px) {
+        // display: none;
+        }
+        margin-top: 2%;
+        -webkit-box-shadow: 0 8px 6px -6px black;
+        -moz-box-shadow: 0 8px 6px -6px black;
+        box-shadow: 0 10px 56px -6px black;
+        border-radius: 7px 7px 5px 5px;
+
+        /* .intro__terminal .header */
+        .header{
+        background: $terminal-header-bg;
+        border-radius: 7px 7px 0 0;
+        padding-left: 10px;
+        color: #fff;
+
+        /* .header__btn */
+        &__btn{
+            float: left;
+            padding: 0;
+            width: 12px;
+            height: 12px;
+            margin: 8px 5px 0 0;
+            display: inline-block;
+            border-radius: 50%;
+
+            /* .header__btn--green */
+            &--green{
+            background-color: #3BB662;
+            } /* END - .header__btn--green */
+
+            /* .header__btn--yellow */
+            &--yellow{
+            background-color: #ffe609;
+            } /* END - .header__btn--yellow */
+
+            /* .header__btn--red */
+            &--red{
+            background-color: #ec4d3b;
+            } /* END - .header__btn--red */
+
+        } /* END - .header__btn */
+
+        } /* END - .intro__terminal .header */
+
+
+        /* .intro__terminal .title */
+        .title{
+        font-size: 0.94rem;
+        text-align: center;
+        padding: 3px 0px;
+
+        /* .intro__terminal .title__text */
+        &__text{
+            margin-left: -56px;
+            color: $terminal-title-color;
+        } /* END -.intro__terminal .title__text */
+
+        } /* END - .intro__terminal .titl */
+
+
+        /* .intro__terminal .body */
+        .body{
+        color: $terminal-text-color;
+        font-size: 15pt;
+        background: $terminal-content-bg;
+        @media (max-width: 1200px) {
+            background: rgba(30, 30, 31, 1);
+        }
+        padding: 10px;
+        box-sizing: border-box;
+        width: 100%;
+        overflow: auto;
+        font-weight: $terminal-font-font-weight;
+        min-height: 250px;
+        font-family: 'Inconsolata', monospace;
+        border-radius: 0 0 5px 5px;
+        p{
+            font-size: 12pt;
+            a{
+                color: $terminal-link-color;
+            }
+        }
+
+        /* .intro__terminal .body__output */
+        &__output{
+            min-height: 21px !important;
+            span{
+                display: inline;
+                min-height: 21px !important;
+            }
+            &:after {
+            content:" _";
+            opacity: 0;
+            color: white;
+            animation: cursor 1s infinite;
+            min-height: 21px !important;
+            }
+        } /* END - .intro__terminal .body__output */
+
+        } /* END - .intro__terminal .body */
+    } /* END - .intro__terminal */
+}

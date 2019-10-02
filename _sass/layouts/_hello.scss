@@ -1,0 +1,5 @@
+.layout_hello{
+    @extend .elements_box;
+    line-height: 1.8rem;
+    p{font-size: 1.12rem;}
+}

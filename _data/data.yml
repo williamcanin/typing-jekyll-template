@@ -1,0 +1,135 @@
+# ________________________________________________________________________________________________ #
+# Attention! Change only the values of the variables! Do not change the position of the variables. #
+# ________________________________________________________________________________________________-#
+
+### BEGIN Config
+website:
+  under_maintenance:
+    title: |
+      Sorry :(  The domain of my site is under maintenance.
+    subtitle: |
+      It will not have forecast of return. Meanwhile, follow me on the social networks below.
+# Theme - Values [ typing | whiteglass | hacking | littlegirl | custom ]
+  theme: "typing"
+# Configuration default
+  title: "Typing"
+  description: "Typing - A Theme for Jekyll"
+  launch: 2015
+  metatag:
+    google-site-verification: 
+    type: "WebSite"
+    locale: "en"
+    expires:  # E.g: "Sat, 24 Dec 2017 00:10:00 GMT"
+    cache-control: "max-age=29030400" # E.g: "max-age=29030400, public" # Default: public / max-age=29030400
+    tags: "Typing, Theme, Jekyll"
+  # Config for Google Analytics.  Note: Must have Google Analytics Tracking ID.
+  google:
+    analytics:
+      id: # tracking id, e.g. "UA-000000-01"
+  # Terminal for theme Hacking.
+  terminal:
+    text:
+      user: typing
+      os: linux
+# Sidebar
+  sidebar:
+    avatar:
+      front: "typing_front.png"
+      back:  "typing_back.png"
+    title:
+      text: "Hey, <br> I'm Typing."
+      size: "2.3rem"
+    menu:
+      blog:
+        text: "Blog"
+        search:
+          text: "Search"
+        tags:
+          text: "Tags"
+        feed:
+          text: "Feed"
+# Content
+  content:
+    search:
+      button:
+        text: "Clean"
+      input:
+        placeholder: ['Search in','article(s)']
+        onfocus: "Pesquisar por: título ou tags"
+        onblur:  ['Search in','article(s)']
+        notfound: "Oh heavens, no results :("
+# Post
+    post:
+      count_comments:
+        text: "Comments:"
+      author:
+        avatar: "typing.svg"
+        title: "Author"
+        name: "Typing Theme"
+        description: |
+          Hi! I'm the Typing theme. :)
+      share:
+        title: "Share this post"
+      comments:
+        title: "Leave a comment on this post"
+  
+# Postlist
+    postlist:
+      pagination:
+        newer_text: "Newer"
+        counter: ['Page', 'of']
+        older_text: "Older"
+
+# Contact
+    contact:
+      language: "en-US"
+      placeholder:
+        name: "Your full name"
+        subject: "Subject matter"
+        email: "Your email"
+        message: "What would you like to say?"
+      send:
+        permalink: "/contact/sent/successful/"
+        button: "Go, message!"
+      note:
+        title: "NOTE"
+        description: |
+          DO NOT PASS on my cell phone number.
+# Resume
+    resume:
+      button:
+        text: "Print"
+# Tags
+    tag:
+      header:
+        title: "Posts by tag:"
+        description: |
+          Here you find the posts related to the specified tag.
+# Footer
+  footer:
+    message: "Simplicity is fashionable."
+# User data
+userdata:
+  email: youremail@domain.com # E.g: youremail@domain.com
+  twitter: # E.g: "@my_twitter"
+  disqus:
+    username: # E.g: myuser
+  # You can add at most 4 social. If you do not want 4, you can remove the block containing: title, id, icon, url.
+  socials:
+    title: Follow Me!
+    links:
+      - title: GitHub
+        id: github
+        icon: fa-github
+        url: https://github.com
+
+      - title: Twitter
+        id: twitter
+        icon: fa-twitter
+        url: https://twitter.com
+
+      - title: LinkedIn
+        id: linkedin
+        icon: fa-linkedin
+        url: https://linkedin.com
+### END Config

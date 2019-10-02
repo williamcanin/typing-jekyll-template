@@ -1,0 +1,75 @@
+### BEGIN - This property enables and disables template features. Use to taste.
+maintenance:
+  enable: false
+google:
+  analytics:
+    enable: true
+home:
+  animation: true
+  terminal:
+    animation: true
+    enable: false
+sidebar:
+  animation: true
+  fixed: true
+  avatar:
+    enable: true
+    background: true
+    border: true
+    circle: true
+    flip: false
+  blog:
+    enable: true
+  icons:
+    enable: true
+  socials:
+    enable: true
+content:
+  icons:
+    enable: true
+  postlist:
+    animation: true
+    date:
+      enable: true
+    expected:
+      enable: true
+    tags:
+      enable: true
+    comments:
+      enable: true
+  tagpost:
+    animation: true
+    date:
+      enable: true
+    expected:
+      enable: true
+    tags:
+      enable: true
+    comments:
+      enable: true
+  post:
+    animation: true
+    author:
+      enable: true
+      avatar:
+        enable: false
+    share:
+      enable: true
+      facebook:
+        enable: true
+      linkedin:
+        enable: true
+      twitter:
+        enable: true
+    day_quote:
+      enable: true
+    comments:
+      enable: true
+  contact:
+    animation: true
+    note:
+      enable: true
+  page:
+    animation: true     
+### END - This property enables and disables template features. Use to taste.
+

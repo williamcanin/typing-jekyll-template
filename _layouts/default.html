@@ -1,0 +1,25 @@
+---
+layout: compress
+---
+
+<!-- Include Data Base  -->
+{% include liquid/data %}
+
+{% if load_options.maintenance.enable == true %}
+  {% include layouts/maintenance.html %}
+{% else %}
+<!DOCTYPE html>
+<html>
+  {% include partials/head.html %}
+<body class="body" id="top">
+  <div class="container layout_default">
+    <div class="row">
+      {% include partials/sidebar.html %}
+      {% include partials/content.html %}
+    </div>
+  </div>
+  {% include partials/footer.html %}
+  {% include scripts/default.html %}
+</body>
+</html>
+{% endif %}

@@ -1,0 +1,135 @@
+---
+layout: blog
+---
+
+<!-- Include Data Base  -->
+{% include liquid/data %}
+
+{% for post in site.posts %}
+  {% capture post_count %} {{ post_count | plus: 1 }} {% endcapture %}
+{% endfor %}
+
+<div class="p-3 layout_postlist {% if load_options.content.postlist.animation == true %} animation__content {% endif %}" itemscope="itemscope" itemtype="http://schema.org/Blog">
+
+    <!-- This is a Blog Title -->
+    <div class="p-3 layout_postlist__header">
+      <div class="container-fluid">
+        <div class="row">
+          <h1 class="font-weight-bold layout_postlist__title">{{ page.title }}</h1>
+        </div>
+
+        <!-- This is a Blog description -->
+        <div class="row d-block">
+          <div class="layout_postlist__description">
+            {{ page.msg_qtd[0] }} <strong>{{ post_count }}</strong> {{ page.msg_qtd[1] }}
+            {{ content }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- Loop of posts -->
+
+      {% if site.posts.size > 0 %}
+
+      {% if page.pagination.enabled == true and site.pagination.enabled == true %}
+        {% assign style_page = paginator.posts %}
+      {% else %}
+        {% assign style_page = site.posts %}
+      {% endif %}
+
+      {% for post in style_page %}
+      <div class="mt-4 mb-4 p-3 layout_postlist__content">
+
+        <div class="container-fluid">
+
+          <div class="row">
+
+            {% if load_options.content.postlist.date.enable == true %}
+            <div class="col-8 col-lg-4 offset-lg-0 col-sm-6">
+              <div class="row justify-content-start">
+                <time class="p-2 layout_postlist__time">
+                  {% if load_options.content.icons.enable == true %}<i class="far fa-calendar-alt"></i>{% endif %}
+                  {% datelang post %}
+                  {% include datelang/post %}
+                </time>
+              </div>
+            </div>
+            {% endif %}
+
+            {% if jekyll.environment == 'production' and
+            load_options.content.postlist.comments.enable == true and
+            page.comments != false and
+            load_data.userdata.disqus.username %}
+            <div class="col-4 col-lg-3 offset-lg-5 col-sm-6">
+              <div class="row justify-content-end">
+                <div class="layout_postlist__comments">
+                    {% if load_options.content.icons.enable == true %}<i class="fas fa-comments"></i>{% endif %}
+                    <span class="disqus-comment-count" data-disqus-identifier="{{ post.url }}"></span>
+                    <!-- <span class="disqus-comment-count"> &nbsp; 5 &nbsp; </span> -->
+                </div>
+              </div>
+            </div>
+            {% endif %}
+          </div>
+
+          <div class="row">
+            <a class="layout_postlist__link" href="{{ post.url | prepend: site.baseurl }}"><h1 class="font-weight-lighter_bak">{{ post.title }}</h1></a>
+          </div>
+
+          {% if load_options.content.postlist.tags.enable == true %}
+          <div class="mt-3 mb-3 row">
+            {% if load_options.content.icons.enable == true %}<i class="fa fa-tags"></i>{% endif %}&nbsp;Tags:&nbsp;
+            <span class="layout_postlist__tags">{{ post | tags }}</span>
+          </div>
+          {% endif %}
+
+          {% if load_options.content.postlist.expected.enable == true %}
+          <div class="row">
+            <p class="p-2 layout_postlist__excerpted">{{ post.excerpted | strip_html | truncatewords:26 }}
+              <a href="{{ post.url | prepend: site.baseurl }}">Continue</a>
+            </p>
+          </div>
+          {% endif %}
+
+        </div>
+      </div>
+      {% endfor %}
+
+      {% endif %}
+
+    {% assign total_page = paginator.total_pages %}
+    {% if total_page > 1 %}
+      <nav>
+        <ul class="pagination justify-content-center layout_postlist__pagination">
+          {% if paginator.previous_page %}
+          <li class="page-item">
+            <a class="page-link layout_postlist__pagination-newer" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">
+              {{ load_data.website.content.postlist.pagination.newer_text }}
+            </a>
+          </li>
+          {% endif %}
+
+          {% if total_page > 1 %}
+            <li class="page-item">
+              <span class="page-link layout_postlist__pagination-counter">
+                {{ load_data.website.content.postlist.pagination.counter[0] }}
+                {{ paginator.page }}
+                {{ load_data.website.content.postlist.pagination.counter[1] }}
+                {{ total_page }}
+              </span>
+            </li>          
+          {% endif %}
+          
+          {% if paginator.next_page %}        
+          <li class="page-item">
+            <a class="page-link layout_postlist__pagination-older" href="{{ paginator.next_page_path | prepend: site.baseurl }}">
+              {{ load_data.website.content.postlist.pagination.older_text }}
+            </a>
+          </li>
+          {% endif %}
+        </ul>
+      </nav>
+    {% endif %}
+
+</div>

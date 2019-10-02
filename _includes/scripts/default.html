@@ -1,0 +1,14 @@
+<!-- JQuery -->
+<script type="text/javascript" src="{{ '/assets/vendor/js/jquery.min.js' | prepend: site.baseurl }}"></script>
+
+<!-- Bootstrap -->
+<script type="text/javascript" src="{{ '/assets/vendor/js/popper.min.js' | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{ '/assets/vendor/js/bootstrap.min.js' | prepend: site.baseurl }}"></script>
+
+<!-- Simple Search Jekyll -->
+<script type="text/javascript" src="{{ '/assets/vendor/js/simple-jekyll-search.min.js' | prepend: site.baseurl }}"></script>
+
+<!-- Specific for each pages. -->
+{% for script_page in page.script %}
+   <script type="text/javascript" src="{{ '/assets/js/' | prepend: site.baseurl | prepend: site.url  | append: script_page }}"></script>
+{% endfor %}

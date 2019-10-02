@@ -1,0 +1,139 @@
+/* Theme Typing - Default
+––––––––––––––––––––––––––––––––––––––––––––––––––  */
+// Default
+$background__full: #e4ca91 !default;
+$color__links: #D7101E !default;
+$color__text: #000 !default;
+
+// Sidebar
+$sidebar__title_color: $color__links;
+$sidebar__title_bg: #fff;
+$sidebar__menu_bg: #fff;
+$sidebar__menu_font_size: 1.3rem;
+$sidebar__menu_line-height: 1.64rem;
+
+
+// Postlist
+$postlist_time_background: rgba(216, 200, 201, 0.42);
+$postlist_expected_background: rgba(236, 236, 236, 0.459) !default;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Colors
+$bg__elements: #f3e8ba !default;
+
+$highlight__bgcolor: #d8d9d8 !default;
+$highlight__bordercolor: #646266 !default;
+$highlight__color: #000 !default;
+$layout_postlist__bg: #fff !default;
+$dashed_color: #9c9c9c !default;
+
+$sidebar__bg: #f3e8ba !default;
+$sidebar__title-color: #000 !default;
+$sidebar__img-bg: #fff !default;
+$blockquote__bg: #cdcdcd !default;
+$footer__bg: #fff !default;
+$footer__bordertop: 1px solid #dfd4a4;
+$layout-search__input-bgcolor: #FFF;
+$layout-search__input-color: #000;
+$btn-typing__color: #FFF;
+
+// Fonts
+$font-weight__all-links: bold; 
+$font-size__content: 17px;
+$font-size__sidebar-menu: 20px;
+$font-weight__sidebar-menu: bold;
+$font-size__layout_postlist-link: 25px;
+$font-size__layout_resume_content: 17px;
+$font-weight__layout_postlist-link: bold;
+
+// Hover / decoration
+$sidebar__menu-hover-color: inherit;
+$sidebar__menu-decoration: underline;
+$sidebar__menu-hover-decoration: none;
+$sidebar__img-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+$layout_postlist__hover-title-color: $color__links;
+$layout_postlist__title-decoration: underline;
+$font-size__layout_resume_content: 12pt;
+$layout_postlist__hover-title-decoration: underline;
+
+// Enables functions for theme - true | false
+$hr-dashed-enable: true !default;
+$border-dashed-enable: true !default;
+$border-r-dashed-enable: true !default;
+$border-l-dashed-enable: true !default;
+$elements__bg-enable: true !default;
+$layout_postlist__bg-enable: true !default;
+$layout_default__bg-enable: true !default;
+$sidebar__bg-enable: true !default;
+
+// Table color
+$table-thead-tr-th-border: #fcf4d7;
+$table-thead-tr-th-color: black;
+$table-thead-tr-th-bg: #f3e8ba;
+$table-tbody-tr-td-border: #f3e8ba;
+$table-tbody-tr-td-color: black;
+$table-tbody-tr-td-bg: #f7ecc4;
+
+// Gist theme
+$gist-bg: #f7ecc4;
+$gist-code-color: black;
+$gist-border: #dfce93 #dfce93 #dfce93;
+$gist-line-number-bg: #dfce93;
+$gist-line-number-color: black;
+$gist-meta-color: black;
+$gist-meta-link-color: #1c9feb;
+$gist-comment-color: #386931;
+$gist-function-color: #246194;
+$gist-function-name-color: #ad8500;
+$gist-string-color: #c55829;
+$gist-variables-color: #132b44;
+
+
+// Terminal home (if enabled)
+// $terminal_is_enable: "false"; // true / false DEPRECATED
+$terminal-light-around: #f8f0cf;
+$terminal-text-color: #3bff1a;
+$terminal-link-color: #3BB662;
+$terminal-font-font-weight: 400;
+$terminal-header-bg: #000;
+$terminal-content-bg: #000;
+$terminal-title-color: #FFF;
+
+// Resume
+$badge-resume-bg: #979797;
+$badge-resume-color: #1f1f1f;
+
+// Pagination
+$pagination-text-decoration: none;
+$pagination-newer-bg: $color__links;
+$pagination-newer-color: #FFF;
+$pagination-newer-bg-hover: #e9404b;
+$pagination-newer-color-hover: #FFF; 
+$pagination-counter-bg: #FFF;
+$pagination-counter-color: #353535;
+$pagination-counter-bg-hover: #FFF;
+$pagination-counter-color-hover: #353535;
+$pagination-older-bg:  $color__links;
+$pagination-older-color: #FFF;
+$pagination-older-bg-hover: #e9404b;
+$pagination-older-color-hover: #FFF;
+
+// Avatar animation pulse color
+$avatar-pulse-color-begin: rgba(250, 35, 49, 0.158);
+$avatar-pulse-color-end: rgba(250, 35, 49, 0.103);
+

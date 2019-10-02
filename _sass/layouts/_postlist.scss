@@ -1,0 +1,42 @@
+.layout_postlist{
+
+    &__header, &__content{
+        @extend .elements_box;
+    }
+    &__time{
+        background-color: $postlist_time_background;
+        opacity: 0.77;
+        color: #080808;
+        border-radius: 5px;
+    }
+    &__excerpted{
+        background-color: $postlist_expected_background;
+        border-radius: 5px;
+        line-height: 1.8rem;
+    }
+    &__comments{
+        .fa-comments{
+            margin: 0px 4px;
+        }
+        .disqus-comment-count{
+            color: $color__links;
+        }
+    }
+    &__pagination{
+        &-newer{
+            @extend .buttons_style;
+            border-radius: 0px;
+        }
+        &-counter{
+            color: $color__links;
+            &:hover{
+                color: $color__links;
+                background-color: white;
+            }
+        }
+        &-older{
+            @extend .buttons_style;
+            border-radius: 0px;
+        }
+    }
+}

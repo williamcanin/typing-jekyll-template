@@ -1,0 +1,74 @@
+{
+  "ch_CH":{
+    "ReadingTime":{
+      "longtext": "閱讀“關於 ",
+      "shorttext": "閱讀“1分鐘內”。",
+      "pword": "分鐘",
+      "sword": "分鐘"
+    }
+  },
+  "de_DE":{
+    "ReadingTime":{
+      "longtext": "Lesen Sie dies in \"über ",
+      "shorttext": "Lesen Sie diese \"Innerhalb 1 Minute\".",
+      "pword": "Protokoll\".",
+      "sword": "Minute\"."
+    }
+  },
+  "en_US":{
+    "ReadingTime":{
+      "longtext": "Read this in \"about ",
+      "shorttext": "Read this \"Within 1 minute\".",
+      "pword": "minutes\".",
+      "sword": "minute\"."
+    }
+  },
+  "es_ES":{
+    "ReadingTime":{
+      "longtext": "Leer esto en \"about ",
+      "shorttext": "Lea esto \"Dentro de 1 minuto\".",
+      "pword": "minutos\".",
+      "sword": "minuto\"."
+    }
+  },
+  "fr_FR":{
+    "ReadingTime":{
+      "longtext": "Lisez ceci dans \"about ",
+      "shorttext": "Lisez ceci \"dans 1 minute\".",
+      "pword": "minutes\".",
+      "sword": "minute\"."
+    }
+  },
+  "it_IT":{
+    "ReadingTime":{
+      "longtext": "Leggi questo in \"su ",
+      "shorttext": "Leggi questo \"entro 1 minuto\".",
+      "pword": "minuti\".",
+      "sword": "minuto\"."
+    }
+  },
+  "ja_JP":{
+    "ReadingTime":{
+      "longtext": "これを読む ",
+      "shorttext": "これを「1分以内に」読む。",
+      "pword": "分",
+      "sword": "分"
+    }
+  },
+  "pt_PT":{
+    "ReadingTime":{
+      "longtext": "Leia isto \"em cerca de ",
+      "shorttext": "Leia isto \"Dentro de 1 minuto\".",
+      "pword": "minutos\".",
+      "sword": "minuto\"."
+      }
+    },
+  "ru_RU":{
+    "ReadingTime":{
+      "longtext": "Прочтите это в разделе «О ",
+      "shorttext": "Прочитайте это «В течение 1 минуты».",
+      "pword": "Минуты",
+      "sword": "Минута"
+    }
+  }
+}

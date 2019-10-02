@@ -1,0 +1,60 @@
+---
+layout: blog
+---
+
+<!-- Include Data Base  -->
+{% include liquid/data %}
+
+<div class="p-4 layout-search {% if load_options.content.page.animation == true %} animation__content {% endif %}">
+
+  <div class="container-fluid">
+
+    <div class="row">
+      <h1 class="font-weight-bold layout-search__title">{{ page.title }}</h1>
+    </div>
+
+    <div class="row d-block">
+      <div class="layout-search__description">{{ content }}</div>
+    </div>
+
+    {% for post in site.posts %}
+      {% capture post_count %} {{ post_count | plus: 1 }} {% endcapture %}
+    {% endfor %}
+
+    <div class="row">
+  
+      <div class="col-md-12">
+        <form id="layout-search__form" class="layout-search__form" action="" accept-charset="UTF-8" method="get">
+          <div class="input-group">
+            <i class="layout-search__shellicon" aria-hidden="true">>></i>
+            <input id="layout-search__input" type="text" 
+              placeholder="
+                {{ load_data.website.content.search.input.placeholder[0] }}
+                {{ post_count }}
+                {{ load_data.website.content.search.input.placeholder[1] }}
+              "
+              onfocus="
+                this.placeholder = '{{ load_data.website.content.search.input.onfocus }}'
+              "
+              onblur="this.placeholder = ' {{ load_data.website.content.search.input.onblur[0] }}
+                {{ post_count }}
+                {{ load_data.website.content.search.input.onblur[1] }}'
+              "
+                class="form-control form-control-sm ml-3 layout-search__input"
+            >
+            <span class="input-group-btn">
+                <input type="button" value="{{ load_data.website.content.search.button.text }}" onclick="ClearFieldSearch();" class="btn btn-link layout-search__btn-clear" data-disable-with="Search">
+            </span>
+          </div>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <ul id="layout-search__data" class="layout-search__data"></ul>
+    </div>
+
+  </div>
+
+</div>

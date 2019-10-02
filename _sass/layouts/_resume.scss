@@ -1,0 +1,10 @@
+.layout_resume{
+    @extend .elements_box;
+    @extend .content_text_font_size;
+    &__btnprint{
+      @extend .buttons_style;
+    }
+    &__excerpt{}
+    &__content{}
+    &__badge{}
+  }

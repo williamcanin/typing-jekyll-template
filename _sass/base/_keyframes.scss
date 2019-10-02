@@ -1,0 +1,48 @@
+@keyframes fade {
+    from{
+        opacity: 0;
+        transform: scale(0.9);
+    }to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes move {
+    from{
+        opacity: 0;
+        transform: translateX(-35%)
+    }to{
+        opacity: 1;
+        transform: translateX(0%)
+    }
+}
+
+@keyframes move_invert {
+    from{
+        opacity: 0;
+        transform: translateX(35%)
+    }to{
+        opacity: 1;
+        transform: translateX(0%)
+    }
+}
+
+@keyframes down {
+    from{
+        opacity: 0;
+        transform: rotateY(-45%);
+    }to{
+        opacity: 1;
+        transform: rotateY(0%);
+    }
+}
+
+@keyframes pulse{
+  0% {
+    box-shadow: 0 0 0 0px $avatar-pulse-color-begin;
+  }
+  100% {
+    box-shadow: 0 0 0 35px $avatar-pulse-color-end;
+  }
+}
