@@ -1,4 +1,5 @@
-### BEGIN - This property enables and disables template features. Use to taste.
+# In this file you can enable and disable template features.
+
 maintenance:
   enable: false
 google:
@@ -71,5 +72,3 @@ content:
       enable: true
   page:
     animation: true     
-### END - This property enables and disables template features. Use to taste.
-

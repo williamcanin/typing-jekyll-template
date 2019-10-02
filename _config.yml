@@ -1,62 +1,56 @@
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://williamcanin.me" # the base hostname & protocol for your site, e.g. http://example.com
+# the base hostname & protocol for your site, e.g. http://example.com
+url: "https://williamcanin.me"
+# the subpath of your site, e.g. /blog
+baseurl: ""
+
+
+
+
+
+# Attention! Do not change the information below as it is 
+# for development unless you know what you are doing.
 
 plugins:
   - jemoji
   - jekyll-paginate-v2
 
-# Settings Default
 include: ['_blog','_pages','_contact']
 markdown: kramdown
 highlighter: rouge
 permalink: /blog/:title/
 
-# Build local / Server
 destination: _site
 port: 4000
 host: localhost
 
-# Config SASS
 sass:
   load_paths:
-  - _sass
+  - src/_sass
   - vendor/node_modules
   style: compressed
 
-# Config feed for atom
 feed:
   path: atom.xml
 
-# Config for Compress HTML
 compress_html:
   clippings: all
   comments: all
   endings: []
   profile: false
 
-# Config plugin 'jekyll-tagging'
 tag_page_layout: tag
 tag_page_dir: blog/tags
 tag_permalink_style: pretty
 
-# Settings for the plugins in the _plugins folder.
 _plugins:
   imager:
     dir_posts: "assets/images/posts"
-  # To see language support, go to the plugin "_plugins/reading_time.rb"
   reading_time:
     locale: en_US
-  # To see language support, go to the plugin "_plugins/datelang.rb"
   datelang:
     locale: en_US
     reload: false
-### EXTRA END - These properties are extra features, such as built-in third-party plugins.
 
-# Pagination
-# https://github.com/sverrirs/jekyll-paginate-v2
-# NOTE: To disable paging, leave "enabled" for "false", 
-#       and in the "_blog/index.md" file, also leave "enabled"
-#       for "false."
 pagination:
   enabled: true
   debug: false
@@ -71,13 +65,9 @@ pagination:
   extension: html
   indexpage: 'index'
 
-# Config for plugin 'jekyll-gist'
 gist:
   noscript: false
 
-### EXTRA BEGIN - These properties are extra features, such as built-in third-party plugins.
-
-# Exclude files (or folders) in compilation.
 exclude:
   - temp
   - node_modules
@@ -94,4 +84,3 @@ exclude:
   - Rakefile
   - yarn.lock
   - Makefile
-### END - [IRRELEVANT PROPERTIES] - These properties have no need to change unless you know what you are doing. WATCH OUT!

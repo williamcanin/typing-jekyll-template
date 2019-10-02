@@ -2,7 +2,7 @@
 Variable to load website data. The file that contains this data is in the _data directory at the root of the project.It is in this file that you have to modify the strings and concepts.
 {% endcomment %}
 
-{% assign load_data = site.data.data %}
+{% assign load_data = site.data.informations %}
 {% assign load_options = site.data.options %}
 
 {% comment %}

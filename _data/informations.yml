@@ -1,15 +1,17 @@
-# ________________________________________________________________________________________________ #
-# Attention! Change only the values of the variables! Do not change the position of the variables. #
-# ________________________________________________________________________________________________-#
+# In this file you will put information for your website, 
+# string modifications, add email and many more.
+# ____________________________________________________
+# Attention! Change only the values of the variables! 
+# Do not change the position of the variables.
+# ____________________________________________________
 
-### BEGIN Config
 website:
   under_maintenance:
     title: |
       Sorry :(  The domain of my site is under maintenance.
     subtitle: |
       It will not have forecast of return. Meanwhile, follow me on the social networks below.
-# Theme - Values [ typing | whiteglass | hacking | littlegirl | custom ]
+# Theme - Values [ typing | whiteglass | hacking | littlegirl ]
   theme: "typing"
 # Configuration default
   title: "Typing"
@@ -55,7 +57,7 @@ website:
         text: "Clean"
       input:
         placeholder: ['Search in','article(s)']
-        onfocus: "Pesquisar por: título ou tags"
+        onfocus: "Search by: title or tags"
         onblur:  ['Search in','article(s)']
         notfound: "Oh heavens, no results :("
 # Post
@@ -110,7 +112,7 @@ website:
     message: "Simplicity is fashionable."
 # User data
 userdata:
-  email: youremail@domain.com # E.g: youremail@domain.com
+  email: # E.g: youremail@domain.com
   twitter: # E.g: "@my_twitter"
   disqus:
     username: # E.g: myuser
@@ -132,4 +134,3 @@ userdata:
         id: linkedin
         icon: fa-linkedin
         url: https://linkedin.com
-### END Config
