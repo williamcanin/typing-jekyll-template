@@ -1,5 +1,7 @@
 > Counter Disqus does not work
-> z-index error sidebar
+> Favicon
+> SEO (metadata)
+> Pages
 >> Post/Page:
     > Markdown
     > Gist

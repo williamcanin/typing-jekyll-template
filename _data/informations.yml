@@ -100,6 +100,7 @@ website:
           DO NOT PASS on my cell phone number.
 # Resume
     resume:
+      image: "3x4.jpg"
       button:
         text: "Print"
 # Tags

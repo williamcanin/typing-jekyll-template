@@ -37,6 +37,14 @@ layout: default
     <div class="layout_resume__content">
       <div class="container-fluid">
         <div class="row d-block">
+          {% if load_options.content.resume.image.enable == true and 
+              load_data.website.content.resume.image %}
+          <div class="img-fluid float-right layout_resume__photo_cv" style="margin-top: -5%;">
+            <img class="rounded" style="border: 1px solid #000;"
+            src="{{ '/assets/images/cv' | prepend: site.baseurl }}/{{ load_data.website.content.resume.image }}"
+            alt="" width="120" height="auto">
+          </div>
+          {% endif %}
           {{ content }}
         </div>
       </div>

@@ -5,15 +5,11 @@
   background-color: $footer__bg;
   font-size: 0.8rem;
   color: $color__text;
-  bottom: 0;
-  z-index: 9999;
 }
 
 .scrolltop{
   color: $color__text;
-  bottom: 0;
   font-size: 3rem;
-  // z-index: 1;
   &__button{
     font-size: 3rem !important;
   }
