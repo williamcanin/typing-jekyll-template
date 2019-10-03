@@ -21,7 +21,8 @@ layout: compress
   {% include partials/footer.html %}
   {% include scripts/default.html %}
 </body>
-<script id="dsq-count-scr" src="//williamcanin.disqus.com/count.js" async></script>
+<!-- Disqus counter comments  -->
+<script id="dsq-count-scr" src="//{{ load_data.userdata.disqus.username }}.disqus.com/count.js" async></script>
 </html>
 {% else %}
   {% include layouts/error.html %}
