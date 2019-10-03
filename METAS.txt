@@ -1,6 +1,4 @@
 > Counter Disqus does not work
-> Social Networks in Hello
-> SEO (metadata)
 > Pages
 >> Post/Page:
     > Markdown

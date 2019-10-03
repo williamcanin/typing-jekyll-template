@@ -50,10 +50,10 @@
         font-family: $font-family__secondary;
         background-color: $sidebar__menu_bg;
         border-radius: 20px;
-        @media (min-width: 768px) and (max-width: 992px) {
-          width: 190px;
-          margin: 0 auto;
-        }
+        // @media (min-width: 768px) and (max-width: 992px) {
+        //   width: 190px;
+        //   margin: 0 auto;
+        // }
         &-title{
           font-size: $sidebar__menu_font_size;
         }

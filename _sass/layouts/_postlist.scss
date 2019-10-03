@@ -3,6 +3,12 @@
     &__header, &__content{
         @extend .elements_box;
     }
+    &__comments{
+        background-color: $postlist_time_background;
+        font-size: 0.97rem;
+        color: $color__text;
+        &-count{}
+    }
     &__time{
         background-color: $postlist_time_background;
         opacity: 0.77;
