@@ -102,7 +102,14 @@
   <link rel="stylesheet" href="{{ '/assets/css/vendor.css' | prepend: site.baseurl }}">
   
   <!-- Themes -->
-  <link rel="stylesheet" href="{{ '/assets/css/typing.css' | prepend: site.baseurl }}">
+  {% if load_data.website.theme == "typing" %}
+    {% assign theme_chosen = "typing" %}
+  {% elsif load_data.website.theme == "whiteglass" %}
+    {% assign theme_chosen = "whiteglass" %}
+  {% elsif load_data.website.theme == "cloudysky" %}
+  {% assign theme_chosen = "cloudysky" %}
+  {% endif %}
+  <link rel="stylesheet" href="{{ '/assets/css' | prepend: site.baseurl }}/{{ theme_chosen }}.css">
 
   <!-- Google Analytics -->
   {% if jekyll.environment == 'production' and load_data.website.google.analytics.id and site.google.analytics.enable == true %}

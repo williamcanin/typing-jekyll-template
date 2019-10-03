@@ -6,5 +6,9 @@
     }
     &__excerpt{}
     &__content{}
-    &__badge{}
+    &__badge{
+      font-weight: 200;
+      color: $color__text;
+      background-color: $texts__background;
+    }
   }

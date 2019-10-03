@@ -40,9 +40,9 @@
 
 @keyframes pulse{
   0% {
-    box-shadow: 0 0 0 0px $avatar-pulse-color-begin;
+    box-shadow: 0 0 0 0px $keyframe__pulse_color_primary;
   }
   100% {
-    box-shadow: 0 0 0 35px $avatar-pulse-color-end;
+    box-shadow: 0 0 0 35px $keyframe__pulse_color_secondary;
   }
 }

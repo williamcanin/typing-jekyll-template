@@ -11,8 +11,8 @@ website:
       Sorry :(  The domain of my site is under maintenance.
     subtitle: |
       It will not have forecast of return. Meanwhile, follow me on the social networks below.
-# Theme - Values [ typing | whiteglass | hacking | littlegirl ]
-  theme: "typing"
+# Theme - Values [ typing | whiteglass | cloudysky | hacking | littlegirl ]
+  theme: "cloudysky"
 # Configuration default
   title: "Typing"
   description: "Typing - A Theme for Jekyll"

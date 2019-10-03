@@ -31,4 +31,4 @@ Jekyll also offers powerful support for code snippets:
 
 Goodbye! :wink:
 
-{% endpost #9D9D9D %}
+{% endpost #000 %}

@@ -4,19 +4,19 @@
         @extend .elements_box;
     }
     &__comments{
-        background-color: $postlist_time_background;
+        background-color: $texts__background;
         font-size: 0.97rem;
         color: $color__text;
         &-count{}
     }
     &__time{
-        background-color: $postlist_time_background;
+        background-color: $texts__background;
         opacity: 0.77;
         color: #080808;
         border-radius: 5px;
     }
     &__excerpted{
-        background-color: $postlist_expected_background;
+        background-color: $texts__background;
         border-radius: 5px;
         line-height: 1.8rem;
     }
@@ -25,7 +25,7 @@
             margin: 0px 4px;
         }
         .disqus-comment-count{
-            color: $color__links;
+            color: $color__clickable;
         }
     }
     &__pagination{
@@ -34,9 +34,9 @@
             border-radius: 0px;
         }
         &-counter{
-            color: $color__links;
+            color: $color__clickable;
             &:hover{
-                color: $color__links;
+                color: $color__clickable;
                 background-color: white;
             }
         }

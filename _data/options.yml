@@ -5,11 +5,14 @@ maintenance:
 google:
   analytics:
     enable: true
+global:
+  links:
+    underline: true
 home:
   animation: true
   terminal:
-    animation: true
     enable: false
+    animation: true
 sidebar:
   animation: true
   fixed: true

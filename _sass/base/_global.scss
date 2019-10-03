@@ -3,15 +3,16 @@
 
 html,body{
   color: $color__text;
-
+  hr{
+    border-top: 1px solid $hr__color;
+  }
   font: 100% verdana, arial, tahoma, sans-serif;
   *{
     a{
-      color: $color__links;
-      text-decoration: none;
-      font-weight: $font-weight__all-links;
+      color: $color__clickable;
+      font-weight: bold;
       &:hover{
-        color: $color__links;
+        color: $color__clickable;
         text-decoration: none;
       }
       @extend .element_opacity;
@@ -27,8 +28,4 @@ body{
   font-family: $font-family__primary;
   background-color: $background__full;
   overflow-x: hidden;
-}
-
-hr{
-  border-top: 1px solid $color__text;
 }

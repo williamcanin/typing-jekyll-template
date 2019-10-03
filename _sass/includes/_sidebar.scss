@@ -38,9 +38,10 @@
     }
     &__title{
         font-family: $font-family__secondary;
-        background-color: $sidebar__title_bg;
+        background-color: $elements__background;
         border-radius: 20px;
-        color: $sidebar__title_color;
+        color: $color__clickable;
+        border: 1px solid $elements__box_color;
         @media (max-width: 992px){
             font-size: 1.9rem;
             text-align: left !important;
@@ -48,18 +49,19 @@
     }
     &__menu{
         font-family: $font-family__secondary;
-        background-color: $sidebar__menu_bg;
+        background-color: $elements__background;
         border-radius: 20px;
+        border: 1px solid $elements__box_color;
         // @media (min-width: 768px) and (max-width: 992px) {
         //   width: 190px;
         //   margin: 0 auto;
         // }
         &-title{
-          font-size: $sidebar__menu_font_size;
+          font-size: 1.3rem;
         }
         &-link{
-          font-size: $sidebar__menu_font_size;
-          line-height: $sidebar__menu_line-height;
+          font-size: 1.3rem;
+          line-height: 1.64rem;
           &:hover{
             text-decoration: underline;
           }

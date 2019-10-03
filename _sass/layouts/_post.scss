@@ -4,7 +4,7 @@
         @extend .elements_box;
     }
     &__comments{
-        background-color: $postlist_time_background;
+        background-color: $texts__background;
         color: $color__text;
         font-size: 1rem;
         &-count{}

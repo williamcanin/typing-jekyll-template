@@ -14,7 +14,7 @@
 
         /* .intro__terminal .header */
         .header{
-        background: $terminal-header-bg;
+        background: #000;
         border-radius: 7px 7px 0 0;
         padding-left: 10px;
         color: #fff;
@@ -58,7 +58,7 @@
         /* .intro__terminal .title__text */
         &__text{
             margin-left: -56px;
-            color: $terminal-title-color;
+            color: #fff;
         } /* END -.intro__terminal .title__text */
 
         } /* END - .intro__terminal .titl */
@@ -66,9 +66,9 @@
 
         /* .intro__terminal .body */
         .body{
-        color: $terminal-text-color;
+        color: #3bff1a;
         font-size: 15pt;
-        background: $terminal-content-bg;
+        background: #000;
         @media (max-width: 1200px) {
             background: rgba(30, 30, 31, 1);
         }
@@ -76,14 +76,14 @@
         box-sizing: border-box;
         width: 100%;
         overflow: auto;
-        font-weight: $terminal-font-font-weight;
+        font-weight: 400;
         min-height: 250px;
         font-family: 'Inconsolata', monospace;
         border-radius: 0 0 5px 5px;
         p{
             font-size: 12pt;
             a{
-                color: $terminal-link-color;
+                color: #3BB662;
             }
         }
 
