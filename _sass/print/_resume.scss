@@ -16,6 +16,9 @@
     &__header, &__excerpt{
       display: none;
     }
+    &__photo_cv{
+      display: block !important;
+    }
     &__content{
       color: black;
       a,code{

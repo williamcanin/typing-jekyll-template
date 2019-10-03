@@ -55,19 +55,19 @@ layout: blog
         <div class="offset-0 offset-sm-0 offset-md-0 offset-lg-2"></div>
 
         {% if load_options.content.post.share.facebook.enable == true %}
-        <div class="text-center col-12 col-sm-3 col-md-3 col-lg-2">
+        <div class="text-center mb-1 mb-sm-0 col-12 col-sm-3 col-md-3 col-lg-2">
           <a class="btn btn-link btn-typing layout_post__share-fb" href="#" title="{{ dbase.website.strings.share_social.facebook.title }}" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),'facebook-share-dialog','width=626,height=436');return false;">Facebook</a>
         </div>
         {% endif %}
 
         {% if load_options.content.post.share.linkedin.enable == true %}
-        <div class="text-center col-12 col-sm-3 col-md-3 col-lg-2">
+        <div class="text-center mb-1 mb-sm-0 col-12 col-sm-3 col-md-3 col-lg-2">
           <a class="btn btn-link btn-typing layout_post__share-ln" href="http://www.linkedin.com/cws/share?url={{ page.url | prepend: site.baseurl | prepend: site.url }}" onclick="window.open(this.href,&quot;popupwindow&quot;,&quot;status=0,height=500,width=700,resizable=0,top=50,left=100&quot;);return false;" target="_blank" title="{{ dbase.website.strings.share_social.linkedin.title }}">Linkedin</a>
         </div>
         {% endif %}
 
         {% if load_options.content.post.share.twitter.enable == true %}
-        <div class="text-center col-12 col-sm-3 col-md-3 col-lg-2">
+        <div class="text-center mb-1 mb-sm-0 col-12 col-sm-3 col-md-3 col-lg-2">
           <a class="btn btn-link btn-typing layout_post__share-tw" href="https://twitter.com/intent/tweet?text={{ page.url | prepend: site.baseurl | prepend: site.url }} - {{ page.title }} by {{ dbase.userdata.twitter }}" target="_blank" title="{{ dbase.website.strings.share_social.twitter.title }}">Twitter</a>
         </div>
         {% endif %}
@@ -97,7 +97,7 @@ layout: blog
   </div>
 
     <!-- jekyll.environment == 'production' and -->
-    {% if 
+    {% if jekyll.environment == 'production' and
     load_options.content.post.comments.enable == true and
     page.comments != false and
     load_data.userdata.disqus.username %}

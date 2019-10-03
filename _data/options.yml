@@ -9,7 +9,7 @@ home:
   animation: true
   terminal:
     animation: true
-    enable: false
+    enable: true
 sidebar:
   animation: true
   fixed: true

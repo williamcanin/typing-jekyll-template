@@ -1,11 +1,6 @@
 .layout_resume{
     @extend .elements_box;
     @extend .content_text_font_size;
-    &__photo_cv{
-      @media (min-width: 376px) and  (max-width: 992px) {
-        display: none;
-      }
-    }
     &__btnprint{
       @extend .buttons_style;
     }

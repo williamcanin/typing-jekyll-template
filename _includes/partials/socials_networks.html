@@ -1,0 +1,32 @@
+<!-- Include Data Base  -->
+{% include liquid/data %}
+
+<div class="modal fade socials_network" id="socials_network" tabindex="-1" role="dialog" aria-labelledby="Socials Network" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered socials_network__dialog" role="document">
+      <div class="modal-content socials_network__content">
+        <div class="modal-header border-bottom-0 socials_network__header">
+          <h5 class="modal-title socials_network__title" id="socials_network__title">
+              {{ load_data.userdata.socials.title }}
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+              <i class="far fa-window-close"></i>
+          </button>
+        </div>
+        <div class="modal-body socials_network__body">
+            <div class="row justify-content-center">
+              {% for hash in load_data %}
+                {% assign userdata = hash[1] %}
+                {% assign links = userdata.socials.links %}
+                {% for item in links %}
+                  <div id="{{ item.id }}" class="col text-center socials_network__item">
+                    <a class="socials_network__link" title="{{ item.title }}" href="{{ item.url }}" target="_blank">
+                      <i class="fab {{ item.icon }} socials_network__icon" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                {% endfor %}
+              {% endfor %}
+            </div>
+        </div>
+      </div>
+    </div>
+</div>

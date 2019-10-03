@@ -6,6 +6,85 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Title Site 
+  ___________________________________________ -->
+  <title>
+    {% if page.url == "/" %}
+        {{ load_data.website.title }} - {{ load_data.website.description }}
+      {% else %}
+        {% if page.title %}
+          {{ page.title }} | {{ load_data.website.title }} - {{ load_data.website.description }}
+        {% else %}
+          {{ load_data.website.title }} | {{ load_data.website.description }}
+        {% endif %}
+    {% endif %}
+  </title>
+
+  <!-- Metatags
+  ___________________________________________ -->
+  <meta name=description 
+  content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | 
+    truncate: 160 }}
+    {% else %}
+    {{ load_data.website.description }}
+    {% endif %}">
+
+
+  {% if load_data.website.metatag.google_site_verification %}
+  <meta name="google-site-verification" 
+  content="{{ load_data.website.metatag.google_site_verification }}">
+  {% endif %}
+
+  {% if load_data.website.metatag.expires %}
+  <meta http-equiv="expires" content="{{ load_data.website.metatag.expires }}">
+  {% endif %}
+
+  {% if load_data.website.metatag.cache_control %}
+  <meta http-equiv="cache-control" content="{{ load_data.website.metatag.cache_control }}"/>
+  {% else %}
+  <meta http-equiv="cache-control" content="public"/>
+  {% endif %}
+
+  <meta http-equiv="pragma" content="public">
+
+  <meta name="keywords" content="{{ load_data.website.metatag.tags }}" />
+
+  <meta name="author" content="{{ load_data.website.content.post.author.name }}" />
+
+  <meta http-equiv="Content-Language" content="{{ load_data.website.metatag.locale }}">
+
+  <!-- Open Graph -->
+  <meta property="og:locale" content="{{ load_data.website.metatag.locale }}" />
+
+  <meta property="og:site_name" content="{{ load_data.website.title }}" />
+
+  <meta property="og:type" content="{{ load_data.website.metatag.type }}" />
+
+  <meta property="og:url" content="{{ page.url | prepend: site.baseurl | 
+    prepend: site.url }}" />
+
+  <meta property="og:description" content="{% if page.description %}{{ page.description | 
+    strip_html | strip_newlines | truncate: 160 }}
+    {% else %}
+    {{ load_data.website.description }}{% endif %}" />
+
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}
+  {% else %}
+  {{ load_data.website.title }}{% endif %}" />
+
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | 
+  prepend: site.baseurl | prepend: site.url }}">
+
+  <link type="application/atom+xml" rel="alternate" 
+  title="{{ load_data.website.title }}" 
+  href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" 
+  href="{{ '/assets/images/favicon/favicon-32x32.png' | 
+  prepend: site.baseurl | prepend: site.url }}">
+
+  
   <!-- Fonts -->
   <!-- https://freebies.fluxes.com/blog/best-free-typewriter-fonts/
   https://www.creativebloq.com/typography/best-typewriter-fonts-10135084 -->
@@ -24,5 +103,10 @@
   
   <!-- Themes -->
   <link rel="stylesheet" href="{{ '/assets/css/typing.css' | prepend: site.baseurl }}">
+
+  <!-- Google Analytics -->
+  {% if jekyll.environment == 'production' and load_data.website.google.analytics.id and site.google.analytics.enable == true %}
+    {% include scripts/google_analytics.html %}
+  {% endif %}
 
 </head>

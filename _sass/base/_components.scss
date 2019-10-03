@@ -81,9 +81,11 @@
     transition: 0.71s;
     &:hover{
         background-color: $color__links;
-        text-decoration: none;
         color: white;
         opacity: 0.84;
+    }
+    &:hover,&:focus,&:visited,&:active{
+        text-decoration: none;
     }
 }
 
