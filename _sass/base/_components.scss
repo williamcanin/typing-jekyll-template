@@ -15,6 +15,7 @@
 
 .inputs_style{
     font-size: 1.8rem;
+    background-color: $elements__background;
     width: 100%;
     box-shadow: none;
     border: none;
@@ -23,6 +24,7 @@
     border-radius: 0px;
     height: auto;
     &:hover,&:focus,&:active,&:visited{
+      background-color: $elements__background;
       box-shadow: none;
       outline: none;
     }
@@ -34,6 +36,7 @@
 // TextArea style
 
 .textarea_style{
+    background-color: $elements__background;
     font-size: 1.17rem;
     width: 100%;
     box-shadow: none;
@@ -43,6 +46,7 @@
     border-radius: 0px;
     height: auto;
     &:hover,&:focus,&:active,&:visited{
+        background-color: $elements__background;
         box-shadow: none;
         outline: none;
       }

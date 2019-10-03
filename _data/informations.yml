@@ -113,7 +113,7 @@ website:
     message: "Simplicity is fashionable."
 # User data
 userdata:
-  email: # E.g: youremail@domain.com
+  email: youremail@domain.com # E.g: youremail@domain.com
   twitter: # E.g: "@my_twitter"
   disqus:
     username: williamcanin # E.g: myuser

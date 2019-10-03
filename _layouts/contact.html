@@ -6,9 +6,9 @@ layout: default
 
 {% if load_data.userdata.email %}
 
-  <div class="p-4 layout_contact {% if load_options.content.contact.animation == true %} animation__content {% endif %}">
+  <div class="p-3 layout_contact {% if load_options.content.contact.animation == true %} animation__content {% endif %}">
 
-    <div class="p-4 mb-4 layout_contact__header">
+    <div class="mb-4 p-3 layout_contact__header">
 
       <div class="container-fluid">
         <div class="row">
@@ -29,7 +29,7 @@ layout: default
 
       <div class="container-fluid">
         <div class="row d-block">
-          <form class="p-4 mb-4 layout_contact__form" action="https://formspree.io/{{ load_data.userdata.email | encode_email }}" method="POST">
+          <form class="mb-4 p-3 layout_contact__form" action="https://formspree.io/{{ load_data.userdata.email | encode_email }}" method="POST">
 
             <div class="container-fluid">
 
@@ -63,7 +63,7 @@ layout: default
         </div>
         {% if load_options.content.contact.note.enable == true %}
         <div class="row d-block">
-          <div class="p-4 mb-4 layout_contact__note">
+          <div class="mb-4 p-3 layout_contact__note">
             <span>{{ load_data.website.content.contact.note.title }}: {{ load_data.website.content.contact.note.description }}</span>
           </div>
         </div>

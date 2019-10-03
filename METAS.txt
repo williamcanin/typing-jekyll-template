@@ -1,5 +1,5 @@
 > Counter Disqus does not work
-> Button top (soft)
+> z-index error sidebar
 >> Post/Page:
     > Markdown
     > Gist

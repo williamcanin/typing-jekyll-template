@@ -6,9 +6,9 @@ layout: default
 {% include liquid/data %}
 
 {% if load_options.home.terminal.enable == true %}
-  <div class="p-3 layout_hello" style="background-color: transparent !important;">
+  <div class="px-1 mx-3 layout_hello" style="background-color: transparent !important;">
 {% else %}
-  <div class="p-3 layout_hello {% if load_options.home.animation == true %} animation__content {% endif %}">
+  <div class="p-3 m-3 layout_hello {% if load_options.home.animation == true %} animation__content {% endif %}">
 {% endif %}
 
   {% if load_options.home.terminal.enable != true %}
@@ -37,7 +37,7 @@ layout: default
     {% else %}
 
     <div class="d-block row">
-    <div class="wow fadeInRight intro__terminal {% if load_options.home.terminal.animation == true %} animation__terminal {% endif %}">
+    <div class="mb-4 intro__terminal {% if load_options.home.terminal.animation == true %} animation__terminal {% endif %}">
       <header class="header">
         <div class="btn header__btn header__btn--red" style="cursor: pointer;"></div>
         <div class="btn header__btn header__btn--yellow" style="cursor: pointer;"></div>

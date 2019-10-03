@@ -4,6 +4,7 @@
 <div class="col-lg-3 px-0 sidebar">
   <div class="py-2 {% if load_options.sidebar.fixed == true %} sticky-top {% endif %} flex-grow-1">
     <div class="sidebar__wrapper">
+      <!-- nav flex-lg-column -->
       <div class="nav flex-lg-column">
         {% if load_options.sidebar.avatar.flip == true and load_data.website.sidebar.avatar.flip.img %}
         <div class="sidebar__avatar_flip">
@@ -25,7 +26,8 @@
                 {% if load_options.sidebar.avatar.background == true %} sidebar_avatar_background {% endif %}
                 {% if load_options.sidebar.avatar.border == true %} sidebar_avatar_border {% endif %}
               "
-              src="{{ '/assets/images/avatar' | prepend: site.baseurl }}/{{ load_data.website.sidebar.avatar.flip.img }}" width="165" height="165" alt="Avatar">
+              src="{{ '/assets/images/avatar' | prepend: site.baseurl }}/{{ load_data.website.sidebar.avatar.flip.img }}"
+              width="165" height="165" alt="Avatar">
             </a>
           </div>
         </div>

@@ -5,9 +5,16 @@
   background-color: $footer__bg;
   font-size: 0.8rem;
   color: $color__text;
-  position: fixed;
   bottom: 0;
-  width: 100%;
-  border-top-right-radius: 50px;
-  border-top-left-radius: 50px;
+  z-index: 9999;
+}
+
+.scrolltop{
+  color: $color__text;
+  bottom: 0;
+  font-size: 3rem;
+  // z-index: 1;
+  &__button{
+    font-size: 3rem !important;
+  }
 }
