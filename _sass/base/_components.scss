@@ -1,6 +1,6 @@
 // Sidebar components
 .sidebar_avatar_background{
-    background-color: #fff;
+    background-color: $elements__background;
 }
 
 .sidebar_avatar_border{
@@ -52,7 +52,7 @@
 }
 
 .elements_box{
-    background-color: white;
+    background-color: $elements__background;
     border-radius: 20px;
 }
 

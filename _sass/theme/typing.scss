@@ -2,13 +2,14 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––  */
 // Default
 $background__full: #e4ca91 !default;
+$elements__background: #ffe6b0 !default;
 $color__links: #D7101E !default;
 $color__text: #000 !default;
 
 // Sidebar
 $sidebar__title_color: $color__links;
-$sidebar__title_bg: #fff;
-$sidebar__menu_bg: #fff;
+$sidebar__title_bg: $elements__background;
+$sidebar__menu_bg: $elements__background;
 $sidebar__menu_font_size: 1.3rem;
 $sidebar__menu_line-height: 1.64rem;
 

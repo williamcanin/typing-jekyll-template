@@ -1,7 +1,4 @@
-> Blog options true
-> Maintanence
-> Flip avatar.
-> Disqus
+> Counter Disqus does not work
 > Button top (soft)
 >> Post/Page:
     > Markdown

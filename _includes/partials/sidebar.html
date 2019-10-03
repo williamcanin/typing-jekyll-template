@@ -5,40 +5,46 @@
   <div class="py-2 {% if load_options.sidebar.fixed == true %} sticky-top {% endif %} flex-grow-1">
     <div class="sidebar__wrapper">
       <div class="nav flex-lg-column">
-            {% if load_options.sidebar.avatar.flip == true and load_data.website.sidebar.avatar.back %}
-              <div class="sidebar__img" {% if load_options.sidebar.avatar.circle == true %} style="border-radius: 50%;" {% endif %}>
-                <div class="sidebar__img-card">
-                  <a class="sidebar__img-front sidebar__img-face" href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">
-                    <img class="p-1 img-fluid mx-auto d-block
-                    {% if load_options.sidebar.animation == true %} animation__pulse {% endif %}
-                    {% if load_options.sidebar.avatar.circle == true %} sidebar_avatar_circle {% endif %}
-                    {% if load_options.sidebar.avatar.background == true %} sidebar_avatar_background {% endif %}
-                    {% if load_options.sidebar.avatar.border == true %} sidebar_avatar_border {% endif %}
-                    "
-                    src="{{ '/assets/images/avatar' | prepend: site.baseurl }}/{{ load_data.website.sidebar.avatar.front }}"
-                    width="165" height="165" alt="Avatar">
-                  </a>
-                  <a class="sidebar__img-back sidebar__img-face" href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">
-                    <img class="p-1 img-fluid mx-auto d-block {% if load_options.sidebar.animation == true %} animation__pulse {% endif %} border-dashed" {% if load_options.sidebar.avatar.circle == true %} style="border-radius: 50%;" {% endif %} src="{{ '/assets/images/avatar' | prepend: site.baseurl }}/{{ load_data.website.sidebar.avatar.back }}" width="165" height="165" alt="Avatar">
-                  </a>
-                </div>
-              </div>
-            {% else %}
-            <div class="sidebar__avatar">
-              <a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}" class="nav-link">
-                <img class="p-1 img-fluid d-block {% if load_options.sidebar.animation == true %} animation__pulse {% endif %} mx-auto
-                  {% if load_options.sidebar.avatar.circle == true %} sidebar_avatar_circle {% endif %}
-                  {% if load_options.sidebar.avatar.background == true %} sidebar_avatar_background {% endif %}
-                  {% if load_options.sidebar.avatar.border == true %} sidebar_avatar_border {% endif %}
-                "
-                  src="{{ '/assets/images/avatar' | prepend: site.baseurl }}/{{ load_data.website.sidebar.avatar.front }}"
-                  width="165" height="165" alt="Avatar"/>
-              </a>
-            </div>
-            {% endif %}
-            <h1 class="p-2 text-center mx-auto {% if load_options.sidebar.animation == true %} animation__sidebar-title {% endif %} sidebar__title">
-              <a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}" class="nav-link" style="font-size: {{ load_data.website.sidebar.title.size }}">{{ load_data.website.sidebar.title.text }}</a>
-            </h1>
+        {% if load_options.sidebar.avatar.flip == true and load_data.website.sidebar.avatar.flip.img %}
+        <div class="sidebar__avatar_flip">
+          <div class="sidebar__avatar_flip-card">
+            <a class="sidebar__avatar_flip-front sidebar__avatar_flip-face" href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">
+              <img class="p-1 img-fluid mx-auto d-block
+                {% if load_options.sidebar.animation == true %} animation__pulse {% endif %}
+                {% if load_options.sidebar.avatar.circle == true %} sidebar_avatar_circle {% endif %}
+                {% if load_options.sidebar.avatar.background == true %} sidebar_avatar_background {% endif %}
+                {% if load_options.sidebar.avatar.border == true %} sidebar_avatar_border {% endif %}
+              "
+              src="{{ '/assets/images/avatar' | prepend: site.baseurl }}/{{ load_data.website.sidebar.avatar.img }}"
+              width="165" height="165" alt="Avatar">
+            </a>
+            <a class="sidebar__avatar_flip-back sidebar__avatar_flip-face" href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">
+              <img class="p-1 img-fluid mx-auto d-block
+                {% if load_options.sidebar.animation == true %} animation__pulse {% endif %}
+                {% if load_options.sidebar.avatar.circle == true %} sidebar_avatar_circle {% endif %}
+                {% if load_options.sidebar.avatar.background == true %} sidebar_avatar_background {% endif %}
+                {% if load_options.sidebar.avatar.border == true %} sidebar_avatar_border {% endif %}
+              "
+              src="{{ '/assets/images/avatar' | prepend: site.baseurl }}/{{ load_data.website.sidebar.avatar.flip.img }}" width="165" height="165" alt="Avatar">
+            </a>
+          </div>
+        </div>
+        {% else %}
+        <div class="sidebar__avatar_noflip">
+          <a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}" class="nav-link">
+            <img class="p-1 img-fluid d-block {% if load_options.sidebar.animation == true %} animation__pulse {% endif %} mx-auto
+              {% if load_options.sidebar.avatar.circle == true %} sidebar_avatar_circle {% endif %}
+              {% if load_options.sidebar.avatar.background == true %} sidebar_avatar_background {% endif %}
+              {% if load_options.sidebar.avatar.border == true %} sidebar_avatar_border {% endif %}
+            "
+            src="{{ '/assets/images/avatar' | prepend: site.baseurl }}/{{ load_data.website.sidebar.avatar.img }}"
+            width="165" height="165" alt="Avatar"/>
+          </a>
+        </div>
+        {% endif %}
+        <h1 class="p-2 text-center mx-auto {% if load_options.sidebar.animation == true %} animation__sidebar-title {% endif %} sidebar__title">
+          <a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}" class="nav-link" style="font-size: {{ load_data.website.sidebar.title.size }}">{{ load_data.website.sidebar.title.text }}</a>
+        </h1>
         <div class="p-2 mx-3 {% if load_options.sidebar.animation == true %} animation__sidebar-menu {% endif %} sidebar__menu">
           <div class="my-1 d-none d-md-block sidebar__menu-title">Menu</div>
           {% if load_options.sidebar.blog.enable == true %}

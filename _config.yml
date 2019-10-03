@@ -25,7 +25,7 @@ host: localhost
 
 sass:
   load_paths:
-  - src/_sass
+  - _sass
   - vendor/node_modules
   style: compressed
 

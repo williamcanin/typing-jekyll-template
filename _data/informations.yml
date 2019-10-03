@@ -36,8 +36,9 @@ website:
 # Sidebar
   sidebar:
     avatar:
-      front: "typing_front.png"
-      back:  "typing_back.png"
+      img: "typing_face.png"
+      flip:
+        img: "typing_back.png"
     title:
       text: "Hey, <br> I'm Typing."
       size: "2.3rem"
@@ -60,12 +61,12 @@ website:
         onfocus: "Search by: title or tags"
         onblur:  ['Search in','article(s)']
         notfound: "Oh heavens, no results :("
-# Post
+  # Post
     post:
       count_comments:
         text: "Comments:"
       author:
-        avatar: "typing.svg"
+        avatar: "author.png"
         title: "Author"
         name: "Typing Theme"
         description: |
@@ -115,7 +116,7 @@ userdata:
   email: # E.g: youremail@domain.com
   twitter: # E.g: "@my_twitter"
   disqus:
-    username: # E.g: myuser
+    username: williamcanin # E.g: myuser
   # You can add at most 4 social. If you do not want 4, you can remove the block containing: title, id, icon, url.
   socials:
     title: Follow Me!

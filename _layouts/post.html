@@ -5,74 +5,46 @@ layout: blog
 <!-- Include Data Base  -->
 {% include liquid/data %}
 
-<div class="p-3 mt-4 mb-4 mt-lg-0 layout_post {% if load_options.content.post.animation == true %} animation__content {% endif %}" itemscope itemtype="http://schema.org/BlogPosting">
+<div class="mt-lg-0 layout_post {% if load_options.content.post.animation == true %} animation__content {% endif %}" itemscope itemtype="http://schema.org/BlogPosting">
 
   <div class="container-fluid">
 
-    <div class="row">
+    <div class="p-3 mb-4 layout_post__header">
       <h1 class="font-weight-bold layout_post__title">{{ page.title }}</h1>
-    </div>
-
-    <div class="mb-2 mt-2 mb-lg-4 mt-lg-4 layout_post__date">
-      <div class="row">
-        <div class="{% if load_options.content.post.comments.enable == true and page.comments != false and load_data.userdata.disqus.username %} col-8 col-lg-4 offset-lg-0 col-sm-6 {% else %} col-12 col-lg-12 offset-lg-0 col-sm-12 {% endif %}">
-          <div class="row justify-content-start">
-            <time class="layout_post__time">
-              {% if load_options.content.icons.enable == true %}<i class="far fa-calendar-alt"></i>{% endif %}
-              
-            </time>
-          </div>
-        </div>
-
-        {% if jekyll.environment == 'production' and
-        load_options.content.post.comments.enable == true and
-        page.comments != false and
-        load_data.userdata.disqus.username %}
-        <div class="col-4 col-lg-4 offset-lg-4 col-sm-6">
-          <div class="row justify-content-end">
-            <div class="layout_postlist__comments">
-              {% if load_options.content.icons.enable == true %}<i class="fas fa-comments"></i>{% else %}{{ load_data.website.content.post.count_comments.text }}&nbsp;{% endif %}<a href="#layout_post__disqus" data-disqus-identifier="{{ page.url }}">0</a>
-            </div>
-          </div>
-        </div>
-        {% endif %}
-
+      <div class="layout_post__date">
+        <time class="layout_post__time">
+          {% if load_options.content.icons.enable == true %}<i class="far fa-calendar-alt"></i>{% endif %}
+          {% datelang page %}{% include datelang/page %}
+        </time>
       </div>
-    </div>
 
-    <div class="layout_post__tags">
-      <div class="row">
+      <div class="layout_post__tags">
         {% if load_options.content.icons.enable == true %}<i class="fa fa-tags"></i>&nbsp;{% endif %}Tags:&nbsp;
         {% for tag in page.tags %}
-          <a class="layout-post__tags-link" href="{{ '/blog/tags/' | prepend: site.baseurl | prepend: site.url }}/{{ tag }}">{{ tag }}</a>,&nbsp;
+        <a class="layout_post__tags-link" href="{{ '/blog/tags/' | prepend: site.baseurl | prepend: site.url }}/{{ tag }}">{{ tag }}</a>,&nbsp;
         {% endfor %}
       </div>
-    </div>
 
-    <div class="layout-post__reading_time">
-      <div class="row">
+      <div class="layout_post__reading_time">
+        <i class="far fa-clock"></i>
         {{ page.content | reading_time }}
       </div>
+
     </div>
 
-    <div class="layout_post__content">
-      <div class="row d-block">
+    <div class="p-3 mb-4 layout_post__content">
+      <div class="d-block">
         {{ content }}
       </div>
     </div>
 
-
+    <div class="p-3 mb-4 layout_post__footer">
     {% if load_options.content.post.day_quote.enable == true  %}
-    <div class="layout_post__dayquote">
-      <div class="row">
-        <h2 class="layout_post__dayquote-title">{{ page.day_quote.title }}</h2>
-      </div>
-      <div class="row">
-        <p class="layout_post__dayquote-description">{{ page.day_quote.description }}</p>
-      </div>
+    <div class="mb-5 layout_post__dayquote">
+      <h2 class="layout_post__dayquote-title">{{ page.day_quote.title }}</h2>
+      <p class="layout_post__dayquote-description">{{ page.day_quote.description }}</p>
     </div>
     {% endif %}
-
 
     {% if load_options.content.post.share.enable == true  %}
     <div class="layout_post__share">
@@ -105,38 +77,39 @@ layout: blog
     </div>
     {% endif %}
 
-
     {% if load_options.content.post.author.enable == true and
       load_data.website.content.post.author.title and
       load_data.website.content.post.author.name and
       load_data.website.content.post.author.description %}
-    <div class="layout_post__author">
-      <div class="row">
-        {% if load_options.content.post.author.avatar.enable == true and load_data.website.content.post.author.avatar %}
-        <div class="p-0 col-6 offset-3 col-lg-2 offset-lg-0">
-          <img class="img-fluid border-dashed layout_post__author-img" src="{{ '/assets/images/author' | prepend: site.baseurl }}/typing.svg" width="140" height="auto" alt="{{ load_data.website.content.post.author.name }}">
-        </div>
-        {% endif %}
-        <div class="col-12 {% if site.content.post.author.avatar.enable == true and load_data.website.content.post.author.avatar %} col-lg-10 {% else %} p-0 col-lg-12 {% endif %}">
-          <p class="layout_post__author-title">{{ load_data.website.content.post.author.title }}</p>
-          <h2 class="font-weight-bold layout_post__author-name">{{ load_data.website.content.post.author.name }}</h2>
-          <p class="layout_post__author-description">{{ load_data.website.content.post.author.description }}</p>
-        </div>
+    <div class="row mt-5 layout_post__author">
+      {% if load_options.content.post.author.avatar.enable == true and load_data.website.content.post.author.avatar %}
+      <div class="col-2">
+        <img class="img-fluid layout_post__author-img" src="{{ '/assets/images/author' | prepend: site.baseurl }}/{{ load_data.website.content.post.author.avatar }}" width="140" height="auto" alt="{{ load_data.website.content.post.author.name }}">
+      </div>
+      {% endif %}
+      <div class="col-10 {% if load_options.content.post.author.avatar.enable != true %} col-12 {% endif %}">
+        <p class="layout_post__author-title">{{ load_data.website.content.post.author.title }}</p>
+        <h2 class="font-weight-bold layout_post__author-name">{{ load_data.website.content.post.author.name }}</h2>
+        <p class="layout_post__author-description">{{ load_data.website.content.post.author.description }}</p>
       </div>
     </div>
-    {% endif %}
+  {% endif %}
+  </div>
 
-    {% if jekyll.environment == 'production' and
+    <!-- jekyll.environment == 'production' and -->
+    {% if 
     load_options.content.post.comments.enable == true and
     page.comments != false and
     load_data.userdata.disqus.username %}
-    <div id="layout_post__disqus" class="layout_post__disqus">
-      <div class="mt-4 mb-4 row justify-content-center">
-        {% if load_options.content.icons.enable == true %}<i class="fas fa-comments layout_post__disqus-icon"></i>{% endif %}
-        <h2 class="ml-3 layout_post__disqus-title">{{ load_data.website.content.post.comments.title }}</h2>
-      </div>
+    <div id="layout_post__disqus" class="p-3 mb-4 layout_post__disqus">
+        <h2 class="text-center mb-5 layout_post__disqus-title">
+            {% if load_options.content.icons.enable == true %}
+              <i class="fas fa-comments layout_post__disqus-icon"></i>
+            {% endif %}
+          {{ load_data.website.content.post.comments.title }}
+        </h2>
       <div class="layout_post__disqus-content">
-          <!-- {% include partials/scripts/disqus_comments.html %} -->
+          {% include scripts/disqus_comments.html %}
       </div>
     </div>
     {% endif %}

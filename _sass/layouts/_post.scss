@@ -1,6 +1,8 @@
 .layout_post{
-    @extend .elements_box;
     @extend .content_text_font_size;
+    &__header, &__content, &__footer, &__disqus{
+        @extend .elements_box;
+    }
     &__share-fb, &__share-ln, &__share-tw{
         @extend .buttons_style;
     }
