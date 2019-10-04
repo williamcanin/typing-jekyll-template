@@ -1,13 +1,11 @@
-/* Theme Whiteglass
+/* Theme for custom
 ––––––––––––––––––––––––––––––––––––––––––––––––––  */
 // Default
-
-// Default
-$background__full: #fff !default;
+$background__full: transparent !default;
 $elements__background: transparent !default;
-$color__clickable: #666666 !default;
+$color__clickable: #587feb !default;
 $color__text: #000 !default;
-$texts__background: rgba(226, 217, 218, 0.42) !default;
+$texts__background: transparent !default;
 $hr__color: #000 !default;
 $elements__box_border_color: transparent;
 $terminal__shadow_color: #000;
@@ -17,5 +15,5 @@ $keyframe__pulse_color_primary: rgba(26, 25, 25, 0.158);
 $keyframe__pulse_color_secondary: rgba(48, 47, 47, 0.103);
 
 // Footer
-$footer__bg: #fff !default;
+$footer__bg: transparent !default;
 

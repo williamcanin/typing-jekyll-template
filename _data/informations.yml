@@ -12,7 +12,7 @@ website:
     subtitle: |
       It will not have forecast of return. Meanwhile, follow me on the social networks below.
 # Theme - Values [ typing | whiteglass | cloudysky | hacking | littlegirl ]
-  theme: "cloudysky"
+  theme: "typing"
 # Configuration default
   title: "Typing"
   description: "Typing - A Theme for Jekyll"
@@ -117,7 +117,7 @@ userdata:
   email: # E.g: youremail@domain.com
   twitter: # E.g: "@my_twitter"
   disqus:
-    username: williamcanin # E.g: myuser
+    username: # E.g: myuser
   # You can add at most 4 social. If you do not want 4, 
   # you can remove the block containing: title, id, icon, url.
   socials:

@@ -1,0 +1,5 @@
+.layout_page{
+    &__header, &__content{
+        @extend .elements_box;
+    }
+}

@@ -9,9 +9,10 @@
     display: none !important;
   }
   .layout_default__content{
-    border: none;
+    border: none !important;
   }
   .layout_resume{
+    border: none !important;
     line-height: 1.5rem;
     &__header, &__excerpt{
       display: none;
@@ -20,9 +21,10 @@
       display: block !important;
     }
     &__content{
-      color: $color__text;
+      color: #000;
+      border: none !important;
       a,code{
-        color: $color__text;
+        color: #000;
       }
       /* Avoid printing hrefs when this class is applied */
       a[href]:after {
@@ -30,8 +32,8 @@
       }
       .badge-plugin{
         box-shadow: none !important;
-        border: 1px solid $color__text !important;
-        color: $color__text !important;
+        border: 1px solid #000 !important;
+        color: #000 !important;
         background-color: white !important;
         font-weight: bold;
       }

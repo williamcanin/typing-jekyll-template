@@ -1,4 +1,5 @@
-> Counter Disqus does not work
+> Slow click disqus count
+> Refatorar propriedades do arquivo informations.yml
 > Pages
 >> Post/Page:
     > Markdown

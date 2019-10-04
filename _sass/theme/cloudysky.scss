@@ -1,7 +1,5 @@
-/* Theme Typing - Default
+/* Theme Cloudysky
 ––––––––––––––––––––––––––––––––––––––––––––––––––  */
-// Default
-
 // Default
 $background__full: #f7f7f7 !default;
 $elements__background: #f3f3f3 !default;
@@ -9,7 +7,8 @@ $color__clickable: #587feb !default;
 $color__text: #000 !default;
 $texts__background: rgba(226, 217, 218, 0.42) !default;
 $hr__color: #000 !default;
-$elements__box_color: #b4b4b4;
+$elements__box_border_color: #b4b4b4;
+$terminal__shadow_color: #000;
 
 // Keyframes
 $keyframe__pulse_color_primary: rgba(26, 25, 25, 0.158);

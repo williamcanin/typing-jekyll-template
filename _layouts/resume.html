@@ -5,9 +5,9 @@ layout: default
 <!-- Include Data Base  -->
 {% include liquid/data %}
 
-<div class="p-4 m-3 layout_resume {% if load_options.content.page.animation == true %} animation__content {% endif %}">
+<div class="layout_resume {% if load_options.content.page.animation == true %} animation__content {% endif %}">
 
-    <div class="layout_resume__header">
+    <div class="p-4 mb-4 layout_resume__header">
       <div class="container-fluid">
 
         <div class="row">
@@ -19,27 +19,33 @@ layout: default
               <button id="layout_resume__btnprint" type="button" name="button" class="btn btn-link btn-typing layout_resume__btnprint">{{ load_data.website.content.resume.button.text }}</button>
             </div>
           </div>
-        </div>
-
-      </div>
-    </div>
-
-    {% if page.excerpt %}
-    <div class="mt-3 mb-5 layout_resume__excerpt">
-      <div class="container-fluid">
-        <div class="row d-block">
-          <div class="layout_resume__excerpt-text">{{ page.excerpt }}</div>
+          <div class="layout_resume__reading_time">
+            <i class="far fa-clock"></i>
+            {{ page.content | reading_time }}
+          </div>
         </div>
       </div>
-    </div>
-    {% endif %}
 
-    <div class="layout_resume__content">
+      {% if page.excerpt %}
+      <div class="mt-3 mb-5 layout_resume__excerpt">
+        <div class="container-fluid">
+          <div class="row d-block">
+            <div class="layout_resume__excerpt-text">{{ page.excerpt }}</div>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+
+    </div>
+
+    
+
+    <div class="p-4 mb-4 layout_resume__content">
       <div class="container-fluid">
         <div class="row d-block">
           {% if load_options.content.resume.image.enable == true and 
               load_data.website.content.resume.image %}
-          <div class="img-fluid float-right d-none d-lg-block layout_resume__photo_cv" style="margin-top: -5%;">
+          <div class="img-fluid float-right d-none d-lg-block layout_resume__photo_cv">
             <img class="rounded" style="border: 1px solid #000;"
             src="{{ '/assets/images/cv' | prepend: site.baseurl }}/{{ load_data.website.content.resume.image }}"
             alt="" width="120" height="auto">

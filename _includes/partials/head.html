@@ -84,8 +84,7 @@
   href="{{ '/assets/images/favicon/favicon-32x32.png' | 
   prepend: site.baseurl | prepend: site.url }}">
 
-  
-  <!-- Fonts -->
+    <!-- Fonts -->
   <!-- https://freebies.fluxes.com/blog/best-free-typewriter-fonts/
   https://www.creativebloq.com/typography/best-typewriter-fonts-10135084 -->
   <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
@@ -107,12 +106,18 @@
   {% elsif load_data.website.theme == "whiteglass" %}
     {% assign theme_chosen = "whiteglass" %}
   {% elsif load_data.website.theme == "cloudysky" %}
-  {% assign theme_chosen = "cloudysky" %}
+    {% assign theme_chosen = "cloudysky" %}
+  {% elsif load_data.website.theme == "hacking" %}
+    {% assign theme_chosen = "hacking" %}
+  {% elsif load_data.website.theme == "littlegirl" %}
+    {% assign theme_chosen = "littlegirl" %}    
   {% endif %}
   <link rel="stylesheet" href="{{ '/assets/css' | prepend: site.baseurl }}/{{ theme_chosen }}.css">
 
   <!-- Google Analytics -->
-  {% if jekyll.environment == 'production' and load_data.website.google.analytics.id and site.google.analytics.enable == true %}
+  {% if jekyll.environment == 'production' and 
+    load_data.website.google.analytics.id and 
+    load_options.google.analytics.enable == true %}
     {% include scripts/google_analytics.html %}
   {% endif %}
 

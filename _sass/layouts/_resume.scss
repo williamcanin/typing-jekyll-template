@@ -1,11 +1,17 @@
 .layout_resume{
-    @extend .elements_box;
     @extend .content_text_font_size;
     &__btnprint{
       @extend .buttons_style;
     }
-    &__excerpt{}
-    &__content{}
+    &__header{
+      @extend .elements_box;
+    }
+    &__photo_cv{
+      margin-top: -15px;
+    }
+    &__content{
+      @extend .elements_box;
+    }
     &__badge{
       font-weight: 200;
       color: $color__text;

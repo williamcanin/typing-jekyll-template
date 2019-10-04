@@ -58,7 +58,7 @@ layout: blog
             {% endif %}
 
             <!-- jekyll.environment == 'production' and -->
-          {% if
+          {% if jekyll.environment == 'production' and
             load_options.content.post.comments.enable == true and
             page.comments != false and
             load_data.userdata.disqus.username %}
@@ -75,7 +75,7 @@ layout: blog
             {% endif %}
           </div>
 
-          <div class="row">
+          <div class="mt-2 row">
             <a class="layout_postlist__link" href="{{ post.url | prepend: site.baseurl }}"><h1 class="font-weight-lighter_bak">{{ post.title }}</h1></a>
           </div>
 

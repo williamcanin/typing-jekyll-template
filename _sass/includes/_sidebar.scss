@@ -41,7 +41,7 @@
         background-color: $elements__background;
         border-radius: 20px;
         color: $color__clickable;
-        border: 1px solid $elements__box_color;
+        border: 1px solid $elements__box_border_color;
         @media (max-width: 992px){
             font-size: 1.9rem;
             text-align: left !important;
@@ -51,7 +51,7 @@
         font-family: $font-family__secondary;
         background-color: $elements__background;
         border-radius: 20px;
-        border: 1px solid $elements__box_color;
+        border: 1px solid $elements__box_border_color;
         // @media (min-width: 768px) and (max-width: 992px) {
         //   width: 190px;
         //   margin: 0 auto;
