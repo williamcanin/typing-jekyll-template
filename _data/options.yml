@@ -52,6 +52,8 @@ content:
     comments:
       enable: true
   post:
+    reading_time:
+      enable: true
     animation: true
     author:
       enable: true
@@ -74,7 +76,11 @@ content:
     note:
       enable: true
   resume:
+    reading_time:
+      enable: true
     image:
       enable: true
   page:
+    reading_time:
+      enable: true
     animation: true     

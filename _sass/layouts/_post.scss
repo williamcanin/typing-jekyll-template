@@ -7,7 +7,6 @@
         background-color: $texts__background;
         color: $color__text;
         font-size: 1rem;
-        &-count{}
     }
     &__share-fb, &__share-ln, &__share-tw{
         @extend .buttons_style;

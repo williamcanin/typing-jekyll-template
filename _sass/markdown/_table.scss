@@ -1,2 +1,31 @@
 /* 
 ––––––––––––––––––––––––––––––––––––––––––––––––––  */
+
+table{
+    margin: 2% 0%;
+    width: 100%;
+    thead{
+      tr{ 
+        th{
+          padding: 5px;
+          border: 1px solid $table__thead_th_border;
+          color: $table__thead_th_color;
+          background-color: $table__thead_th_background;
+        }
+      }
+    }
+    tbody{
+      background-color: $table__tbody_td_background;
+      tr{
+        td{
+          padding: 5px;
+          border: 1px solid $table__tbody_td_border;
+          color: $table__tbody_td_color;
+          background-color: $table__tbody_td_background;
+          code{
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }

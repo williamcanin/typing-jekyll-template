@@ -22,6 +22,17 @@ $highlight__color: #000;
 // Footer
 $footer__bg: transparent !default;
 
+// Table
+$table__thead_th_background: #fff;
+$table__thead_th_color: #000;
+$table__thead_th_border: #fff;
+$table__tbody_td_background: #fff;
+$table__tbody_td_color: #000;
+$table__tbody_td_border: #fff;
+
+// Blockquote
+$blockquote__background: #fff;
+
 // Gist theme
 $gist__background: #f7ecc4;
 $gist__code_color: black;

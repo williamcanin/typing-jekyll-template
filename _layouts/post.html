@@ -25,10 +25,12 @@ layout: blog
         {% endfor %}
       </div>
 
+      {% if load_options.content.post.reading_time.enable == true %}
       <div class="layout_post__reading_time">
         <i class="far fa-clock"></i>
         {{ page.content | reading_time }}
       </div>
+      {% endif %}
 
     </div>
 

@@ -19,10 +19,13 @@ layout: default
               <button id="layout_resume__btnprint" type="button" name="button" class="btn btn-link btn-typing layout_resume__btnprint">{{ load_data.website.content.resume.button.text }}</button>
             </div>
           </div>
+
+          {% if load_options.content.resume.reading_time.enable == true %}
           <div class="layout_resume__reading_time">
             <i class="far fa-clock"></i>
             {{ page.content | reading_time }}
           </div>
+          {% endif %}
         </div>
       </div>
 

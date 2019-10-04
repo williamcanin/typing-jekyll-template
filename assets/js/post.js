@@ -5,6 +5,11 @@ layout: null
 /*Include Data Base*/
 {% include liquid/data %}
 
+// Add indice name in Markdown Toc
+$('#markdown-toc').hover(function(){
+    $(this).attr('data-content', '{{ load_data.website.content.post.markdown_toc.indice.text }}');
+});
+
 // Count comments
 {% if load_data.userdata.disqus.username %}
     var disqus_shortname  = '{{ load_data.userdata.disqus.username }}';

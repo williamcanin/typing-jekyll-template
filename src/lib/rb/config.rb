@@ -59,7 +59,7 @@ class Main < Variables
                 file.puts("  priority: 0.7")
                 file.puts("  changefreq: 'monthly'")
                 file.puts("  lastmod: #{date_hour}")
-                file.puts("in_menu: true")
+                # file.puts("in_menu: true")
                 file.puts("icon: # add icon Font Awesome. E.g: fa-briefcase")
                 file.puts("published: false")
                 file.puts("permalink: # add permilink for page. E.g: /smallparty/")

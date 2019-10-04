@@ -1,2 +1,15 @@
 /* 
 ––––––––––––––––––––––––––––––––––––––––––––––––––  */
+
+blockquote{
+    border: none !important;
+    background-color: $blockquote__background;
+    border-left: 5px solid $color__clickable !important;
+    padding: 10px 10px 0px 10px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    p{
+      padding-bottom: 10px;
+    }
+  }
