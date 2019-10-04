@@ -11,18 +11,22 @@ layout: compress
 <!DOCTYPE html>
 <html>
   {% include partials/head.html %}
-<body class="body {% if load_options.global.links.underline == true %} underline_links {% endif %}" id="top">
-  <div class="container layout_default">
-    <div class="row">
-      {% include partials/sidebar_blog.html %}
-      {% include partials/content.html %}
+  <body class="body {% if load_options.global.links.underline == true %} underline_links {% endif %}" id="top">
+    <div class="container layout_default">
+      <div class="row">
+        {% include partials/sidebar_blog.html %}
+        {% include partials/content.html %}
+      </div>
     </div>
-  </div>
-  {% include partials/footer.html %}
-  {% include scripts/default.html %}
-</body>
-<!-- Disqus counter comments  -->
-<script id="dsq-count-scr" src="//{{ load_data.userdata.disqus.username }}.disqus.com/count.js" async></script>
+    {% include partials/footer.html %}
+    {% include scripts/default.html %}
+  </body>
+
+  <!-- Disqus counter comments  -->
+  {% if jekyll.environment == 'production' %}
+  <script id="dsq-count-scr" src="//{{ load_data.userdata.disqus.username }}.disqus.com/count.js" async></script>
+  {% endif %}
+  
 </html>
 {% else %}
   {% include layouts/error.html %}

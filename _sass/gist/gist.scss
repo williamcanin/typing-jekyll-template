@@ -1,0 +1,60 @@
+
+.gist{
+    .gist-data{
+        background-color: $gist__background !important;
+        color: $gist__code_color !important;
+    }
+    .gist-file{
+        border-color: $gist__border !important;
+    }
+    .blob-code, .blob-num{
+        color: $gist__code_color !important;
+        border: 0.1rem solid $gist__background !important;
+        background: $gist__background !important;
+    }
+    .js-line-number{
+        background: $gist__ln_background !important;
+        color: $gist__ln_color !important;
+    }
+    .gist-meta{
+        background-color: $gist__background !important;
+        color: $gist__meta_color !important;
+        /* Link meta */
+        a{
+            color: $gist__meta_link_color !important;
+        }
+    }
+  
+    /* Comments */
+    .pl-c{
+    color: $gist__comment_color !important;
+    }
+  
+    /* Function */
+    .pl-k, tbody tr:first-child .blob-code, tbody tr:last-child .blob-code{
+    color: $gist__function_color !important;
+    }
+  
+    /* Function Name */
+    .pl-en{
+    color: $gist__fn_color !important;
+    }
+  
+    /* Function Method */
+    .pl-c1{
+    color: $gist__fn_color !important;
+    }
+    /* "'s around Strings */
+    .pl-pds{
+    color: $gist__string_color !important;
+    }
+  
+    /* Strings */
+    .pl-s{
+    color: $gist__string_color !important;
+    }
+  
+    .pl-smi{
+        color: $gist__var_color !important;
+    }
+  }

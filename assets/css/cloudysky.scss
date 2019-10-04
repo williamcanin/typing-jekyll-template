@@ -2,7 +2,10 @@
 ---
 
 @import "theme/cloudysky";
+@import "highlighter/highlighter";
 @import "base/base";
+@import "markdown/markdown";
 @import "layouts/layouts";
 @import "includes/includes";
+@import "gist/gist";
 @import "print/print";

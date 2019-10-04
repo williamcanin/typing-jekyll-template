@@ -16,6 +16,24 @@ $terminal__shadow_color: #000;
 $keyframe__pulse_color_primary: rgba(26, 25, 25, 0.158);
 $keyframe__pulse_color_secondary: rgba(48, 47, 47, 0.103);
 
+// Highlighter
+$highlight__background: #fafafa;
+$highlight__border_color: #fafafa;
+$highlight__color: #000;
+
 // Footer
 $footer__bg: #fff !default;
 
+// Gist theme
+$gist__background: #fff;
+$gist__code_color: black;
+$gist__border: #eeeeee #eeeeee #eeeeee;
+$gist__ln_background: #fff;
+$gist__ln_color: black;
+$gist__meta_color: black;
+$gist__meta_link_color: #666666;
+$gist__comment_color: #386931;
+$gist__function_color: #246194;
+$gist__fn_color: #ad8500;
+$gist__string_color: #c55829;
+$gist__var_color: #132b44;

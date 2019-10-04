@@ -1,14 +1,8 @@
 > Refatorar propriedades do arquivo informations.yml
+> Refatorar config.rb gerar cabeçalho post/page.
+> Send e-mail layout/modal.
 >> Post/Page:
     > Markdown
-    > Gist
     > Table
-    > Highlight
-    > Linenos
     > Image
->> Themes:
-    > Whiteglass
-    > Hacking
-    > Littlegirl
-
 ># Upgrade Jektify

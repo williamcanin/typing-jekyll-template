@@ -1,0 +1,35 @@
+/* Stylesheets for include Highlight
+--------------------------------------------------------*/
+
+.highlight{
+  margin: 3% 0%;
+  font-size: 1.2rem;
+}
+pre{
+  background-color: $highlight__background;
+  border-radius: 0px;
+  padding: 2%;
+  border: 1px solid $highlight__border_color;
+  border-radius: 10px;
+  code{
+    color: $highlight__color;
+    white-space: pre;
+    word-wrap: normal;
+    overflow-x: auto;
+    overflow-x: hidden;
+    .lineno{
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -o-user-select: none;
+      margin-right: 2%;
+      border-right: 0.1rem solid $highlight__border_color;
+    }
+    .lineno::-moz-selection {
+      background-color: transparent;
+    }
+    .lineno::selection {
+      background-color: transparent;
+    }
+    @import "pygments";
+  }
+}

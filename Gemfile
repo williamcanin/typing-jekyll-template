@@ -9,6 +9,7 @@ ruby RUBY_VERSION
 
 gem 'json'
 gem 'rake'
+gem 'pygments.rb'
 gem 'jekyll'
 
 group :jekyll_plugins do
