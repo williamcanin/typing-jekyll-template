@@ -1,6 +1,4 @@
-> Slow click disqus count
 > Refatorar propriedades do arquivo informations.yml
-> Pages
 >> Post/Page:
     > Markdown
     > Gist

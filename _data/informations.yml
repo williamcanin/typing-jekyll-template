@@ -117,7 +117,7 @@ userdata:
   email: # E.g: youremail@domain.com
   twitter: # E.g: "@my_twitter"
   disqus:
-    username: # E.g: myuser
+    username: williamcanin # E.g: myuser
   # You can add at most 4 social. If you do not want 4, 
   # you can remove the block containing: title, id, icon, url.
   socials:

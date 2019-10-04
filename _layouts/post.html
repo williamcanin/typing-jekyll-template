@@ -35,7 +35,7 @@ layout: blog
     <div class="p-3 mb-4 layout_post__content">
       <div class="d-block">
           <!-- jekyll.environment == 'production' and -->
-          {% if jekyll.environment == 'production' and
+          {% if 
             load_options.content.post.comments.enable == true and
             page.comments != false and
             load_data.userdata.disqus.username %}
@@ -43,7 +43,7 @@ layout: blog
                 {% if load_options.content.icons.enable == true %}
                 <i class="fas fa-comments"></i>
                 {% endif %}
-                <a class="layout_post__comments-count" 
+                <a id="comments_in_post" class="layout_post__comments-count" 
                   href="{{ page.url }}#disqus_thread">
                     0
                 </a>
@@ -113,7 +113,7 @@ layout: blog
   </div>
 
     <!-- jekyll.environment == 'production' and -->
-    {% if jekyll.environment == 'production' and
+    {% if
     load_options.content.post.comments.enable == true and
     page.comments != false and
     load_data.userdata.disqus.username %}
