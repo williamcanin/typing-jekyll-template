@@ -3,6 +3,7 @@
 > Send e-mail layout/modal.
 >> Post/Page:
     > Markdown
-    > Table
+        > Table
+        > Blockquote
     > Image
 ># Upgrade Jektify

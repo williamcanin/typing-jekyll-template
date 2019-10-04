@@ -12,9 +12,4 @@
     &__content{
       @extend .elements_box;
     }
-    &__badge{
-      font-weight: 200;
-      color: $color__text;
-      background-color: $texts__background;
-    }
   }

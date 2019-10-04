@@ -48,7 +48,7 @@ module Jekyll
 
         # Creating the structure for image layout. Using Bootstrap.
         if align == "center"
-          %(<div class="row imager" style="margin: 40px 0px;">
+          %(<div class="row imager__plugin">
             <img class="img-fluid mx-auto d-block" src="#{@url_website}/#{@get_dir_img_posts}/#{img}" title="#{img}" alt="#{img}">
           </div>)
          else
