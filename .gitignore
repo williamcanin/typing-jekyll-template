@@ -1,9 +1,10 @@
-/vendor/
-/_site/
-/temp/
-/node_modules/
-/.sass-cache/
-/.jekyll-metadata/
+vendor
+assets/vendor
+_site
+temp
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
 **/*.bak
 **/*.lock
 **/*.log

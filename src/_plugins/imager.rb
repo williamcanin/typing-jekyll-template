@@ -18,10 +18,10 @@ module Jekyll
       # Method for picking up the _config.yml
       def _get_config_yml
         # Capture the settings of the _config.yml file
-        config_yml = YAML::load_file(File.join(File.dirname(File.expand_path(__FILE__)), '../_config.yml'))
+        config_yml = YAML::load_file(File.join(File.dirname(File.expand_path(__FILE__)), '../../_config.yml'))
         # Add some of these settings to variables
         @url_website = config_yml['baseurl']
-        @get_dir_img_posts = config_yml['_plugins']['imager']['dir_posts']
+        @get_dir_img_posts = config_yml['imager']['dir_posts']
       end
       def initialize(tag_name, input, tokens)
         super

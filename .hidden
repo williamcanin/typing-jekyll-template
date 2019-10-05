@@ -1,8 +1,5 @@
 vendor
-_includes
-_layouts
-_plugins
-_sass
+temp
 src
 Rakefile
 yarn.lock

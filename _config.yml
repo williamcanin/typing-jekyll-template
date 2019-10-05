@@ -16,10 +16,15 @@ plugins:
   - jekyll-gist
 
 include: ['_blog','_pages']
+
+layouts_dir: ./src/_layouts
+includes_dir: ./src/_includes
+plugins_dir: ./src/_plugins
+
 markdown: kramdown
+highlighter: rouge
 kramdown:
-  syntax_highlighter: pygments
-highlighter: pygments
+  syntax_highlighter: rouge
 permalink: /blog/:title/
 
 destination: _site
@@ -28,7 +33,7 @@ host: localhost
 
 sass:
   load_paths:
-  - _sass
+  - src/_sass
   - vendor/node_modules
   style: compressed
 
@@ -45,14 +50,15 @@ tag_page_layout: tag
 tag_page_dir: blog/tags
 tag_permalink_style: pretty
 
-_plugins:
-  imager:
-    dir_posts: "assets/images/posts"
-  reading_time:
-    locale: en_US
-  datelang:
-    locale: en_US
-    reload: false
+imager:
+  dir_posts: "assets/images/posts"
+
+reading_time:
+  locale: en_US
+
+datelang:
+  locale: en_US
+  reload: false
 
 pagination:
   enabled: true
@@ -74,7 +80,7 @@ gist:
 exclude:
   - temp
   - node_modules
-  - src
+  # - src
   - vendor
   - Gemfile
   - Gemfile.lock

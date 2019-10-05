@@ -50,16 +50,16 @@ module Jekyll
     class Main < Liquid::Tag
       Syntax = /^\s*([^\s]+)(\s+(\d+)\s+(\d+)\s*)?/
       def get_configs
-        @config_json = File.join(File.dirname(File.expand_path(__FILE__)), "./.datelangrc")
+        @config_json = File.join(File.dirname(File.expand_path(__FILE__)), "../lib/json/datelang.json")
         if not File.exist?(@config_json)
           raise "Abort: File \"#{@config_json}\" not found. You must create along with its structure."
         end
         @config_json_read = File.read(@config_json)
         @data_hash_json = JSON.parse(@config_json_read)
-        @data_hash_yml = YAML::load_file(File.join(File.dirname(File.expand_path(__FILE__)), '../_config.yml'))
-        @locale = @data_hash_yml['_plugins']['datelang']['locale']
-        @reload = @data_hash_yml['_plugins']['datelang']['reload']
-        @path_datelang = File.join("./", "_includes/datelang")
+        @data_hash_yml = YAML::load_file(File.join(File.dirname(File.expand_path(__FILE__)), '../../_config.yml'))
+        @locale = @data_hash_yml['datelang']['locale']
+        @reload = @data_hash_yml['datelang']['reload']
+        @path_datelang = File.join("./", "src/_includes/datelang")
       end # end get_configs
      def tplate(path,fileC,data_hash_json,locale, reload)
         @path = path

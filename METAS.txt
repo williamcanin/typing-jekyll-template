@@ -1,8 +1,12 @@
 > Refatorar propriedades do arquivo informations.yml
 > Idioma para data postagem.
-> Copiar arquivo usando ruby.
 > Page error.
-> Copy code highlighter
+> Button copy code highlighter
+> Rouge com linenos (ERROR)
 >> Post/Page:
     > Image
 ># Upgrade Jektify
+
+
+http://www.twisterrob.net/blog/2015/06/Jekyll-hacks-for-development.html
+https://sacha.me/

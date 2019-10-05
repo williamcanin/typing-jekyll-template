@@ -16,13 +16,13 @@ module Jekyll
     def reading_time(input)
 
       # Loading config string languages
-      config = File.read(File.join(File.dirname(File.expand_path(__FILE__)), "./.readingtimerc"))
+      config = File.read(File.join(File.dirname(File.expand_path(__FILE__)), "../lib/json/reading_time.json"))
       # Capture hash
       data_hash_json = JSON.parse(config)
       # Loading and Capture config file _config.yml
-      data_hash_yml = YAML::load_file(File.join(File.dirname(File.expand_path(__FILE__)), '../_config.yml'))
+      data_hash_yml = YAML::load_file(File.join(File.dirname(File.expand_path(__FILE__)), '../../_config.yml'))
       # Captures informed locale for plugin
-      locale = data_hash_yml['_plugins']['reading_time']['locale']
+      locale = data_hash_yml['reading_time']['locale']
 
       # Capture data
       longtext = data_hash_json[locale]['ReadingTime']['longtext']
