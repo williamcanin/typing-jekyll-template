@@ -51,7 +51,7 @@ class Main
 
 
     def page_create
-      array = enginer(CONFIG['PAGE_DIR'], 'Enter the name for the new page (without extension):')
+      array = enginer(CONFIG['PAGE_DIR'], 'Enter the name for the new page:')
       puts "Creating new page: #{array[3]}".green
       open(array[3], 'w') do |file|
           file.puts("---")
@@ -75,7 +75,7 @@ class Main
     end # page_create
 
     def post_create
-      array = enginer(CONFIG['POST_DIR'], 'Enter new post title (without extension):')
+      array = enginer(CONFIG['POST_DIR'], 'Enter new post title:')
       puts "Creating new post: #{array[3]}"
       open(array[3], 'w') do |file|
         file.puts("---")
