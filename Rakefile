@@ -5,12 +5,7 @@
 # Page author: http://williamcanin.com
 # Description: Task creation file for the 'config.rb' file.
 
-LIB_DIR = "./src/lib"
-
-require "#{LIB_DIR}/rb/config.rb"
-
-# require "./src/lib/rb/config.rb"
-
+require "./src/lib/rb/config.rb"
 
 # Task create header Post
 # Example1: rake post TITLE="First post"
@@ -18,7 +13,7 @@ require "#{LIB_DIR}/rb/config.rb"
 desc "Create new post"
 task :post do
   confs = Main.new
-  confs.post_create('postsDir')
+  confs.post_create
 end
 
 # Task create header Page
@@ -27,7 +22,7 @@ end
 desc "Create new page"
 task :page do
   confs = Main.new
-  confs.page_create('pageDir')
+  confs.page_create
 end
 
 

@@ -8,8 +8,8 @@ layout: null
     <!-- Include Data Base  -->
     {% include liquid/data %}
 
-    <title>{{ loadData.website.title | xml_escape }}</title>
-    <description>{{ loadData.website.description | xml_escape }}</description>
+    <title>{{ load_data.website.title | xml_escape }}</title>
+    <description>{{ load_data.website.description | xml_escape }}</description>
     <link>{{ site.url }}{{ site.baseurl }}/</link>
     <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
     <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>

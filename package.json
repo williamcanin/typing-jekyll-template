@@ -7,6 +7,8 @@
     "preinstall": "bundle install",
     "postinstall": "src/lib/sh/vendor.sh",
     "build": "bundle exec jekyll build",
+    "page": "bundle exec rake page",
+    "post": "bundle exec rake post TITLE='test'",
     "serve": "bundle exec jekyll serve"
   },
   "repository": "git+https://github.com/williamcanin/typing-jekyll-template.git",
