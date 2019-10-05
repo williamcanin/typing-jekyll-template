@@ -77,7 +77,7 @@ class Main
     def post_create
       array = enginer(CONFIG['POST_DIR'], 'Enter new post title (without extension):')
       puts "Creating new post: #{array[3]}"
-      open(filename, 'w') do |file|
+      open(array[3], 'w') do |file|
         file.puts("---")
         file.puts("layout: post")
         file.puts("title: \"#{array[0]}\"")
