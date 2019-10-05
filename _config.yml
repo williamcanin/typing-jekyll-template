@@ -15,14 +15,8 @@ plugins:
   - jekyll-paginate-v2
   - jekyll-gist
 
-include: ['_blog','_pages','_contact']
+include: ['_blog','_pages']
 markdown: kramdown
-# linenos: true
-# highlight:
-#   linenos: true
-# highlight_options:
-#   linenos: true
-
 kramdown:
   syntax_highlighter: pygments
 highlighter: pygments

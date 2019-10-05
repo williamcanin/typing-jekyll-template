@@ -1,8 +1,9 @@
 ---
 layout: contact
 title: Contact
-in_menu: true
 icon: fa-envelope
+menu: true
+script: [contact.js]
 published: true
 permalink: /contact/
 ---

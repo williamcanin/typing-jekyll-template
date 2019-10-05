@@ -1,0 +1,27 @@
+.email_successfully_sent{
+    &__content{
+        background-color: $elements__background;
+    }
+    &__header{}
+    &__body{}
+    &__icon{
+        font-size: 7rem;
+        color: #24aa20;
+        .el_icon{
+            border-radius: 50%;
+            padding: 20px;
+            background-color: #fff;
+        }
+    }
+    &__message_header{
+        h4{
+            font-size: 1.67rem;
+            color: $color__text;
+        }
+    }
+    &__message_body{
+        p{
+            font-size: 1.43rem;
+        }
+    }
+}

@@ -5,9 +5,10 @@ sitemap:
   priority: 0.7
   changefreq: 'monthly'
   lastmod: 2017-05-04T12:49:30-05:00
-in_menu: true
 icon: fa-briefcase
+menu: true
 published: true
+script: []
 permalink: /projects/
 ---
 

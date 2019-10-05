@@ -6,8 +6,9 @@ sitemap:
   priority: 0.7
   changefreq: 'monthly'
   lastmod: 2019-10-03 04:03:41
-in_menu: true
 icon: fa-user  # add icon Font Awesome. E.g: fa-briefcase
+menu: true
+script: []
 published: true
 permalink: /about/ # add permilink for page. E.g: /smallparty/
 ---

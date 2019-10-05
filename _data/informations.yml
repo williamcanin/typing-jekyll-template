@@ -79,14 +79,14 @@ website:
       comments:
         title: "Leave a comment on this post"
   
-# Postlist
+  # Postlist
     postlist:
       pagination:
         newer_text: "Newer"
         counter: ['Page', 'of']
         older_text: "Older"
 
-# Contact
+  # Contact
     contact:
       language: "en-US"
       placeholder:
@@ -95,18 +95,32 @@ website:
         email: "Your email"
         message: "What would you like to say?"
       send:
-        permalink: "/contact/sent/successful/"
+        successfully:
+          header:
+            icon: "fas fa-thumbs-up"
+            message: |
+              Email successfully sent!
+          body: |
+            I will contact you as soon as possible.
+        failed:
+          header:
+            icon: "fas fa-bug"
+            message: |
+              Failed to send email :(
+          body: |
+            Unfortunately for some reason your email was not sent.
+            You can contact us by email "myemail@com"
         button: "Go, message!"
       note:
         title: "NOTE"
         description: |
           DO NOT PASS on my cell phone number.
-# Resume
+  # Resume
     resume:
       image: "3x4.jpg"
       button:
         text: "Print"
-# Tags
+  # Tags
     tag:
       header:
         title: "Posts by tag:"
@@ -115,14 +129,13 @@ website:
 # Footer
   footer:
     message: "Simplicity is fashionable."
+
 # User data
 userdata:
-  email: # E.g: youremail@domain.com
+  email: william.costa.canin@gmail.com # E.g: youremail@domain.com
   twitter: # E.g: "@my_twitter"
   disqus:
     username: # E.g: myuser
-  # You can add at most 4 social. If you do not want 4, 
-  # you can remove the block containing: title, id, icon, url.
   socials:
     title: Follow Me!
     links:

@@ -1,0 +1,5 @@
+.layout_error{
+    &__header, &__content{
+        @extend .elements_box;
+    }
+}

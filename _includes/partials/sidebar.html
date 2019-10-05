@@ -58,7 +58,7 @@
           </li>
           {% endif %}     
           {% for page in site.pages %}
-              {% if page.title and page.in_menu == true %}
+              {% if page.title and page.menu == true %}
                 <li class="mr-3 mr-lg-0 float-left float-lg-none sidebar__menu-item">
                   {% if load_options.sidebar.icons.enable == true %}<i class="mr-1 fas {{ page.icon }}"></i>{% endif %}
                   <a class="sidebar__menu-link" href="{{ page.url | prepend: site.baseurl | prepend: site.url }}">{{ page.title }}</a>

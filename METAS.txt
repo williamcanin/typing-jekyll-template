@@ -1,6 +1,21 @@
 > Refatorar propriedades do arquivo informations.yml
 > Send e-mail layout/modal.
+> Idioma para data postagem.
+> Page error.
 >> Post/Page:
-    > Markdown
     > Image
 ># Upgrade Jektify
+
+
+# Formspree _next call modal 
+# https://stackoverflow.com/questions/29708824/bootstrap-modal-not-displaying-on-form-submit
+$(document).ready(function () {
+    if (window.location.hash === "#openmodal") {
+        $("#openmodal").modal("show");
+    }
+});
+
+
+              <input type="hidden" name="_next" value="//localhost:4000/#modal__email_sent">
+              <input type="hidden" name="_language" value="{{ load_data.website.content.contact.language }}" />
+              <input type="text" name="_gotcha" style="display:none" />

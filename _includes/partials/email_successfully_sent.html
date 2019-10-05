@@ -1,0 +1,29 @@
+<!-- Include Data Base  -->
+{% include liquid/data %}
+
+<div class="modal fade email_successfully_sent" id="email_successfully_sent"
+        tabindex="-1" role="dialog" aria-labelledby="Email Successfully Sent" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered email_successfully_sent__dialog" role="document">
+          <div class="modal-content email_successfully_sent__content">
+            <div class="modal-header border-bottom-0 email_successfully_sent__header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                  <i class="far fa-window-close"></i>
+              </button>
+            </div>
+            <div class="modal-body email_successfully_sent__body">
+              <div class="row my-4 p-3 justify-content-center email_successfully_sent__icon">
+                <i class="{{ load_data.website.content.contact.
+                  send.successfully.header.icon }} el_icon"></i>
+              </div>
+              <div class="row my-4 p-3 justify-content-center email_successfully_sent__message_header">
+                <h4>
+                  {{ load_data.website.content.contact.send.successfully.header.message }}
+                </h4>
+              </div>
+              <div class="row my-4 p-3 justify-content-center email_successfully_sent__message_body">
+                  <p>{{ load_data.website.content.contact.send.successfully.body }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+</div>

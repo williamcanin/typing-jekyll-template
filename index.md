@@ -1,6 +1,7 @@
 ---
 layout: hello
 title: Typing
+menu: false
 script: [hello.js]
 ---
 
@@ -8,6 +9,9 @@ script: [hello.js]
 Hey, I'am [Typing](https://github.com/williamcanin/typing-jekyll-template){: target="_blank"}. I'm a theme [Jekyll](https://jekyllrb.com){: target="_blank"} Inspired by the habit of typing. Using an appearance that resembles the typewriter. A simple, fast and efficient way of reading, just like the old days.
 
 'Typing' is intended for users with more technical content than for users who wish to have a stylish page. Keep it simple!
+
+{% for last_post in site.posts limit:1 %}
+"<a href="{{site.url}}{{site.baseurl}}{{last_post.url}}">{{last_post.title}}</a>". {% endfor %}
 
 **Let's get some details:**
 

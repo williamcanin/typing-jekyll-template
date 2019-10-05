@@ -5,13 +5,11 @@ sitemap:
   priority: 0.7
   changefreq: 'monthly'
   lastmod: 2017-05-04T12:49:30-05:00
-published: true
-in_menu: true
 icon: fa-address-card
+menu: true
+published: true
 script: [resume.js]
 permalink: /resume/
-excerpt: |
-    This is my resume. On this page you can print using the browser shortcut (Ctrl + P) or using the 'Print' Button as well.
 ---
 
 
