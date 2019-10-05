@@ -1,6 +1,6 @@
 > Refatorar propriedades do arquivo informations.yml
 > Idioma para data postagem.
-> config input create post/page.
+> Copiar arquivo usando ruby.
 > Page error.
 > Copy code highlighter
 >> Post/Page:

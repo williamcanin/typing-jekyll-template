@@ -1,6 +1,6 @@
 #encoding: utf-8
 
-# File: config.rb
+# File: manager.rb
 # Language: Ruby
 # Country/State: Brazil/SP
 # Author : William C. Canin <http://williamcanin.me>
@@ -8,14 +8,44 @@
 
 require "colorize"
 
-class Main
+class Manager
 
     SOURCE = "."
     CONFIG = {
+      'ROOT_VENDOR' => File.join(SOURCE, "assets/vendor"),
+      'VENDORJS_DIR' => File.join(SOURCE, "assets/vendor/js"),
+      'NODE_MODULES' => File.join(SOURCE, "vendor/node_modules"),
       'POST_DIR' => File.join(SOURCE, "_posts"),
       'PAGE_DIR' => File.join(SOURCE, "_pages"),
       'markdown_extension' => "md"
     }
+
+    def create_directory(path)
+      unless File.directory?(path)
+        puts "> Create folder '#{path}'...".blue
+        FileUtils.mkdir_p(path)
+        puts "> Folder '#{path}', created!".green
+      end
+    end # create_directory
+
+    def copy_file(origin, destiny)
+      FileUtils.cp(origin, destiny)
+    end # copy_file
+
+    def postinstall
+      create_directory(CONFIG['VENDORJS_DIR'])
+      files = ['jquery/dist/jquery.min.js',
+                'popper.js/dist/umd/popper.min.js',
+                'bootstrap/dist/js/bootstrap.min.js',
+                'simple-jekyll-search/dest/simple-jekyll-search.min.js'
+              ]
+      for f in files
+        # unless File.exist?(f)
+          copy_file("#{CONFIG['NODE_MODULES']}/#{f}", CONFIG['VENDORJS_DIR'])
+          puts "> File '#{f}' copied to #{CONFIG['VENDORJS_DIR']}!".green
+        # end
+      end
+    end # postinstall
     
     def slug_generator(parameter)
       parameter.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
@@ -54,23 +84,23 @@ class Main
       array = enginer(CONFIG['PAGE_DIR'], 'Enter the name for the new page:')
       puts "Creating new page: #{array[3]}".green
       open(array[3], 'w') do |file|
-          file.puts("---")
-          file.puts("layout: page")
-          file.puts("title: \"#{array[0]}\"")
-          file.puts("date: #{array[2]}")
-          file.puts("sitemap:")
-          file.puts("  priority: 0.7")
-          file.puts("  changefreq: 'monthly'")
-          file.puts("  lastmod: #{array[2]}")
-          file.puts("icon: # add icon Font Awesome. E.g: fa-briefcase")
-          file.puts("menu: true")
-          file.puts("published: false")
-          file.puts("script: []")
-          file.puts("permalink: # add permilink for page. E.g: /smallparty/")
-          file.puts("---")
-          file.puts("")
-          file.puts "<!-- Write from here your page !!! -->"
-          puts "Created successfully!"
+        file.puts("---")
+        file.puts("layout: page")
+        file.puts("title: \"#{array[0]}\"")
+        file.puts("date: #{array[2]}")
+        file.puts("sitemap:")
+        file.puts("  priority: 0.7")
+        file.puts("  changefreq: 'monthly'")
+        file.puts("  lastmod: #{array[2]}")
+        file.puts("icon: # add icon Font Awesome. E.g: fa-briefcase")
+        file.puts("menu: true")
+        file.puts("published: false")
+        file.puts("script: []")
+        file.puts("permalink: # add permilink for page. E.g: /smallparty/")
+        file.puts("---")
+        file.puts("")
+        file.puts "<!-- Write from here your page !!! -->"
+        puts "Created successfully!"
       end #open
     end # page_create
 

@@ -1,32 +1,42 @@
 # File: Rakefile
-# Language: RakeFile
+# Language: Rake
 # Country/State: Brazil/SP
-# Author : William C. Canin <http://williamcanin.github.com>
-# Page author: http://williamcanin.com
-# Description: Task creation file for the 'config.rb' file.
+# Author : William C. Canin
+# Page author: http://williamcanin.me
+# Description: Task creation file for the 'manager.rb' file.
 
-require "./src/lib/rb/config.rb"
+require "./src/lib/rb/manager.rb"
 
-# Task create header Post
-# Example1: rake post TITLE="First post"
-# Note: TITLE is Required
+# Task create header post
+# Example: rake post
 desc "Create new post"
 task :post do
-  confs = Main.new
-  confs.post_create
+  manager = Manager.new
+  manager.post_create
 end
 
-# Task create header Page
-# Example1: rake page TITLE="First page"
-# Note: TITLE is Required
+# Task create header page
+# Example: rake page
 desc "Create new page"
 task :page do
-  confs = Main.new
-  confs.page_create
+  manager = Manager.new
+  manager.page_create
 end
 
+# Task to set up after installation
+# Example: rake postinstall
+desc "Setup after installation"
+task :postinstall do
+  manager = Manager.new
+  manager.postinstall
+end
 
-# Default configuration
+# Other outputs
+def get_stdin(message)
+  print message
+  STDIN.gets.chomp
+end
+
 def ask(message, valid_options)
   if valid_options
     answer = get_stdin("#{message} #{valid_options.to_s.gsub(/"/, '').gsub(/, /,'/')} ") while !valid_options.include?(answer)
@@ -34,9 +44,4 @@ def ask(message, valid_options)
     answer = get_stdin(message)
   end
   answer
-end
-
-def get_stdin(message)
-  print message
-  STDIN.gets.chomp
 end
