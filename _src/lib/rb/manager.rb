@@ -60,7 +60,7 @@ class Manager
       end
     end # datetime_generator
 
-    def enginer(directory, message)
+    def enginer(directory, message, type)
       abort("Rake aborted: #{directory} directory not found.") unless FileTest.directory?(directory)
       begin
         print "#{message}\n> ".blue
@@ -72,7 +72,11 @@ class Manager
       slug = slug_generator(title)
       date = datetime_generator('%Y-%m-%d')
       datetime = datetime_generator('%Y-%m-%d %R:%S')
-      filename = File.join(directory, "#{date}-#{slug}.#{CONFIG['markdown_extension']}")
+      if type == 'page'
+        filename = File.join(directory, "#{slug}.#{CONFIG['markdown_extension']}")
+      else
+        filename = File.join(directory, "#{date}-#{slug}.#{CONFIG['markdown_extension']}")
+      end
       if File.exist?(filename)
         abort("Action aborted by user!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
       end
@@ -81,7 +85,7 @@ class Manager
 
 
     def page_create
-      array = enginer(CONFIG['PAGE_DIR'], 'Enter the name for the new page:')
+      array = enginer(CONFIG['PAGE_DIR'], 'Enter the name for the new page:', 'page')
       puts "Creating new page: #{array[3]}".green
       open(array[3], 'w') do |file|
         file.puts("---")
@@ -110,7 +114,7 @@ class Manager
     end # page_create
 
     def post_create
-      array = enginer(CONFIG['POST_DIR'], 'Enter new post title:')
+      array = enginer(CONFIG['POST_DIR'], 'Enter new post title:', 'post')
       puts "Creating new post: #{array[3]}"
       open(array[3], 'w') do |file|
         file.puts("---")

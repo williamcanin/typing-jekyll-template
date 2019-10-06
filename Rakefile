@@ -5,7 +5,7 @@
 # Page author: http://williamcanin.me
 # Description: Task creation file for the 'manager.rb' file.
 
-require "./src/lib/rb/manager.rb"
+require "./_src/lib/rb/manager.rb"
 
 # Task create header post
 # Example: rake post
