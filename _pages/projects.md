@@ -1,17 +1,22 @@
 ---
 layout: page
+order: 2
 title: Projects
 sitemap:
   priority: 0.7
   changefreq: 'monthly'
   lastmod: 2017-05-04T12:49:30-05:00
+# Use icons of: https://fontawesome.com/icons
+# E.g: fa-briefcase
 icon: fa-briefcase
-menu: true
-published: true
+menu:
+  enable: true
+  local: [default]
 script: []
-permalink: /projects/
+published: true
+permalink: /projects/ # add permilink for page. E.g: /smallparty/
 ---
-
+ 
 If you wanted to know about my favorite chores, this is the correct page. You find my designs of my own, or participation.
 
 ## Major collaborations

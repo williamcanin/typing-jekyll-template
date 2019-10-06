@@ -1,15 +1,20 @@
 ---
 layout: resume
+order: 3
 title: Resume
 sitemap:
   priority: 0.7
   changefreq: 'monthly'
   lastmod: 2017-05-04T12:49:30-05:00
+# Use icons of: https://fontawesome.com/icons
+# E.g: fa-briefcase
 icon: fa-address-card
-menu: true
-published: true
+menu:
+  enable: true
+  local: [default]
 script: [resume.js]
-permalink: /resume/
+published: true
+permalink: /resume/ # add permilink for page. E.g: /smallparty/
 ---
 
 

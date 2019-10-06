@@ -47,22 +47,21 @@
         </h1>
         <div class="p-2 mx-3 sidebar__menu {% if load_options.sidebar.animation == true %} animation__sidebar-menu {% endif %}">
           <div class="my-1 d-none d-md-block sidebar__menu-title">Menu: {{ load_data.website.sidebar.menu.blog.text }}</div>
+          {% assign sorted_pages = site.pages | sort:'order' %}
+          {% for page in sorted_pages %}
+          {% if page.title and page.menu.local[0] == 'blog' %}
           <li class="mr-3 mr-lg-0 float-left float-lg-none sidebar__menu-item">
-            {% if load_options.sidebar.icons.enable == true %}<i class="mr-1 fas fa-edit"></i>{% endif %}
-            <a href="{{ '/blog' | prepend: site.baseurl | prepend: site.url }}" class="sidebar__menu-link">{{ load_data.website.sidebar.menu.blog.text }}</a>
+              {% if load_options.sidebar.icons.enable == true %}<i class="mr-1 fas {{ page.icon }}"></i>{% endif %}
+              <a class="sidebar__menu-link" href="{{ page.url | prepend: site.baseurl | prepend: site.url }}">{{ page.title }}</a>
           </li>
-          <li class="mr-3 mr-lg-0 float-left float-lg-none sidebar__menu-item sidebar__menu-tags">
-              {% if load_options.sidebar.icons.enable == true %}<i class="mr-1 fas fa-tags"></i>{% endif %}
-              <a href="{{ '/blog/tags' | prepend: site.baseurl | prepend: site.url }}" class="sidebar__menu-link">{{ load_data.website.sidebar.menu.blog.tags.text }}</a>
-          </li>
-          <li class="mr-3 mr-lg-0 float-left float-lg-none sidebar__menu-item sidebar__menu-search">
-              {% if load_options.sidebar.icons.enable == true %}<i class="mr-1 fas fa-search"></i>{% endif %}
-              <a href="{{ '/blog/search' | prepend: site.baseurl | prepend: site.url }}" class="sidebar__menu-link">{{ load_data.website.sidebar.menu.blog.search.text }}</a>
-          </li>
+          {% endif %}
+          {% if page.title and page.menu.local[1] == 'blog' %}
           <li class="mr-3 mr-lg-0 float-left float-lg-none sidebar__menu-item">
-              {% if load_options.sidebar.icons.enable == true %}<i class="mr-1 fas fa-rss"></i>{% endif %}
-              <a href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}" class="sidebar__menu-link">{{ load_data.website.sidebar.menu.blog.feed.text }}</a>
+              {% if load_options.sidebar.icons.enable == true %}<i class="mr-1 fas {{ page.icon }}"></i>{% endif %}
+              <a class="sidebar__menu-link" href="{{ page.url | prepend: site.baseurl | prepend: site.url }}">{{ page.title }}</a>
           </li>
+          {% endif %}
+          {% endfor %}
         </div>
       </div>
     </div>

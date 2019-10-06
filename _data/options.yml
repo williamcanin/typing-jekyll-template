@@ -22,8 +22,6 @@ sidebar:
     border: true
     circle: true
     flip: true
-  blog:
-    enable: true
   icons:
     enable: true
   socials:
