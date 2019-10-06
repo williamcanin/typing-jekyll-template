@@ -52,7 +52,7 @@ module Jekyll
             <img class="img-fluid mx-auto d-block" src="#{@url_website}/#{@get_dir_img_posts}/#{img}" title="#{img}" alt="#{img}">
           </div>)
          else
-          %(<img style="float: #{align};" class="img-fluid" src="#{@url_website}/#{@get_dir_img_posts}/#{img}" title="#{img}" alt="#{img}">)
+          %(<img style="float: #{align};" class="img-fluid imager__plugin" src="#{@url_website}/#{@get_dir_img_posts}/#{img}" title="#{img}" alt="#{img}">)
          end
       end
       def split_params(params)

@@ -2,4 +2,11 @@
     &__header, &__content{
         @extend .elements_box;
     }
+    &__icon{
+        font-size: 8rem;
+        color: red;
+    }
+    &__content{
+        @extend .content_text_font_size;
+    }
 }

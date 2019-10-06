@@ -24,6 +24,9 @@
   }
   &__input{
     @extend .inputs_style;
+    @media (min-width: 300px) and (max-width: 992px) {
+      font-size: 1.2rem !important;
+    }
   }
   &__btn-clear{
     @extend .buttons_style;

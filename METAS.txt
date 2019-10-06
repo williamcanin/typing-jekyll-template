@@ -1,9 +1,6 @@
 > Refatorar propriedades do arquivo informations.yml
 > Idioma para data postagem.
-> Page error.
-> Button copy code highlighter
 > Rouge com linenos (ERROR)
-> Virgula tags no post.html
 >> Post/Page:
     > Image
 ># Upgrade Jektify
