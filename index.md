@@ -11,7 +11,7 @@ Hey, I'am [Typing](https://github.com/williamcanin/typing-jekyll-template){: tar
 'Typing' is intended for users with more technical content than for users who wish to have a stylish page. Keep it simple!
 
 {% for last_post in site.posts limit:1 %}
-"<a href="{{site.url}}{{site.baseurl}}{{last_post.url}}">{{last_post.title}}</a>". {% endfor %}
+See the last post: "<a href="{{site.url}}{{site.baseurl}}{{last_post.url}}">{{last_post.title}}</a>". {% endfor %}
 
 **Let's get some details:**
 

@@ -71,16 +71,16 @@ pagination:
   locale: ''
   title: ':title - Page :num'
   limit: 0
-  extension: html
+  # extension: html
   indexpage: 'index'
 
 gist:
-  noscript: true
+  noscript: false
 
 exclude:
   - temp
   - node_modules
-  # - src
+  - src
   - vendor
   - Gemfile
   - Gemfile.lock
