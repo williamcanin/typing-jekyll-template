@@ -1,6 +1,7 @@
 vendor
 assets/vendor
 _site
+public
 temp
 .sass-cache
 .jekyll-cache
