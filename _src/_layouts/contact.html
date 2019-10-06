@@ -1,0 +1,89 @@
+---
+layout: default
+---
+<!-- Include Data Base  -->
+{% include liquid/data %}
+
+{% if load_data.userdata.email %}
+
+  <div class="p-3 layout_contact {% if load_options.content.contact.animation == true %} animation__content {% endif %}">
+
+    <div class="mb-4 p-3 layout_contact__header">
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="p-0 col col-lg-7">
+            <h1 class="font-weight-bold layout_contact__title">{{ page.title }}</h1>
+          </div>
+          <div class="p-0 col col-lg-5 text-right">
+            <span class="text-right layout_contact__vendor">Service provided by:&nbsp;<a href="https://formspree.io/" target="_blank">Formspree</a></span>
+          </div>
+        </div>
+
+        <div class="row d-block"> 
+          <div class="layout_contact__description">{{ content }}</div>
+        </div>
+      </div>
+
+    </div>
+
+      <div class="container-fluid">
+        <div class="row d-block">
+          <form id="layout_contact__form" class="mb-4 p-3 layout_contact__form"
+            method="POST">
+
+            <div class="container-fluid">
+
+              <div class="row">
+                <input type="text" class="my-1 form-control layout_contact__input"
+                  name="Name" placeholder="{{ load_data.website.content.contact.placeholder.name }}"
+                  id="name" required autofocus>
+              </div>
+
+              <div class="row">
+                <input type="text" class="my-1 form-control layout_contact__input"
+                  name="_subject"
+                  placeholder="{{ load_data.website.content.contact.placeholder.subject }}"
+                  id="subject" required autofocus>
+              </div>
+
+              <div class="row">
+                <input type="text" class="my-1 form-control layout_contact__input"
+                name="Email"
+                placeholder="{{ load_data.website.content.contact.placeholder.email }}"
+                id="email" required autofocus>
+              </div>
+
+              <div class="row">
+                <textarea  class="my-1 form-control layout_contact__textarea"
+                name="Message" rows="7" cols="50"
+                placeholder="{{ load_data.website.content.contact.placeholder.message }}"
+                id="message" required></textarea>
+              </div>
+
+              <div class="row">
+                <button type="submit"
+                  class="m-0 btn btn-link btn-typing layout_contact__form-button">
+                  {{ load_data.website.content.contact.send.button }}
+                </button>
+              </div>
+            </div> 
+
+          </form>
+        </div>
+        {% if load_options.content.contact.note.enable == true %}
+        <div class="row d-block">
+          <div class="mb-4 p-3 layout_contact__note">
+            <span>{{ load_data.website.content.contact.note.title }}: {{ load_data.website.content.contact.note.description }}</span>
+          </div>
+        </div>
+        {% endif %}
+      </div>
+  </div>
+{% else %}
+<p style="color: yellow; background-color: black; padding: 5px;"> Warning! Email not informed "usedata => email" in file '_data/informations.yml'.</p>
+{% endif %}
+
+<!-- Add Modal action message sent -->
+{% include partials/email_successfully_sent.html %}
+{% include partials/email_failed_sent.html %}

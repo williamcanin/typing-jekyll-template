@@ -17,23 +17,23 @@ plugins:
 
 include: ['_blog','_pages']
 
-layouts_dir: ./src/_layouts
-includes_dir: ./src/_includes
-plugins_dir: ./src/_plugins
-
 markdown: kramdown
 highlighter: rouge
 kramdown:
   syntax_highlighter: rouge
 permalink: /blog/:title/
 
-destination: _site
+layouts_dir: _src/_layouts
+includes_dir: _src/_includes
+plugins_dir: _src/_plugins
+
+destination: public
 port: 4000
 host: localhost
 
 sass:
   load_paths:
-  - src/_sass
+  - _src/_sass
   - vendor/node_modules
   style: compressed
 
@@ -79,8 +79,9 @@ gist:
 
 exclude:
   - temp
+  - .hidden
   - node_modules
-  - src
+  - _src
   - vendor
   - Gemfile
   - Gemfile.lock

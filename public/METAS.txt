@@ -1,0 +1,11 @@
+> Refatorar propriedades do arquivo informations.yml
+> Idioma para data postagem.
+> Rouge com linenos (ERROR)
+>> Post/Page:
+    > Image
+># Upgrade Jektify
+
+
+http://www.twisterrob.net/blog/2015/06/Jekyll-hacks-for-development.html
+https://sacha.me/
+https://badoo.com/profile/0obff5b362880e65950444b0402d68af84c425560a0c687644

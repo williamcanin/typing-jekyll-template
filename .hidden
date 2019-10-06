@@ -1,6 +1,6 @@
 vendor
 temp
-src
+_src
 Rakefile
 yarn.lock
 Gemfile.lock

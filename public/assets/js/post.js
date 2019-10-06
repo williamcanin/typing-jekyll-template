@@ -1,0 +1,1 @@
+$("#markdown-toc").hover(function(){$(this).attr("data-content","Table of Content")}),$("#comments_in_post").click(function(t){t.preventDefault(),$("html,body").animate({scrollTop:$(this.hash).offset().top},500)});
