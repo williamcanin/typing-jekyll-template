@@ -21,7 +21,7 @@ If you wanted to know about my favorite chores, this is the correct page. You fi
 
 ## Major collaborations
 
-[Typing Theme](https://github.com/williamcanin/typing-jekyll-template) : Creating themes for Jekyll   
+[Typing Theme](https://github.com/williamcanin/typing-jekyll-template) : Creating themes for Jekyll
 
 
 |[Typing Jekyll Template](https://github.com/williamcanin/typing-jekyll-template){:target="_blank"}|

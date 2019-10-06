@@ -1,5 +1,4 @@
 vendor
-temp
 _src
 Rakefile
 yarn.lock

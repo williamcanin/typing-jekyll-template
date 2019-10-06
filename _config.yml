@@ -15,7 +15,7 @@ plugins:
   - jekyll-paginate-v2
   - jekyll-gist
 
-include: ['_blog','_pages', '_src/_test']
+include: ['_blog','_pages']
 
 markdown: kramdown
 highlighter: rouge

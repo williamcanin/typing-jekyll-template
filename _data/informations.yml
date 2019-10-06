@@ -28,7 +28,7 @@ website:
   google:
     analytics:
       id: # tracking id, e.g. "UA-000000-01"
-  # Terminal for theme Hacking.
+  # Terminal
   terminal:
     text:
       user: typing
@@ -132,7 +132,7 @@ website:
 
 # User data
 userdata:
-  email: william.costa.canin@gmail.com # E.g: youremail@domain.com
+  email: # E.g: youremail@domain.com
   twitter: # E.g: "@my_twitter"
   disqus:
     username: # E.g: myuser
