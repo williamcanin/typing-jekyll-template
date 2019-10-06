@@ -5,4 +5,10 @@
     &__icon{
         font-size: 3.5rem;
     }
+    &__close{
+        color: $color__text;
+        &:hover{
+            color: $color__text;
+        }
+    }
 }

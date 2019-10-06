@@ -15,7 +15,7 @@ global:
 home:
   animation: true
   terminal:
-    enable: false
+    enable: true
     animation: true
 sidebar:
   animation: true
@@ -77,12 +77,15 @@ content:
     animation: true
     note:
       enable: true
+  error:
+    animation: true
   resume:
+    animation: true
     reading_time:
       enable: true
     image:
       enable: true
   page:
+    animation: true
     reading_time:
       enable: true
-    animation: true     
