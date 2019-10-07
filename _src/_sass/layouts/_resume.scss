@@ -1,5 +1,6 @@
 .layout_resume{
     @extend .content_text_font_size;
+
     &__btnprint{
       @extend .buttons_style;
     }
@@ -10,6 +11,7 @@
       margin-top: -15px;
     }
     &__content{
+      font-family: $font-family__third;
       @extend .elements_box;
     }
   }

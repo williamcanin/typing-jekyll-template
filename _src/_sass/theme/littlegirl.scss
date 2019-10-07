@@ -1,11 +1,11 @@
 /* Theme Littlegirl
 ––––––––––––––––––––––––––––––––––––––––––––––––––  */
 // Default
-$background__full: #e77eb3 !default;
-$elements__background: #f39ad7 !default;
-$color__clickable: #7b15b6 !default;
+$background__full: #ef9ec7 !default;
+$elements__background: #fab5e4 !default;
+$color__clickable: #9044bd !default;
 $color__text: #000 !default;
-$texts__background: #da7ec2!default;
+$texts__background: #ef9ec7!default;
 $hr__color: #000 !default;
 $elements__box_border_color: transparent;
 $terminal__shadow_color: #000;
@@ -15,8 +15,8 @@ $keyframe__pulse_color_primary: rgba(164, 35, 250, 0.349);
 $keyframe__pulse_color_secondary: rgba(182, 35, 250, 0.199);
 
 // Highlighter
-$highlight__background: #e77eb3;
-$highlight__border_color: #e77eb3;
+$highlight__background: #ef9ec7;
+$highlight__border_color: #ef9ec7;
 $highlight__color: #000;
 
 // Footer
@@ -26,12 +26,12 @@ $footer__bg: #f0a9cc !default;
 $blockquote__background: #e77eb3;
 
 // Table
-$table__thead_th_background: #e77eb3;
+$table__thead_th_background: #ef9ec7;
 $table__thead_th_color: #000;
-$table__thead_th_border: #9b4dc9;
-$table__tbody_td_background: #e77eb3;
+$table__thead_th_border: #9044bd;
+$table__tbody_td_background: #ef9ec7;
 $table__tbody_td_color: #000;
-$table__tbody_td_border: #9b4dc9;
+$table__tbody_td_border: #9044bd;
 
 // Gist theme
 $gist__background: #e794be;
@@ -40,7 +40,7 @@ $gist__border: #e794be #e794be #e794be;
 $gist__ln_background: #e794be;
 $gist__ln_color: black;
 $gist__meta_color: black;
-$gist__meta_link_color: #7b15b6;
+$gist__meta_link_color: #9044bd;
 $gist__comment_color: #386931;
 $gist__function_color: #246194;
 $gist__fn_color: #ad8500;
