@@ -36,7 +36,7 @@ end
 desc "Deploy the compiled project"
 namespace :deploy do
   task :public do
-    manager.deploy(Manager::CONFIG['PUBLIC_DIR'], 'public')
+    manager.deploy('public', 'public')
   end
 end
 
