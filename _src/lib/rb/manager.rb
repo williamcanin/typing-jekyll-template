@@ -41,7 +41,9 @@ class Manager
       create_directory(CONFIG['VENDORJS_DIR'])
       files = ['jquery/dist/jquery.min.js',
                 'popper.js/dist/umd/popper.min.js',
+                'popper.js/dist/umd/popper.min.js.map',
                 'bootstrap/dist/js/bootstrap.min.js',
+                'bootstrap/dist/js/bootstrap.min.js.map',
                 'simple-jekyll-search/dest/simple-jekyll-search.min.js'
               ]
       for f in files

@@ -80,6 +80,27 @@ pagination:
   # extension: html
   indexpage: 'index'
 
+jektify:
+  enable: true
+  open: true
+  toggle:
+    enable: true
+  spotify:
+    user: # "you_user"
+    text: "See me no Spotify"
+  sass:
+    jekyll: true
+    other:
+      dir: "way/to/your/SASS"
+  title:
+    enable: false
+    text: "Music name"
+  description:
+    enable: false
+    text: |
+      Jekyll plugin to generate html snippets for embedding Spotify Musics.
+      To listen to the full song, open your Spotify and start these musics.
+
 gist:
   noscript: false
 

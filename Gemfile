@@ -22,6 +22,7 @@ group :jekyll_plugins do
   gem 'jekyll-youtube'
   gem 'jekyll-tagging'
   gem 'jemoji'
+  gem 'jektify'
   gem 'jekyll-email-protect'
   gem 'jekyll-paginate-v2'
 end

@@ -18,3 +18,8 @@
 {% for script_page in page.script %}
    <script type="text/javascript" src="{{ '/assets/js/' | prepend: site.baseurl | prepend: site.url  | append: script_page }}"></script>
 {% endfor %}
+
+<!-- Plugin Jektify -->
+{% if site.jektify.enable == true and site.jektify.toggle.enable == true %}
+<script src="{{ '/assets/vendor/jektify/js/jektify.min.js' | prepend: site.baseurl | prepend: site.url }}"></script>
+{% endif %}
