@@ -14,6 +14,8 @@ gem 'pygments.rb'
 gem 'jekyll'
 
 group :jekyll_plugins do
+  gem 'jekyll-feed'
+  gem 'jekyll-sitemap'
   gem 'jekyll-coffeescript'
   gem 'jekyll-jsminify'
   gem 'jekyll-gist'

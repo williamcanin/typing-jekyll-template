@@ -6,7 +6,7 @@
     <div class="sidebar__wrapper">
       <div class="nav flex-lg-column">
         {% if load_options.sidebar.avatar.flip == true and load_data.website.sidebar.avatar.flip.img %}
-        <div class="sidebar__avatar_flip">
+        <div class="d-none d-sm-block sidebar__avatar_flip">
           <div class="sidebar__avatar_flip-card">
             <a class="sidebar__avatar_flip-front sidebar__avatar_flip-face" href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">
               <img class="p-1 img-fluid mx-auto d-block
@@ -30,7 +30,7 @@
           </div>
         </div>
         {% else %}
-        <div class="sidebar__avatar_noflip">
+        <div class="d-none d-sm-block sidebar__avatar_noflip">
           <a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}" class="nav-link">
             <img class="p-1 img-fluid {% if load_options.sidebar.animation == true %} animation__pulse {% endif %} mx-auto d-block
               {% if load_options.sidebar.avatar.circle == true %} sidebar_avatar_circle {% endif %}
@@ -42,10 +42,10 @@
           </a>
         </div>
         {% endif %}
-        <h1 class="p-2 text-center mx-auto {% if load_options.sidebar.animation == true %} animation__sidebar-title {% endif %} sidebar__title">
+        <h1 class="p-2 text-center d-md-flex align-items-center mx-auto {% if load_options.sidebar.animation == true %} animation__sidebar-title {% endif %} sidebar__title">
           <a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}" class="nav-link" style="font-size: {{ load_data.website.sidebar.title.size }}">{{ load_data.website.sidebar.title.text }}</a>
         </h1>
-        <div class="p-2 mx-3 sidebar__menu {% if load_options.sidebar.animation == true %} animation__sidebar-menu {% endif %}">
+        <div class="p-2 mx-3 d-md-flex flex-md-column sidebar__menu {% if load_options.sidebar.animation == true %} animation__sidebar-menu {% endif %}">
           <div class="my-1 d-none d-md-block sidebar__menu-title">Menu: {{ load_data.website.sidebar.menu.blog.text }}</div>
           {% assign sorted_pages = site.pages | sort:'order' %}
           {% for page in sorted_pages %}

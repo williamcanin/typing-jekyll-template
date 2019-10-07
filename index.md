@@ -1,7 +1,10 @@
 ---
 layout: hello
 title: Typing
-menu: false
+menu:
+  enable: false
+  local: [null]
+published: true
 script: [hello.js]
 ---
 
@@ -18,5 +21,3 @@ See the last post: "<a href="{{site.url}}{{site.baseurl}}{{last_post.url}}">{{la
 This page exists to put everything about you, as if it were a simplified 'About'. The file for editing this page is in the directory root: `index.md`.
 
 You already have a template page for 'Blog', 'Projects', 'Search', 'Contact', 'Tags' and 'Resume', but you can change as you want, modifying property values.
-
-

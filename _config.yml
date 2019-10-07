@@ -14,6 +14,11 @@ plugins:
   - jemoji
   - jekyll-paginate-v2
   - jekyll-gist
+  - jekyll-sitemap
+  - jekyll-jsminify
+  - jekyll-email-protect
+  - jekyll-feed
+  - jekyll-coffeescript
 
 include: ['_blog','_pages']
 
@@ -21,6 +26,7 @@ markdown: kramdown
 highlighter: rouge
 kramdown:
   syntax_highlighter: rouge
+
 permalink: /blog/:title/
 
 layouts_dir: _src/_layouts
@@ -38,7 +44,7 @@ sass:
   style: compressed
 
 feed:
-  path: atom.xml
+  path: feed.xml
 
 compress_html:
   clippings: all
@@ -58,7 +64,7 @@ reading_time:
 
 datelang:
   locale: en_US
-  reload: false
+  reload: true
 
 pagination:
   enabled: true

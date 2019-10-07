@@ -7,6 +7,9 @@
 # Description: Script for project management.
 
 require "colorize"
+require "open3"
+require "json"
+require "date"
 
 class Manager
 
@@ -17,6 +20,8 @@ class Manager
       'NODE_MODULES' => File.join(SOURCE, "vendor/node_modules"),
       'POST_DIR' => File.join(SOURCE, "_posts"),
       'PAGE_DIR' => File.join(SOURCE, "_pages"),
+      'PUBLIC_DIR' => File.join(SOURCE, "public"),
+      'DEPLOY_JSON' => File.join(SOURCE, "_src/lib/json/deploy.json"),
       'markdown_extension' => "md"
     }
 
@@ -139,4 +144,75 @@ class Manager
         puts "Created successfully!"
       end # open
     end # post_create
+
+    def deploy_public
+      datetime = DateTime.now
+      deploy_json = open(CONFIG['DEPLOY_JSON'])
+      parsed = JSON.parse(deploy_json.read)
+
+      begin
+        if parsed['public']['git']['init'] == false
+          create_git_init = """
+          cd #{CONFIG['PUBLIC_DIR']}
+          git init
+          """
+          Open3.popen3(create_git_init)
+          parsed['public']['git']['init'] = true
+          File.write(CONFIG['DEPLOY_JSON'], JSON.pretty_generate(parsed))
+        end
+
+        if parsed['public']['git']['origin'] == "" and 
+          parsed['public']['git']['remote'] == ""
+          print "Enter the origin:\n> ".blue
+          origin = STDIN.gets.chomp
+
+          print "Enter the remote address:\n> ".blue
+          remote = STDIN.gets.chomp
+          
+          add_remote = """
+            cd #{CONFIG['PUBLIC_DIR']}
+            git remote add #{origin} #{remote}
+          """
+
+          Open3.popen3(add_remote)
+          
+          parsed['public']['git']['origin'] = origin
+          parsed['public']['git']['remote'] = remote
+          File.write(CONFIG['DEPLOY_JSON'], JSON.pretty_generate(parsed))
+
+        end
+
+        commit = """
+          cd #{CONFIG['PUBLIC_DIR']}
+          git add .
+          git commit -m \"Update - #{datetime}\"
+        """
+        Open3.popen3(commit)
+
+        if parsed['public']['git']['branch'] == ""
+          print "Add branch:\n> ".blue
+          branch = STDIN.gets.chomp
+            
+          add_branch = """
+            cd #{CONFIG['PUBLIC_DIR']}
+            git add .
+            git commit -m \"Update - #{datetime}\"
+            git checkout -b #{branch}
+          """
+          Open3.popen3(add_branch)
+          parsed['public']['git']['branch'] = branch
+          File.write(CONFIG['DEPLOY_JSON'], JSON.pretty_generate(parsed))
+        end
+
+        push = """
+        git push #{parsed['public']['git']['origin']} #{parsed['public']['git']['branch']}
+        """
+        Open3.popen3(push)
+      
+      rescue Interrupt => e
+        puts "\nApproached by the user".yellow
+        exit -1
+      end # begin
+
+    end # deploy_public
 end # Main

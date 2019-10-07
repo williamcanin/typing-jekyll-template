@@ -6,9 +6,9 @@
         margin: 10px auto;
         width: 165px;
         height: 165px;
-        @media (min-width: 320px) and (max-width: 992px){ 
-            width: 120px;
-            height: 120px;
+        @media (min-width: 575px) and (max-width: 992px){ 
+            width: 20%;
+            height: auto;
         }
         &-card{
             transform-style: preserve-3d;

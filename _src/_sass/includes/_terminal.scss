@@ -3,6 +3,7 @@
 
 .intro{
     &__terminal{
+        font-family: $font-family__terminal;
         @media (max-width: 768px) {
         // display: none;
         }
@@ -78,7 +79,6 @@
         overflow: auto;
         font-weight: 400;
         min-height: 250px;
-        font-family: 'Inconsolata', monospace;
         border-radius: 0 0 5px 5px;
         p{
             font-size: 12pt;
@@ -100,6 +100,18 @@
             color: white;
             animation: cursor 1s infinite;
             min-height: 21px !important;
+            }
+            &__user{
+                color: magenta;
+            }
+            &__at{
+                color: white;
+            }
+            &__os{
+                color: yellow;
+            }
+            &__dir{
+                color: cyan;
             }
         } /* END - .intro__terminal .body__output */
 

@@ -7,11 +7,13 @@
 
 require "./_src/lib/rb/manager.rb"
 
+# Instance class
+manager = Manager.new
+
 # Task create header post
 # Example: rake post
 desc "Create new post"
 task :post do
-  manager = Manager.new
   manager.post_create
 end
 
@@ -19,7 +21,6 @@ end
 # Example: rake page
 desc "Create new page"
 task :page do
-  manager = Manager.new
   manager.page_create
 end
 
@@ -27,8 +28,16 @@ end
 # Example: rake postinstall
 desc "Setup after installation"
 task :postinstall do
-  manager = Manager.new
   manager.postinstall
+end
+
+# Task to deploy the compiled project
+# Example: rake deploy:public
+desc "Deploy the compiled project"
+namespace :deploy do
+  task :public do
+    manager.deploy_public
+  end
 end
 
 # Other outputs

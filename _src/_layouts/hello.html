@@ -48,9 +48,11 @@ layout: default
       </header>
       <section class="body">
         {% comment %} ./brief_description.py {% endcomment %}
-        <p>{{ load_data.website.terminal.text.user }}@{{ load_data.website.terminal.text.os }}:~$ python brief_description.py</p>
+        <p class="body__output"><span><span class="body__output__user">{{ load_data.website.terminal.text.user }}</span><span class="body__output__at">@</span><span class="body__output__os">{{ load_data.website.terminal.text.os }}</span>:<span class="body__output__dir">~$</span></span>
+          {{ load_data.website.terminal.text.command }}
+        </p>
         {{ content }}
-        <p class="body__output"><span>{{ load_data.website.terminal.text.user }}@{{ load_data.website.terminal.text.os }}:~$</span>
+        <p class="body__output"><span><span class="body__output__user">{{ load_data.website.terminal.text.user }}</span><span class="body__output__at">@</span><span class="body__output__os">{{ load_data.website.terminal.text.os }}</span>:<span class="body__output__dir">~$</span></span>
           <span class="layout_hello__cursor">_</span>
         </p>
       </section>

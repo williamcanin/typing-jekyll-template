@@ -1,8 +1,4 @@
-> Refatorar propriedades do arquivo informations.yml
-> Idioma para data postagem.
-> Rouge com linenos (ERROR)
->> Post/Page:
-    > Image
+> Criar funcionalidade manager.rb de deploy do public
 ># Upgrade Jektify
 
 
