@@ -207,7 +207,10 @@ class Manager
         push = """
         git push #{parsed['public']['git']['origin']} #{parsed['public']['git']['branch']}
         """
-        Open3.popen3(push)
+        Open3.popen3(push) do |stdout, stderr|
+          puts stdout
+          puts stderr
+        end
       
       rescue Interrupt => e
         puts "\nApproached by the user".yellow
