@@ -195,8 +195,6 @@ class Manager
             
           add_branch = """
             cd #{CONFIG['PUBLIC_DIR']}
-            git add .
-            git commit -m \"Update - #{datetime}\"
             git checkout -b #{branch}
           """
           Open3.popen3(add_branch)
