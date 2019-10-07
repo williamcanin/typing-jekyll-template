@@ -3,8 +3,27 @@ url: "https://williamcanin.me"
 # the subpath of your site, e.g. /blog
 baseurl: ""
 
-
-
+# Plugins de player - Jektify
+jektify:
+  enable: true
+  open: true
+  toggle:
+    enable: true
+  spotify:
+    user: # "you_user_spotify"
+    text: "See me no Spotify"
+  sass:
+    jekyll: true
+    other:
+      dir: "way/to/your/SASS"
+  title:
+    enable: false
+    text: "Music name"
+  description:
+    enable: false
+    text: |
+      Jekyll plugin to generate html snippets for embedding Spotify Musics.
+      To listen to the full song, open your Spotify and start these musics.
 
 
 # Attention! Do not change the information below as it is 
@@ -79,27 +98,6 @@ pagination:
   limit: 0
   # extension: html
   indexpage: 'index'
-
-jektify:
-  enable: true
-  open: true
-  toggle:
-    enable: true
-  spotify:
-    user: # "you_user"
-    text: "See me no Spotify"
-  sass:
-    jekyll: true
-    other:
-      dir: "way/to/your/SASS"
-  title:
-    enable: false
-    text: "Music name"
-  description:
-    enable: false
-    text: |
-      Jekyll plugin to generate html snippets for embedding Spotify Musics.
-      To listen to the full song, open your Spotify and start these musics.
 
 gist:
   noscript: false

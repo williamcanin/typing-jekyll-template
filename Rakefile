@@ -36,7 +36,16 @@ end
 desc "Deploy the compiled project"
 namespace :deploy do
   task :public do
-    manager.deploy_public
+    manager.deploy(Manager::CONFIG['PUBLIC_DIR'], 'public')
+  end
+end
+
+# Task to deploy the project source.
+# Example: rake deploy:source
+desc "Deploy the project source"
+namespace :deploy do
+  task :source do
+    manager.deploy('.', 'src')
   end
 end
 

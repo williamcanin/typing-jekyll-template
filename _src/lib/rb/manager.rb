@@ -147,24 +147,24 @@ class Manager
       end # open
     end # post_create
 
-    def deploy_public
+    def deploy(dir, head)
       datetime = DateTime.now
       deploy_json = open(CONFIG['DEPLOY_JSON'])
       parsed = JSON.parse(deploy_json.read)
 
       begin
-        if parsed['public']['git']['init'] == false
+        if parsed[head]['git']['init'] == false
           create_git_init = """
-          cd #{CONFIG['PUBLIC_DIR']}
+          cd #{dir}
           git init
           """
           Open3.popen3(create_git_init)
-          parsed['public']['git']['init'] = true
+          parsed[head]['git']['init'] = true
           File.write(CONFIG['DEPLOY_JSON'], JSON.pretty_generate(parsed))
         end
 
-        if parsed['public']['git']['origin'] == "" and 
-          parsed['public']['git']['remote'] == ""
+        if parsed[head]['git']['origin'] == "" and 
+          parsed[head]['git']['remote'] == ""
           print "Enter the origin:\n> ".blue
           origin = STDIN.gets.chomp
 
@@ -172,41 +172,41 @@ class Manager
           remote = STDIN.gets.chomp
           
           add_remote = """
-            cd #{CONFIG['PUBLIC_DIR']}
+            cd #{dir}
             git remote add #{origin} #{remote}
           """
 
           Open3.popen3(add_remote)
           
-          parsed['public']['git']['origin'] = origin
-          parsed['public']['git']['remote'] = remote
+          parsed[head]['git']['origin'] = origin
+          parsed[head]['git']['remote'] = remote
           File.write(CONFIG['DEPLOY_JSON'], JSON.pretty_generate(parsed))
 
         end
 
         commit = """
-          cd #{CONFIG['PUBLIC_DIR']}
+          cd #{dir}
           git add .
           git commit -m \"Update - #{datetime}\"
         """
         Open3.popen3(commit)
 
-        if parsed['public']['git']['branch'] == ""
+        if parsed[head]['git']['branch'] == ""
           print "Add branch:\n> ".blue
           branch = STDIN.gets.chomp
             
           add_branch = """
-            cd #{CONFIG['PUBLIC_DIR']}
+            cd #{dir}
             git checkout -b #{branch}
           """
           Open3.popen3(add_branch)
-          parsed['public']['git']['branch'] = branch
+          parsed[head]['git']['branch'] = branch
           File.write(CONFIG['DEPLOY_JSON'], JSON.pretty_generate(parsed))
         end
 
         push = """
-        cd #{CONFIG['PUBLIC_DIR']}
-        git push #{parsed['public']['git']['origin']} #{parsed['public']['git']['branch']}
+        cd #{dir}
+        git push #{parsed[head]['git']['origin']} #{parsed[head]['git']['branch']}
         """
         Open3.popen3(push) do |stdout, stderr|
           puts stdout
@@ -218,5 +218,5 @@ class Manager
         exit -1
       end # begin
 
-    end # deploy_public
+    end # deploy
 end # Main
