@@ -210,7 +210,7 @@ class Manager
         """
         Open3.popen3(push)
 
-        puts "Deploy #{folder}, Done!".green
+        puts "Deploy #{head}, Done!".green
       
       rescue Interrupt => e
         puts "\nApproached by the user".yellow
