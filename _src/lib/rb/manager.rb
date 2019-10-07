@@ -203,6 +203,7 @@ class Manager
         end
 
         push = """
+        cd #{CONFIG['PUBLIC_DIR']}
         git push #{parsed['public']['git']['origin']} #{parsed['public']['git']['branch']}
         """
         Open3.popen3(push) do |stdout, stderr|

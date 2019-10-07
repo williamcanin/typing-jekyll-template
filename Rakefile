@@ -1,5 +1,5 @@
-# File: Rakefile
-# Language: Rake
+# File name: Rakefile
+# Stript type: Rake
 # Country/State: Brazil/SP
 # Author : William C. Canin
 # Page author: http://williamcanin.me
