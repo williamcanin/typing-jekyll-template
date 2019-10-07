@@ -208,10 +208,9 @@ class Manager
         cd #{dir}
         git push #{parsed[head]['git']['origin']} #{parsed[head]['git']['branch']}
         """
-        Open3.popen3(push) do |stdout, stderr|
-          puts stdout
-          puts stderr
-        end
+        Open3.popen3(push)
+
+        puts "Deploy Done!".green
       
       rescue Interrupt => e
         puts "\nApproached by the user".yellow
