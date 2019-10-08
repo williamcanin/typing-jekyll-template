@@ -11,7 +11,7 @@ website:
       Sorry :(  The domain of my site is under maintenance.
     subtitle: |
       It will not have forecast of return. Meanwhile, follow me on the social networks below.
-# Theme - Values [ typing | whiteglass | cloudysky | hacking | littlegirl ]
+# Theme - Values [ typing | whiteglass | cloudysky | hacking | littlegirl | custom ]
   theme: "littlegirl"
 # Configuration default
   title: "Typing"

@@ -5,7 +5,7 @@ maintenance:
 # To disable blogging, leave the value 'false'. Go to the blog.md file 
 # and set the menu => enable property to 'false' too.
 blog:
-  enable: true
+  enable: false
 google:
   analytics:
     enable: true

@@ -8,7 +8,7 @@ posts_quantity:
 # E.g: fa-briefcase
 icon: fa-edit
 menu:
-  enable: true
+  enable: false
   local: [default, blog]
 pagination:
   enabled: true

@@ -22,30 +22,30 @@
 
 ## Introduction
 
-**NOTA: O Typing Jekyll Template não é compatível com a compilação atômica no Github Pages devido ao seu próprio recurso de plug-ins e a algumas configurações que o tema disponibiliza. Você precisa executar o clone do projeto em sua máquina, compilar o site e implantá-lo nas páginas do Github.**
-
 Sua interface faz parte da filosofia "Keep It Simple", precisamente para ter um alto desempenho em todos os tipos de navegadores e dispositivos móveis.
 
-Você já tem uma página de modelo para "Blog", "Projetos", "Pesquisa", "Contato", "Tags" e "Resumo", mas pode sair como quiser, modificando as strings.
+Você já tem uma página de modelo para "Blog", "Projetos", "Pesquisa", "Contato", "Tags" e "Resumo", mas pode alterar como quiser, modificando as strings.
 
-Na página 'resume', você pode imprimir usando o atalho Ctrl + P do navegador ou o botão. A impressão eliminará peças inúteis, como a barra lateral. Você também terá um modelo para postagem (welcome-tot-jekyll) e precisará seguir o cabeçalho desse modelo.
+Na página **resume**, você pode imprimir usando o atalho Ctrl + P do navegador ou o botão. A impressão eliminará peças inúteis, como a barra lateral. Você também terá um modelo para postagem (welcome-to-jekyll) e precisará seguir o cabeçalho desse modelo.
 
-A página de contato usa o recurso [Formspree] (https://formespree.io), você precisa ter uma conta no serviço e adicionar seu ** email ** ao arquivo `_data/informations.yml`. Além disso, todo o conteúdo do arquivo `_data/informations.yml` deve ser alterado conforme a gosto.
+A página de contato usa o recurso [Formspree](https://formespree.io), você precisa ter uma conta no serviço e adicionar seu **email** ao arquivo `_data/informations.yml`. Além disso, todo o conteúdo do arquivo `_data/informations.yml` deve ser alterado conforme a gosto.
 
+**NOTA: O Typing Jekyll Template não é compatível com a compilação atômica no Github Pages devido ao seu próprio ter recurso de plug-ins e a algumas configurações que o tema disponibiliza. Você precisa executar o clone do projeto em sua máquina, compilar o site e implantá-lo nas páginas do Github.**
 
-
-## Feature
+## Características
 
 - [x] **Google Analytics**
 - [x] **Google Fonts**
-- [x] **Jekyll Search on Blog Page**
-- [x] **Print page resume**
-- [x] **Avatar on sidebar**
+- [x] **Jekyll Pesquisar na página do blog**
+- [x] **Print na página de resume**
+- [x] **Avatar animado no sidebar**
 - [x] **404 Error Page**
-- [x] **Disqus [Accountant and Comments]**
-- [x] **Social buttons**
+- [x] **Disqus [Contador e Comentários]**
+- [x] **Botões de rede sociais**
+- [x] **Opções de temas**
+- [x] **Ativar e desativar funcionalidades**
 
-**Used plugins**:
+**Plugins usados:**
 
 * Fornecedores:
     - jekyll-coffeescript
@@ -60,11 +60,11 @@ A página de contato usa o recurso [Formspree] (https://formespree.io), você pr
     - jekyll-email-protect
     - jektify
 * Do próprio projeto:
-    - Readingtime [Estimated reading time]
-    - Imager [Responsive Images]
-    - DateLang [Complete dates in each languages]
-    - Badge [Add badges]
-    - Endpost [Creates a horizontal line]
+    - Readingtime [Tempo estimado de leitura]
+    - Imager [Acrescentar imagem na postagem ou páginas]
+    - DateLang [Datas completas em cada idioma]
+    - Badge [Adiciona badges]
+    - Endpost [Vria uma linha horizontal]
 
 ## Requerimentos
 
@@ -74,15 +74,15 @@ A página de contato usa o recurso [Formspree] (https://formespree.io), você pr
 | Ruby            | `ruby -v`           | [Ruby](https://www.ruby-lang.org) |
 | Gem             | `gem -v`            | **Ruby** contains **Gem** |
 | Bundler         | `bundler -v`        | `gem install bundler` |
-| Yarn            | `yarn -v`           | [Yarn install](https://yarnpkg.com/en/docs/install) |
+| Yarn            | `yarn -v`           | [Yarn](https://yarnpkg.com/en/docs/install) |
 
 ## Usando
 
 1 - Clonando e entrando na pasta:
 
 ```
-$ git clone https://github.com/williamcanin/typing-jekyll-template.git "my-site"
-$ cd "my-site"
+$ git clone https://github.com/williamcanin/typing-jekyll-template.git "my_site"
+$ cd "my_site"
 ```
 
 2 - Download de dependências para Typing:
@@ -111,11 +111,15 @@ ou
 $ bundle exec jekyll s
 ```
 
-## Página inicial
+## Arquivo 'index.md'
 
 Agora a homepage está no arquivo "**index.md**" na pasta raiz do projeto. Escreva uma boa abertura.
 
-## _pages
+## Pasta 'assets'
+
+Essa pasta contém subpastas onde algumas você não precisa fuçar amiguinho, com por exemplo a pasta **css**, **js**, **vendor** e **json**. A pasta **images** por contrário, você deve colocar as imagens para seu website. Cada subpasta da pasta **images** é autoexplicativa.
+
+## Pasta '_pages'
 
 As páginas são encontradas na pasta **_pages/blogger** e **_pages/global**.
 A pasta **_pages/blogger** está contido páginas do Blog e a pasta **_pages/global**, é pasta onde está contido a página **about.md** e **projects.md**.
@@ -132,6 +136,7 @@ Para criar um página é muito simples. Usando o comando a seguir, você cria o 
 ```shell
 $ yarn page
 ```
+
 As páginas criadas por você, pode aparecer ou não no menu do seu site. Basta você configurar o cabeçalho que se parece com esse:
 
 ```markdown
@@ -164,9 +169,11 @@ A propriedade **order**, você pode colocar um número que (de acordo com as out
 
 > Não esqueça de deixar a propriedade **published** para **true** para que sua página apareça.
 
-## _posts
+## Pasta '_posts'
 
-A pasta **_posts** é onde você colocará todas suas postagens. Para criar uma postagem, é tão simples quanto criar uma página. Basta executar o comando abaixo:
+A pasta **_posts** é onde você colocará todas suas postagens. Para criar uma postagem, é tão simples quanto criar uma página.
+
+### Criando uma postagem
 
 ```shell
 $ yarn post
@@ -202,6 +209,158 @@ Já a propriedade **day_quote**, é onde você pode colocar uma frase do seu gos
 A propriedade **comments**, é para ativar ou desativar comentários sobre a postagem em si.
 
 > Não esqueça de deixar a propriedade **published** para **true** para que sua postagem apareça.
+
+## Pasta 'public'
+
+A pasta **public** ficará todo seu website compilado. Será o conteúdo dessa pasta que você deve enviar para seu servidor de hospedagem.
+
+## Pasta '_src'
+
+Essa pasta é onde ficar toda estrutura do template. Bocê não precisa alterar em nada nessa pasta, a não ser que queira corromper o tema. :)
+
+## Pasta 'vendor'
+
+Essa pasta terá todas as dependências para seu template ser gerado e funcionar. Ela é criada e preenchida com o comando `yarn install`. Não delete ela.
+
+## Arquivos do template que você NÃO precisa alterar
+
+- Gemfile
+- package.json
+- Rakefile
+- .yarnrc
+
+## Configurações
+
+Bom, agora que você ja sabe sobre algumas pastas e arquivos, vamos entender como configurar o Typing para seu gosto. Vamos lá.
+
+### Arquivo '_config.yml'
+
+O primeiro arquivo que você de abrir para configurar é o **_config.yml**. Nesse arquivo você terá algumas indicação de blocos que devem ser alterados, mas basicamente você deve alterar a propriedade **url** e **baseurl**.
+
+Em **url** você informa a url do seu domínio. Por exemplo:
+
+```yml
+url: http://mysite.com
+```
+
+Em **baseurl** você informa a subpasta cada seu website está (caso esteja). Por exemplo:
+
+```yml
+baseurl: /site1
+```
+
+> NOTA: Não coloque barra no final.
+
+Tem as configurações do plugin [Jektify](https://jektify.github.io), você também pode alterar ao seu gosto.
+Outra configuração que você poderia fazer é nas propriedades **reading_time** e **datelang**, alterando o *locale* de ambas para seu idioma.
+
+Os idiomas suportados para **reading_time** e **datelang**, são:
+
+- ch_CH - Chinese
+- de_DE - Deutschland
+- en_US - English
+- es_ES - Spanish
+- fr_FR - French
+- it_IT - Italian
+- ja_JP - Japan
+- pt_PT - Portuguese
+- ru_RU - Russian
+
+Outras alterações que você pode fazer no **_config.yml**:
+
+Ativa ou desativa paginação para o blog [padrão: true]:
+
+```yml
+pagination:
+  enabled: true
+```
+
+Altera a porta do servidor [padrão: 4000]:
+```yml
+port: 4000
+```
+
+Altera host do servidor [padrão: localhost]:
+```yml
+host: localhost
+```
+
+> As outras propriedade você não precisa fuçar.
+
+### Arquivo '_data/informations.yml'
+
+O arquivo **'_data/informations.yml'** é um arquivo que contém informações do template, a maioria delas são as string que aparece no website. Você deve configurar os valores das propriedades desse arquivo ao seu gosto.
+
+Algumas configurações básicas que você irá fazer nesse arquivo é de:
+
+#### Trocar o avatar
+
+Você deve informar o nome do seu avatar, que deve estar na pasta **assets/images/avatar** na seguinte propriedade:
+
+```yml
+sidebar:
+  avatar:
+    img: "your_first_photo_avatar.png"
+    flip:
+      img: "your_second_photo_avatar.png"
+```
+
+O avatar tem uma animação de Flip, onde você deve informar uma segunda imagem na propriedade **flip -> img**.
+
+#### Trocar o tema
+
+Esse é um dos recursos mais legais do Typing, que é poder alterar entre vários temas de uma maneira rápida, e até mesmo [customizar](#criando-seu-proprio-tema) um (caso você sair um pouco de CSS/SCSS). Vamos lá.
+
+Por padrão, o Typing vem 5 (cincos) temas oficiais, eles são:
+
+- typing
+- whiteglass
+- cloudysky
+- hacking
+- littlegirl
+
+Para usar algum tema, basta alterar a propriedade **theme** no arquivo **'_data/informations.yml'**:
+
+```yml
+website:
+  ....
+  theme: "typing"
+```
+
+Conheça o rosto dos temas:
+
+##### Typing
+##### Whiteglass
+##### Cloudysky
+##### Hacking
+##### Littlegirl
+
+#### Criando seu proprio tema
+
+Você também terá o arquivo **_src/_sass/theme/custom.scss**, onde você pode criar um tema próprio sem alterar os oficiais do Typing.
+
+> NOTA: Essa é uma opção não muito comum, só altere arquivos do template caso você saiba o que esta fazendo.
+
+### Arquivo '_data/options.yml'
+
+Esse arquivo contém opções de ativar e desativar recursos do Typing. Nesse arquivo basicamente você deve aterar conforme seu gosto.
+
+Uma das coisas que você pode não querer, é um website sem blog, nesse caso você deve deixar a propriedade abaixo para **false**
+
+```yml
+blog:
+  enable: false
+```
+Após alterar essa propriedade, você deve alterar no arquivo **_pages/blogger/blog.md** a seguinte propriedade para **false**:
+
+```yml
+menu:
+  enable: false
+```
+
+Assim o link **Blog** não vai aparecer no menu.
+
+
 
 ## Custom
 
@@ -321,61 +480,6 @@ $ bundle exec rake page TITLE="My title"
 ```
 
 If you use unix / darwin, you can use the script "*init.sh help*".
-
-## Deploy
-
-Your site will be generated in the `_site` folder. Deploy these files to your hosting server.
-
-**Note:** Before deploying to the server, you have to edit the
-Variables: **url** and **baseurl** in the `_config.yml` file according to url Where your site is crooked. You can get more information on how to set up at: [Jekyll Configuration](https://jekyllrb.com/docs/configuration/#serve-command-options)
-
-### Deploy GitHub
-
-After doing all the configuration, compile the project with the command "bundle exec jekyll b" and your project can already be sender to your hosting server.
-
-**O.S Unix**
-
-If you use a UNIX-based operating system, you can deploy the source code and compiled site very simply with the "init.sh" script.
-You must first configure the "**deploy.conf**" file for your repository settings.
-
-I) After performing the project clone, empty the factory settings with the "reset" command:
-
-**[NOTE IMPORTANT]: Be careful when using this option because it deletes everything that has already been configured. If you do this after you have set up the Git repository (.git), you may need to manually reconcile the GIT commands with pull and fetch. The "init.sh" script does not resolve this issue.**
-
-```
-$ bash init.sh reset
-```
-
-II - *deploy.conf*
-
-[GENERAL]
-
-* **remoteURL** - Put here the git's remote URL.
-* **commit** - Customize the first commit message. By default, you will add the committee date and time.
-* **pull** - If left with the value of "yes", the pull will be performed before the push.
-
-[ BRANCH CONFIG NAMES ]
-
-* **source** - Put the branch where the project source code file will be.
-* **built** - Put the compiled website branch.
-
-[ BEFORE RAISING THE SITE ]
-
-* **compile** - Before deploying the compiled site, it will compile the project. Leave it as "yes" if you want to do this.
-
-III - Commands:
-
-2) Deploy source files:
-
-```
-$ bash init.sh deploy:source
-```
-
-3) Deploy the built site:
-
-```
-$ bash init.sh deploy:site
-```
 
 ## Demo
 

@@ -78,6 +78,11 @@ tag_permalink_style: pretty
 imager:
   dir_posts: "assets/images/posts"
 
+# Readingtime
+## supported languages:
+### ch_CH - Chinese | de_DE - Deutschland | en_US - English
+### es_ES - Spanish | fr_FR - French | it_IT - Italian
+### ja_JP - Japan | pt_PT - Portuguese | ru_RU - Russian
 reading_time:
   locale: en_US
 

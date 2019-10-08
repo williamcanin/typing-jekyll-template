@@ -111,7 +111,9 @@
   {% elsif load_data.website.theme == "hacking" %}
     {% assign theme_chosen = "hacking" %}
   {% elsif load_data.website.theme == "littlegirl" %}
-    {% assign theme_chosen = "littlegirl" %}    
+    {% assign theme_chosen = "littlegirl" %}
+  {% elsif load_data.website.theme == "custom" %}
+    {% assign theme_chosen = "custom" %}  
   {% endif %}
   <link rel="stylesheet" href="{{ '/assets/css' | prepend: site.baseurl }}/{{ theme_chosen }}.css">
 
