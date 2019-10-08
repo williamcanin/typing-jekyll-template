@@ -207,11 +207,10 @@ class Manager
         push_origin = parsed[head]['git']['origin']
         push_branch = parsed[head]['git']['branch']
         push_start = """
-        cd #{dir}
-        git push #{push_origin} #{push_branch}
+        cd #{dir}; git push #{push_origin} #{push_branch}
         """
-        puts push_start
-        # Open3.popen3(push_start)
+        # puts push_start
+        Open3.popen3(push_start)
 
         puts "Deploy, Done!".green
       
