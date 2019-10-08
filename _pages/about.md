@@ -20,9 +20,14 @@ permalink: /about/ # add permilink for page. E.g: /smallparty/
  
 <!-- Write from here your page !!! -->
 
+Hey, I'am [Typing](https://github.com/williamcanin/typing-jekyll-template){: target="_blank"}. I'm a theme [Jekyll](https://jekyllrb.com){: target="_blank"} Inspired by the habit of typing. Using an appearance that resembles the typewriter. A simple, fast and efficient way of reading, just like the old days.
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi unde earum itaque saepe voluptatum distinctio soluta provident repudiandae mollitia similique repellat eum incidunt quo, tenetur quasi voluptatem sed animi repellendus.
+'Typing' is intended for users with more technical content than for users who wish to have a stylish page. Keep it simple!
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi unde earum itaque saepe voluptatum distinctio soluta provident repudiandae mollitia similique repellat eum incidunt quo, tenetur quasi voluptatem sed animi repellendus.
+**Let's see some details about this page:**
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi unde earum itaque saepe voluptatum distinctio soluta provident repudiandae mollitia similique repellat eum incidunt quo, tenetur quasi voluptatem sed animi repellendus.
+This page exists to put everything about you, as if it were a simplified 'About'. The file for editing this page is in the directory root: `index.md`.
+
+Hey Nerd! How is it? You're analyzing me, but are not you using me? Use me now! I'm not into embellishment. 
+
+[Download](https://github.com/williamcanin/typing-jekyll-template){: target="_blank"}
