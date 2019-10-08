@@ -1,7 +1,7 @@
 ---
 ---
 
-@import "theme/cloudysky";
+@import "themes/cloudysky";
 @import "highlighter/highlighter";
 @import "base/base";
 @import "markdown/markdown";
@@ -10,3 +10,6 @@
 @import "gist/gist";
 @import "print/print";
 @import "plugins/plugins";
+
+// Mobile
+@import "mobile/mobile";

@@ -136,46 +136,40 @@
     }
   }
 
-
-// Animation
-@media (min-width: 770px) {
-
-    .animation {
-        animation-name: fade;
+.animation {
+    animation-name: fade;
+    animation-duration: 500ms;
+    &__move{
+        animation-name: move;
         animation-duration: 500ms;
-        &__move{
-            animation-name: move;
-            animation-duration: 500ms;
-            animation-delay: 250ms;
-            animation-fill-mode: backwards;
-        }
-        &__down{
-            animation-name: down;
-            animation-duration: 500ms;
-        }
-        &__pulse{
-            animation: pulse 1s linear;
-        }
-        &__sidebar-title{
-            animation: move 500ms;
-            animation-delay: 250ms;
-            animation-fill-mode: backwards;
-        } 
-        &__sidebar-menu{
-            animation: move 600ms;
-            animation-delay: 290ms;
-            animation-fill-mode: backwards;
-        }
-        &__content{
-            animation: move_invert 670ms;
-            animation-delay: 310ms;
-            animation-fill-mode: backwards;
-        }
-        &__terminal{
-            animation: fade 670ms;
-            animation-delay: 310ms;
-            animation-fill-mode: backwards;
-        }
+        animation-delay: 250ms;
+        animation-fill-mode: backwards;
     }
-
+    &__down{
+        animation-name: down;
+        animation-duration: 500ms;
+    }
+    &__pulse{
+        animation: pulse 1s linear;
+    }
+    &__sidebar-title{
+        animation: move 500ms;
+        animation-delay: 250ms;
+        animation-fill-mode: backwards;
+    } 
+    &__sidebar-menu{
+        animation: move 600ms;
+        animation-delay: 290ms;
+        animation-fill-mode: backwards;
+    }
+    &__content{
+        animation: move_invert 670ms;
+        animation-delay: 310ms;
+        animation-fill-mode: backwards;
+    }
+    &__terminal{
+        animation: fade 670ms;
+        animation-delay: 310ms;
+        animation-fill-mode: backwards;
+    }
 }

@@ -1,0 +1,17 @@
+/* 
+––––––––––––––––––––––––––––––––––––––––––––––––––  */
+
+.intro{
+    &__terminal{
+        // @media (max-width: 768px) {
+        // display: none;
+        // }
+
+        /* .intro__terminal .body */
+        .body{
+            @media (max-width: 1200px) {
+                background: rgba(30, 30, 31, 1);
+            }
+        } /* END - .intro__terminal .body */
+    } /* END - .intro__terminal */
+}

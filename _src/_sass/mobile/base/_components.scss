@@ -1,0 +1,26 @@
+@media (max-width: 770px) { 
+    .animation {
+        animation-name: none;
+        &__move{
+            animation-name: none;
+        }
+        &__down{
+            animation-name: none;
+        }
+        &__pulse{
+            animation-name: none;
+        }
+        &__sidebar-title{
+            animation-name: none;
+        } 
+        &__sidebar-menu{
+            animation-name: none;
+        }
+        &__content{
+            animation-name: none;
+        }
+        &__terminal{
+            animation-name: none;
+        }
+    }
+}
