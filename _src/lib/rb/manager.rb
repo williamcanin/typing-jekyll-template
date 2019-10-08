@@ -210,7 +210,7 @@ class Manager
         cd #{dir}; git push #{push_origin} #{push_branch}
         """
         # puts push_start
-        Open3.popen3(push_start)
+        system(push_start)
 
         puts "Deploy, Done!".green
       
