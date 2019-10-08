@@ -204,11 +204,13 @@ class Manager
           File.write(CONFIG['DEPLOY_JSON'], JSON.pretty_generate(parsed))
         end
 
-        push = """
+        push_origin = parsed[head]['git']['origin']
+        push_branch = parsed[head]['git']['branch']
+        push_start = """
         cd #{dir}
-        git push #{parsed[head]['git']['origin']} #{parsed[head]['git']['branch']}
+        git push #{push_origin} #{push_branch}
         """
-        Open3.popen3(push)
+        Open3.popen3(push_start)
 
         puts "Deploy, Done!".green
       
