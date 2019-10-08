@@ -343,23 +343,23 @@ website:
 
 ###### Typing
 
-![Typing](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/README/images/typing.png)
+![Typing](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/doc/readme/images/typing.png)
 
 ###### Whiteglass
 
-![Whiteglass](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/README/images/whiteglass.png)
+![Whiteglass](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/doc/readme/images/whiteglass.png)
 
 ###### Cloudysky
 
-![Whiteglass](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/README/images/cloudysky.png)
+![Whiteglass](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/doc/readme/images/cloudysky.png)
 
 ###### Hacking
 
-![Hacking](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/README/images/hacking.png)
+![Hacking](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/README/doc/readme/images/hacking.png)
 
 ###### Littlegirl
 
-![Littlegirl](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/README/images/littlegirl.png)
+![Littlegirl](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/doc/readme/images/littlegirl.png)
 
 #### Criando seu próprio tema
 
@@ -369,7 +369,9 @@ Você também terá o arquivo **_src/_sass/theme/custom.scss**, onde você pode 
 
 ### Arquivo '_data/options.yml'
 
-Esse arquivo contém opções de ativar e desativar recursos do Typing. Nesse arquivo basicamente você deve aterar conforme seu gosto.
+Esse arquivo contém opções de ativar e desativar recursos do Typing. Nesse arquivo basicamente você deve alterar conforme seu gosto.
+
+#### Desativando o Blog
 
 Uma das coisas que você pode não querer, é um website sem blog, nesse caso você deve deixar a propriedade abaixo para **false**
 
@@ -377,6 +379,7 @@ Uma das coisas que você pode não querer, é um website sem blog, nesse caso vo
 blog:
   enable: false
 ```
+
 Após alterar essa propriedade, você deve alterar no arquivo **_pages/blogger/blog.md** a seguinte propriedade para **false**:
 
 ```yml
@@ -385,6 +388,8 @@ menu:
 ```
 
 Assim o link **Blog** não vai aparecer no menu.
+
+#### Alterando efeito do avatar
 
 Outro recurso que você pode querer alterar, é a animação do avatar. Por padrão, animação FLIP vem ativada. Para desativar essa animação, você deixa a propriedade baixo com valor de **false**:
 
@@ -395,6 +400,25 @@ sidebar:
     ....
     flip: false
 ```
+
+#### Habilitando simulador de terminal
+
+Outro recurso que o Typing adquiriu, foi um simulador de terminal na página inicial. Essa é uma questão visual apenas, pois o terminal não é de verdade.
+
+Misturando um projeto que lembra o passado e ao mesmo tempo o presente.
+
+Para habilitar o simulador de terminal na página inicial, basta deixar as configurações igual abaixo:
+
+```yml
+home:
+  ...
+  terminal:
+    enable: true
+```
+
+Veja como esse recurso irá se comportar no seu projeto:
+
+![Terminal](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/doc/readme/images/terminal.png)
 
 ## Demo
 
