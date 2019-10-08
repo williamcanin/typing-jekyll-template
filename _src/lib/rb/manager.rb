@@ -155,10 +155,10 @@ class Manager
       begin
         if parsed[head]['git']['init'] == false
           create_git_init = """
-          cd #{dir}
-          git init
+          cd #{dir}; git init
           """
-          Open3.popen3(create_git_init)
+          # Open3.popen3(create_git_init)
+          system(create_git_init)
           parsed[head]['git']['init'] = true
           File.write(CONFIG['DEPLOY_JSON'], JSON.pretty_generate(parsed))
         end
@@ -172,11 +172,11 @@ class Manager
           remote = STDIN.gets.chomp
           
           add_remote = """
-            cd #{dir}
-            git remote add #{origin} #{remote}
+            cd #{dir}; git remote add #{origin} #{remote}
           """
 
-          Open3.popen3(add_remote)
+          # Open3.popen3(add_remote)
+          system(add_remote)
           
           parsed[head]['git']['origin'] = origin
           parsed[head]['git']['remote'] = remote
@@ -185,21 +185,20 @@ class Manager
         end
 
         commit = """
-          cd #{dir}
-          git add .
-          git commit -m \"Update - #{datetime}\"
+          cd #{dir}; git add .; git commit -m \"Update - #{datetime}\"
         """
-        Open3.popen3(commit)
+        # Open3.popen3(commit)
+        system(commit)
 
         if parsed[head]['git']['branch'] == ""
           print "Add branch:\n> ".blue
           branch = STDIN.gets.chomp
             
           add_branch = """
-            cd #{dir}
-            git checkout -b #{branch}
+            cd #{dir}; git checkout -b #{branch}
           """
-          Open3.popen3(add_branch)
+          # Open3.popen3(add_branch)
+          system(add_branch)
           parsed[head]['git']['branch'] = branch
           File.write(CONFIG['DEPLOY_JSON'], JSON.pretty_generate(parsed))
         end
