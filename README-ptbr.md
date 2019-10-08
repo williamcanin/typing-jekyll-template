@@ -22,6 +22,9 @@
 * [License and Copyrights](https://github.com/williamcanin/typing-jekyll-template/#license-and-copyrights)
 * [Credits](https://github.com/williamcanin/typing-jekyll-template/#credits)
 
+* Do not remove this line (it will not be displayed)
+{: toc}
+
 ## Introdução
 
 Sua interface faz parte da filosofia "Keep It Simple", precisamente para ter um alto desempenho em todos os tipos de navegadores e dispositivos móveis.
