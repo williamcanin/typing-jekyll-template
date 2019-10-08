@@ -15,7 +15,7 @@ global:
 home:
   animation: true
   terminal:
-    enable: true
+    enable: false
     animation: true
 sidebar:
   animation: true
