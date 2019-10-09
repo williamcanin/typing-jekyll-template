@@ -4,7 +4,7 @@
 
 ![](https://img.shields.io/github/languages/top/williamcanin/typing-jekyll-template.svg?colorB=blue&style=flat-square) ![](https://img.shields.io/github/commit-activity/y/williamcanin/typing-jekyll-template.svg?style=flat-square) ![](https://img.shields.io/github/last-commit/williamcanin/typing-jekyll-template.svg?style=flat-square) ![](https://img.shields.io/github/last-commit/williamcanin/typing-jekyll-template/master.svg?style=flat-square) ![](https://img.shields.io/github/watchers/williamcanin/typing-jekyll-template.svg?style=flat-square) ![](https://img.shields.io/github/stars/williamcanin/typing-jekyll-template.svg?style=flat-square) ![](https://img.shields.io/github/forks/williamcanin/typing-jekyll-template.svg?style=flat-square)
 
-![Typing Change Themes](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/doc/readme/images/change_themes.gif)
+![Typing Change Themes](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/_src/doc/readme/images/change_themes.gif)
 
 ## Introduction
 
@@ -331,23 +331,23 @@ website:
 
 ###### Typing
 
-![Typing](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/doc/readme/images/typing.png)
+![Typing](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/_src/doc/readme/images/typing.png)
 
 ###### Whiteglass
 
-![Whiteglass](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/doc/readme/images/whiteglass.png)
+![Whiteglass](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/_src/doc/readme/images/whiteglass.png)
 
 ###### Cloudysky
 
-![Whiteglass](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/doc/readme/images/cloudysky.png)
+![Whiteglass](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/_src/doc/readme/images/cloudysky.png)
 
 ###### Hacking
 
-![Hacking](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/README/doc/readme/images/hacking.png)
+![Hacking](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/README/_src/doc/readme/images/hacking.png)
 
 ###### Littlegirl
 
-![Littlegirl](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/doc/readme/images/littlegirl.png)
+![Littlegirl](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/_src/doc/readme/images/littlegirl.png)
 
 #### Creating your own theme
 
@@ -433,7 +433,7 @@ home:
 
 Here's how this feature will behave in your project:
 
-![Terminal](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/doc/readme/images/terminal.png)
+![Terminal](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/_src/doc/readme/images/terminal.png)
 
 > There is much more functionality in the **_data/options.yml** file for you to explore :)
 
