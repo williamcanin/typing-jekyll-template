@@ -1,13 +1,17 @@
 <!-- Include Data Base  -->
 {% include liquid/data %}
 
-<div class="col-lg-3 px-0 sidebar">
-  <div class="py-2 {% if load_options.sidebar.fixed == true %} sticky-top {% endif %} flex-grow-1">
+<div class="col-lg-3 px-0 mt-3 sidebar">
+  <div class="py-2 {% if load_options.sidebar.fixed == true %} sticky-top {% endif %}
+    {% if load_options.sidebar.avatar.enable == false %} py-4 {% else %} py-3 {% endif %}
+    flex-grow-1">
     <div class="sidebar__wrapper">
       <!-- nav flex-lg-column -->
-      <div class="nav flex-lg-column">
+      <div class="nav flex-lg-column mx-3 mx-lg-0">
         {% if load_options.sidebar.avatar.flip == true and load_data.website.sidebar.avatar.flip.img %}
-        <div class="d-none d-sm-block sidebar__avatar_flip">
+        <div class="d-none
+          {% if load_options.sidebar.avatar.enable == true %} d-sm-block {% endif %}
+          sidebar__avatar_flip">
           <div class="sidebar__avatar_flip-card">
             <a class="sidebar__avatar_flip-front sidebar__avatar_flip-face" href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">
               <img class="p-1 img-fluid mx-auto d-block
@@ -49,8 +53,11 @@
           <a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}" class="nav-link" style="font-size: {{ load_data.website.sidebar.title.size }}">{{ load_data.website.sidebar.title.text }}</a>
         </h1>
         <!-- Menu -->
-        <div class="p-2 mx-3 d-md-flex flex-md-column sidebar__menu {% if load_options.sidebar.animation == true %} animation__sidebar-menu {% endif %}">
-          <div class="my-1 d-none d-md-block sidebar__menu-title">Menu</div>
+        <div class="p-2 mx-3
+          {% if load_options.sidebar.avatar.enable == true %} d-md-flex flex-md-column align-items-md-start {% endif %}
+          align-items-center align-items-lg-start flex-lg-column mx-auto mr-lg-3 ml-lg-3
+          sidebar__menu {% if load_options.sidebar.animation == true %} animation__sidebar-menu {% endif %}">
+          <div class="my-1 d-none d-md-block mr-3 sidebar__menu-title">Menu</div>
           {% assign sorted_pages = site.pages | sort:'order' %}
           {% for page in sorted_pages %}
               {% if page.title and page.menu.enable == true and page.menu.local[0] == 'default' %}
