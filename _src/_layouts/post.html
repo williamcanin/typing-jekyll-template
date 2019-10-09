@@ -36,10 +36,10 @@ layout: blog
 
     <div class="p-1 p-lg-3 mb-4 layout_post__content">
       <div class="d-block">
-          <!-- jekyll.environment == 'production' and -->
           <div class="py-3 row">
             <div class="offset-7 col-5 offset-sm-9 col-sm-3 offset-lg-10 col-lg-2">
-            {% if
+            <!-- jekyll.environment == 'production' and -->
+            {% if jekyll.environment == 'production' and
               load_options.content.post.comments.enable == true and
               page.comments != false and
               load_data.userdata.disqus.username %}
