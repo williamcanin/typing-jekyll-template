@@ -25,6 +25,19 @@ userdata:
   email: "youremail@domain.com"
 ```
 
+Then you must change the type of plan you have in [Formspree](https://formspree.io) in the option:
+
+```yml
+website:
+  ...
+  content:
+    ...
+    contact:
+      formspree:
+        plan: "free|paid"
+```
+
+
 NOTE: The **paid** plan, where the form will be sent via AJAX, which will return a success or failure response, whether the email was delivered or not. The **free** plan, will not have a failed return if the message is not sent successfully. You can learn more at: [Formspree Plans](https://formspree.io/plans)
 
 In addition, all contents of the **_data/informations.yml** file should be changed to suit your needs and needs.
