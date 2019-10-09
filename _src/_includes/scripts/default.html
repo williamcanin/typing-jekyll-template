@@ -2,17 +2,17 @@
 {% include liquid/data %}
 
 <!-- JQuery -->
-<script type="text/javascript" src="{{ '/assets/vendor/js/jquery.min.js' | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{ '/assets/vendor/js/jquery.min.js' | prepend: site.baseurl | prepend: site.url }}"></script>
 
 <!-- Bootstrap -->
-<script type="text/javascript" src="{{ '/assets/vendor/js/popper.min.js' | prepend: site.baseurl }}"></script>
-<script type="text/javascript" src="{{ '/assets/vendor/js/bootstrap.min.js' | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{ '/assets/vendor/js/popper.min.js' | prepend: site.baseurl | prepend: site.url }}"></script>
+<script type="text/javascript" src="{{ '/assets/vendor/js/bootstrap.min.js' | prepend: site.baseurl | prepend: site.url }}"></script>
 
 <!-- Simple Search Jekyll -->
-<script type="text/javascript" src="{{ '/assets/vendor/js/simple-jekyll-search.min.js' | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{ '/assets/vendor/js/simple-jekyll-search.min.js' | prepend: site.baseurl | prepend: site.url }}"></script>
 
 <!-- Global JS -->
-<script type="text/javascript" src="{{ '/assets/js/global.js' | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{ '/assets/js/global.js' | prepend: site.baseurl | prepend: site.url }}"></script>
 
 <!-- Specific for each pages. -->
 {% for script_page in page.script %}
