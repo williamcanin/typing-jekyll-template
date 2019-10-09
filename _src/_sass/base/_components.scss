@@ -11,7 +11,7 @@
 }
 
 .sidebar_avatar_border{
-    border: 0.12rem solid $color__text;
+    border: 0.12rem solid $color__clickable;
 }
 
 .sidebar_avatar_circle{
@@ -100,9 +100,10 @@
 // Text and Font for all texts.
 .content_text_font_size{
     line-height: 1.8rem;
-    p{
-        font-size: 1.12rem;
-    }
+    font-size: 1.12rem;
+    // p{
+        // font-size: 1.12rem;
+    // }
 }
 
 // Scrollbar modern

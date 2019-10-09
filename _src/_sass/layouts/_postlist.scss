@@ -2,6 +2,7 @@
 
     &__header, &__content{
         @extend .elements_box;
+        @extend .content_text_font_size;
     }
     &__comments{
         background-color: $texts__background;

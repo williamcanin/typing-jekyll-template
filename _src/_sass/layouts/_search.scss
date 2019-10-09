@@ -4,6 +4,7 @@
 
 .layout-search{
     @extend .elements_box;
+    @extend .content_text_font_size;
   &__form{
     border-radius: 0px;
     height: auto;
