@@ -37,7 +37,7 @@ layout: blog
     <div class="p-1 p-lg-3 mb-4 layout_post__content">
       <div class="d-block">
           <div class="py-3 row">
-            <div class="offset-7 col-5 offset-sm-9 col-sm-3 offset-lg-10 col-lg-2">
+            <div class="offset-6 col-6 offset-sm-9 col-sm-3 offset-lg-10 col-lg-2">
             <!-- jekyll.environment == 'production' and -->
             {% if jekyll.environment == 'production' and
               load_options.content.post.comments.enable == true and
@@ -105,11 +105,11 @@ layout: blog
       load_data.website.content.post.author.description %}
     <div class="row mt-5 layout_post__author">
       {% if load_options.content.post.author.avatar.enable == true and load_data.website.content.post.author.avatar %}
-      <div class="col-lg-2">
+      <div class="col-3 col-lg-2">
         <img class="img-fluid layout_post__author-img" src="{{ '/assets/images/author' | prepend: site.baseurl }}/{{ load_data.website.content.post.author.avatar }}" width="140" height="auto" alt="{{ load_data.website.content.post.author.name }}">
       </div>
       {% endif %}
-      <div class="col-lg-10 {% if load_options.content.post.author.avatar.enable != true %} col-12 {% endif %}">
+      <div class="col-9 col-lg-10 {% if load_options.content.post.author.avatar.enable != true %} col-12 {% endif %}">
         <p class="layout_post__author-title">{{ load_data.website.content.post.author.title }}</p>
         <h2 class="font-weight-bold layout_post__author-name">{{ load_data.website.content.post.author.name }}</h2>
         <p class="layout_post__author-description">{{ load_data.website.content.post.author.description }}</p>
