@@ -18,7 +18,7 @@ Na página **resume.md**, você pode imprimir usando o atalho Ctrl + P do navega
 
 Você também terá um modelo para postagem no arquivo **"welcome-to-jekyll.md"** e precisará seguir o cabeçalho desse modelo. O arquivo contém algumas informações que você pode pegar para usar em seu website.
 
-A página de contato (**_pages/global/contact.md**) usa o recurso [Formspree](https://formespree.io), você precisa ter uma conta no serviço e adicionar seu **email** ao arquivo `_data/informations.yml`.
+A página de contato (**_pages/global/contact.md**) usa o recurso [Formspree](https://formspree.io), você precisa ter uma conta no serviço e adicionar seu **email** ao arquivo `_data/informations.yml`.
 
 ```yml
 userdata:
@@ -309,7 +309,7 @@ O avatar tem uma animação de Flip, onde você deve informar uma segunda imagem
 
 #### Trocar o tema
 
-Esse é um dos recursos mais legais do Typing, que é poder alterar entre vários temas de uma maneira rápida, e até mesmo [customizar](#criando-seu-proprio-tema) um (caso você saiba um pouco de CSS/SCSS). Vamos lá.
+Esse é um dos recursos mais legais do Typing, que é poder alterar entre vários temas de uma maneira rápida, e até mesmo [customizar](#criando-seu-próprio-tema) um (caso você saiba um pouco de CSS/SCSS). Vamos lá.
 
 Por padrão, o Typing vem 5 (cincos) temas oficiais, eles são:
 

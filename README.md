@@ -14,11 +14,11 @@ Its interface is part of the "Keep It Simple" philosophy, precisely for high per
 
 You already have a template page for "Blog", "Projects", "Search", "Contact", "Tags", "Summary", "404" and "About", but you can change it as you wish by modifying the strings.
 
-On the ** resume.md ** page, you can print using the browser shortcut Ctrl + P or the button. Printing will eliminate useless parts such as the sidebar.
+On the **resume.md** page, you can print using the browser shortcut Ctrl + P or the button. Printing will eliminate useless parts such as the sidebar.
 
 You will also have a template for posting to the "" welcome-to-jekyll.md "** file and will need to follow the header of that template. The file contains some information you can get to use on your website.
 
-The contact page (**_ pages/global/contact.md**) uses the feature [Formspree](https://formespree.io), you need to have an account on the service and add your **email** to the file **_data/informations.yml**.
+The contact page (**_ pages/global/contact.md**) uses the feature [Formspree](https://formspree.io), you need to have an account on the service and add your **email** to the file **_data/informations.yml**.
 
 ```yml
 userdata:
@@ -309,7 +309,7 @@ The avatar has a Flip animation, where you must enter a second image in the **fl
 
 #### Change theme
 
-This is one of the coolest features of Typing, which is that you can quickly switch between multiple themes, and even [customize](#create-your-own-theme) one (if you know a bit of CSS/SCSS) . Come on.
+This is one of the coolest features of Typing, which is that you can quickly switch between multiple themes, and even [customize](#creating-your-own-theme) one (if you know a bit of CSS/SCSS) . Come on.
 
 By default Typing comes with 5 (five) official themes, they are:
 
