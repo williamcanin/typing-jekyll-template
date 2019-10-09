@@ -5,9 +5,9 @@ layout: blog
 <!-- Include Data Base  -->
 {% include liquid/data %}
 
-<div class="p-3 layout_tag {% if load_options.content.tagpost.animation == true %} animation__content {% endif %}">
+<div class="p-1 p-lg-3 layout_tag {% if load_options.content.tagpost.animation == true %} animation__content {% endif %}">
 
-    <div class="p-3 layout_tag__header">
+    <div class="p-1 p-lg-3 layout_tag__header">
       <div class="container-fluid">
         <div class="row">
           <h1 class="font-weight-bold layout_tag__title">{{ load_data.website.content.tag.header.title }}&nbsp;{{ page.tag }}</h1>
@@ -26,7 +26,7 @@ layout: blog
 
   <!-- Loop of posts -->
       {% for post in page.posts %}
-      <div class="mt-4 mb-4 p-3 layout_tag__content">
+      <div class="mt-4 mb-4 p-1 p-lg-3 layout_tag__content">
 
         <div class="container-fluid">
 

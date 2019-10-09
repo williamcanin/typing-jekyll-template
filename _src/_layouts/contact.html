@@ -6,9 +6,9 @@ layout: default
 
 {% if load_data.userdata.email %}
 
-  <div class="p-3 layout_contact {% if load_options.content.contact.animation == true %} animation__content {% endif %}">
+  <div class="p-1 p-lg-3 layout_contact {% if load_options.content.contact.animation == true %} animation__content {% endif %}">
 
-    <div class="mb-4 p-3 layout_contact__header">
+    <div class="mb-4 p-1 p-lg-3 layout_contact__header">
 
       <div class="container-fluid">
         <div class="row">
@@ -29,9 +29,14 @@ layout: default
 
       <div class="container-fluid">
         <div class="row d-block">
+          {% if load_data.website.content.contact.formspree.plan != 'free' %}
           <form id="layout_contact__form" class="mb-4 p-3 layout_contact__form"
             method="POST">
-
+          {% else %}
+          <form id="layout_contact__form" class="mb-4 p-3 layout_contact__form"
+          action="https://formspree.io/{{ load_data.userdata.email | encode_email }}"  
+          method="POST">
+          {% endif %}
             <div class="container-fluid">
 
               <div class="row">
@@ -67,6 +72,13 @@ layout: default
                   {{ load_data.website.content.contact.send.button }}
                 </button>
               </div>
+              
+              {% if load_data.website.content.contact.formspree.plan == 'free' %}
+              <input type="hidden" name="_next" value="{{ '/contact/#email_successfully_sent' | prepend: site.baseurl | prepend: site.url }}">
+              <input type="hidden" name="_language" value="{{ load_data.website.content.contact.language }}" />
+              <input type="text" name="_gotcha" style="display:none" />
+              {% endif %}
+
             </div> 
 
           </form>

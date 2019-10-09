@@ -89,6 +89,8 @@ website:
 
   # Contact
     contact:
+      formspree:
+        plan: "free" # Using: free | paid
       language: "en-US"
       placeholder:
         name: "Your full name"
@@ -133,10 +135,10 @@ website:
 
 # User data
 userdata:
-  email: contato@williamcanin.me # E.g: youremail@domain.com
+  email: william.costa.canin@gmail.com # E.g: youremail@domain.com
   twitter: # E.g: "@my_twitter"
   disqus:
-    username: # E.g: myuser
+    username: williamcanin # E.g: myuser
   socials:
     title: Follow Me!
     links:

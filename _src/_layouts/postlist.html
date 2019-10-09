@@ -9,10 +9,10 @@ layout: blog
   {% capture post_count %} {{ post_count | plus: 1 }} {% endcapture %}
 {% endfor %} 
 
-<div class="p-3 layout_postlist {% if load_options.content.postlist.animation == true %} animation__content {% endif %}" itemscope="itemscope" itemtype="http://schema.org/Blog">
+<div class="p-1 p-lg-3 layout_postlist {% if load_options.content.postlist.animation == true %} animation__content {% endif %}" itemscope="itemscope" itemtype="http://schema.org/Blog">
 
     <!-- This is a Blog Title -->
-    <div class="p-3 layout_postlist__header">
+    <div class="p-1 p-lg-3 layout_postlist__header">
       <div class="container-fluid">
         <div class="row">
           <h1 class="font-weight-bold layout_postlist__title">{{ page.title }}</h1>
@@ -39,7 +39,7 @@ layout: blog
       {% endif %}
 
       {% for post in style_page %}
-      <div class="mt-4 mb-4 p-3 layout_postlist__content">
+      <div class="mt-4 mb-4 p-1 p-lg-3 layout_postlist__content">
 
         <div class="container-fluid">
 

@@ -25,6 +25,8 @@ userdata:
   email: "youremail@domain.com"
 ```
 
+NOTE: The **paid** plan, where the form will be sent via AJAX, which will return a success or failure response, whether the email was delivered or not. The **free** plan, will not have a failed return if the message is not sent successfully. You can learn more at: [Formspree Plans](https://formspree.io/plans)
+
 In addition, all contents of the **_data/informations.yml** file should be changed to suit your needs and needs.
 
 > NOTE: Typing Jekyll Template does not support atomic compilation in Github Pages due to its own plug-in feature and some settings that the theme provides. You need to run the project clone on your machine, compile the site, and deploy it to the Github pages.

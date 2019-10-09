@@ -1,6 +1,10 @@
 <!-- Include Data Base  -->
 {% include liquid/data %}
 
+<!-- This modal is only used when using the AJAX feature to submit
+  the form in Formspree. The AJAX form submission feature in Formspree
+  is only available for the paid plan, not the free one. -->
+
 <div class="modal fade email_failed_sent" id="email_failed_sent"
       tabindex="-1" role="dialog" aria-labelledby="Email Failed Sent" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered email_failed_sent__dialog" role="document">

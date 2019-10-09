@@ -25,6 +25,20 @@ userdata:
   email: "youremail@domain.com"
 ```
 
+Depois, você deve alterar o tipo de plano que você tem no [Formspree](https://formspree.io) na opção:
+
+```yml
+website:
+  ...
+  content:
+    ...
+    contact:
+      formspree:
+        plan: "free|paid"
+```
+
+> NOTA: O plano **paid**, é um plano pago, onde o formulário irá ser enviar através do AJAX, que vai retorna uma resposta em modal de sucesso ou falha, se o e-mail foi entregue ou não. Já o plano **free**, que é o plano grátis, não terá um retorno de falha caso a mensagem não seja enviada com sucesso. Você pode saber mais em: [Formspree Plans](https://formspree.io/plans)
+
 Além disso, todo o conteúdo do arquivo `_data/informations.yml` deve ser alterado conforme a gosto e suas necessidades.
 
 **NOTA: O Typing Jekyll Template não é compatível com a compilação atômica no Github Pages devido ao seu próprio ter recurso de plug-ins e a algumas configurações que o tema disponibiliza. Você precisa executar o clone do projeto em sua máquina, compilar o site e implantá-lo nas páginas do Github.**

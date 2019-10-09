@@ -5,8 +5,8 @@ layout: default
 <!-- Include Data Base  -->
 {% include liquid/data %}
 
-<div class="p-3 layout_page {% if load_options.content.page.animation == true %} animation__content {% endif %}">
-  <div class="p-3 mb-4 layout_page__header">
+<div class="p-1 p-lg-3 layout_page {% if load_options.content.page.animation == true %} animation__content {% endif %}">
+  <div class="p-1 p-lg-3 mb-4 layout_page__header">
     <h1>{{ page.title }}</h1>
     {% if load_options.content.page.reading_time.enable == true %}
     <div class="layout_page__reading_time">
@@ -15,7 +15,7 @@ layout: default
     </div>
     {% endif %}
   </div>
-  <div class="p-3 mb-4 layout_page__content">
+  <div class="p-1 p-lg-3 mb-4 layout_page__content">
       {{ content }}
   </div>
 </div> 
