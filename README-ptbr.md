@@ -61,7 +61,7 @@ Além disso, todo o conteúdo do arquivo `_data/informations.yml` deve ser alter
   - Imager [Acrescentar imagem na postagem ou páginas]
   - DateLang [Datas completas em cada idioma]
   - Badge [Adiciona badges]
-  - Endpost [Vria uma linha horizontal]
+  - Endpost [Cria uma linha horizontal]
 
 ## Requerimentos
 
@@ -209,7 +209,7 @@ A pasta **public** ficará todo seu website compilado. Será o conteúdo dessa p
 
 ## Pasta '_src'
 
-Essa pasta é onde ficar toda estrutura do template. Bocê não precisa alterar em nada nessa pasta, a não ser que queira corromper o tema. :)
+Essa pasta é onde ficar toda estrutura do template. Você não precisa alterar em nada nessa pasta, a não ser que queira corromper o tema. :)
 
 ## Pasta 'vendor'
 
@@ -235,7 +235,7 @@ Para saber sobre esse arquivo, leia sobre registros CNAME [AQUI](https://support
 
 O primeiro arquivo que você de abrir para configurar é o **_config.yml**. Nesse arquivo você terá algumas indicação de blocos que devem ser alterados, mas basicamente você deve alterar a propriedade **url** e **baseurl** apenas.
 
-Em **url** você informa a url do seu domínio. Por exemplo:
+Em **url** você informar a url do seu domínio. Por exemplo:
 
 ```yml
 url: http://mysite.com
@@ -274,11 +274,13 @@ pagination:
 ```
 
 Altera a porta do servidor [padrão: 4000]:
+
 ```yml
 port: 4000
 ```
 
 Altera host do servidor [padrão: localhost]:
+
 ```yml
 host: localhost
 ```
@@ -289,7 +291,7 @@ host: localhost
 
 O arquivo **'_data/informations.yml'** é um arquivo que contém informações do template, a maioria delas são as string que aparece no website. Você deve configurar os valores das propriedades desse arquivo ao seu gosto.
 
-Algumas configurações básicas que você irá fazer nesse arquivo é de:
+Algumas configurações básicas que você irá fazer neste arquivo é de:
 
 #### Trocar o avatar
 
@@ -351,15 +353,33 @@ website:
 
 Você também terá o arquivo **_src/_sass/theme/custom.scss**, onde você pode criar um tema próprio sem alterar os oficiais do Typing.
 
-> NOTA1: A pasta **_src** pode estar oculta devido o arquivo **.hidden**. Com seu gerenciador de arquivos, mostre os arquivos ocultos ou abra todo projeto em um editor de texto preferencial. Só altere arquivos do template caso você saiba o que esta fazendo.
+> NOTA: A pasta **_src** pode estar oculta devido o arquivo **.hidden**. Com seu gerenciador de arquivos, mostre os arquivos ocultos ou abra todo projeto em um editor de texto preferencial. Só altere arquivos do template caso você saiba o que esta fazendo.
+
+#### Comentários nas postagens
+
+O Typing usa o [Disqus](https://disqus.com) para incorporar comentários no blog. Para ter o recurso de comentários, você deve informar o usuário do no arquivo "**_data/_informations.yml**":
+
+```yaml
+userdata:
+  disqus:
+    username: "my_user_disqus"
+```
+
+> NOTA: O recurso de comentário aparecerá se o ambiente Jekyll for de produção, não de desenvolvimento, isto é, ao executar o comando **yarn build**.
+
+Você também pode habilitar ou desabilitar o comentário para cada postagem que você fazer. No cabeçalho da postagem, altera a propriedade:
+
+```yaml
+comments: true|false
+```
 
 ### Arquivo '_data/options.yml'
 
-Esse arquivo contém opções de ativar e desativar recursos do Typing. Nesse arquivo basicamente você deve alterar conforme seu gosto.
+Este arquivo contém opções de ativar e desativar recursos do Typing. Nesse arquivo basicamente você deve alterar conforme seu gosto.
 
 #### Desativando o Blog
 
-Uma das coisas que você pode não querer, é um website sem blog, nesse caso você deve deixar a propriedade abaixo para **false**
+Uma das coisas que você pode não querer, é um website sem blog, nesse caso você deve deixar a propriedade abaixo para **false**:
 
 ```yml
 blog:

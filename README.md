@@ -1,333 +1,467 @@
-# Typing Jekyll Template
+[Leia em Português](README-ptbr.md)
+
+# Typing
 
 ![](https://img.shields.io/github/languages/top/williamcanin/typing-jekyll-template.svg?colorB=blue&style=flat-square) ![](https://img.shields.io/github/commit-activity/y/williamcanin/typing-jekyll-template.svg?style=flat-square) ![](https://img.shields.io/github/last-commit/williamcanin/typing-jekyll-template.svg?style=flat-square) ![](https://img.shields.io/github/last-commit/williamcanin/typing-jekyll-template/master.svg?style=flat-square) ![](https://img.shields.io/github/watchers/williamcanin/typing-jekyll-template.svg?style=flat-square) ![](https://img.shields.io/github/stars/williamcanin/typing-jekyll-template.svg?style=flat-square) ![](https://img.shields.io/github/forks/williamcanin/typing-jekyll-template.svg?style=flat-square)
 
-**Typing Jekyll Template**, is a template for [Jekyll](http://jekyllrb.com) built especially for those who want to have a blog and pages quickly and lightly. Keep It Simple, my friend!
-
-![Typing Jekyll Template](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/screenshot.png)
-
-## Table of Contents
-
-* [Introduction](https://github.com/williamcanin/typing-jekyll-template/#introduction)
-* [Feature](https://github.com/williamcanin/typing-jekyll-template/#feature)
-* [Requeriments](https://github.com/williamcanin/typing-jekyll-template/#requeriments)
-* [Usage](https://github.com/williamcanin/typing-jekyll-template/#usage)
-* [Custom Appearance](https://github.com/williamcanin/typing-jekyll-template/#custom-appearance)
-* [Deploy](https://github.com/williamcanin/typing-jekyll-template/#deploy)
-* [Demo](https://github.com/williamcanin/typing-jekyll-template/#demo)
-* [Questions](https://github.com/williamcanin/typing-jekyll-template/#questions)
-* [Versions](https://github.com/williamcanin/typing-jekyll-template/#versions)
-* [License and Copyrights](https://github.com/williamcanin/typing-jekyll-template/#license-and-copyrights)
-* [Credits](https://github.com/williamcanin/typing-jekyll-template/#credits)
+![Typing Change Themes](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/doc/readme/images/change_themes.gif)
 
 ## Introduction
 
-**NOTE: The Typing Jekyll Template is not compatible with the atomic compilation in Github Pages due to its own plugins feature and some configures that the theme makes available. You need to run the project clone on your machine, compile the site, and then deploy it to the Github pages.**
+**Typing**, is a template for [Jekyll](http://jekyllrb.com) created especially for those who want to have a blog and pages quickly and lightly. Keep things simple, my friend!
 
-Its interface is part of the "Keep It Simple" philosophy, precisely to have a high performance in all types of browsers and mobile devices.
+Its interface is part of the "Keep It Simple" philosophy, precisely for high performance on all types of browsers and mobile devices.
 
-You already have a template page for ‘Blog’, ‘Projects’, ‘Search’, ‘Contact’, ‘Tags’ and ‘Resume’, but you can leave as you want, modifying strings.
+You already have a template page for "Blog", "Projects", "Search", "Contact", "Tags", "Summary", "404" and "About", but you can change it as you wish by modifying the strings.
 
-The 'resume' page, you can print using the browser's Ctrl + P shortcut or the push button. Printing will eliminate useless parts, such as the sidebar. You'll also have a template for post (welcome-tot-jekyll), and you'll have to follow that template header.
+On the ** resume.md ** page, you can print using the browser shortcut Ctrl + P or the button. Printing will eliminate useless parts such as the sidebar.
 
-The contact page uses the [Formspree](https://formespree.io) feature, you will need to have an account in the service and add your **e-mail** to the `_data/data.yml` file. In addition, the entire contents of the `_data/dbase.yml` file should be changed as needed.
+You will also have a template for posting to the "" welcome-to-jekyll.md "** file and will need to follow the header of that template. The file contains some information you can get to use on your website.
 
-> NOTE: **Typing Jekyll Template** uses plugins and features to generate the site. So you can not clone this repository in your github and change just a few features.
+The contact page (**_ pages/global/contact.md**) uses the feature [Formspree](https://formespree.io), you need to have an account on the service and add your **email** to the file **_data/informations.yml**.
 
-## Feature
+```yml
+userdata:
+  email: "youremail@domain.com"
+```
+
+In addition, all contents of the **_data/informations.yml** file should be changed to suit your needs and needs.
+
+> NOTE: Typing Jekyll Template does not support atomic compilation in Github Pages due to its own plug-in feature and some settings that the theme provides. You need to run the project clone on your machine, compile the site, and deploy it to the Github pages.
+
+## Features
 
 - [x] **Google Analytics**
 - [x] **Google Fonts**
-- [x] **Jekyll Search on Blog Page**
-- [x] **Print page resume**
-- [x] **Avatar on sidebar**
+- [x] **Jekyll Search the blog page**
+- [x] **Print on the resume page**
+- [x] **Animated avatar on the sidebar**
 - [x] **404 Error Page**
 - [x] **Disqus [Accountant and Comments]**
-- [x] **Social buttons**
+- [x] **Social network buttons**
+- [x] **Theme Options**
+- [x] **Enable and disable features**
 
-**Used plugins**:
+**Used Plugins:**
 
-* Vendors:
-    - jekyll-coffeescript
-    - jekyll-jsminify
-    - jekyll-paginate
-    - jekyll-gist
-    - jekyll-youtube
-    - jekyll-tagging
-    - jemoji
-    - jekyll-email-protect
-    - jektify
+* Plugins:
+  - jekyll-coffeescript
+  - jekyll-jsminify
+  - jekyll-paginate
+  - jekyll-gist
+  - jekyll-youtube
+  - jekyll-tagging
+  - jekyll-sitemap
+  - jekyll-feed
+  - jemoji
+  - jekyll-email-protect
+  - jektify
 * From the project itself:
-    - Readingtime [Estimated reading time]
-    - Imager [Responsive Images]
-    - DateLang [Complete dates in each languages]
-    - Label [Add labels]
-    - Endpost [Creates a horizontal line]
+  - Readingtime [Estimated Reading Time]
+  - Imager [Add image to post and pages]
+  - DateLang [Complete dates in each language]
+  - Badge [Add badges]
+  - Endpost [Create a horizontal line]
 
-## Requeriments
+## Requirements
 
-| Requerid        | How to check        | How to install  |
+| Required        | How to verify       | How to install  |
 | --------------- | ------------------- | -------------- |
 | Git             | `git --version`     | [Git](http://git-scm.com/) |
 | Ruby            | `ruby -v`           | [Ruby](https://www.ruby-lang.org) |
 | Gem             | `gem -v`            | **Ruby** contains **Gem** |
-| Python          | `python --version`  | [Python](https://www.python.org/) |
 | Bundler         | `bundler -v`        | `gem install bundler` |
+| Yarn            | `yarn -v`           | [Yarn](https://yarnpkg.com/en/docs/install) |
 
-## Usage
+## Using
 
 1 - Cloning and entering the folder:
 
 ```
-$ git clone https://github.com/williamcanin/typing-jekyll-template.git "my-site"
-$ cd "my-site"
+$ git clone https://github.com/williamcanin/typing-jekyll-template.git "my_site"
+$ cd "my_site"
 ```
 
-2 - Downloading Gems and Jekyll dependencies for Typing:
+2 - Downloading Dependencies for Typing:
 
 ```
-$ bundle install
+$ yarn install
 ```
 
-3 - Compiling project for deploy:
+3 - Build project to deploy:
 
 ```
-$ JEKYLL_ENV=production bundle exec jekyll b
+$ yarn build
 ```
 
-4 - Starting Jekyll serve:
+4 - Starting the Jekyll Service:
 
 ```
-$ JEKYLL_ENV=development bundle exec jekyll s
+$ yarn serve
 ```
 
-**O.S Unix**
+## File '.hidden'
 
-If you use a Unix O.S, you can perform from step 2, all action through the `init.sh` file. Type it:
+This file is specific to Linux systems, where are all files and folders that should be hidden so as not to visually pollute the project.
 
+## File 'index.md'
+
+Now the homepage is in the file "**index.md**" in the project root folder. Write a good opening.
+
+## Folder 'assets'
+
+This folder contains subfolders where some you don't need to fumble with, such as **css**, **js**, **vendor** and **json**. The folder **images** instead you should put the images to your website. Each subfolder of the **images** folder is self-explanatory.
+
+## Folder '_pages'
+
+The pages are found in the **_ pages/blogger** and **_ pages/global** folder.
+The **_ pages/blogger** folder is contained in Blog pages and the **_ pages/global** folder is where **about.md** and **projects.md** page is contained.
+
+If you do not want to work with the **about.md** and **projects.md** pages, we recommend leaving the **published** property to **false**. *NEVER DELETE FOLDER PAGES **blogger** and **global*** as they have unique properties that a normal page may not contain.
+
+If you don't want to have a blog on your website then you should disable it in the archive **_data/options.yml**, where you will find more information in the section [Files '_data/options.yml'](#file-_dataoptionsyml).
+
+To create a page is very simple. Using the following command, you create the header of a page in the **_ pages** directory, where all your created pages should be.
+
+### Creating a page
+
+```shell
+$ yarn page
 ```
-$ bash init.sh help
+
+The pages you create may or may not appear in your website menu. Just set the header **menu -> enable** property that looks like this:
+
+```markdown
+---
+layout: page
+order: #number
+title: "page1"
+date: 2019-10-07 22:57:30
+sitemap:
+  priority: 0.7
+  changefreq: 'monthly'
+  lastmod: 2019-10-07 22:57:30
+# Use icons of: https://fontawesome.com/icons
+# E.g: fa-briefcase
+icon: 
+menu:
+  enable: true
+  local: [default]
+script: []
+published: false
+permalink: # add permilink for page. E.g: /smallparty/
+---
 ```
 
-## Structure
+Some properties you should not change, such as **layout**, **date** and **menu -> location**.
 
-### Home pages
+In the **icon** property you can either put the icon [FontAwesome](https://fontawesome.com/icons) that is related to your created page, or simply leave it blank.
 
-Now the home page is in the "**index.md**" file in the project root folder. Write a good opening.
+The property **order**, you can put a number that (according to the other pages), to sort in the website menu.
 
-### Pages Blog / Tags / Search / Sent
+> Be sure to leave the **published** property to **true** for your page to appear.
 
-The description of the Blog, Tags and Search pages are in their respective folders in the "**index.md**" file:
+## Folder '_posts'
 
-- blog/index.md
-- blog/tags/index.md
-- blog/search/index.md
+The **_posts** folder is where you will put all your posts. Creating a post is as simple as creating a page.
 
-Edit the values of the properties as desired.
+### Creating a post
 
-The same goes for the contact sending page.
+```shell
+$ yarn post
+```
 
-- contact/send/index.md
+You will enter an intuitive console to enter the title name of your post. When creating, the header will look something like this:
 
-## Custom
+```markdown
+---
+layout: post
+title: "mypost"
+date: 2019-10-07 23:06:50
+tags: ['tag1','tag2','tag3']
+published: false
+comments: false
+excerpted: |
+        Put here your excerpt
+day_quote:
+ title: "Put here title quote of the day"
+ description: |
+        "Put here your quote of the day"
 
-### Resources
+# Does not change and does not remove 'script' variable.
+script: [post.js]
+---
+```
 
-In the file "**_config.yml**" contains a session where you can activate and deactivate some features of the template. By the way
-, everything to remove from the template, is in this file and what is related to appearance, is in the file "**_data/data.yml**".
+Some properties you should not change, such as **layout**, **data** and **script**.
 
-**Disqus**
+The **excerpted** property is text that you must set (if you wish) to appear in the posts listing of your website.
 
-To have the comments feature, you must inform your Disqus user in file "**_data/data.yml**":
+The **day_quote** property is where you can put a phrase you like at the end of your post.
+
+The **comments** property is to enable or disable comments on the post itself.
+
+> Be sure to leave the **published** property to **true** for your post to appear.
+
+## Folder 'public'
+
+The **public** folder will be your entire compiled website. It will be the contents of this folder that you must upload to your hosting server.
+
+## Folder '_src'
+
+This folder is where the whole template structure is. You don't need to change anything in this folder unless you want to corrupt the theme. :)
+
+## Folder 'vendor'
+
+This folder will have all the dependencies for your template to be generated and work. It is created and populated with the **yarn install** command. Do not delete it.
+
+## Template files you should NOT change or delete
+
+- Gemfile
+- package.json
+- Rakefile
+- .yarnrc
+- .hidden
+
+## Settings
+
+Well, now that you know about some folders and files, let's understand how to configure Typing to your liking. Come on.
+
+### Folder 'CNAME'
+
+To learn about this file, read about CNAME records [HERE](https://support.google.com/a/answer/112037?hl=en)
+
+### File '_config.yml'
+
+The first file you open to configure is **_config.yml**. In this file you will have some indication of blocks that should be changed, but basically you should change the **url** and **baseurl** property only.
+
+In **url** you enter the url of your domain. For example:
+
+```yml
+url: http://mysite.com
+```
+
+In **baseurl** you tell the subfolder your website is (if it is). For example:
+
+```yml
+baseurl: /site1
+```
+
+> NOTE: Do not put slash at the end.
+
+It has the plugin settings [Jektify](https://jektify.github.io), you can also change to your liking.
+Another setting you could do is in the **reading_time** and **datelang** properties, changing their *locale* to their language.
+
+The supported languages for **reading_time** and **datelang** are:
+
+- ch_CH - Chinese
+- de_DE - Deutschland
+- en_US - English
+- es_ES - Spanish
+- fr_FR - French
+- it_IT - Italian
+- ja_JP - Japan
+- pt_PT - Portuguese
+- ru_RU - Russian
+
+Other changes you can make to **_ config.yml**:
+
+Enables or disables blog pagination [default: true]:
+
+```yml
+pagination:
+  enabled: true
+```
+
+Changes the server port [default: 4000]:
+
+```yml
+port: 4000
+```
+
+Change server host [default: localhost]:
+
+```yml
+host: localhost
+```
+
+> The other property you do not need to dig through.
+
+### File '_data/informations.yml'
+
+The file **'_ data/informations.yml'** is a file that contains template information, most of which is the string that appears on the website. You should set the property values of this file to your liking.
+
+Some basic settings you will make in this file are:
+
+#### Change avatar
+
+You must enter the name of your avatar, which should be in the folder **assets/images/avatar** in the following property:
+
+```yml
+sidebar:
+  avatar:
+    img: "your_first_photo_avatar.png|jpg"
+    flip:
+      img: "your_second_photo_avatar.png|jpg"
+```
+
+The avatar has a Flip animation, where you must enter a second image in the **flip -> img** property. If you do not want this animation, you can disable it by reading the section [File '_data/options.yml'](#file-_dataoptionsyml).
+
+#### Change theme
+
+This is one of the coolest features of Typing, which is that you can quickly switch between multiple themes, and even [customize](#create-your-own-theme) one (if you know a bit of CSS/SCSS) . Come on.
+
+By default Typing comes with 5 (five) official themes, they are:
+
+- typing
+- whiteglass
+- cloudysky
+- hacking
+- littlegirl
+
+To use a theme, simply change the **theme** property in the **'_ data/informations.yml'** file and then compile your project again:
+
+```yml
+website:
+  ....
+  theme: "typing"
+```
+
+##### Know the face of the themes
+
+###### Typing
+
+![Typing](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/doc/readme/images/typing.png)
+
+###### Whiteglass
+
+![Whiteglass](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/doc/readme/images/whiteglass.png)
+
+###### Cloudysky
+
+![Whiteglass](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/doc/readme/images/cloudysky.png)
+
+###### Hacking
+
+![Hacking](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/README/doc/readme/images/hacking.png)
+
+###### Littlegirl
+
+![Littlegirl](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/doc/readme/images/littlegirl.png)
+
+#### Creating your own theme
+
+You will also have the file **_src/_sass/theme/custom.scss**, where you can create your own theme without changing Typing officers.
+
+> NOTE: The folder **_src** may be hidden due to the file **.hidden**. With your file manager, show hidden files or open every project in a preferred text editor. Only change template files if you know what you are doing.
+
+#### Comments on posts
+
+Typing uses [Disqus](https://disqus.com) to embed comments on the blog. To have the comments feature, you must inform the user of the in the file "**_ data/_informations.yml**":
 
 ```yaml
 userdata:
   disqus:
-    username: "myname"
+    username: "my_user_disqus"
 ```
 
-> NOTE: Only the comment feature will appear, if the Jekyll environment is production, not development, that is, when executing the command "bundle exec jekyll b".  
+> NOTE: The commenting feature will appear if the Jekyll environment is a production environment, not a development environment, ie when executing the **yarn build** command.
 
-### Appearance
-
-**Typing**
-
-![Typing](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/README/images/typing.png)
-
-**Whiteglass**
-
-![Whiteglass](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/README/images/whiteglass.png)
-
-**Hacking**
-
-![Hacking](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/README/images/hacking.png)
-
-**Littlegirl**
-
-![Littlegirl](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/README/images/littlegirl.png)
-
-**Custom** (This is not a theme, just for you to customize to taste.)
-
-![Custom](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/README/images/custom.png)
-
-
-You can change the colors of the Typing Jekyll Template with a simple line changes. In the "**_data/data.yml**" file, change the "`website => theme`" property as listed the themes available in the comment. Example:
+You can also enable or disable commenting for each post you make. In the post header, change the property:
 
 ```yaml
-website:
-  theme: "whiteglass"
-```
-If you want to customize the theme, choose "**custom**" and customize the style sheet "**_sass/theme/custom.scss**" to your liking.
-
-Currently, there are 4(four) that *Typing* supports:
-
-- typing (default)
-- hacking
-- whiteglass
-- littlegirl
-
-
-Feel free to configure as you want. :)
-
-
-## Date and 'Reading time' Language
-
-Typing has the language setting for the date and a message in the post for read time. These settings are available in the "**_config.yml**"
-
-
-### Reading time
-
-To change the phrase of Reading time, go to the section 'To see language support, go to the plugin '_plugins/reading_time.rb'', change the value of 'reading_time > locale' to your locality*.
-
- E.g: 
-```yaml
- reading_time:
-        locale: en_US
+comments: true|false
 ```
 
-### Datelang
+### File '_data/options.yml'
 
-To change the date language to extensive, search for the section 'To see language support, go to the plugin '_plugins/datelang.rb'' ', change the value 'datelang > locale' to your locality*.
+This file contains options to enable and disable Typing features. In this file you should basically change as you like.
 
-Change the 'datelang > reload' to 'true', compile the project (./init.sh build or bundle exec jekyll build). After compiling, return the value of 'datelang > reload' to 'false'.
+#### Disabling Blog
 
- E.g:
-```yaml
- datelang:
-        locale: en_US
-        reload: true
+One of the things you might not want is a blogless website, in which case you should leave the property below to **false**:
+
+```yml
+blog:
+  enable: false
 ```
 
-* The languages supported are:
+After changing this property, you **MUST change** in the **_ pages/blogger/blog.md** file the following property to **false**:
 
-    * ch_CH - Chinese
-    * de_DE - Deutschland 
-    * en_US - English
-    * es_ES - Spanish
-    * fr_FR - French
-    * it_IT - Italian
-    * ja_JP - Japan
-    * pt_PT - Portuguese
-    * ru_RU - Russian
-
-## Post and Page
-
-You can create posts and page headers with only one line in the terminal.
-
-post:
-
-```bash
-$ bundle exec rake post TITLE="My title"
+```yml
+menu:
+  enable: false
 ```
 
-page:
+So the link **Blog** will not appear in the menu.
 
-```bash
-$ bundle exec rake page TITLE="My title"
+#### Turning avatar features on and off
+
+Another feature you may want to change is avatar animation. By default, FLIP animation is enabled. To disable this animation, you leave the low property with value of **false**:
+
+```yml
+sidebar:
+  ...
+  avatar:
+    ....
+    flip: false
 ```
 
-If you use unix / darwin, you can use the script "*init.sh help*".
+If you don't want an avatar on your website, simply disable it in the option:
 
-## Deploy
-
-Your site will be generated in the `_site` folder. Deploy these files to your hosting server.
-
-**Note:** Before deploying to the server, you have to edit the
-Variables: **url** and **baseurl** in the `_config.yml` file according to url Where your site is crooked. You can get more information on how to set up at: [Jekyll Configuration](https://jekyllrb.com/docs/configuration/#serve-command-options)
-
-### Deploy GitHub
-
-After doing all the configuration, compile the project with the command "bundle exec jekyll b" and your project can already be sender to your hosting server.
-
-**O.S Unix**
-
-If you use a UNIX-based operating system, you can deploy the source code and compiled site very simply with the "init.sh" script.
-You must first configure the "**deploy.conf**" file for your repository settings.
-
-I) After performing the project clone, empty the factory settings with the "reset" command:
-
-**[NOTE IMPORTANT]: Be careful when using this option because it deletes everything that has already been configured. If you do this after you have set up the Git repository (.git), you may need to manually reconcile the GIT commands with pull and fetch. The "init.sh" script does not resolve this issue.**
-
-```
-$ bash init.sh reset
+```yml
+sidebar:
+  ...
+  avatar:
+    enable: false
 ```
 
-II - *deploy.conf*
+#### Enabling Terminal Simulator
 
-[GENERAL]
+Another feature Typing acquired was a terminal simulator on the homepage. This is a visual matter only, as the terminal is not real.
 
-* **remoteURL** - Put here the git's remote URL.
-* **commit** - Customize the first commit message. By default, you will add the committee date and time.
-* **pull** - If left with the value of "yes", the pull will be performed before the push.
+Mixing a project that resembles the past and at the same time the present.
 
-[ BRANCH CONFIG NAMES ]
+To enable the terminal simulator on the home page, just leave the same settings below:
 
-* **source** - Put the branch where the project source code file will be.
-* **built** - Put the compiled website branch.
-
-[ BEFORE RAISING THE SITE ]
-
-* **compile** - Before deploying the compiled site, it will compile the project. Leave it as "yes" if you want to do this.
-
-III - Commands:
-
-2) Deploy source files:
-
-```
-$ bash init.sh deploy:source
+```yml
+home:
+  ...
+  terminal:
+    enable: true
 ```
 
-3) Deploy the built site:
+Here's how this feature will behave in your project:
 
-```
-$ bash init.sh deploy:site
-```
+![Terminal](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/doc/readme/images/terminal.png)
+
+> There is much more functionality in the **_data/options.yml** file for you to explore :)
 
 ## Demo
 
-If you want to see the project in action, go here > [Demo](http://williamcanin.github.io/typing-jekyll-template/)
+If you want to see the project in action, click here. > [Demo](http://williamcanin.github.io/typing-jekyll-template/)
 
 ## Questions
 
-Make your opinions on Typing Jekyll Template, in:
+Have your say about Typing Jekyll Template at:
 [Typing Jekyll Template - Issues](https://github.com/williamcanin/typing-jekyll-template/issues)
 
 ## Versions
 
-You can download the versions without making a clone with Git. Go to [Releases](https://github.com/williamcanin/typing-jekyll-template/releases)
+You can download versions without creating a clone with Git. Go to [Releases](https://github.com/williamcanin/typing-jekyll-template/releases)
 
 ## License and Copyrights
 
 License: [MIT License (MIT)](https://opensource.org/licenses/MIT)
 
-Copyrights: William C. Canin | Copyright © 2017-2018
+Copyright: William C. Canin | Copyright © 2017-2019
 
-*You can change the structure of Typing Jekyll Template as you wish, as long as you do not manipulate the copyrights of William C.Canin in the project*
+*Você pode alterar a estrutura do Typing Jekyll Template conforme desejar, desde que não manipule ou remova os direitos autorais de William C.Canin no projeto*
 
 ## Credits
 
 * Name: William C. Canin
 * Country: Brazil - SP
-* EMail: william.costa.canin@gmail.com    
+* E-Mail: william.costa.canin@gmail.com
 * GitHub: [William Canin](http://github.com/williamcanin)
-* Home page: [William Canin](http://williamcanin.github.com)
+* Personal page: [William Canin](http://williamcanin.github.com)
