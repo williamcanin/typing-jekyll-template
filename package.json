@@ -6,7 +6,7 @@
   "scripts": {
     "preinstall": "bundle install",
     "postinstall": "bundle exec rake postinstall",
-    "build": "bundle exec rake postinstall && bundle exec jekyll build",
+    "build": "bundle exec rake postinstall && JEKYLL_ENV=production bundle exec jekyll build",
     "serve": "bundle exec jekyll serve",
     "page": "bundle exec rake page",
     "post": "bundle exec rake post",
