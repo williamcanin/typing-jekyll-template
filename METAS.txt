@@ -1,7 +1,0 @@
-> Criar funcionalidade manager.rb de deploy do public
-># Upgrade Jektify
-
-
-http://www.twisterrob.net/blog/2015/06/Jekyll-hacks-for-development.html
-https://sacha.me/
-https://badoo.com/profile/0obff5b362880e65950444b0402d68af84c425560a0c687644

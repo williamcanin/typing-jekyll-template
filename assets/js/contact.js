@@ -6,10 +6,10 @@ layout: null
 {% include liquid/data %}
 
 $(function($){
-	$("#layout_contact__form").submit(function(event) {
+	$("form").submit(function(event) {
 		event.preventDefault();
 		$.ajax({
-	    url: "https://formspree.io/{{ load_data.userdata.email | encode_email }}", 
+	    url: "https://formspree.io/{{ load_data.userdata.email }}", 
 	    method: "POST",
 	    data: {
             name: $("#name").val(),

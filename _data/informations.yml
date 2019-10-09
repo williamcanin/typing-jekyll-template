@@ -12,7 +12,7 @@ website:
     subtitle: |
       It will not have forecast of return. Meanwhile, follow me on the social networks below.
 # Theme - Values [ typing | whiteglass | cloudysky | hacking | littlegirl | custom ]
-  theme: "typing"
+  theme: "whiteglass"
 # Configuration default
   title: "Typing"
   description: "Typing - A Theme for Jekyll"
@@ -133,7 +133,7 @@ website:
 
 # User data
 userdata:
-  email: # E.g: youremail@domain.com
+  email: contato@williamcanin.me # E.g: youremail@domain.com
   twitter: # E.g: "@my_twitter"
   disqus:
     username: # E.g: myuser
