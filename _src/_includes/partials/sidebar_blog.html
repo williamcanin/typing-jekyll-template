@@ -55,15 +55,15 @@
           align-items-center align-items-lg-start flex-lg-column mx-auto mr-lg-3 ml-lg-3
           sidebar__menu {% if load_options.sidebar.animation == true %} animation__sidebar-menu {% endif %}">
           <div class="my-1 d-none d-md-block mr-3 sidebar__menu-title">Menu: {{ load_data.website.sidebar.menu.blog.text }}</div>
-          {% assign sorted_pages = site.pages | sort:'order' %}
+          {% assign sorted_pages = site.pages | sort: 'order' %}
           {% for page in sorted_pages %}
-          {% if page.title and page.menu.local[0] == 'blog' %}
+          {% if page.title and page.menu.local[0] == 'blog' and page.autogen == nil %}
           <li class="mr-3 mr-lg-0 float-left float-lg-none sidebar__menu-item">
               {% if load_options.sidebar.icons.enable == true %}<i class="mr-1 fas {{ page.icon }}"></i>{% endif %}
               <a class="sidebar__menu-link" href="{{ page.url | prepend: site.baseurl | prepend: site.url }}">{{ page.title }}</a>
           </li>
           {% endif %}
-          {% if page.title and page.menu.local[1] == 'blog' %}
+          {% if page.title and page.menu.local[1] == 'blog' and page.autogen == nil %}
           <li class="mr-3 mr-lg-0 float-left float-lg-none sidebar__menu-item">
               {% if load_options.sidebar.icons.enable == true %}<i class="mr-1 fas {{ page.icon }}"></i>{% endif %}
               <a class="sidebar__menu-link" href="{{ page.url | prepend: site.baseurl | prepend: site.url }}">{{ page.title }}</a>
