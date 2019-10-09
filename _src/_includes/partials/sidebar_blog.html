@@ -1,11 +1,11 @@
 <!-- Include Data Base  -->
 {% include liquid/data %}
 
-<div class="col-lg-3 px-0 mt-3 sidebar">
+<div class="col-lg-3 px-0 mt-0 sidebar">
   <div class="
     {% if load_options.sidebar.avatar.enable == false %} py-4 {% else %} py-3 {% endif %}
     {% if load_options.sidebar.fixed == true %} sticky-top {% endif %} flex-grow-1">
-    <div class="sidebar__wrapper">
+    <div class="pt-3 sidebar__wrapper">
       <div class="nav flex-lg-column mx-3 mx-lg-0">
         {% if load_options.sidebar.avatar.flip == true and load_data.website.sidebar.avatar.flip.img %}
         <div class="d-none 

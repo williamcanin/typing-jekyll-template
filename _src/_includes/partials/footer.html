@@ -14,7 +14,7 @@
   </div>
 </div>
 
-<div class="d-block d-lg-none position-fixed fixed-bottom w-100 scrolltop">
+<div class="d-block {% if load_options.sidebar.fixed == true %} d-lg-none {% endif %} position-fixed fixed-bottom w-100 scrolltop">
   <div class="float-right mr-3 scrolltop__wrapper">
     <a class="mr-3 scrolltop__button" href="#top"><i class="fas fa-caret-up"></i></a>
   </div>

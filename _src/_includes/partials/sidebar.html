@@ -1,11 +1,11 @@
 <!-- Include Data Base  -->
 {% include liquid/data %}
 
-<div class="col-lg-3 px-0 mt-3 sidebar">
-  <div class="py-2 {% if load_options.sidebar.fixed == true %} sticky-top {% endif %}
+<div class="col-lg-3 p-0 sidebar">
+  <div class="{% if load_options.sidebar.fixed == true %} sticky-top {% endif %}
     {% if load_options.sidebar.avatar.enable == false %} py-4 {% else %} py-3 {% endif %}
     flex-grow-1">
-    <div class="sidebar__wrapper">
+    <div class="pt-3 sidebar__wrapper">
       <!-- nav flex-lg-column -->
       <div class="nav flex-lg-column mx-3 mx-lg-0">
         {% if load_options.sidebar.avatar.flip == true and load_data.website.sidebar.avatar.flip.img %}
@@ -55,7 +55,7 @@
         <!-- Menu -->
         <div class="p-2 mx-3
           {% if load_options.sidebar.avatar.enable == true %} d-md-flex flex-md-column align-items-md-start {% endif %}
-          align-items-center align-items-lg-start flex-lg-column mx-auto mr-lg-3 ml-lg-3
+          align-items-center align-items-lg-start flex-lg-column mx-auto mr-lg-3 ml-lg-3 d-lg-block
           sidebar__menu {% if load_options.sidebar.animation == true %} animation__sidebar-menu {% endif %}">
           <div class="my-1 d-none d-md-block mr-3 sidebar__menu-title">Menu</div>
           {% assign sorted_pages = site.pages | sort:'order' %}

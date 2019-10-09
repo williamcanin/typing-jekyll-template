@@ -11,11 +11,15 @@
         }
     }
     &__avatar_noflip{
-        img{
-            @media (max-width: 992px){
-                width: 90px;
-            }
+        @media (min-width: 575px) and (max-width: 992px){ 
+            width: 20%;
+            height: auto;
         }
+        // img{
+        //     @media (max-width: 992px){
+        //         width: 90px;
+        //     }
+        // }
     }
     &__title{
         @media (max-width: 992px){

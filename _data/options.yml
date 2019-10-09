@@ -25,7 +25,7 @@ sidebar:
     background: true
     border: true
     circle: true
-    flip: true
+    flip: false
   icons:
     enable: true
   socials:
