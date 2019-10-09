@@ -135,10 +135,10 @@ website:
 
 # User data
 userdata:
-  email: william.costa.canin@gmail.com # E.g: youremail@domain.com
+  email: # E.g: youremail@domain.com
   twitter: # E.g: "@my_twitter"
   disqus:
-    username: williamcanin # E.g: myuser
+    username: # E.g: myuser
   socials:
     title: Follow Me!
     links:

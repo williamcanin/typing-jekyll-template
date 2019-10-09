@@ -1,7 +1,7 @@
 # the base hostname & protocol for your site, e.g. http://example.com
 url: "https://williamcanin.me"
 # the subpath of your site, e.g. /blog
-baseurl: ""
+baseurl: "/typing-jekyll-template"
 
 # Plugins de player - Jektify
 jektify:
