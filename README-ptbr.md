@@ -343,7 +343,7 @@ website:
 
 ###### Hacking
 
-![Hacking](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/README/_src/doc/readme/images/hacking.png)
+![Hacking](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/_src/doc/readme/images/hacking.png)
 
 ###### Littlegirl
 
