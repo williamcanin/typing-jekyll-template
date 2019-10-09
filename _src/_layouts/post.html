@@ -5,11 +5,11 @@ layout: blog
 <!-- Include Data Base  -->
 {% include liquid/data %}
 
-<div class="mt-lg-0 layout_post {% if load_options.content.post.animation == true %} animation__content {% endif %}" itemscope itemtype="http://schema.org/BlogPosting">
+<div class="px-0 mt-lg-0 layout_post {% if load_options.content.post.animation == true %} animation__content {% endif %}" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <div class="container-fluid">
+  <!-- <div class="container-fluid"> -->
 
-    <div class="p-1 p-lg-3 mb-4 layout_post__header">
+    <div class="p-0 p-lg-3 mb-4 layout_post__header">
       <h1 class="font-weight-bold layout_post__title">{{ page.title }}</h1>
       <div class="layout_post__date">
         <time class="layout_post__time">
@@ -34,7 +34,7 @@ layout: blog
 
     </div>
 
-    <div class="p-1 p-lg-3 mb-4 layout_post__content">
+    <div class="p-0 p-lg-3 mb-4 layout_post__content">
       <div class="d-block">
           <div class="py-3 row">
             <div class="offset-6 col-6 offset-sm-9 col-sm-3 offset-lg-10 col-lg-2">
@@ -60,7 +60,7 @@ layout: blog
       </div>
     </div>
 
-    <div class="p-1 p-lg-3 mb-4 layout_post__footer">
+    <div class="p-0 p-lg-3 mb-4 layout_post__footer">
     {% if load_options.content.post.day_quote.enable == true  %}
     <div class="mb-5 layout_post__dayquote">
       <h2 class="layout_post__dayquote-title">{{ page.day_quote.title }}</h2>
@@ -136,5 +136,5 @@ layout: blog
     </div>
     {% endif %}
 
-  </div>
+  <!-- </div> -->
 </div>
