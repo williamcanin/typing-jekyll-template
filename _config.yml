@@ -78,7 +78,7 @@ tag_permalink_style: pretty
 imager:
   dir_posts: "assets/images/posts"
 
-# Readingtime
+# Readingtime and Datelang
 ## supported languages:
 ### ch_CH - Chinese | de_DE - Deutschland | en_US - English
 ### es_ES - Spanish | fr_FR - French | it_IT - Italian

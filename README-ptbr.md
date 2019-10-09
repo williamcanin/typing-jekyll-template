@@ -1,31 +1,14 @@
 [Read in English](README.md)
 
-# Typing Jekyll Template
+# Typing
 
 ![](https://img.shields.io/github/languages/top/williamcanin/typing-jekyll-template.svg?colorB=blue&style=flat-square) ![](https://img.shields.io/github/commit-activity/y/williamcanin/typing-jekyll-template.svg?style=flat-square) ![](https://img.shields.io/github/last-commit/williamcanin/typing-jekyll-template.svg?style=flat-square) ![](https://img.shields.io/github/last-commit/williamcanin/typing-jekyll-template/master.svg?style=flat-square) ![](https://img.shields.io/github/watchers/williamcanin/typing-jekyll-template.svg?style=flat-square) ![](https://img.shields.io/github/stars/williamcanin/typing-jekyll-template.svg?style=flat-square) ![](https://img.shields.io/github/forks/williamcanin/typing-jekyll-template.svg?style=flat-square)
 
-** Typing Jekyll Template **, é um template para o [Jekyll](http://jekyllrb.com) criado especialmente para quem deseja ter um blog e páginas de maneira rápida e leve. Mantenha as coisas simples, meu amigo!
-
-![Typing Jekyll Template](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/screenshot.png)
-
-## Índices
-
-* [Introdução](https://github.com/williamcanin/typing-jekyll-template/#introduction)
-* [Feature](https://github.com/williamcanin/typing-jekyll-template/#feature)
-* [Requeriments](https://github.com/williamcanin/typing-jekyll-template/#requeriments)
-* [Usage](https://github.com/williamcanin/typing-jekyll-template/#usage)
-* [Custom Appearance](https://github.com/williamcanin/typing-jekyll-template/#custom-appearance)
-* [Deploy](https://github.com/williamcanin/typing-jekyll-template/#deploy)
-* [Demo](https://github.com/williamcanin/typing-jekyll-template/#demo)
-* [Questions](https://github.com/williamcanin/typing-jekyll-template/#questions)
-* [Versions](https://github.com/williamcanin/typing-jekyll-template/#versions)
-* [License and Copyrights](https://github.com/williamcanin/typing-jekyll-template/#license-and-copyrights)
-* [Credits](https://github.com/williamcanin/typing-jekyll-template/#credits)
-
-* Do not remove this line (it will not be displayed)
-{: toc}
+![Typing Change Themes](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/doc/readme/images/change_themes.gif)
 
 ## Introdução
+
+**Typing**, é um template para o [Jekyll](http://jekyllrb.com) criado especialmente para quem deseja ter um blog e páginas de maneira rápida e leve. Mantenha as coisas simples, meu amigo!
 
 Sua interface faz parte da filosofia "Keep It Simple", precisamente para ter um alto desempenho em todos os tipos de navegadores e dispositivos móveis.
 
@@ -368,7 +351,7 @@ website:
 
 Você também terá o arquivo **_src/_sass/theme/custom.scss**, onde você pode criar um tema próprio sem alterar os oficiais do Typing.
 
-> NOTA: Essa é uma opção não muito comum, só altere arquivos do template caso você saiba o que esta fazendo.
+> NOTA1: A pasta **_src** pode estar oculta devido o arquivo **.hidden**. Com seu gerenciador de arquivos, mostre os arquivos ocultos ou abra todo projeto em um editor de texto preferencial. Só altere arquivos do template caso você saiba o que esta fazendo.
 
 ### Arquivo '_data/options.yml'
 
@@ -383,7 +366,7 @@ blog:
   enable: false
 ```
 
-Após alterar essa propriedade, você deve alterar no arquivo **_pages/blogger/blog.md** a seguinte propriedade para **false**:
+Após alterar essa propriedade, você **DEVE OBRIGATORIAMENTE** alterar no arquivo **_pages/blogger/blog.md** a seguinte propriedade para **false**:
 
 ```yml
 menu:
@@ -392,7 +375,7 @@ menu:
 
 Assim o link **Blog** não vai aparecer no menu.
 
-#### Alterando efeito do avatar
+#### Ativando e Desativando recursos do avatar
 
 Outro recurso que você pode querer alterar, é a animação do avatar. Por padrão, animação FLIP vem ativada. Para desativar essa animação, você deixa a propriedade baixo com valor de **false**:
 
@@ -402,6 +385,15 @@ sidebar:
   avatar:
     ....
     flip: false
+```
+
+Se não quiser um avatar no seu website, simplesmente desative-o na opção:
+
+```yml
+sidebar:
+  ...
+  avatar:
+    enable: false
 ```
 
 #### Habilitando simulador de terminal
@@ -422,6 +414,8 @@ home:
 Veja como esse recurso irá se comportar no seu projeto:
 
 ![Terminal](https://raw.githubusercontent.com/williamcanin/typing-jekyll-template/master/doc/readme/images/terminal.png)
+
+> Existe muito mais funcionalidades no arquivo **_data/options.yml** para você explorar :)
 
 ## Demo
 
