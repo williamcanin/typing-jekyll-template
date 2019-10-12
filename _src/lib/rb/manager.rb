@@ -17,7 +17,7 @@ class Manager
     CONFIG = {
       'ROOT_VENDOR' => File.join(SOURCE, "assets/vendor"),
       'VENDORJS_DIR' => File.join(SOURCE, "assets/vendor/js"),
-      'NODE_MODULES' => File.join(SOURCE, "vendor/node_modules"),
+      'NODE_MODULES' => File.join(SOURCE, "node_modules"),
       'POST_DIR' => File.join(SOURCE, "_posts"),
       'PAGE_DIR' => File.join(SOURCE, "_pages"),
       'PUBLIC_DIR' => File.join(SOURCE, "public"),

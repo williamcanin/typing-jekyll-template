@@ -33,12 +33,12 @@ sidebar:
     flip:
       enable: true
       face:
-        svg_inner: true
+        svg_inner: false
       back:
         svg_inner: false
     noflip:
       face:
-        svg_inner: true
+        svg_inner: false
   icons:
     enable: true
   socials:

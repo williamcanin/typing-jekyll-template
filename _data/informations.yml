@@ -12,7 +12,7 @@ website:
     subtitle: |
       It will not have forecast of return. Meanwhile, follow me on the social networks below.
 # Theme - Values [ typing | whiteglass | cloudysky | hacking | littlegirl | custom ]
-  theme: "whiteglass"
+  theme: "typing"
 # Configuration default
   title: "Typing"
   description: "Typing - A Theme for Jekyll"
