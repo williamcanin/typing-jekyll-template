@@ -19,6 +19,12 @@
         display: block;
         transform: rotateY(180deg);   
     }
+    &__avatar_flip, &__avatar_noflip{
+        .image_avatar{
+            width: 165px;
+            height: 165px;
+        }
+    }
     &__title{
         font-family: $font-family__secondary;
         background-color: $elements__background;

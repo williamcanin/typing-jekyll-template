@@ -5,9 +5,16 @@ layout: blog
 <!-- Include Data Base  -->
 {% include liquid/data %}
 
-{% for post in site.posts %}
-  {% capture post_count %} {{ post_count | plus: 1 }} {% endcapture %}
-{% endfor %} 
+
+<!-- Count posts -->
+{% if page.pagination.enabled == true and site.pagination.enabled == true %}
+  {% assign count_posts = paginator.total_posts %}
+{% else %}
+  {% for _ in site.posts %}
+    {% capture count_posts %} {{ count_posts | plus: 1 }} {% endcapture %}
+  {% endfor %}
+{% endif %}
+
 
 <div class="p-1 p-lg-3 layout_postlist {% if load_options.content.postlist.animation == true %} animation__content {% endif %}" itemscope="itemscope" itemtype="http://schema.org/Blog">
 
@@ -21,7 +28,7 @@ layout: blog
         <!-- This is a Blog description -->
         <div class="row d-block">
           <div class="layout_postlist__description">
-            {{ page.posts_quantity.message[0] }} <strong>{{ post_count }}</strong> {{ page.posts_quantity.message[1] }}
+            {{ page.posts_quantity.message[0] }} <strong>{{ count_posts }}</strong> {{ page.posts_quantity.message[1] }}
             {{ content }}
           </div>
         </div>
@@ -33,12 +40,12 @@ layout: blog
       {% if site.posts.size > 0 %}
 
       {% if page.pagination.enabled == true and site.pagination.enabled == true %}
-        {% assign style_page = paginator.posts %}
+        {% assign postlist_type = paginator.posts %}
       {% else %}
-        {% assign style_page = site.posts %}
+        {% assign postlist_type = site.posts %}
       {% endif %}
 
-      {% for post in style_page %}
+      {% for post in postlist_type %}
       <div class="mt-4 mb-4 p-1 p-lg-3 layout_postlist__content">
 
         <div class="container-fluid">
@@ -66,7 +73,7 @@ layout: blog
                 {% if load_options.content.icons.enable == true %}
                 <i class="fas fa-comments"></i>
                 {% endif %}
-                <a class="layout_postlist__comments-count" 
+                <a class="mr-2 layout_postlist__comments-count" 
                   href="{{ post.url }}#disqus_thread">
                     0
                 </a>

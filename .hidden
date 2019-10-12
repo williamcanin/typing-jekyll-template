@@ -1,6 +1,9 @@
 vendor
+node_modules
+*.bak
 _src
 Rakefile
+gulpfile.babel.js
 yarn.lock
 Gemfile.lock
 package-lock.json
@@ -8,4 +11,5 @@ package.json
 COPYING
 CREDITS
 README.md
+README-ptbr.md
 Gemfile

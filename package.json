@@ -1,17 +1,15 @@
 {
   "name": "typing-jekyll-template",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "Typing, is a template for Jekyll built especially for those who want to have a blog and pages quickly and lightly.",
   "main": "index.md",
   "scripts": {
     "preinstall": "bundle install",
     "postinstall": "bundle exec rake postinstall",
-    "build": "bundle exec rake postinstall && JEKYLL_ENV=production bundle exec jekyll build",
+    "build": "bundle exec rake postinstall; JEKYLL_ENV=production bundle exec jekyll build; yarn run gulp",
     "serve": "bundle exec jekyll serve",
     "page": "bundle exec rake page",
-    "post": "bundle exec rake post",
-    "deploy:source": "bundle exec rake deploy:source",
-    "deploy:public": "bundle exec rake deploy:public"
+    "post": "bundle exec rake post"
   },
   "repository": "git+https://github.com/williamcanin/typing-jekyll-template.git",
   "keywords": [
@@ -30,5 +28,12 @@
     "jquery": "^3.4.1",
     "popper.js": "^1.15.0",
     "simple-jekyll-search": "^1.7.2"
+  },
+  "devDependencies": {
+    "eslint": "^6.5.1",
+    "gulp": "^4.0.2",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^6.1.1",
+    "gulp-uglify": "^3.0.2"
   }
 }

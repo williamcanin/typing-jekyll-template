@@ -33,17 +33,28 @@
         &-newer{
             @extend .buttons_style;
             border-radius: 0px;
+            border: 1px solid $color__clickable;
+            &:hover{
+                border: 1px solid $color__clickable;
+            }
         }
         &-counter{
             color: $color__clickable;
+            background-color: $elements__background;
+            border: 1px solid;
             &:hover{
                 color: $color__clickable;
-                background-color: white;
+                background-color: $elements__background;
+                border: 1px solid;
             }
         }
         &-older{
             @extend .buttons_style;
             border-radius: 0px;
+            border: 1px solid $color__clickable;
+            &:hover{
+                border: 1px solid $color__clickable;
+            }
         }
     }
 }

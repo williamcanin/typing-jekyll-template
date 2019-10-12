@@ -1,6 +1,7 @@
 .socials_network{
     &__header, &__body{
         background-color: $background__full !important;
+        border: 1px solid $color__text;
     }
     &__icon{
         font-size: 3.5rem;

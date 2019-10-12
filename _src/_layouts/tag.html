@@ -35,7 +35,7 @@ layout: blog
             {% if load_options.content.tagpost.date.enable == true %}
             <div class="col-8 col-lg-4 offset-lg-0 col-sm-6">
               <div class="row justify-content-start">
-                <time class="p-2 layout_tag__time">
+                <time class="p-2 mb-2 layout_tag__time">
                   {% if load_options.content.icons.enable == true %}<i class="far fa-calendar-alt"></i>{% endif %}
                   {% datelang post %}
                   {% include datelang/post %}
@@ -52,7 +52,11 @@ layout: blog
               <div class="row justify-content-end">
                 <div class="layout_tag__comments">
                     {% if load_options.content.icons.enable == true %}<i class="fas fa-comments"></i>{% endif %}
-                    <span class="disqus-comment-count" data-disqus-identifier="{{ post.url }}"></span>
+                    <a class="mr-2 layout_tag__comments-count" 
+                      href="{{ post.url }}#disqus_thread">
+                        0
+                    </a>
+                    {{ load_data.website.content.post.count_comments.text }}
                 </div>
               </div>
             </div>

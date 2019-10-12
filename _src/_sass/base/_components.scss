@@ -83,13 +83,13 @@
     border-radius: 5px;
     width: auto;
     text-decoration: none !important;
-    color: white;
+    color: $buttons__color;
     opacity: 1;
     min-width: 100px;
     transition: 0.71s;
     &:hover{
         background-color: $color__clickable;
-        color: white;
+        color: $buttons__color;
         opacity: 0.84;
     }
     &:hover,&:focus,&:visited,&:active{

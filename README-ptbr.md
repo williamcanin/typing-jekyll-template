@@ -287,6 +287,8 @@ pagination:
   enabled: true
 ```
 
+> NOTA: Se quiser desativar o paginador, após fazer as configurações de cima, você terá que ir na página **_pages/blogger/blog.md** e deixar o **pagination -> enable** para **false**.
+
 Altera a porta do servidor [padrão: 4000]:
 
 ```yml

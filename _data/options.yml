@@ -25,7 +25,20 @@ sidebar:
     background: true
     border: true
     circle: true
-    flip: true
+    # This "svg_inner" function, you need to put your SVG inside
+    # the HTML in the sidebar. Enter the block:
+    # <!-- Add your SVG - BEGIN -->
+    # <!-- Add your SVG - END -->
+    # and, then create a stylesheet to configure svg.
+    flip:
+      enable: true
+      face:
+        svg_inner: true
+      back:
+        svg_inner: false
+    noflip:
+      face:
+        svg_inner: true
   icons:
     enable: true
   socials:

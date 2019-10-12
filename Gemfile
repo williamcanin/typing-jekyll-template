@@ -10,7 +10,6 @@ group :jekyll_plugins do
   gem 'jekyll-feed', '~> 0.12.1'
   gem 'jekyll-sitemap', '~> 1.3.1'
   gem 'jekyll-coffeescript', '~> 2.0.0'
-  gem 'jekyll-jsminify', '~> 0.3.0'
   gem 'jekyll-gist', '~> 1.5.0'
   gem 'jekyll-youtube', '~> 1.0.0'
   gem 'jekyll-tagging', '~> 1.1.0'

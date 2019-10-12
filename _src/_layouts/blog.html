@@ -1,7 +1,3 @@
----
-layout: compress
----
-
 <!-- Include Data Base  -->
 {% include liquid/data %}
 
@@ -12,7 +8,7 @@ layout: compress
 <html>
   {% include partials/head.html %}
   <body class="body {% if load_options.global.links.underline == true %} underline_links {% endif %}" id="top">
-    <div class="container layout_blog">
+    <div class="container layout_default">
       <div class="row">
         {% include partials/sidebar_blog.html %}
         {% include partials/content.html %}

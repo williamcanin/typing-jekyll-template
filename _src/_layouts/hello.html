@@ -6,7 +6,7 @@ layout: default
 {% include liquid/data %}
 
 {% if load_options.home.terminal.enable == true %}
-  <div class="px-1 mx-3 layout_hello" style="background-color: transparent !important;">
+  <div class="px-1 mx-3 layout_hello" style="background-color: transparent !important; border: none !important;">
 {% else %}
   <div class="p-1 m-1 p-lg-3 m-lg-3 layout_hello {% if load_options.home.animation == true %} animation__content {% endif %}">
 {% endif %}
@@ -37,7 +37,11 @@ layout: default
     {% else %}
 
     <div class="d-block row">
+    {% if load_data.website.theme == "hacking" %}
+    <div style="border: 1px solid #484848; box-shadow: none !important; -webkit-box-shadow: none !important;" class="mb-4 intro__terminal {% if load_options.home.terminal.animation == true %} animation__terminal {% endif %}">
+    {% else %}
     <div class="mb-4 intro__terminal {% if load_options.home.terminal.animation == true %} animation__terminal {% endif %}">
+    {% endif %}
       <header class="header">
         <div class="btn header__btn header__btn--red" style="cursor: pointer;"></div>
         <div class="btn header__btn header__btn--yellow" style="cursor: pointer;"></div>

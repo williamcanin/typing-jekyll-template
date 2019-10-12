@@ -8,44 +8,319 @@
     <div class="pt-3 sidebar__wrapper">
       <!-- nav flex-lg-column -->
       <div class="nav flex-lg-column mx-3 mx-lg-0">
-        {% if load_options.sidebar.avatar.flip == true and load_data.website.sidebar.avatar.flip.img %}
+        
+        {% if load_options.sidebar.avatar.flip.enable == true and load_data.website.sidebar.avatar.flip.img %}
         <div class="d-none
           {% if load_options.sidebar.avatar.enable == true %} d-sm-block {% endif %}
           sidebar__avatar_flip">
           <div class="sidebar__avatar_flip-card">
             <a class="sidebar__avatar_flip-front sidebar__avatar_flip-face" href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">
+              {% if load_options.sidebar.avatar.flip.face.svg_inner == false %}
               <img class="p-1 img-fluid mx-auto d-block
                 {% if load_options.sidebar.animation == true %} animation__pulse {% endif %}
                 {% if load_options.sidebar.avatar.circle == true %} sidebar_avatar_circle {% endif %}
                 {% if load_options.sidebar.avatar.background == true %} sidebar_avatar_background {% endif %}
                 {% if load_options.sidebar.avatar.border == true %} sidebar_avatar_border {% endif %}
+                image_avatar
               "
               src="{{ '/assets/images/avatar' | prepend: site.baseurl }}/{{ load_data.website.sidebar.avatar.img }}"
-              width="165" height="165" alt="Avatar">
+              alt="Avatar">
+              {% else %}
+                <!-- Add your SVG - BEGIN -->
+                <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+                <svg class="p-1 img-fluid mx-auto d-block 
+                  {% if load_options.sidebar.animation == true %} animation__pulse {% endif %}
+                  {% if load_options.sidebar.avatar.circle == true %} sidebar_avatar_circle {% endif %}
+                  {% if load_options.sidebar.avatar.background == true %} sidebar_avatar_background {% endif %}
+                  {% if load_options.sidebar.avatar.border == true %} sidebar_avatar_border {% endif %}
+                  svg_vvfolded"
+                  xmlns:dc="http://purl.org/dc/elements/1.1/"
+                  xmlns:cc="http://creativecommons.org/ns#"
+                  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                  xmlns:svg="http://www.w3.org/2000/svg"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                  xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                  width="900"
+                  height="900"
+                  viewBox="0 0 843.75 843.75"
+                  version="1.1"
+                  id="svg6"
+                  sodipodi:docname="avatar.svg"
+                  inkscape:version="0.92.4 5da689c313, 2019-01-14">
+                  <metadata
+                    id="metadata12">
+                    <rdf:RDF>
+                      <cc:Work
+                        rdf:about="">
+                        <dc:format>image/svg+xml</dc:format>
+                        <dc:type
+                          rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+                        <dc:title />
+                      </cc:Work>
+                    </rdf:RDF>
+                  </metadata>
+                  <defs
+                    id="defs10" />
+                  <sodipodi:namedview
+                    pagecolor="#ffffff"
+                    bordercolor="#666666"
+                    borderopacity="1"
+                    objecttolerance="10"
+                    gridtolerance="10"
+                    guidetolerance="10"
+                    inkscape:pageopacity="0"
+                    inkscape:pageshadow="2"
+                    inkscape:window-width="1326"
+                    inkscape:window-height="704"
+                    id="namedview8"
+                    showgrid="false"
+                    inkscape:zoom="0.34766083"
+                    inkscape:cx="225.43491"
+                    inkscape:cy="355.19507"
+                    inkscape:window-x="40"
+                    inkscape:window-y="27"
+                    inkscape:window-maximized="1"
+                    inkscape:current-layer="svg6" />
+                  <g
+                    id="g4539">
+                    <rect
+                      class="svg_vvfolded__background"
+                      ry="0"
+                      y="-2.9804077"
+                      x="-3.0152702e-05"
+                      height="846.73041"
+                      width="849.42706"
+                      id="rect4516"
+                      style="opacity:1;fill:#222222;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.1875;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+                    <path
+                      class="svg_vvfolded__vvfolded1"
+                      inkscape:export-ydpi="96"
+                      inkscape:export-xdpi="96"
+                      style="fill:#ffe609;fill-opacity:1;fill-rule:evenodd;stroke-width:4.16359711"
+                      inkscape:connector-curvature="0"
+                      id="path2-3"
+                      d="M 331.0684,666.83732 C 390.87279,480.08949 545.03993,338.83221 706.09828,200.89819 491.37017,326.08201 286.42471,542.95907 27.568183,254.47634 138.30221,386.98897 254.88865,516.47519 331.0684,666.83732 Z" />
+                    <path
+                      class="svg_vvfolded__vvfolded2"
+                      inkscape:export-ydpi="96"
+                      inkscape:export-xdpi="96"
+                      sodipodi:nodetypes="cccccc"
+                      style="fill:#ffe609;fill-opacity:1;fill-rule:evenodd;stroke-width:4.16359711"
+                      inkscape:connector-curvature="0"
+                      id="path4-6"
+                      d="m 440.06019,494.81503 c 33.09425,33.06671 79.79511,100.74197 135.32976,171.38121 92.8209,-98.58121 196.52871,-260.89999 238.3791,-381.4254 -31.63506,59.1696 -171.19279,220.128 -223.92944,219.30068 -56.95036,2.46828 -60.39653,-56.84676 -83.36077,-88.80475 -26.066,22.9086 -45.86676,47.1145 -66.41865,79.54826 z" />
+                  </g>
+                </svg>
+                <!-- Add your SVG - END -->
+              {% endif %}
             </a>
             <a class="sidebar__avatar_flip-back sidebar__avatar_flip-face" href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">
+              {% if load_options.sidebar.avatar.flip.back.svg_inner == false %}
               <img class="p-1 img-fluid mx-auto d-block
                 {% if load_options.sidebar.animation == true %} animation__pulse {% endif %}
                 {% if load_options.sidebar.avatar.circle == true %} sidebar_avatar_circle {% endif %}
                 {% if load_options.sidebar.avatar.background == true %} sidebar_avatar_background {% endif %}
                 {% if load_options.sidebar.avatar.border == true %} sidebar_avatar_border {% endif %}
+                image_avatar
               "
               src="{{ '/assets/images/avatar' | prepend: site.baseurl }}/{{ load_data.website.sidebar.avatar.flip.img }}"
-              width="165" height="165" alt="Avatar">
+              alt="Avatar">
+              {% else %}
+                <!-- Add your SVG - BEGIN -->
+                <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+                <svg class="p-1 img-fluid mx-auto d-block 
+                  {% if load_options.sidebar.animation == true %} animation__pulse {% endif %}
+                  {% if load_options.sidebar.avatar.circle == true %} sidebar_avatar_circle {% endif %}
+                  {% if load_options.sidebar.avatar.background == true %} sidebar_avatar_background {% endif %}
+                  {% if load_options.sidebar.avatar.border == true %} sidebar_avatar_border {% endif %}
+                  svg_vvfolded"
+                  xmlns:dc="http://purl.org/dc/elements/1.1/"
+                  xmlns:cc="http://creativecommons.org/ns#"
+                  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                  xmlns:svg="http://www.w3.org/2000/svg"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                  xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                  width="900"
+                  height="900"
+                  viewBox="0 0 843.75 843.75"
+                  version="1.1"
+                  id="svg6"
+                  sodipodi:docname="avatar.svg"
+                  inkscape:version="0.92.4 5da689c313, 2019-01-14">
+                  <metadata
+                    id="metadata12">
+                    <rdf:RDF>
+                      <cc:Work
+                        rdf:about="">
+                        <dc:format>image/svg+xml</dc:format>
+                        <dc:type
+                          rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+                        <dc:title />
+                      </cc:Work>
+                    </rdf:RDF>
+                  </metadata>
+                  <defs
+                    id="defs10" />
+                  <sodipodi:namedview
+                    pagecolor="#ffffff"
+                    bordercolor="#666666"
+                    borderopacity="1"
+                    objecttolerance="10"
+                    gridtolerance="10"
+                    guidetolerance="10"
+                    inkscape:pageopacity="0"
+                    inkscape:pageshadow="2"
+                    inkscape:window-width="1326"
+                    inkscape:window-height="704"
+                    id="namedview8"
+                    showgrid="false"
+                    inkscape:zoom="0.34766083"
+                    inkscape:cx="225.43491"
+                    inkscape:cy="355.19507"
+                    inkscape:window-x="40"
+                    inkscape:window-y="27"
+                    inkscape:window-maximized="1"
+                    inkscape:current-layer="svg6" />
+                  <g
+                    id="g4539">
+                    <rect
+                      class="svg_vvfolded__background"
+                      ry="0"
+                      y="-2.9804077"
+                      x="-3.0152702e-05"
+                      height="846.73041"
+                      width="849.42706"
+                      id="rect4516"
+                      style="opacity:1;fill:#222222;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.1875;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+                    <path
+                      class="svg_vvfolded__vvfolded1"
+                      inkscape:export-ydpi="96"
+                      inkscape:export-xdpi="96"
+                      style="fill:#ffe609;fill-opacity:1;fill-rule:evenodd;stroke-width:4.16359711"
+                      inkscape:connector-curvature="0"
+                      id="path2-3"
+                      d="M 331.0684,666.83732 C 390.87279,480.08949 545.03993,338.83221 706.09828,200.89819 491.37017,326.08201 286.42471,542.95907 27.568183,254.47634 138.30221,386.98897 254.88865,516.47519 331.0684,666.83732 Z" />
+                    <path
+                      class="svg_vvfolded__vvfolded2"
+                      inkscape:export-ydpi="96"
+                      inkscape:export-xdpi="96"
+                      sodipodi:nodetypes="cccccc"
+                      style="fill:#ffe609;fill-opacity:1;fill-rule:evenodd;stroke-width:4.16359711"
+                      inkscape:connector-curvature="0"
+                      id="path4-6"
+                      d="m 440.06019,494.81503 c 33.09425,33.06671 79.79511,100.74197 135.32976,171.38121 92.8209,-98.58121 196.52871,-260.89999 238.3791,-381.4254 -31.63506,59.1696 -171.19279,220.128 -223.92944,219.30068 -56.95036,2.46828 -60.39653,-56.84676 -83.36077,-88.80475 -26.066,22.9086 -45.86676,47.1145 -66.41865,79.54826 z" />
+                  </g>
+                </svg>
+                <!-- Add your SVG - END -->
+              {% endif %}
             </a>
           </div>
         </div>
+
         {% else %}
+
         <!-- Avatar Not Flip -->
         <div class="d-none d-sm-block sidebar__avatar_noflip">
           <a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}" class="nav-link">
+            {% if load_options.sidebar.avatar.noflip.face.svg_inner == false %}
             <img class="p-1 img-fluid d-block {% if load_options.sidebar.animation == true %} animation__pulse {% endif %} mx-auto
               {% if load_options.sidebar.avatar.circle == true %} sidebar_avatar_circle {% endif %}
               {% if load_options.sidebar.avatar.background == true %} sidebar_avatar_background {% endif %}
               {% if load_options.sidebar.avatar.border == true %} sidebar_avatar_border {% endif %}
-            "
+              image_avatar"
             src="{{ '/assets/images/avatar' | prepend: site.baseurl }}/{{ load_data.website.sidebar.avatar.img }}"
-            width="165" height="165" alt="Avatar"/>
+            alt="Avatar"/>
+            {% else %}
+              <!-- Add your SVG - BEGIN -->
+              <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+              <svg class="p-1 img-fluid mx-auto d-block 
+                {% if load_options.sidebar.animation == true %} animation__pulse {% endif %}
+                {% if load_options.sidebar.avatar.circle == true %} sidebar_avatar_circle {% endif %}
+                {% if load_options.sidebar.avatar.background == true %} sidebar_avatar_background {% endif %}
+                {% if load_options.sidebar.avatar.border == true %} sidebar_avatar_border {% endif %}
+                svg_vvfolded"
+                xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:cc="http://creativecommons.org/ns#"
+                xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                xmlns:svg="http://www.w3.org/2000/svg"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                width="900"
+                height="900"
+                viewBox="0 0 843.75 843.75"
+                version="1.1"
+                id="svg6"
+                sodipodi:docname="avatar.svg"
+                inkscape:version="0.92.4 5da689c313, 2019-01-14">
+                <metadata
+                  id="metadata12">
+                  <rdf:RDF>
+                    <cc:Work
+                      rdf:about="">
+                      <dc:format>image/svg+xml</dc:format>
+                      <dc:type
+                        rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+                      <dc:title />
+                    </cc:Work>
+                  </rdf:RDF>
+                </metadata>
+                <defs
+                  id="defs10" />
+                <sodipodi:namedview
+                  pagecolor="#ffffff"
+                  bordercolor="#666666"
+                  borderopacity="1"
+                  objecttolerance="10"
+                  gridtolerance="10"
+                  guidetolerance="10"
+                  inkscape:pageopacity="0"
+                  inkscape:pageshadow="2"
+                  inkscape:window-width="1326"
+                  inkscape:window-height="704"
+                  id="namedview8"
+                  showgrid="false"
+                  inkscape:zoom="0.34766083"
+                  inkscape:cx="225.43491"
+                  inkscape:cy="355.19507"
+                  inkscape:window-x="40"
+                  inkscape:window-y="27"
+                  inkscape:window-maximized="1"
+                  inkscape:current-layer="svg6" />
+                <g
+                  id="g4539">
+                  <rect
+                    class="svg_vvfolded__background"
+                    ry="0"
+                    y="-2.9804077"
+                    x="-3.0152702e-05"
+                    height="846.73041"
+                    width="849.42706"
+                    id="rect4516"
+                    style="opacity:1;fill:#222222;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.1875;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+                  <path
+                    class="svg_vvfolded__vvfolded1"
+                    inkscape:export-ydpi="96"
+                    inkscape:export-xdpi="96"
+                    style="fill:#ffe609;fill-opacity:1;fill-rule:evenodd;stroke-width:4.16359711"
+                    inkscape:connector-curvature="0"
+                    id="path2-3"
+                    d="M 331.0684,666.83732 C 390.87279,480.08949 545.03993,338.83221 706.09828,200.89819 491.37017,326.08201 286.42471,542.95907 27.568183,254.47634 138.30221,386.98897 254.88865,516.47519 331.0684,666.83732 Z" />
+                  <path
+                    class="svg_vvfolded__vvfolded2"
+                    inkscape:export-ydpi="96"
+                    inkscape:export-xdpi="96"
+                    sodipodi:nodetypes="cccccc"
+                    style="fill:#ffe609;fill-opacity:1;fill-rule:evenodd;stroke-width:4.16359711"
+                    inkscape:connector-curvature="0"
+                    id="path4-6"
+                    d="m 440.06019,494.81503 c 33.09425,33.06671 79.79511,100.74197 135.32976,171.38121 92.8209,-98.58121 196.52871,-260.89999 238.3791,-381.4254 -31.63506,59.1696 -171.19279,220.128 -223.92944,219.30068 -56.95036,2.46828 -60.39653,-56.84676 -83.36077,-88.80475 -26.066,22.9086 -45.86676,47.1145 -66.41865,79.54826 z" />
+                </g>
+              </svg>
+              <!-- Add your SVG - END -->
+            {% endif %}
           </a>
         </div>
         {% endif %}
@@ -74,9 +349,6 @@
             {% if load_options.sidebar.icons.enable == true %}
             <i class="mr-1 fas fa-globe"></i>
             {% endif %}
-            <!-- <button class="btn btn-link sidebar__menu-link" data-toggle="modal" data-target=".bd-example-modal-xl">
-                {{ load_data.userdata.socials.title }}
-            </button> -->
             <a href="" class="sidebar__menu-link" data-toggle="modal" data-target="#socials_network">
               {{ load_data.userdata.socials.title }}
             </a>

@@ -1,5 +1,6 @@
 vendor
 assets/vendor
+node_modules
 _site
 public
 temp

@@ -288,6 +288,8 @@ pagination:
   enabled: true
 ```
 
+> NOTE: If you want to disable the pager, after making the above settings, you have to go to page **_pages/blogger/blog.md** and leave **pagination -> enable** to **false**.
+
 Changes the server port [default: 4000]:
 
 ```yml

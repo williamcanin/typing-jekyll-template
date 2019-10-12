@@ -31,23 +31,25 @@ task :postinstall do
   manager.postinstall
 end
 
-# Task to deploy the compiled project
-# Example: rake deploy:public
-desc "Deploy the compiled project"
-namespace :deploy do
-  task :public do
-    manager.deploy('public', 'public')
-  end
-end
+# UNDER DEVELOPMENT
+## Task to deploy the compiled project
+## Example: rake deploy:public
+# desc "Deploy the compiled project"
+# namespace :deploy do
+#   task :public do
+#     manager.deploy('public', 'public')
+#   end
+# end
 
-# Task to deploy the project source.
-# Example: rake deploy:source
-desc "Deploy the project source"
-namespace :deploy do
-  task :source do
-    manager.deploy('.', 'src')
-  end
-end
+# UNDER DEVELOPMENT
+## Task to deploy the project source.
+## Example: rake deploy:source
+# desc "Deploy the project source"
+# namespace :deploy do
+#   task :source do
+#     manager.deploy('.', 'src')
+#   end
+# end
 
 # Other outputs
 def get_stdin(message)

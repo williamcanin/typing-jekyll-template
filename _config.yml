@@ -29,16 +29,6 @@ jektify:
 # Attention! Do not change the information below as it is 
 # for development unless you know what you are doing.
 
-plugins:
-  - jemoji
-  - jekyll-paginate-v2
-  - jekyll-gist
-  - jekyll-sitemap
-  - jekyll-jsminify
-  - jekyll-email-protect
-  - jekyll-feed
-  - jekyll-coffeescript
-
 include: ['_blog','_pages']
 
 markdown: kramdown
@@ -59,6 +49,7 @@ host: localhost
 sass:
   load_paths:
   - _src/_sass
+  - node_modules
   - vendor/node_modules
   style: compressed
 

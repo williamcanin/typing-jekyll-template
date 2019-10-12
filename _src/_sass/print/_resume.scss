@@ -26,11 +26,14 @@
       a,code{
         color: #000;
       }
+      hr{
+        border-top: 1px solid #000;
+      }
       /* Avoid printing hrefs when this class is applied */
       a[href]:after {
         content: none !important;
       }
-      .badge-plugin{
+      .badge__plugin{
         box-shadow: none !important;
         border: 1px solid #000 !important;
         color: #000 !important;
