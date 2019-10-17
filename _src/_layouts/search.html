@@ -28,20 +28,13 @@ layout: blog
           <div class="input-group">
             <i class="layout-search__shellicon" aria-hidden="true">>></i>
             <input id="layout-search__input" type="text" 
-              placeholder="
-                {{ load_data.website.content.search.input.placeholder[0] }}
-                {{ post_count }}
-                {{ load_data.website.content.search.input.placeholder[1] }}
+              placeholder="{{ load_data.website.content.search.input.placeholder[0] }} {{ post_count }} {{ load_data.website.content.search.input.placeholder[1] }}
               "
               onfocus="
                 this.placeholder = '{{ load_data.website.content.search.input.onfocus }}'
               "
-              onblur="this.placeholder = ' {{ load_data.website.content.search.input.onblur[0] }}
-                {{ post_count }}
-                {{ load_data.website.content.search.input.onblur[1] }}'
-              "
-                class="form-control form-control-sm ml-3 layout-search__input"
-            >
+              onblur="this.placeholder = '{{ load_data.website.content.search.input.onblur[0] }} {{ post_count }} {{ load_data.website.content.search.input.onblur[1] }}'"
+              class="form-control form-control-sm ml-3 layout-search__input">
             <span class="d-none d-lg-block input-group-btn">
                 <input type="button" value="{{ load_data.website.content.search.button.text }}" onclick="ClearFieldSearch();" class="btn btn-link layout-search__btn-clear" data-disable-with="Search">
             </span>
