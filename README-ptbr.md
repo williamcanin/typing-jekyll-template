@@ -476,9 +476,9 @@ Copyright: William C. Canin | Copyright © 2017-2019
 
 *Você pode alterar a estrutura do Typing Jekyll Template conforme desejar, desde que não manipule ou remova os direitos autorais de William C.Canin no projeto*
 
-## Donation
+## Doação
 
-If you liked my work, buy me a coffee <3
+Se você gostou do meu trabalho, me compre um café <3
 
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick" />
