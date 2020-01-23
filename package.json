@@ -1,6 +1,6 @@
 {
   "name": "typing-jekyll-template",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "description": "Typing, is a template for Jekyll built especially for those who want to have a blog and pages quickly and lightly.",
   "main": "index.md",
   "scripts": {
@@ -24,16 +24,17 @@
   },
   "homepage": "https://github.com/williamcanin/typing-jekyll-template#readme",
   "dependencies": {
-    "bootstrap": "^4.3.1",
+    "bootstrap": "^4.4.1",
     "jquery": "^3.4.1",
-    "popper.js": "^1.15.0",
-    "simple-jekyll-search": "^1.7.2"
+    "popper.js": "^1.16.1",
+    "simple-jekyll-search": "^1.7.3"
   },
   "devDependencies": {
-    "eslint": "^6.5.1",
+    "cypress": "^3.8.2",
+    "eslint": "^6.8.0",
     "gulp": "^4.0.2",
     "gulp-htmlmin": "^5.0.1",
-    "gulp-imagemin": "^6.1.1",
+    "gulp-imagemin": "^7.1.0",
     "gulp-uglify": "^3.0.2"
   }
 }
