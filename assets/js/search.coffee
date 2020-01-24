@@ -26,8 +26,15 @@ SimpleJekyllSearch
 #   fuzzy:!1
 # });
 
+# Using Javascript
 # /* Empty input search in moment closed */
 # ClearFieldSearch = function() {
-#   document.getElementById("layout-search__input").value = "";
-#   document.getElementById("layout-search__data").innerHTML = "";
+#  document.getElementById("layout-search__input").value = "";
+#  document.getElementById("layout-search__data").innerHTML = "";
 # }
+
+# Using Coffescript
+# /* Empty input search in moment closed */
+this.ClearFieldSearch = ->
+    document.getElementById('layout-search__input').value = ''
+    document.getElementById('layout-search__data').innerHTML = ''
