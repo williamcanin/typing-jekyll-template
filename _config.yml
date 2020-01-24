@@ -112,6 +112,8 @@ exclude:
   - package-lock.json
   - package.json
   - README.md
+  - README-ptbr.md
+  - gulpfile.js
   - Rakefile
   - yarn.lock
   - Makefile
