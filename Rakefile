@@ -31,6 +31,14 @@ task :postinstall do
   manager.postinstall
 end
 
+# # UNDER DEVELOPMENT
+# # Task to set up before installation
+# # Example: rake preinstall
+# desc "Setup before installation"
+# task :preinstall do
+#   manager.preinstall
+# end
+
 # UNDER DEVELOPMENT
 ## Task to deploy the compiled project
 ## Example: rake deploy:public

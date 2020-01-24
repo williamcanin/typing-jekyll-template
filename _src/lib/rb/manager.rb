@@ -16,6 +16,7 @@ class Manager
     SOURCE = "."
     CONFIG = {
       'ROOT_VENDOR' => File.join(SOURCE, "assets/vendor"),
+      # 'BUNDLE_CONFIG_PATH' => File.join(SOURCE, ".bundle"),
       'VENDORJS_DIR' => File.join(SOURCE, "assets/vendor/js"),
       'NODE_MODULES' => File.join(SOURCE, "node_modules"),
       'POST_DIR' => File.join(SOURCE, "_posts"),
@@ -36,6 +37,18 @@ class Manager
     def copy_file(origin, destiny)
       FileUtils.cp(origin, destiny)
     end # copy_file
+
+    ## UNDER DEVELOPMENT
+    # def preinstall
+    #   create_directory(CONFIG['BUNDLE_CONFIG_PATH'])
+    #   if not File.exist?("#{CONFIG['BUNDLE_CONFIG_PATH']}/config")
+    #     open("#{CONFIG['BUNDLE_CONFIG_PATH']}/config", 'w') do |file|
+    #       file.puts("---")
+    #       file.puts("BUNDLE_PATH: \"vendor/bundle\"")
+    #       file.puts("BUNDLE_DISABLE_SHARED_GEMS: \"true\"")
+    #     end
+    #   end
+    # end
 
     def postinstall
       create_directory(CONFIG['VENDORJS_DIR'])
