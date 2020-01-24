@@ -106,7 +106,7 @@ $ cd "my_site"
 $ yarn install
 ```
 
-> Note: If you experience problems with **yarn** locking, you may be using **npm** as well.
+> Note: If you experience problems with **yarn** during installation of the dependencies, you may also be using **npm** like this: `npm install`.
 
 3 - Build project to deploy:
 
