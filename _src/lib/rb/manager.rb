@@ -62,9 +62,10 @@ class Manager
       for f in files
         # unless File.exist?(f)
           copy_file("#{CONFIG['NODE_MODULES']}/#{f}", CONFIG['VENDORJS_DIR'])
-          puts "> File '#{f}' copied to #{CONFIG['VENDORJS_DIR']}!".green
+          # puts "> File '#{f}' copied to #{CONFIG['VENDORJS_DIR']}!".green
         # end
       end
+      puts "Postinstall done!".green
     end # postinstall
     
     def slug_generator(parameter)
