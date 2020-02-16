@@ -50,23 +50,24 @@ class Manager
     #   end
     # end
 
-    def postinstall
-      create_directory(CONFIG['VENDORJS_DIR'])
-      files = ['jquery/dist/jquery.min.js',
-                'popper.js/dist/umd/popper.min.js',
-                'popper.js/dist/umd/popper.min.js.map',
-                'bootstrap/dist/js/bootstrap.min.js',
-                'bootstrap/dist/js/bootstrap.min.js.map',
-                'simple-jekyll-search/dest/simple-jekyll-search.min.js'
-              ]
-      for f in files
-        # unless File.exist?(f)
-          copy_file("#{CONFIG['NODE_MODULES']}/#{f}", CONFIG['VENDORJS_DIR'])
-          # puts "> File '#{f}' copied to #{CONFIG['VENDORJS_DIR']}!".green
-        # end
-      end
-      puts "Postinstall done!".green
-    end # postinstall
+    # # DEPRECATED!
+    # def postinstall
+    #   create_directory(CONFIG['VENDORJS_DIR'])
+    #   files = ['jquery/dist/jquery.min.js',
+    #             'popper.js/dist/umd/popper.min.js',
+    #             'popper.js/dist/umd/popper.min.js.map',
+    #             'bootstrap/dist/js/bootstrap.min.js',
+    #             'bootstrap/dist/js/bootstrap.min.js.map',
+    #             'simple-jekyll-search/dest/simple-jekyll-search.min.js'
+    #           ]
+    #   for f in files
+    #     # unless File.exist?(f)
+    #       copy_file("#{CONFIG['NODE_MODULES']}/#{f}", CONFIG['VENDORJS_DIR'])
+    #       # puts "> File '#{f}' copied to #{CONFIG['VENDORJS_DIR']}!".green
+    #     # end
+    #   end
+    #   puts "Postinstall done!".green
+    # end # postinstall
     
     def slug_generator(parameter)
       parameter.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')

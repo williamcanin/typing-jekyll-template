@@ -3,7 +3,6 @@ node_modules
 *.bak
 _src
 Rakefile
-gulpfile.babel.js
 yarn.lock
 Gemfile.lock
 package-lock.json
@@ -13,3 +12,5 @@ CREDITS
 README.md
 README-ptbr.md
 Gemfile
+gulpfile.js
+screenshot.png

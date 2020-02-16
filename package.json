@@ -5,6 +5,7 @@
   "main": "index.md",
   "scripts": {
     "preinstall": "bundle install",
+    "postinstall": "yarn run gulp postinstall",
     "build": "JEKYLL_ENV=production bundle exec jekyll build; yarn run gulp",
     "serve": "bundle exec jekyll serve",
     "page": "bundle exec rake page",
@@ -25,8 +26,7 @@
   "dependencies": {
     "bootstrap": "^4.4.1",
     "jquery": "^3.4.1",
-    "popper.js": "^1.16.1",
-    "simple-jekyll-search": "^1.7.3"
+    "popper.js": "^1.16.1"
   },
   "devDependencies": {
     "gulp": "^4.0.2",

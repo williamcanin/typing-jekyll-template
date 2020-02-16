@@ -14,8 +14,7 @@ function postinstall_statics() {
       'node_modules/popper.js/dist/umd/popper.min.js',
       'node_modules/popper.js/dist/umd/popper.min.js.map',
       'node_modules/bootstrap/dist/js/bootstrap.min.js',
-      'node_modules/bootstrap/dist/js/bootstrap.min.js.map',
-      'node_modules/simple-jekyll-search/dest/simple-jekyll-search.min.js'])
+      'node_modules/bootstrap/dist/js/bootstrap.min.js.map'])
     .pipe(gulp.dest('assets/vendor/js'))
 }
 
@@ -36,7 +35,7 @@ function html_minify() {
 }
 
 // function optimize images
-function images() {
+function images_minify() {
   return gulp
     .src('public/assets/images/**/*')
     .pipe(
@@ -58,8 +57,7 @@ function images() {
 }
 
 // task build
-const build = gulp.series(gulp.parallel(postinstall_statics,
-                                        html_minify,
+const build = gulp.series(gulp.parallel(html_minify,
                                         javascripts,
                                         images_minify));
 

@@ -24,12 +24,13 @@ task :page do
   manager.page_create
 end
 
-# Task to set up after installation
-# Example: rake postinstall
-desc "Setup after installation"
-task :postinstall do
-  manager.postinstall
-end
+# # DEPRECATED!
+# # Task to set up after installation
+# # Example: rake postinstall
+# desc "Setup after installation"
+# task :postinstall do
+#   manager.postinstall
+# end
 
 # # UNDER DEVELOPMENT
 # # Task to set up before installation
