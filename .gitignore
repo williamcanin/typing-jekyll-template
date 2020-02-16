@@ -11,3 +11,4 @@
 **/*.bak
 **/*.lock
 **/*.log
+package-lock.json
