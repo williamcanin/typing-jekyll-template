@@ -5,8 +5,7 @@
   "main": "index.md",
   "scripts": {
     "preinstall": "bundle install",
-    "postinstall": "bundle exec rake postinstall",
-    "build": "bundle exec rake postinstall; JEKYLL_ENV=production bundle exec jekyll build; yarn run gulp",
+    "build": "JEKYLL_ENV=production bundle exec jekyll build; yarn run gulp",
     "serve": "bundle exec jekyll serve",
     "page": "bundle exec rake page",
     "post": "bundle exec rake post"
@@ -30,11 +29,9 @@
     "simple-jekyll-search": "^1.7.3"
   },
   "devDependencies": {
-    "cypress": "^3.8.2",
-    "eslint": "^6.8.0",
     "gulp": "^4.0.2",
-    "gulp-htmlmin": "^5.0.1",
     "gulp-imagemin": "^7.1.0",
+    "gulp-htmlmin": "^5.0.1",
     "gulp-uglify": "^3.0.2"
   }
 }
