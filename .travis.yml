@@ -1,8 +1,9 @@
 ---
-language: node_js
+language: node_js, ruby
 node_js:
   - 13.7
-  - 12.0
+rvm:
+  - 2.7
 cache:
   directories:
   - node_modules
