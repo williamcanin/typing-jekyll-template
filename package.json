@@ -5,8 +5,8 @@
   "main": "index.md",
   "scripts": {
     "preinstall": "bundle install",
-    "postinstall": "yarn run gulp postinstall",
-    "build": "JEKYLL_ENV=production bundle exec jekyll build; yarn run gulp",
+    "postinstall": "gulp postinstall",
+    "build": "JEKYLL_ENV=production bundle exec jekyll build; gulp",
     "serve": "bundle exec jekyll serve",
     "page": "bundle exec rake page",
     "post": "bundle exec rake post"

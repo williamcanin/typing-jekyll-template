@@ -1,0 +1,15 @@
+---
+language: node_js
+node_js:
+  - 13.7
+  - 12.0
+cache:
+  directories:
+  - node_modules
+  - vendor
+before_script:
+  - npm install -g gulp yarn
+script:
+  - gulp build
+install:
+  - npm install
