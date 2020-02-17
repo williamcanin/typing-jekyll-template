@@ -8,6 +8,7 @@ cache:
   - node_modules
   - vendor
 before_script:
+  - gem install bundler
   - npm install -g gulp yarn
 script:
   - gulp build
