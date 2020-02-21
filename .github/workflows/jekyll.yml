@@ -6,20 +6,20 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    
+
     strategy:
       matrix:
         node-version: [12.x]
 
     steps:
-    - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+    - uses: actions/checkout@v2
     - name: Build the site in the jekyll/builder container
-    - run: |
+      run: |
         gem install bundler
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "chmod 777 -R /srv/jekyll && npm install && JEKYLL_ENV=production bundle exec jekyll build && jekyll build --future"
+        jekyll/builder:latest /bin/bash -c "chmod 777 -R /srv/jekyll && npm install && bundle exec jekyll build --future"
