@@ -5,7 +5,19 @@ let gulp = require('gulp');
 let uglify = require('gulp-uglify');
 let imagemin = require('gulp-imagemin');
 let htmlmin = require('gulp-htmlmin');
+let del = require('del');
 
+
+// function clean objects caches
+function clean_objects() {
+  var objs = [
+    'node_modules',
+    'vendor',
+    'package-lock.json',
+    'Gemfile.lock'
+  ]
+  return del(objs)
+}
 
 // function postinstall for copy files statics
 function postinstall_statics() {
@@ -67,4 +79,5 @@ exports.images = images_minify;
 exports.js = javascripts;
 exports.html = html_minify;
 exports.build = build;
+exports.clean = clean_objects;
 exports.default = build;

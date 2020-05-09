@@ -79,14 +79,14 @@ Além disso, todo o conteúdo do arquivo `_data/informations.yml` deve ser alter
 
 ## Requerimentos
 
-| Requerido       | Como verificar      | Como instalar  |
-| --------------- | ------------------- | -------------- |
-| Git             | `git --version`     | [Git](http://git-scm.com/) |
-| Ruby            | `ruby -v`           | [Ruby](https://www.ruby-lang.org) |
-| Gem             | `gem -v`            | **Ruby** contains **Gem** |
-| Bundler         | `bundler -v`        | `gem install bundler` |
-| Yarn            | `yarn -v`           | [Yarn](https://yarnpkg.com/en/docs/install) |
-| Npm             | `npm -v`            | [Npm](https://www.npmjs.com/get-npm) |
+| Requerido       |   Versão   |  Como verificar    | Como instalar  |
+| --------------- | ---------- | ------------------ | -------------- |
+| Git             | >= 2.25    | `git --version`   | [Git](http://git-scm.com/) |
+| Ruby            | >= 2.7     | `ruby -v`          | [Ruby](https://www.ruby-lang.org) |
+| Gem             | >= 3.0     | `gem -v`           | **Ruby** contains **Gem** |
+| Bundler         | >= 2.0     | `bundler -v`       | `gem install bundler` |
+| Yarn            | >= 1.20    | `yarn -v`          | [Yarn](https://yarnpkg.com/en/docs/install) |
+| Npm             | >= 6.12    | `npm -v`           | [Npm](https://www.npmjs.com/get-npm) |
 
 ## Usando
 
@@ -115,6 +115,14 @@ $ yarn build
 
 ```
 $ yarn serve
+```
+
+## Clearing the cache/dependencies
+
+Caso queira apagar todo cache do projeto, use o comando a seguir:
+
+```
+$ yarn clean
 ```
 
 ## Arquivo '.hidden'
