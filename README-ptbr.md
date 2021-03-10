@@ -18,7 +18,7 @@ Na página **resume.md**, você pode imprimir usando o atalho Ctrl + P do navega
 
 Você também terá um modelo para postagem no arquivo **"welcome-to-jekyll.md"** e precisará seguir o cabeçalho desse modelo. O arquivo contém algumas informações que você pode pegar para usar em seu website.
 
-A página de contato (**_pages/global/contact.md**) usa o recurso [Formspree](https://formspree.io), você precisa ter uma conta no serviço e adicionar seu **email** ao arquivo `_data/informations.yml`.
+A página de contato (**_pages/global/contact.md**) usa o recurso [Formspree](https://formspree.io), você precisa ter uma conta no serviço e adicionar seu **email** e o **endpoint** ao arquivo `_data/informations.yml`.
 
 ```yml
 userdata:
@@ -35,9 +35,14 @@ website:
     contact:
       formspree:
         plan: "free|paid"
+        endpoint: ""
 ```
 
-> NOTA: O plano **paid**, é um plano pago, onde o formulário irá ser enviar através do AJAX, que vai retorna uma resposta em modal de sucesso ou falha, se o e-mail foi entregue ou não. Já o plano **free**, que é o plano grátis, não terá um retorno de falha caso a mensagem não seja enviada com sucesso. Você pode saber mais em: [Formspree Plans](https://formspree.io/plans)
+> NOTA: O plano **paid**, é um plano pago, onde terá opções de redirecionar a pagina após enviar (ou não) os dados do formulário, e outras funcionalidades a mais. O **Typing** tem duas páginas pronto para o redirecionamento se usar a opção paid, uma de sucesso e outra de falha. Elas são:
+ * https://example.com/contact/#email_successfully_sent
+ * https://example.com/contact/#email_failed_sent
+> Entre em sua conta do Formspree e adicione essas páginas para o redirecionamento.
+Você pode saber mais em: [Formspree Plans](https://formspree.io/plans)
 
 Além disso, todo o conteúdo do arquivo `_data/informations.yml` deve ser alterado conforme a gosto e suas necessidades.
 
@@ -169,7 +174,7 @@ sitemap:
   lastmod: 2019-10-07 22:57:30
 # Use icons of: https://fontawesome.com/icons
 # E.g: fa-briefcase
-icon: 
+icon:
 menu:
   enable: true
   local: [default]
@@ -254,7 +259,7 @@ Bom, agora que você já sabe sobre algumas pastas e arquivos, vamos entender co
 
 ### Arquivo 'CNAME'
 
-Para saber sobre esse arquivo, leia sobre registros CNAME [AQUI](https://support.google.com/a/answer/112037?hl=pt-BR) 
+Para saber sobre esse arquivo, leia sobre registros CNAME [AQUI](https://support.google.com/a/answer/112037?hl=pt-BR)
 
 ### Arquivo '_config.yml'
 

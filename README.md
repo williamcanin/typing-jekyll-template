@@ -18,7 +18,7 @@ On the **resume.md** page, you can print using the browser shortcut Ctrl + P or 
 
 You will also have a template for posting to the "" welcome-to-jekyll.md "** file and will need to follow the header of that template. The file contains some information you can get to use on your website.
 
-The contact page (**_ pages/global/contact.md**) uses the feature [Formspree](https://formspree.io), you need to have an account on the service and add your **email** to the file **_data/informations.yml**.
+The contact page (**_ pages/global/contact.md**) uses the feature [Formspree](https://formspree.io), you need to have an account on the service and add your **email** and **endpoint** to the file **_data/informations.yml**.
 
 ```yml
 userdata:
@@ -35,10 +35,14 @@ website:
     contact:
       formspree:
         plan: "free|paid"
+        endpoint: ""
 ```
 
 
-NOTE: The **paid** plan, where the form will be sent via AJAX, which will return a success or failure response, whether the email was delivered or not. The **free** plan, will not have a failed return if the message is not sent successfully. You can learn more at: [Formspree Plans](https://formspree.io/plans)
+> NOTE: The **paid** plan, you will have the option to redirect the page after sending (or not) the form data, among other features. **Typing** has two pages ready for redirection if you use the paid option, one for success and one for failure. They are:
+  * https://example.com/contact/#email_successfully_sent
+  * https://example.com/contact/#email_failed_sent
+> You can learn more at: [Formspree Plans](https://formspree.io/plans)
 
 In addition, all contents of the **_data/informations.yml** file should be changed to suit your needs and needs.
 
@@ -169,7 +173,7 @@ sitemap:
   lastmod: 2019-10-07 22:57:30
 # Use icons of: https://fontawesome.com/icons
 # E.g: fa-briefcase
-icon: 
+icon:
 menu:
   enable: true
   local: [default]
