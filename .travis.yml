@@ -1,8 +1,8 @@
 ---
 node_js:
-  - 13.7
+  - 16.1
 rvm:
-  - 2.7
+  - 3.0
 cache:
   directories:
   - node_modules
