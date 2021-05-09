@@ -14,3 +14,4 @@ script:
   - gulp build
 install:
   - npm install
+  - npm run build
