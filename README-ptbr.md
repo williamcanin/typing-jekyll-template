@@ -492,9 +492,13 @@ Copyright: William C. Canin | Copyright © 2015-2021
 
 ## Doação
 
-Se você gostou do meu trabalho, me compre um café <3
+Clique na imagem abaixo para te redirecionar aos formulários de doação:
 
-[![paypal](https://www.paypalobjects.com/pt_BR/BR/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=C4EEL62SFHZS4&source=url)
+<div class="donate">
+  <a href="https://github.com/williamcanin/donations/blob/master/README.md">
+    <img width="160" height="100" src="https://raw.githubusercontent.com/williamcanin/donations/master/svg/donate/donate-hand.svg" alt="Donations"
+  </a>
+</div>
 
 
 ## Creditos
