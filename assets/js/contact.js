@@ -1,1 +1,1 @@
-(function(){0===location.href.indexOf("https://williamcanin.me/typing-jekyll-template/contact/#email_successfully_sent")&&($("#email_successfully_sent").modal("show"),$("#email_successfully_sent").on("hidden.bs.modal",function(){return document.location.href=String(document.location.href).replace("#email_successfully_sent",""),!1}))}).call(this);
+(function(){$("#submit").click(function(){$("#name").val(""),$("#subject").val(""),$("#email").val(""),$("#message").val("")})}).call(this);
