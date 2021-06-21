@@ -1,5 +1,5 @@
 # the base hostname & protocol for your site, e.g. http://example.com
-url: "https://williamcanin.me"
+url: "https://williamcanin.github.io"
 # the subpath of your site, e.g. /blog
 baseurl: "/typing-jekyll-template"
 
