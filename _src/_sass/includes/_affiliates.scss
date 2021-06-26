@@ -1,0 +1,39 @@
+.affiliates{
+    background-color: $elements__background;
+    padding: 20px;
+    padding-top: 40px;
+    &__title{
+        color: $color__text;
+    }
+    &__description{
+        color: $color__text;
+    }
+    &__footer{
+        background-color: $color__clickable;
+        border: none;
+    }
+    &__btn{
+        border-radius: 0px !important;
+
+    }
+    &__wrap{
+        .card{
+            min-height: 280px;
+            border: 1px solid $color__clickable !important;
+        }
+        .card-body{
+            background-color: $elements__background;
+            // background-color: transparent !important;
+            .card-title{
+                background-color: $elements__background;
+                // background-color: transparent !important;
+                color: $color__text;
+            }
+            .card-text{
+                background-color: $elements__background;
+                // background-color: transparent !important;
+                color: $color__text;
+            }
+        }
+    }
+}

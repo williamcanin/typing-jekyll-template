@@ -1,0 +1,81 @@
+<!-- Include Data Base  -->
+{% include liquid/data %}
+
+{% if load_options.content.affiliates.enable == true %}
+  <div class="affiliates">
+    {% if load_options.content.affiliates.title.enable == true %}
+    <div class="row justify-content-center">
+      <h2 class="affiliates__title">{{ load_data.affiliates.title }}</h2>
+    </div>
+    {% endif %}
+    {% if load_options.content.affiliates.description.enable == true %}
+    <div class="row justify-content-center">
+      <h4 class="affiliates__description">{{ load_data.affiliates.description }}</h4>
+    </div>
+    {% endif %}
+    <div class="row row-cols-1 row-cols-md-2 affiliates__wrap">
+      {% for hash in load_data %}
+        {% assign affiliates = hash[1] %}
+        {% assign cards = affiliates.cards %}
+        {% for item in cards %}
+          <div id="{{ item.id }}" class="col mb-4">
+            <div class="card">
+              {% if load_options.content.affiliates.cards.image == true %}
+                <img src="{{ '/assets/images/affiliates' | prepend: site.baseurl }}/{{ item.image }}" class="card-img-top" alt="{{ item.title }}">
+              {% endif %}
+              <div class="card-body">
+                <h5 class="card-title">{{ item.title }}</h5>
+                <p class="card-text">
+                  {{ item.description }}
+                </p>
+              </div>
+              <a href="{{ item.url }}" class="btn btn-link buttons_style affiliates__btn" target="_blank" style="border: none;">
+                {{ load_data.affiliates.button.text }}
+              </a>
+            </div>
+          </div>
+        {% endfor %}
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
+<!--
+
+<div class="row row-cols-1 row-cols-md-2">
+  <div class="col mb-4">
+    <div class="card">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col mb-4">
+    <div class="card">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col mb-4">
+    <div class="card">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col mb-4">
+    <div class="card">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+  </div>
+</div> -->

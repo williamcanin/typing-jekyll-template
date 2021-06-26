@@ -47,7 +47,7 @@ layout: blog
             {% if jekyll.environment == 'production' and
             load_options.content.tagpost.comments.enable == true and
             page.comments != false and
-            load_data.userdata.disqus.username %}
+            load_data.userdata.disqus.username and load_options.content.post.comments.count.enable %}
             <div class="col-4 col-lg-3 offset-lg-5 col-sm-6">
               <div class="row justify-content-end">
                 <div class="layout_tag__comments">

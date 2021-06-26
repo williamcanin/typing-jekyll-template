@@ -6,9 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Title Site 
+  <!-- Title Site
   ___________________________________________ -->
   <title>
+    {% if load_options.maintenance.enable == true %}
+        {{ load_data.website.under_maintenance.title }} - {{ load_data.website.under_maintenance.subtitle }}
+    {% else %}
     {% if page.url == "/" %}
         {{ load_data.website.title }} - {{ load_data.website.description }}
       {% else %}
@@ -18,12 +21,13 @@
           {{ load_data.website.title }} | {{ load_data.website.description }}
         {% endif %}
     {% endif %}
+    {% endif %}
   </title>
 
   <!-- Metatags
   ___________________________________________ -->
-  <meta name=description 
-  content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | 
+  <meta name=description
+  content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines |
     truncate: 160 }}
     {% else %}
     {{ load_data.website.description }}
@@ -31,7 +35,7 @@
 
 
   {% if load_data.website.metatag.google_site_verification %}
-  <meta name="google-site-verification" 
+  <meta name="google-site-verification"
   content="{{ load_data.website.metatag.google_site_verification }}">
   {% endif %}
 
@@ -60,10 +64,10 @@
 
   <meta property="og:type" content="{{ load_data.website.metatag.type }}" />
 
-  <meta property="og:url" content="{{ page.url | prepend: site.baseurl | 
+  <meta property="og:url" content="{{ page.url | prepend: site.baseurl |
     prepend: site.url }}" />
 
-  <meta property="og:description" content="{% if page.description %}{{ page.description | 
+  <meta property="og:description" content="{% if page.description %}{{ page.description |
     strip_html | strip_newlines | truncate: 160 }}
     {% else %}
     {{ load_data.website.description }}{% endif %}" />
@@ -72,36 +76,43 @@
   {% else %}
   {{ load_data.website.title }}{% endif %}" />
 
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | 
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' |
   prepend: site.baseurl | prepend: site.url }}">
 
-  <link type="application/atom+xml" rel="alternate" 
-  title="{{ load_data.website.title }}" 
+  <link type="application/atom+xml" rel="alternate"
+  title="{{ load_data.website.title }}"
   href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" 
-  href="{{ '/assets/images/favicon/favicon-32x32.png' | 
+    <!-- Favicon
+  ___________________________________________ -->
+  <link rel="icon" type="image/png" sizes="32x32"
+  href="{{ '/assets/images/favicon/favicon-32x32.png' |
   prepend: site.baseurl | prepend: site.url }}">
 
-  <!-- Fonts active -->
+
+  <!-- Fonts
+  ___________________________________________ -->
   <!-- https://freebies.fluxes.com/blog/best-free-typewriter-fonts/
   https://www.creativebloq.com/typography/best-typewriter-fonts-10135084 -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Special+Elite&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
   {% if site.home.terminal.enable == true %}
   <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&display=swap" rel="stylesheet">
   {% endif %}
+  {% if site.page == "resume" %}
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+  {% endif %}
+  <!--   <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet"> -->
 
-  <!-- Fonts inactive -->
-  <!-- <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet"> -->
-  <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet"> -->
+  <!-- Vendor
+  ___________________________________________ -->
+  <link rel="stylesheet" href="{{ '/assets/css/bootstrap.css' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/jektify.css' | prepend: site.baseurl | prepend: site.url }}">
 
-  <!-- Vendor -->
-  <link rel="stylesheet" href="{{ '/assets/css/vendor.css' | prepend: site.baseurl | prepend: site.url }}">
-  
-  <!-- Themes -->
+  <!-- Themes
+  ___________________________________________ -->
   {% if load_data.website.theme == "typing" %}
     {% assign theme_chosen = "typing" %}
   {% elsif load_data.website.theme == "whiteglass" %}
@@ -113,13 +124,13 @@
   {% elsif load_data.website.theme == "littlegirl" %}
     {% assign theme_chosen = "littlegirl" %}
   {% elsif load_data.website.theme == "custom" %}
-    {% assign theme_chosen = "custom" %}  
+    {% assign theme_chosen = "custom" %}
   {% endif %}
   <link rel="stylesheet" href="{{ '/assets/css' | prepend: site.baseurl | prepend: site.url }}/{{ theme_chosen }}.css">
 
   <!-- Google Analytics -->
-  {% if jekyll.environment == 'production' and 
-    load_data.website.google.analytics.id and 
+  {% if jekyll.environment == 'production' and
+    load_data.website.google.analytics.id and
     load_options.google.analytics.enable == true %}
     {% include scripts/google_analytics.html %}
   {% endif %}

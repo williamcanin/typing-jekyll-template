@@ -66,15 +66,15 @@ layout: blog
 
             <!-- jekyll.environment == 'production' and -->
           {% if jekyll.environment == 'production' and
-            load_options.content.post.comments.enable == true and
+            load_options.content.postlist.comments.enable == true and
             page.comments != false and
             load_data.userdata.disqus.username %}
             <div class="pt-2 font-weight-normal badge badge-light float-right layout_postlist__comments">
                 {% if load_options.content.icons.enable == true %}
                 <i class="fas fa-comments"></i>
                 {% endif %}
-                <a class="mr-2 layout_postlist__comments-count" 
-                  href="{{ post.url }}#disqus_thread">
+                <a class="mr-2 layout_postlist__comments-count"
+                  href="{{ post.url | prepend: site.baseurl | prepend: site.url }}#disqus_thread">
                     0
                 </a>
                 {{ load_data.website.content.post.count_comments.text }}
@@ -127,10 +127,10 @@ layout: blog
                 {{ load_data.website.content.postlist.pagination.counter[1] }}
                 {{ total_page }}
               </span>
-            </li>          
+            </li>
           {% endif %}
-          
-          {% if paginator.next_page %}        
+
+          {% if paginator.next_page %}
           <li class="page-item">
             <a class="page-link layout_postlist__pagination-older" href="{{ paginator.next_page_path | prepend: site.baseurl }}">
               {{ load_data.website.content.postlist.pagination.older_text }}

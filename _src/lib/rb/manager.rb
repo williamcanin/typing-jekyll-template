@@ -16,12 +16,11 @@ class Manager
     SOURCE = "."
     CONFIG = {
       'ROOT_VENDOR' => File.join(SOURCE, "assets/vendor"),
-      # 'BUNDLE_CONFIG_PATH' => File.join(SOURCE, ".bundle"),
       'VENDORJS_DIR' => File.join(SOURCE, "assets/vendor/js"),
       'NODE_MODULES' => File.join(SOURCE, "node_modules"),
       'POST_DIR' => File.join(SOURCE, "_posts"),
       'PAGE_DIR' => File.join(SOURCE, "_pages"),
-      'PUBLIC_DIR' => File.join(SOURCE, "public"),
+      'PUBLIC_DIR' => File.join(SOURCE, "../public"),
       'DEPLOY_JSON' => File.join(SOURCE, "_src/lib/json/deploy.json"),
       'markdown_extension' => "md"
     }
@@ -38,36 +37,22 @@ class Manager
       FileUtils.cp(origin, destiny)
     end # copy_file
 
-    ## UNDER DEVELOPMENT
-    # def preinstall
-    #   create_directory(CONFIG['BUNDLE_CONFIG_PATH'])
-    #   if not File.exist?("#{CONFIG['BUNDLE_CONFIG_PATH']}/config")
-    #     open("#{CONFIG['BUNDLE_CONFIG_PATH']}/config", 'w') do |file|
-    #       file.puts("---")
-    #       file.puts("BUNDLE_PATH: \"vendor/bundle\"")
-    #       file.puts("BUNDLE_DISABLE_SHARED_GEMS: \"true\"")
-    #     end
-    #   end
-    # end
-
-    # # DEPRECATED!
-    # def postinstall
-    #   create_directory(CONFIG['VENDORJS_DIR'])
-    #   files = ['jquery/dist/jquery.min.js',
-    #             'popper.js/dist/umd/popper.min.js',
-    #             'popper.js/dist/umd/popper.min.js.map',
-    #             'bootstrap/dist/js/bootstrap.min.js',
-    #             'bootstrap/dist/js/bootstrap.min.js.map',
-    #             'simple-jekyll-search/dest/simple-jekyll-search.min.js'
-    #           ]
-    #   for f in files
-    #     # unless File.exist?(f)
-    #       copy_file("#{CONFIG['NODE_MODULES']}/#{f}", CONFIG['VENDORJS_DIR'])
-    #       # puts "> File '#{f}' copied to #{CONFIG['VENDORJS_DIR']}!".green
-    #     # end
-    #   end
-    #   puts "Postinstall done!".green
-    # end # postinstall
+    def postinstall
+      create_directory(CONFIG['VENDORJS_DIR'])
+      files = ['jquery/dist/jquery.min.js',
+                'popper.js/dist/umd/popper.min.js',
+                'popper.js/dist/umd/popper.min.js.map',
+                'bootstrap/dist/js/bootstrap.min.js',
+                'bootstrap/dist/js/bootstrap.min.js.map',
+                'simple-jekyll-search/dest/simple-jekyll-search.min.js'
+              ]
+      for f in files
+        # unless File.exist?(f)
+          copy_file("#{CONFIG['NODE_MODULES']}/#{f}", CONFIG['VENDORJS_DIR'])
+          puts "> File '#{f}' copied to #{CONFIG['VENDORJS_DIR']}!".green
+        # end
+      end
+    end # postinstall
     
     def slug_generator(parameter)
       parameter.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
@@ -162,77 +147,75 @@ class Manager
       end # open
     end # post_create
 
-    ## UNDER DEVELOPMENT
-    # def deploy(dir, head)
-    #   datetime = DateTime.now
-    #   deploy_json = open(CONFIG['DEPLOY_JSON'])
-    #   parsed = JSON.parse(deploy_json.read)
+    def deploy(dir, head)
+      datetime = DateTime.now
+      deploy_json = open(CONFIG['DEPLOY_JSON'])
+      parsed = JSON.parse(deploy_json.read)
 
-    #   begin
-    #     if parsed[head]['git']['init'] == false
-    #       create_git_init = """
-    #       cd #{dir}; git init
-    #       """
-    #       # Open3.popen3(create_git_init)
-    #       system(create_git_init)
-    #       parsed[head]['git']['init'] = true
-    #       File.write(CONFIG['DEPLOY_JSON'], JSON.pretty_generate(parsed))
-    #     end
+      begin
+        if parsed[head]['git']['init'] == false
+          create_git_init = """
+          cd #{dir}; git init
+          """
+          # Open3.popen3(create_git_init)
+          system(create_git_init)
+          parsed[head]['git']['init'] = true
+          File.write(CONFIG['DEPLOY_JSON'], JSON.pretty_generate(parsed))
+        end
 
-    #     if parsed[head]['git']['origin'] == "" and 
-    #       parsed[head]['git']['remote'] == ""
-    #       print "Enter the origin:\n> ".blue
-    #       origin = STDIN.gets.chomp
+        if parsed[head]['git']['origin'] == "" and 
+          parsed[head]['git']['remote'] == ""
+          print "Enter the origin:\n> ".blue
+          origin = STDIN.gets.chomp
 
-    #       print "Enter the remote address:\n> ".blue
-    #       remote = STDIN.gets.chomp
+          print "Enter the remote address:\n> ".blue
+          remote = STDIN.gets.chomp
           
-    #       add_remote = """
-    #         cd #{dir}; git remote add #{origin} #{remote}
-    #       """
+          add_remote = """
+            cd #{dir}; git remote add #{origin} #{remote}
+          """
 
-    #       # Open3.popen3(add_remote)
-    #       system(add_remote)
+          # Open3.popen3(add_remote)
+          system(add_remote)
           
-    #       parsed[head]['git']['origin'] = origin
-    #       parsed[head]['git']['remote'] = remote
-    #       File.write(CONFIG['DEPLOY_JSON'], JSON.pretty_generate(parsed))
+          parsed[head]['git']['origin'] = origin
+          parsed[head]['git']['remote'] = remote
+          File.write(CONFIG['DEPLOY_JSON'], JSON.pretty_generate(parsed))
 
-    #     end
+        end
 
-    #     commit = """
-    #       cd #{dir}; git add .; git commit -m \"Update - #{datetime}\"
-    #     """
-    #     # Open3.popen3(commit)
-    #     system(commit)
+        commit = """
+          cd #{dir}; git add .; git commit -m \"Update - #{datetime}\"
+        """
+        # Open3.popen3(commit)
+        system(commit)
 
-    #     if parsed[head]['git']['branch'] == ""
-    #       print "Add branch:\n> ".blue
-    #       branch = STDIN.gets.chomp
+        if parsed[head]['git']['branch'] == ""
+          print "Add branch:\n> ".blue
+          branch = STDIN.gets.chomp
             
-    #       add_branch = """
-    #         cd #{dir}; git checkout -b #{branch}
-    #       """
-    #       # Open3.popen3(add_branch)
-    #       system(add_branch)
-    #       parsed[head]['git']['branch'] = branch
-    #       File.write(CONFIG['DEPLOY_JSON'], JSON.pretty_generate(parsed))
-    #     end
+          add_branch = """
+            cd #{dir}; git checkout -b #{branch}
+          """
+          # Open3.popen3(add_branch)
+          system(add_branch)
+          parsed[head]['git']['branch'] = branch
+          File.write(CONFIG['DEPLOY_JSON'], JSON.pretty_generate(parsed))
+        end
 
-    #     push_origin = parsed[head]['git']['origin']
-    #     push_branch = parsed[head]['git']['branch']
-    #     push_start = """
-    #     cd #{dir}; git push #{push_origin} #{push_branch}
-    #     """
-    #     system(push_start)
-    #     # Open3.popen3(push_start)
-    #     puts "Deploy, Done!".green
+        push_origin = parsed[head]['git']['origin']
+        push_branch = parsed[head]['git']['branch']
+        push_start = """
+        cd #{dir}; git push #{push_origin} #{push_branch}
+        """
+        system(push_start)
+        # Open3.popen3(push_start)
+        puts "Deploy, Done!".green
       
-    #   rescue Interrupt => e
-    #     puts "\nApproached by the user".yellow
-    #     exit -1
-    #   end # begin
+      rescue Interrupt => e
+        puts "\nApproached by the user".yellow
+        exit -1
+      end # begin
 
-    # end # deploy
-
+    end # deploy
 end # Main

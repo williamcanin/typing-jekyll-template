@@ -7,6 +7,7 @@
   <body>
     <div class="mt-4 maintenance">
       <div class="container">
+        {% if load_options.maintenance.icon == true %}
         <div class="row">
           <div class="offset-5"></div>
           <div class="col-2 text-center">
@@ -14,12 +15,19 @@
           </div>
           <div class="offset-5"></div>
         </div>
+        {% endif %}
         <div class="row justify-content-center">
           <h1>{{ load_data.website.under_maintenance.title }}</h1>
         </div>
         <div class="row justify-content-center">
           <h3>{{ load_data.website.under_maintenance.subtitle }}</h3>
         </div>
+        {% if load_data.website.under_maintenance.avatar %}
+	<div class="row">
+	  <img class="img-fluid mx-auto d-block" src="{{ '/assets/images/maintenance' | prepend: site.baseurl }}/{{ load_data.website.under_maintenance.avatar }}"
+              alt="Maintenance" width="120" height="auto">
+        </div>
+        {% endif %}
       </div>
     </div>
   </body>

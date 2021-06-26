@@ -2,7 +2,7 @@
 ---------------------------------------------------------------*/
 
 @media print {
-  .sidebar,.footer, .scrolltop, #markdown-toc{
+  .sidebar,.footer, .scrolltop, #markdown-toc, .remove-printer{
     display: none !important;
   }
   .scrolltop__button{
@@ -27,7 +27,7 @@
         color: #000;
       }
       .emoji{
-        display: none !important;
+      	display: none !important;
       }
       hr{
         border-top: 1px solid #000;

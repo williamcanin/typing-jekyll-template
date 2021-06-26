@@ -29,7 +29,7 @@ jektify:
 # Attention! Do not change the information below as it is 
 # for development unless you know what you are doing.
 
-include: ['_blog','_pages']
+include: ['_pages']
 
 markdown: kramdown
 highlighter: rouge
@@ -54,7 +54,7 @@ sass:
   style: compressed
 
 feed:
-  path: feed.xml
+  path: /blog/feed.xml
 
 compress_html:
   clippings: all

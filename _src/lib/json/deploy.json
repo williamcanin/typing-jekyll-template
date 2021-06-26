@@ -3,16 +3,16 @@
     "git": {
       "init": true,
       "origin": "origin",
-      "remote": "git@github.com:williamcanin/typing-jekyll-template-pro.git",
-      "branch": "dev-v4.0.3"
+      "remote": "git@github.com:williamcanin/williamcanin.github.io.git",
+      "branch": "main"
     }
   },
   "public": {
     "git": {
-      "init": false,
-      "origin": "",
-      "remote": "",
-      "branch": ""
+      "init": true,
+      "origin": "origin",
+      "remote": "git@github.com:williamcanin/williamcanin.github.io.git",
+      "branch": "public"
     }
   }
 }

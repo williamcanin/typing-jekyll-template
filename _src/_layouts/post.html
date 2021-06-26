@@ -9,6 +9,7 @@ layout: blog
 
   <!-- <div class="container-fluid"> -->
 
+
     <div class="p-0 p-lg-3 mb-4 layout_post__header">
       <h1 class="font-weight-bold layout_post__title">{{ page.title }}</h1>
       <div class="layout_post__date">
@@ -18,8 +19,8 @@ layout: blog
         </time>
       </div>
 
-      <div class="layout_post__tags"> 
-        {% if load_options.content.icons.enable == true %}<i class="fa fa-tags"></i>&nbsp;{% endif %}Tags:&nbsp;
+      <div class="layout_post__tags">
+        {% if load_options.content.icons.enable == true %}<i class="fa fa-tags"></i>&nbsp;{% endif %}Tags:&nbsp; |
         {% for tag in page.tags %}
         <a class="layout_post__tags-link" href="{{ '/blog/tags/' | prepend: site.baseurl | prepend: site.url }}/{{ tag }}">{{ tag }}</a> |
         {% endfor %}
@@ -42,13 +43,13 @@ layout: blog
             {% if jekyll.environment == 'production' and
               load_options.content.post.comments.enable == true and
               page.comments != false and
-              load_data.userdata.disqus.username %}
+              load_data.userdata.disqus.username and load_options.content.post.comments.count.enable == true %}
               <div class="badge badge-light font-weight-normal layout_post__comments">
                   {% if load_options.content.icons.enable == true %}
                   <i class="fas fa-comments"></i>
                   {% endif %}
-                  <a id="comments_in_post" class="mr-2 layout_post__comments-count" 
-                    href="{{ page.url }}#disqus_thread">
+                  <a id="comments_in_post" class="mr-2 layout_post__comments-count"
+                    href="{{ page.url | prepend: site.baseurl | prepend: site.url }}#disqus_thread">
                       0
                   </a>
                   {{ load_data.website.content.post.count_comments.text }}
@@ -98,6 +99,9 @@ layout: blog
       </div>
     </div>
     {% endif %}
+
+    <!-- Affiliates Block -->
+    {% include partials/affiliates.html %}
 
     {% if load_options.content.post.author.enable == true and
       load_data.website.content.post.author.title and

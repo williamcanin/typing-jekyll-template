@@ -10,7 +10,7 @@ menu:
   local: [blog]
 script: []
 published: true
-permalink: /feed.xml # add permilink for page. E.g: /smallparty/
+permalink: /blog/feed.xml # add permilink for page. E.g: /smallparty/
 ---
 
 <!-- Do not delete this file! -->

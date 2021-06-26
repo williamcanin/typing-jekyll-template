@@ -3,4 +3,9 @@
     @extend .content_text_font_size;
     // line-height: 1.8rem;
     // p{font-size: 1.12rem;}
+
+    // 1920x1080
+    @media (min-width: 1920px) {
+        margin-top: 194px;
+    }
 }

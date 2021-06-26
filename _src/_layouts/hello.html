@@ -47,16 +47,16 @@ layout: default
         <div class="btn header__btn header__btn--yellow" style="cursor: pointer;"></div>
         <div class="btn header__btn header__btn--green" style="cursor: pointer;"></div>
         <div class="title">
-          <span class="title__text">{{ load_data.website.terminal.text.user }}@{{ load_data.website.terminal.text.os }}:/home/{{ load_data.website.terminal.text.user }}</span>
+          <span class="title__text">{{ load_data.website.terminal.text.user }}@{{ load_data.website.terminal.text.os }}:~</span>
         </div>
       </header>
       <section class="body">
         {% comment %} ./brief_description.py {% endcomment %}
-        <p class="body__output"><span><span class="body__output__user">{{ load_data.website.terminal.text.user }}</span><span class="body__output__at">@</span><span class="body__output__os">{{ load_data.website.terminal.text.os }}</span>:<span class="body__output__dir">~$</span></span>
+        <p class="body__output"><span><span class="body__output__user">{{ load_data.website.terminal.text.user }}</span><span class="body__output__at"> at </span><span class="body__output__os">{{ load_data.website.terminal.text.os }}</span> in <span class="body__output__dir">~$</span></span>
           {{ load_data.website.terminal.text.command }}
         </p>
         {{ content }}
-        <p class="body__output"><span><span class="body__output__user">{{ load_data.website.terminal.text.user }}</span><span class="body__output__at">@</span><span class="body__output__os">{{ load_data.website.terminal.text.os }}</span>:<span class="body__output__dir">~$</span></span>
+        <p class="body__output"><span><span class="body__output__user">{{ load_data.website.terminal.text.user }}</span><span class="body__output__at"> at </span><span class="body__output__os">{{ load_data.website.terminal.text.os }}</span> in <span class="body__output__dir">~$</span></span>
           <span class="layout_hello__cursor">_</span>
         </p>
       </section>

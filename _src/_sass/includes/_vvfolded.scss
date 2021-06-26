@@ -1,0 +1,45 @@
+@keyframes avatar_vvfolded1{
+    0% {
+        fill: #ffe609;
+    }
+    100% {
+        // fill: #3BB662;
+        fill: #FFF;
+    }
+}
+
+@keyframes avatar_vvfolded2{
+    0% {
+        fill: #ffe609;
+    }
+    100% {
+        // fill: #3BB662;
+        fill: #FFF;
+    }
+}
+
+.animation{
+    &__avatar_vvfolded1{
+        animation: avatar_vvfolded1 2200ms infinite;
+        animation-delay: 500ms;
+    }
+    &__avatar_vvfolded2{
+        animation: avatar_vvfolded2 2200ms infinite;
+        animation-delay: 500ms;
+    }
+}
+.sidebar{
+    &__avatar_noflip, &__avatar_flip{
+        .svg_vvfolded{
+            width: 165px;
+            height: 165px;
+            &__vvfolded1{
+                @extend .animation__avatar_vvfolded1;
+            }
+            &__vvfolded2{
+                @extend .animation__avatar_vvfolded2;
+            }
+            &__background{}
+        }
+    }
+}
