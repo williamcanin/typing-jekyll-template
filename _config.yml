@@ -104,6 +104,7 @@ exclude:
   - node_modules
   - _src
   - vendor
+  - cache
   - Gemfile
   - Gemfile.lock
   - screenshot.png
