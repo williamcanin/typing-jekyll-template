@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/typing-jekyll-template/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/typing-jekyll-template/" rel="alternate" type="text/html" /><updated>2021-11-01T18:27:10-03:00</updated><id>http://localhost:4000/typing-jekyll-template/blog/feed.xml</id><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/typing-jekyll-template/blog/welcome-to-jekyll/" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2019-10-03T10:22:16-03:00</published><updated>2019-10-03T10:22:16-03:00</updated><id>http://localhost:4000/typing-jekyll-template/blog/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/typing-jekyll-template/blog/welcome-to-jekyll/">&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#examples&quot; id=&quot;markdown-toc-examples&quot;&gt;Examples&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#table&quot; id=&quot;markdown-toc-table&quot;&gt;Table&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#list&quot; id=&quot;markdown-toc-list&quot;&gt;List&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#image-responsive-plugin-imager&quot; id=&quot;markdown-toc-image-responsive-plugin-imager&quot;&gt;Image responsive (plugin Imager)&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#code-in-one-line---text&quot; id=&quot;markdown-toc-code-in-one-line---text&quot;&gt;Code in one line - Text&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#unlighted-code&quot; id=&quot;markdown-toc-unlighted-code&quot;&gt;Unlighted code&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#gist-code&quot; id=&quot;markdown-toc-gist-code&quot;&gt;Gist code&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Hi! :hand:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.webpagefx.com/tools/emoji-cheat-sheet/&quot; target=&quot;_blank&quot;&gt;Emoji Syntax&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;Tom&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &apos;Hi, Tom&apos; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot; target=&quot;_blank&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot; target=&quot;_blank&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot; target=&quot;_blank&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;examples&quot;&gt;Examples&lt;/h1&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;strong&gt;Titles with icon - Plugin Fa&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;table&quot;&gt;Table&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;First Header&lt;/th&gt;
+      &lt;th&gt;Second Header&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Content from cell 1&lt;/td&gt;
+      &lt;td&gt;Content from cell 2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Content in the first column&lt;/td&gt;
+      &lt;td&gt;Content in the second column&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;list&quot;&gt;List&lt;/h2&gt;
+
+&lt;ul class=&quot;task-list&quot;&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;@mentions, #refs, &lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;links&lt;/a&gt;, &lt;strong&gt;formatting&lt;/strong&gt;, and &lt;del&gt;tags&lt;/del&gt; supported&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;list syntax required (any unordered or ordered list supported)&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;this is a complete item&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;
+    &lt;p&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;this is an incomplete item&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;Item 1&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;Item 2
+    &lt;ul&gt;
+      &lt;li&gt;Item 2a&lt;/li&gt;
+      &lt;li&gt;Item 2b&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2&lt;/li&gt;
+  &lt;li&gt;Item 3
+    &lt;ol&gt;
+      &lt;li&gt;Item 3a&lt;/li&gt;
+      &lt;li&gt;Item 3b&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Notes:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;We’re living the future so the present is our past.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;image-responsive-plugin-imager&quot;&gt;Image responsive (plugin Imager)&lt;/h2&gt;
+
+&lt;div class=&quot;row imager__plugin&quot;&gt;
+            &lt;img class=&quot;img-fluid mx-auto d-block&quot; src=&quot;/typing-jekyll-template/assets/images/posts/typing_logotype.png&quot; title=&quot;typing_logotype.png&quot; alt=&quot;typing_logotype.png&quot; /&gt;
+          &lt;/div&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi eaque, temporibus quia praesentium dolores repellat minus corporis illo sequi ab numquam laborum blanditiis eveniet. Unde libero ex qui quas temporibus.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi eaque, temporibus quia praesentium dolores repellat minus corporis illo sequi ab numquam laborum blanditiis eveniet. Unde libero ex qui quas temporibus.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi eaque, temporibus quia praesentium dolores repellat minus corporis illo sequi ab numquam laborum blanditiis eveniet. Unde libero ex qui quas temporibus.&lt;/p&gt;
+
+&lt;p&gt;&lt;img style=&quot;float: left;&quot; class=&quot;img-fluid imager__plugin&quot; src=&quot;/typing-jekyll-template/assets/images/posts/typing_logotype.png&quot; title=&quot;typing_logotype.png&quot; alt=&quot;typing_logotype.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi eaque, temporibus quia praesentium dolores repellat minus corporis illo sequi ab numquam laborum blanditiis eveniet. Unde libero ex qui quas temporibus.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi eaque, temporibus quia praesentium dolores repellat minus corporis illo sequi ab numquam laborum blanditiis eveniet. Unde libero ex qui quas temporibus.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi eaque, temporibus quia praesentium dolores repellat minus corporis illo sequi ab numquam laborum blanditiis eveniet. Unde libero ex qui quas temporibus.&lt;/p&gt;
+
+&lt;p&gt;&lt;img style=&quot;float: right;&quot; class=&quot;img-fluid imager__plugin&quot; src=&quot;/typing-jekyll-template/assets/images/posts/typing_logotype.png&quot; title=&quot;typing_logotype.png&quot; alt=&quot;typing_logotype.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi eaque, temporibus quia praesentium dolores repellat minus corporis illo sequi ab numquam laborum blanditiis eveniet. Unde libero ex qui quas temporibus.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi eaque, temporibus quia praesentium dolores repellat minus corporis illo sequi ab numquam laborum blanditiis eveniet. Unde libero ex qui quas temporibus.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi eaque, temporibus quia praesentium dolores repellat minus corporis illo sequi ab numquam laborum blanditiis eveniet. Unde libero ex qui quas temporibus.
+Commodi eaque, temporibus quia praesentium dolores repellat minus corporis illo sequi ab numquam laborum blanditiis eveniet. Unde libero ex qui quas temporibus.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-size: 10px;&quot; class=&quot;p-2 my-2 badge badge-secondary badge__plugin&quot;&gt;Ruby&lt;/span&gt;
+&lt;span style=&quot;font-size: 20px;&quot; class=&quot;p-2 my-2 badge badge-secondary badge__plugin&quot;&gt;HTML5&lt;/span&gt;
+&lt;span style=&quot;font-size: 30px;&quot; class=&quot;p-2 my-2 badge badge-secondary badge__plugin&quot;&gt;CSS3&lt;/span&gt;
+&lt;span style=&quot;font-size: 40px;&quot; class=&quot;p-2 my-2 badge badge-secondary badge__plugin&quot;&gt;JQuery&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;code-in-one-line---text&quot;&gt;Code in one line - Text&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Featured&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;unlighted-code&quot;&gt;Unlighted code&lt;/h2&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fancyAlert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;arg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;arg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;facebox&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;#foo&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;gist-code&quot;&gt;Gist code&lt;/h2&gt;
+
+&lt;script src=&quot;https://gist.github.com/7ab295790e841929cf83c0b1676269af.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;To use, see:&lt;a href=&quot;https://jektify.github.io&quot; target=&quot;_blank&quot;&gt;Jektify - Doc&lt;/a&gt;&lt;/p&gt;
+
+&lt;dl class=&quot;jektify jektify--dark jektify--custom&quot;&gt;
+
+          &lt;dt class=&quot;jektify__header jektify__header--dark jektify__header--custom&quot;&gt;
+
+            &lt;a class=&quot;jektify__brand jektify__brand--dark jektify__brand--custom&quot; href=&quot;https://jektify.github.io&quot; target=&quot;_blank&quot;&gt;jektify&lt;/a&gt;
+
+            &lt;i class=&quot;jektify__year jektify__year--dark jektify__year--custom&quot;&gt;&amp;copy;&amp;nbsp;2021&amp;nbsp;&lt;/i&gt;
+              &lt;span class=&quot;jektify__button jektify__button--dark jektify__button--custom jektify__button--open&quot;&gt;+&lt;/span&gt;
+          &lt;/dt&gt;
+
+          &lt;dd class=&quot;jektify__body jektify__body--dark jektify__body--custom&quot; style=&quot;display: block&quot;&gt;
+
+            
+
+            &lt;h1 class=&quot;jektify__title jektify__title--dark jektify__user--dark jektify__title--custom&quot; style=&quot;display: none;&quot;&gt;Music name&lt;/h1&gt;
+
+            &lt;p class=&quot;jektify__description jektify__description--dark jektify__description--custom&quot; style=&quot;display: none;&quot;&gt;Jekyll plugin to generate html snippets for embedding Spotify Musics.
+To listen to the full song, open your Spotify and start these musics.
+&lt;/p&gt;
+
+            &lt;div class=&quot;jektify__tracklist jektify__tracklist--dark jektify__tracklist--custom&quot;&gt;
+              &lt;iframe id=&quot;jektify__track&quot; class=&quot;jektify__track jektify__track--dark 
+                jektify__track--custom&quot; src=&quot;https://open.spotify.com/embed/track/62qsgMnY4wg8nE5qjyOdWO?theme=0&quot; width=&quot;100%&quot; height=&quot;80&quot; frameborder=&quot;0&quot; allowtransparency=&quot;true&quot; allow=&quot;encrypted-media&quot;&gt;
+              &lt;/iframe&gt;
+            &lt;/div&gt;
+          &lt;/dd&gt;
+        &lt;/dl&gt;
+
+&lt;p&gt;Goodbye! :wink:&lt;/p&gt;
+
+&lt;hr style=&quot;border-top: 1px solid #9D9D9D ; color: #9D9D9D ;&quot; class=&quot;endpost&quot; /&gt;</content><author><name></name></author><category term="example" /><category term="welcome" /><category term="jekyll" /><category term="typing" /></entry></feed>
