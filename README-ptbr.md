@@ -91,14 +91,14 @@ Além disso, todo o conteúdo do arquivo `_data/informations.yml` deve ser alter
 | Gem             | >= 3.0     | `gem -v`           | **Ruby** contains **Gem** |
 | Bundler         | >= 2.0     | `bundler -v`       | `gem install bundler` |
 | Yarn            | >= 1.20    | `yarn -v`          | [Yarn](https://yarnpkg.com/en/docs/install) |
-| Npm             | >= 6.12    | `npm -v`           | [Npm](https://www.npmjs.com/get-npm) |
+| NodeJS          | >= 16.16   | `node-v`           | [NodeJS](https://nodejs.org) |
 
 ## Usando
 
 1 - Clonando e entrando na pasta:
 
 ```
-$ git clone https://github.com/williamcanin/typing-jekyll-template.git "my_site"
+$ git clone --single-branch https://github.com/williamcanin/typing-jekyll-template.git "my_site"
 $ cd "my_site"
 ```
 

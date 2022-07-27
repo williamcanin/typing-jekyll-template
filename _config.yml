@@ -3,6 +3,12 @@ url: "https://williamcanin.github.io"
 # the subpath of your site, e.g. /blog
 baseurl: "/typing-jekyll-template"
 
+
+# Plugins Gemfile
+plugins:
+  - jekyll-sitemap
+
+
 # Plugins de player - Jektify
 jektify:
   enable: true
@@ -26,7 +32,7 @@ jektify:
       To listen to the full song, open your Spotify and start these musics.
 
 
-# Attention! Do not change the information below as it is 
+# Attention! Do not change the information below as it is
 # for development unless you know what you are doing.
 
 include: ['_pages']
@@ -100,7 +106,9 @@ gist:
 
 exclude:
   - temp
+  - tmp
   - .hidden
+  - yarn-error.log
   - node_modules
   - _src
   - vendor
