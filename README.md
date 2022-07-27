@@ -514,4 +514,4 @@ Click on the image below to be redirected the donation forms:
 * Name: William C. Canin
 * Country: Brazil - SP
 * GitHub: [William Canin](http://github.com/williamcanin)
-* Personal page: [William Canin](http://williamcanin.github.com)
+* Personal page: [William Canin](http://williamcanin.github.io)

@@ -513,4 +513,4 @@ Clique na imagem abaixo para te redirecionar aos formulários de doação:
 * Nome: William C. Canin
 * Região: Brazil - SP
 * GitHub: [William Canin](http://github.com/williamcanin)
-* Página pessoal: [William Canin](http://williamcanin.github.com)
+* Página pessoal: [William Canin](http://williamcanin.github.io)
