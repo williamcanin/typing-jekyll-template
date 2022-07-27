@@ -495,8 +495,6 @@ Você pode baixar as versões sem criar um clone com o Git. Vamos para [Releases
 
 Licença: [MIT License (MIT)](https://opensource.org/licenses/MIT)
 
-Copyright: William C. Canin | Copyright © 2015-2021
-
 *Você pode alterar a estrutura do Typing Jekyll Template conforme desejar, desde que não manipule ou remova os direitos autorais de William C.Canin no projeto*
 
 ## Doação
@@ -514,6 +512,5 @@ Clique na imagem abaixo para te redirecionar aos formulários de doação:
 
 * Nome: William C. Canin
 * Região: Brazil - SP
-* E-Mail: william.costa.canin@gmail.com
 * GitHub: [William Canin](http://github.com/williamcanin)
 * Página pessoal: [William Canin](http://williamcanin.github.com)
