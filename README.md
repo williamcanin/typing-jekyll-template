@@ -92,35 +92,39 @@ In addition, all contents of the **_data/informations.yml** file should be chang
 | Gem             | >= 3.0     | `gem -v`          | **Ruby** contains **Gem** |
 | Bundler         | >= 2.0     | `bundler -v`      | `gem install bundler` |
 | Yarn            | >= 1.20    | `yarn -v`         | [Yarn](https://yarnpkg.com/en/docs/install) |
-| NodeJS          | >= 16.16   | `node-v`           | [NodeJS](https://nodejs.org) |
+| NodeJS          | >= 16.16   | `node -v`           | [NodeJS](https://nodejs.org) |
 
 ## Using
 
-1 - Cloning and entering the folder:
+1 - Cloning **Typing**:
 
 ```
-$ git clone --single-branch https://github.com/williamcanin/typing-jekyll-template.git "my_site"
-$ cd "my_site"
+git clone --single-branch https://github.com/williamcanin/typing-jekyll-template.git "my_site"
 ```
-
-2 - Downloading Dependencies for Typing:
+2 - Entering the folder "**my_site**":
 
 ```
-$ yarn install
+cd "my_site"
+```
+
+3 - Downloading Dependencies for **Typing**:
+
+```
+yarn install
 ```
 
 > Note: If you experience problems with **yarn** during installation of the dependencies, you may also be using **npm** like this: `npm install`.
 
-3 - Build project to deploy:
+4 - Build project to deploy:
 
 ```
-$ yarn build
+yarn build
 ```
 
-4 - Starting the Jekyll Service:
+5 - Starting the **Typing** server with Jekyll:
 
 ```
-$ yarn serve
+yarn serve
 ```
 
 ## Clearing the cache/dependencies
@@ -156,7 +160,7 @@ To create a page is very simple. Using the following command, you create the hea
 ### Creating a page
 
 ```shell
-$ yarn page
+yarn page
 ```
 
 The pages you create may or may not appear in your website menu. Just set the header **menu -> enable** property that looks like this:
@@ -198,7 +202,7 @@ The **_posts** folder is where you will put all your posts. Creating a post is a
 ### Creating a post
 
 ```shell
-$ yarn post
+yarn post
 ```
 
 You will enter an intuitive console to enter the title name of your post. When creating, the header will look something like this:

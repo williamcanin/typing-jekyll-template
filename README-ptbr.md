@@ -92,35 +92,39 @@ Além disso, todo o conteúdo do arquivo `_data/informations.yml` deve ser alter
 | Gem             | >= 3.0     | `gem -v`           | **Ruby** contains **Gem** |
 | Bundler         | >= 2.0     | `bundler -v`       | `gem install bundler` |
 | Yarn            | >= 1.20    | `yarn -v`          | [Yarn](https://yarnpkg.com/en/docs/install) |
-| NodeJS          | >= 16.16   | `node-v`           | [NodeJS](https://nodejs.org) |
+| NodeJS          | >= 16.16   | `node -v`           | [NodeJS](https://nodejs.org) |
 
 ## Usando
 
-1 - Clonando e entrando na pasta:
+1 - Clonando o **Typing**:
 
 ```
-$ git clone --single-branch https://github.com/williamcanin/typing-jekyll-template.git "my_site"
-$ cd "my_site"
+git clone --single-branch https://github.com/williamcanin/typing-jekyll-template.git "my_site"
 ```
 
-2 - Download de dependências para Typing:
+2 - Entrando na pasta "**my_site**":
+```
+cd "my_site"
+```
+
+3 - Download de dependências para **Typing**:
 
 ```
-$ yarn install
+yarn install
 ```
 
 > Nota: Se você tiver problemas de travamento com o **yarn** durante a instalação das dependências, você pode estar utilizando o **npm** também dessa forma: `npm install`.
 
-3 - Projeto de compilação para deploy:
+4 - Projeto de compilação para deploy:
 
 ```
-$ yarn build
+yarn build
 ```
 
-4 - Iniciando o serviço Jekyll:
+5 - Iniciando o servidor do **Typing** com Jekyll:
 
 ```
-$ yarn serve
+yarn serve
 ```
 
 ## Clearing the cache/dependencies
@@ -157,7 +161,7 @@ Para criar um página é muito simples. Usando o comando a seguir, você cria o 
 ### Criando uma página
 
 ```shell
-$ yarn page
+yarn page
 ```
 
 As páginas criadas por você, pode aparecer ou não no menu do seu site. Basta você configurar a propriedde **menu -> enable** do cabeçalho que se parece com esse:
@@ -199,7 +203,7 @@ A pasta **_posts** é onde você colocará todas suas postagens. Para criar uma 
 ### Criando uma postagem
 
 ```shell
-$ yarn post
+yarn post
 ```
 Você irá entrar em um intuitivo console para informar o nome do título da sua postagem. Ao criar, o cabeçalho irá ser parecido com isso:
 
