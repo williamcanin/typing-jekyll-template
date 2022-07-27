@@ -1,4 +1,6 @@
 vendor/
+cache/
+.cache/
 !/_src/_sass/vendor/
 !/assets/vendor/simple-jekyll-search.min.js
 node_modules/

@@ -1,7 +1,9 @@
 vendor
+cache
 node_modules
 *.bak
 _src
+cache
 Rakefile
 yarn.lock
 Gemfile.lock

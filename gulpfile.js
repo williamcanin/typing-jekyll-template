@@ -12,6 +12,7 @@ let del = require('del');
 function clean_objects() {
   var objs = [
     'node_modules',
+    'cache',
     'vendor',
     'package-lock.json',
     'Gemfile.lock'

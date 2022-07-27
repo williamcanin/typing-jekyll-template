@@ -232,6 +232,11 @@ A propriedade **comments**, é para ativar ou desativar comentários sobre a pos
 
 > Não esqueça de deixar a propriedade **published** para **true** para que sua postagem apareça.
 
+## Pasta '_drafts'
+
+Nesta pasta você deixará todos seus rascunhos para futuras postagens, assim que tive seguro, mova-os para a pasta **"_posts"**.
+> Nota: Os *_drafts* aparecerão apenas ao executar o `yarn serve`, em ambiente de produção não serão renderizados.
+
 ## Pasta 'public'
 
 A pasta **public** ficará todo seu website compilado. Será o conteúdo dessa pasta que você deve enviar para seu servidor de hospedagem.
@@ -240,7 +245,7 @@ A pasta **public** ficará todo seu website compilado. Será o conteúdo dessa p
 
 Essa pasta é onde ficar toda estrutura do template. Você não precisa alterar em nada nessa pasta, a não ser que queira corromper o tema. :)
 
-## Pasta 'vendor'
+## Pasta 'cache'
 
 Essa pasta terá todas as dependências para seu template ser gerado e funcionar. Ela é criada e preenchida com o comando `yarn install`. Não delete ela.
 

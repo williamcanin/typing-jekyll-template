@@ -232,6 +232,11 @@ The **comments** property is to enable or disable comments on the post itself.
 
 > Be sure to leave the **published** property to **true** for your post to appear.
 
+## Folder '_drafts_'
+
+In this folder you will leave all your drafts for future posts, once you have it safe, move them to the **"_posts"** folder.
+> Note: *_drafts* will only appear when running `yarn serve`, in production environment they will not be rendered.
+
 ## Folder 'public'
 
 The **public** folder will be your entire compiled website. It will be the contents of this folder that you must upload to your hosting server.
@@ -240,7 +245,7 @@ The **public** folder will be your entire compiled website. It will be the conte
 
 This folder is where the whole template structure is. You don't need to change anything in this folder unless you want to corrupt the theme. :)
 
-## Folder 'vendor'
+## Folder 'cache'
 
 This folder will have all the dependencies for your template to be generated and work. It is created and populated with the **yarn install** command. Do not delete it.
 
