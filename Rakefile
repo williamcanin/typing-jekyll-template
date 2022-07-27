@@ -2,7 +2,7 @@
 # Stript type: Rake
 # Country/State: Brazil/SP
 # Author : William C. Canin
-# Page author: http://williamcanin.me
+# Page author: http://williamcanin.github.io
 # Description: Task creation file for the 'manager.rb' file.
 
 require "./_src/lib/rb/manager.rb"
