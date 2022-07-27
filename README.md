@@ -18,7 +18,7 @@ On the **resume.md** page, you can print using the browser shortcut Ctrl + P or 
 
 You will also have a template for posting to the "" welcome-to-jekyll.md "** file and will need to follow the header of that template. The file contains some information you can get to use on your website.
 
-The contact page (**_ pages/global/contact.md**) uses the feature [Formspree](https://formspree.io), you need to have an account on the service and add your **email** and **endpoint** to the file **_data/informations.yml**.
+The contact page (**_pages/global/contact.md**) uses the feature [Formspree](https://formspree.io), you need to have an account on the service and add your **email** and **endpoint** to the file **_data/informations.yml**.
 
 ```yml
 userdata:
@@ -144,14 +144,13 @@ This folder contains subfolders where some you don't need to fumble with, such a
 
 ## Folder '_pages'
 
-The pages are found in the **_ pages/blogger** and **_ pages/global** folder.
-The **_ pages/blogger** folder is contained in Blog pages and the **_ pages/global** folder is where **about.md** and **projects.md** page is contained.
+The pages are found in the **_pages/** folder.
 
-If you do not want to work with the **about.md** and **projects.md** pages, we recommend leaving the **published** property to **false**. *NEVER DELETE FOLDER PAGES **blogger** and **global*** as they have unique properties that a normal page may not contain.
+If you do not want to work with the **about.md** and **projects.md** pages, we recommend leaving the **published** property to **false**.
 
 If you don't want to have a blog on your website then you should disable it in the archive **_data/options.yml**, where you will find more information in the section [Files '_data/options.yml'](#file-_dataoptionsyml).
 
-To create a page is very simple. Using the following command, you create the header of a page in the **_ pages** directory, where all your created pages should be.
+To create a page is very simple. Using the following command, you create the header of a page in the **_pages** directory, where all your created pages should be.
 
 ### Creating a page
 
@@ -294,7 +293,7 @@ The supported languages for **reading_time** and **datelang** are:
 - pt_PT - Portuguese
 - ru_RU - Russian
 
-Other changes you can make to **_ config.yml**:
+Other changes you can make to **_config.yml**:
 
 Enables or disables blog pagination [default: true]:
 
@@ -303,7 +302,7 @@ pagination:
   enabled: true
 ```
 
-> NOTE: If you want to disable the pager, after making the above settings, you have to go to page **_pages/blogger/blog.md** and leave **pagination -> enable** to **false**.
+> NOTE: If you want to disable the pager, after making the above settings, you have to go to page **_pages/blog.md** and leave **pagination -> enable** to **false**.
 
 Changes the server port [default: 4000]:
 
@@ -321,7 +320,7 @@ host: localhost
 
 ### File '_data/informations.yml'
 
-The file **'_ data/informations.yml'** is a file that contains template information, most of which is the string that appears on the website. You should set the property values of this file to your liking.
+The file **'_data/informations.yml'** is a file that contains template information, most of which is the string that appears on the website. You should set the property values of this file to your liking.
 
 Some basic settings you will make in this file are:
 
@@ -351,7 +350,7 @@ By default Typing comes with 5 (five) official themes, they are:
 - hacking
 - littlegirl
 
-To use a theme, simply change the **theme** property in the **'_ data/informations.yml'** file and then compile your project again:
+To use a theme, simply change the **theme** property in the **'_data/informations.yml'** file and then compile your project again:
 
 ```yml
 website:
@@ -389,7 +388,7 @@ You will also have the file **_src/_sass/theme/custom.scss**, where you can crea
 
 #### Comments on posts
 
-Typing uses [Disqus](https://disqus.com) to embed comments on the blog. To have the comments feature, you must inform the user of the in the file "**_ data/_informations.yml**":
+Typing uses [Disqus](https://disqus.com) to embed comments on the blog. To have the comments feature, you must inform the user of the in the file "**_data/_informations.yml**":
 
 ```yaml
 userdata:
@@ -418,7 +417,7 @@ blog:
   enable: false
 ```
 
-After changing this property, you **MUST change** in the **_ pages/blogger/blog.md** file the following property to **false**:
+After changing this property, you **MUST change** in the **_pages/blog.md** file the following property to **false**:
 
 ```yml
 menu:

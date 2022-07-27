@@ -144,10 +144,9 @@ Essa pasta contém subpastas onde algumas você não precisa fuçar amiguinho, c
 
 ## Pasta '_pages'
 
-As páginas são encontradas na pasta **_pages/blogger** e **_pages/global**.
-A pasta **_pages/blogger** está contido páginas do Blog e a pasta **_pages/global**, é pasta onde está contido a página **about.md** e **projects.md**.
+As páginas são encontradas na pasta **_pages/**.
 
-Caso você não queira trabalhar com as páginas **about.md** e **projects.md**, o recomendável é deixar a propriedade **published** para **false**. *NUNCA EXCLUA PÁGINAS DA PASTA **blogger** e **global***, pois elas tem propriedades únicas que um página normal pode não conter.
+Caso você não queira trabalhar com as páginas **about.md** e **projects.md**, o recomendável é deixar a propriedade **published** para **false**.
 
 Se você não quiser ter um Blog no seu website, então você deve desativar no arquivo
 **_data/options.yml**, onde você terá mais informação na seção [Arquivos '_data/options.yml'](#arquivo-_dataoptionsyml).
@@ -303,7 +302,7 @@ pagination:
   enabled: true
 ```
 
-> NOTA: Se quiser desativar o paginador, após fazer as configurações de cima, você terá que ir na página **_pages/blogger/blog.md** e deixar o **pagination -> enable** para **false**.
+> NOTA: Se quiser desativar o paginador, após fazer as configurações de cima, você terá que ir na página **_pages/blog.md** e deixar o **pagination -> enable** para **false**.
 
 Altera a porta do servidor [padrão: 4000]:
 
@@ -418,7 +417,7 @@ blog:
   enable: false
 ```
 
-Após alterar essa propriedade, você **DEVE OBRIGATORIAMENTE** alterar no arquivo **_pages/blogger/blog.md** a seguinte propriedade para **false**:
+Após alterar essa propriedade, você **DEVE OBRIGATORIAMENTE** alterar no arquivo **_pages/blog.md** a seguinte propriedade para **false**:
 
 ```yml
 menu:
