@@ -6,6 +6,8 @@ maintenance:
 # and set the menu => enable property to 'false' too.
 blog:
   enable: true
+  feed:
+    enable: true
 google:
   analytics:
     enable: true
@@ -43,9 +45,6 @@ sidebar:
     enable: true
   socials:
     enable: true
-  blog:
-    feed:
-      enable: true
 content:
   icons:
     enable: true
