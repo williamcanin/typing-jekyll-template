@@ -27,10 +27,12 @@ jobs:
         node-version: ${{ matrix.node-version }}
 
     - name: Set up Ruby 3.0
-      uses: actions/setup-ruby@v1
+      uses: ruby/setup-ruby@v1
       with:
         ruby-version: ${{ matrix.ruby-version }}
 
     - name: Tests
       run: |
         npm install yarn
+        yarn install
+        yarn build
