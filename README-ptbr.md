@@ -87,7 +87,7 @@ Além disso, todo o conteúdo do arquivo `_data/informations.yml` deve ser alter
 | Requerido       |   Versão   |  Como verificar    | Como instalar  |
 | --------------- | ---------- | ------------------ | -------------- |
 | Git             | >= 2.25    | `git --version`   | [Git](http://git-scm.com/) |
-| Ruby            | >= 2.7     | `ruby -v`          | [Ruby](https://www.ruby-lang.org) |
+| Ruby            | >= 3.0     | `ruby -v`          | [Ruby](https://www.ruby-lang.org) |
 | Gem             | >= 3.0     | `gem -v`           | **Ruby** contains **Gem** |
 | Bundler         | >= 2.0     | `bundler -v`       | `gem install bundler` |
 | Yarn            | >= 1.20    | `yarn -v`          | [Yarn](https://yarnpkg.com/en/docs/install) |

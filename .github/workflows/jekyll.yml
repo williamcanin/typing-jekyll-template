@@ -1,4 +1,4 @@
-name: Jekyll site CI
+name: Typing Jekyll Template Tests
 
 on:
   push:
@@ -8,13 +8,29 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+        ruby-version: ['3.0']
 
     steps:
     - uses: actions/checkout@v3
-    - name: Build the site in the jekyll/builder container
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Set up Ruby 3.0
+      uses: actions/setup-ruby@v1
+      with:
+        ruby-version: ${{ matrix.ruby-version }}
+
+    - name: Tests
       run: |
-        docker run \
-        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+        npm install yarn

@@ -53,7 +53,7 @@ class Manager
         # end
       end
     end # postinstall
-    
+
     def slug_generator(parameter)
       parameter.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
     end # slug_generator
@@ -147,75 +147,77 @@ class Manager
       end # open
     end # post_create
 
-    def deploy(dir, head)
-      datetime = DateTime.now
-      deploy_json = open(CONFIG['DEPLOY_JSON'])
-      parsed = JSON.parse(deploy_json.read)
+    ### UNDER DEVELOPMENT
+    # def deploy(dir, head)
+    #   datetime = DateTime.now
+    #   deploy_json = open(CONFIG['DEPLOY_JSON'])
+    #   parsed = JSON.parse(deploy_json.read)
 
-      begin
-        if parsed[head]['git']['init'] == false
-          create_git_init = """
-          cd #{dir}; git init
-          """
-          # Open3.popen3(create_git_init)
-          system(create_git_init)
-          parsed[head]['git']['init'] = true
-          File.write(CONFIG['DEPLOY_JSON'], JSON.pretty_generate(parsed))
-        end
+    #   begin
+    #     if parsed[head]['git']['init'] == false
+    #       create_git_init = """
+    #       cd #{dir}; git init
+    #       """
+    #       # Open3.popen3(create_git_init)
+    #       system(create_git_init)
+    #       parsed[head]['git']['init'] = true
+    #       File.write(CONFIG['DEPLOY_JSON'], JSON.pretty_generate(parsed))
+    #     end
 
-        if parsed[head]['git']['origin'] == "" and 
-          parsed[head]['git']['remote'] == ""
-          print "Enter the origin:\n> ".blue
-          origin = STDIN.gets.chomp
+    #     if parsed[head]['git']['origin'] == "" and
+    #       parsed[head]['git']['remote'] == ""
+    #       print "Enter the origin:\n> ".blue
+    #       origin = STDIN.gets.chomp
 
-          print "Enter the remote address:\n> ".blue
-          remote = STDIN.gets.chomp
-          
-          add_remote = """
-            cd #{dir}; git remote add #{origin} #{remote}
-          """
+    #       print "Enter the remote address:\n> ".blue
+    #       remote = STDIN.gets.chomp
 
-          # Open3.popen3(add_remote)
-          system(add_remote)
-          
-          parsed[head]['git']['origin'] = origin
-          parsed[head]['git']['remote'] = remote
-          File.write(CONFIG['DEPLOY_JSON'], JSON.pretty_generate(parsed))
+    #       add_remote = """
+    #         cd #{dir}; git remote add #{origin} #{remote}
+    #       """
 
-        end
+    #       # Open3.popen3(add_remote)
+    #       system(add_remote)
 
-        commit = """
-          cd #{dir}; git add .; git commit -m \"Update - #{datetime}\"
-        """
-        # Open3.popen3(commit)
-        system(commit)
+    #       parsed[head]['git']['origin'] = origin
+    #       parsed[head]['git']['remote'] = remote
+    #       File.write(CONFIG['DEPLOY_JSON'], JSON.pretty_generate(parsed))
 
-        if parsed[head]['git']['branch'] == ""
-          print "Add branch:\n> ".blue
-          branch = STDIN.gets.chomp
-            
-          add_branch = """
-            cd #{dir}; git checkout -b #{branch}
-          """
-          # Open3.popen3(add_branch)
-          system(add_branch)
-          parsed[head]['git']['branch'] = branch
-          File.write(CONFIG['DEPLOY_JSON'], JSON.pretty_generate(parsed))
-        end
+    #     end
 
-        push_origin = parsed[head]['git']['origin']
-        push_branch = parsed[head]['git']['branch']
-        push_start = """
-        cd #{dir}; git push #{push_origin} #{push_branch}
-        """
-        system(push_start)
-        # Open3.popen3(push_start)
-        puts "Deploy, Done!".green
-      
-      rescue Interrupt => e
-        puts "\nApproached by the user".yellow
-        exit -1
-      end # begin
+    #     commit = """
+    #       cd #{dir}; git add .; git commit -m \"Update - #{datetime}\"
+    #     """
+    #     # Open3.popen3(commit)
+    #     system(commit)
 
-    end # deploy
+    #     if parsed[head]['git']['branch'] == ""
+    #       print "Add branch:\n> ".blue
+    #       branch = STDIN.gets.chomp
+
+    #       add_branch = """
+    #         cd #{dir}; git checkout -b #{branch}
+    #       """
+    #       # Open3.popen3(add_branch)
+    #       system(add_branch)
+    #       parsed[head]['git']['branch'] = branch
+    #       File.write(CONFIG['DEPLOY_JSON'], JSON.pretty_generate(parsed))
+    #     end
+
+    #     push_origin = parsed[head]['git']['origin']
+    #     push_branch = parsed[head]['git']['branch']
+    #     push_start = """
+    #     cd #{dir}; git push #{push_origin} #{push_branch}
+    #     """
+    #     system(push_start)
+    #     # Open3.popen3(push_start)
+    #     puts "Deploy, Done!".green
+
+    #   rescue Interrupt => e
+    #     puts "\nApproached by the user".yellow
+    #     exit -1
+    #   end # begin
+
+    # end # deploy
+
 end # Main
