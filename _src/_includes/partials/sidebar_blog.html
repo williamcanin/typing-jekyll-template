@@ -8,11 +8,12 @@
     <div class="pt-3 sidebar__wrapper">
       <div class="nav flex-lg-column mx-3 mx-lg-0">
         {% if load_options.sidebar.avatar.flip.enable == true and load_data.website.sidebar.avatar.flip.img %}
-        <div class="d-none 
+        <div class="d-none
           {% if load_options.sidebar.avatar.enable == true %} d-sm-block {% endif %}
           sidebar__avatar_flip">
           <div class="sidebar__avatar_flip-card">
-            <a class="sidebar__avatar_flip-front sidebar__avatar_flip-face" href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">
+            <a class="sidebar__avatar_flip-front sidebar__avatar_flip-face"
+              href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">
               {% if load_options.sidebar.avatar.flip.face.svg_inner == false %}
               <img class="p-1 img-fluid mx-auto d-block
                 {% if load_options.sidebar.animation == true %} animation__pulse {% endif %}
@@ -20,31 +21,30 @@
                 {% if load_options.sidebar.avatar.background == true %} sidebar_avatar_background {% endif %}
                 {% if load_options.sidebar.avatar.border == true %} sidebar_avatar_border {% endif %}
                 image_avatar
-              "
-              src="{{ '/assets/images/avatar' | prepend: site.baseurl }}/{{ load_data.website.sidebar.avatar.img }}"
-              alt="Avatar">
+              " src="{{ '/assets/images/avatar' | prepend: site.baseurl }}/{{ load_data.website.sidebar.avatar.img }}"
+                alt="Avatar">
               {% else %}
-                <!-- Add your SVG - BEGIN -->
-                
-                <!-- Add your SVG - END -->
-                {% endif %}
+              <!-- Add your SVG - BEGIN -->
+
+              <!-- Add your SVG - END -->
+              {% endif %}
             </a>
-            <a class="sidebar__avatar_flip-back sidebar__avatar_flip-face" href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">
+            <a class="sidebar__avatar_flip-back sidebar__avatar_flip-face"
+              href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">
               {% if load_options.sidebar.avatar.flip.back.svg_inner == false %}
               <img class="p-1 img-fluid mx-auto d-block
                 {% if load_options.sidebar.animation == true %} animation__pulse {% endif %}
                 {% if load_options.sidebar.avatar.circle == true %} sidebar_avatar_circle {% endif %}
                 {% if load_options.sidebar.avatar.background == true %} sidebar_avatar_background {% endif %}
                 {% if load_options.sidebar.avatar.border == true %} sidebar_avatar_border {% endif %}
-                image_avatar  
-              "
-              src="{{ '/assets/images/avatar' | prepend: site.baseurl }}/{{ load_data.website.sidebar.avatar.flip.img }}"
-              alt="Avatar">
+                image_avatar
+              " src="{{ '/assets/images/avatar' | prepend: site.baseurl }}/{{ load_data.website.sidebar.avatar.flip.img }}"
+                alt="Avatar">
               {% else %}
-                <!-- Add your SVG - BEGIN -->
-                
-                <!-- Add your SVG - END -->
-                {% endif %}
+              <!-- Add your SVG - BEGIN -->
+
+              <!-- Add your SVG - END -->
+              {% endif %}
             </a>
           </div>
         </div>
@@ -56,41 +56,52 @@
               {% if load_options.sidebar.avatar.circle == true %} sidebar_avatar_circle {% endif %}
               {% if load_options.sidebar.avatar.background == true %} sidebar_avatar_background {% endif %}
               {% if load_options.sidebar.avatar.border == true %} sidebar_avatar_border {% endif %}
-              image_avatar  
-            "
-            src="{{ '/assets/images/avatar' | prepend: site.baseurl }}/{{ load_data.website.sidebar.avatar.img }}"
-            alt="Avatar"/>
+              image_avatar
+            " src="{{ '/assets/images/avatar' | prepend: site.baseurl }}/{{ load_data.website.sidebar.avatar.img }}"
+              alt="Avatar" />
             {% else %}
-              <!-- Add your SVG - BEGIN -->
-              
-              <!-- Add your SVG - END -->
-              {% endif %}
+            <!-- Add your SVG - BEGIN -->
+
+            <!-- Add your SVG - END -->
+            {% endif %}
           </a>
         </div>
         {% endif %}
-        <h1 class="p-2 text-center d-md-flex align-items-center mx-auto {% if load_options.sidebar.animation == true %} animation__sidebar-title {% endif %} sidebar__title">
-          <a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}" class="nav-link" style="font-size: {{ load_data.website.sidebar.title.size }}">{{ load_data.website.sidebar.title.text }}</a>
+        <h1
+          class="p-2 text-center d-md-flex align-items-center mx-auto {% if load_options.sidebar.animation == true %} animation__sidebar-title {% endif %} sidebar__title">
+          <a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}" class="nav-link"
+            style="font-size: {{ load_data.website.sidebar.title.size }}">{{ load_data.website.sidebar.title.text }}</a>
         </h1>
         <div class="p-2 mx-3
           {% if load_options.sidebar.avatar.enable == true %} d-md-flex flex-md-column align-items-md-start {% endif %}
           align-items-center align-items-lg-start flex-lg-column mx-auto mr-lg-3 ml-lg-3
           sidebar__menu {% if load_options.sidebar.animation == true %} animation__sidebar-menu {% endif %}">
-          <div class="my-1 d-none d-md-block mr-3 sidebar__menu-title">Menu: {{ load_data.website.sidebar.menu.blog.text }}</div>
+          <div class="my-1 d-none d-md-block mr-3 sidebar__menu-title">Menu:
+            {{ load_data.website.sidebar.menu.blog.text }}</div>
           {% assign sorted_pages = site.pages | sort: 'order' %}
           {% for page in sorted_pages %}
           {% if page.title and page.menu.local[0] == 'blog' and page.autogen == nil %}
           <li class="mr-3 mr-lg-0 float-left float-lg-none sidebar__menu-item">
-              {% if load_options.sidebar.icons.enable == true %}<i class="mr-1 fas {{ page.icon }}"></i>{% endif %}
-              <a class="sidebar__menu-link" href="{{ page.url | prepend: site.baseurl | prepend: site.url }}">{{ page.title }}</a>
+            {% if load_options.sidebar.icons.enable == true %}<i class="mr-1 fas {{ page.icon }}"></i>{% endif %}
+            <a class="sidebar__menu-link"
+              href="{{ page.url | prepend: site.baseurl | prepend: site.url }}">{{ page.title }}</a>
           </li>
           {% endif %}
           {% if page.title and page.menu.local[1] == 'blog' and page.autogen == nil %}
           <li class="mr-3 mr-lg-0 float-left float-lg-none sidebar__menu-item">
-              {% if load_options.sidebar.icons.enable == true %}<i class="mr-1 fas {{ page.icon }}"></i>{% endif %}
-              <a class="sidebar__menu-link" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">{{ page.title }}</a>
+            {% if load_options.sidebar.icons.enable == true %}<i class="mr-1 fas {{ page.icon }}"></i>{% endif %}
+            <a class="sidebar__menu-link"
+              href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">{{ page.title }}</a>
           </li>
           {% endif %}
           {% endfor %}
+          {% if load_options.sidebar.blog.feed.enable == true %}
+          <li class="mr-3 mr-lg-0 float-left float-lg-none sidebar__menu-item">
+            {% if load_options.sidebar.icons.enable == true %}<i class="mr-1 fas fa-rss"></i>{% endif %}
+            <a class="sidebar__menu-link"
+              href="{{ site.feed.path | prepend: site.baseurl | prepend: site.url }}">Feed</a>
+          </li>
+          {% endif %}
         </div>
       </div>
     </div>
