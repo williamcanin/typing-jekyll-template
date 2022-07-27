@@ -493,7 +493,7 @@ Você pode baixar as versões sem criar um clone com o Git. Vamos para [Releases
 
 ## Licença e Copyrights
 
-Licença: [MIT License (MIT)](https://opensource.org/licenses/MIT)
+Licença: [MIT License (MIT)](https://github.com/williamcanin/typing-jekyll-template/blob/main/LICENSE)
 
 *Você pode alterar a estrutura do Typing Jekyll Template conforme desejar, desde que não manipule ou remova os direitos autorais de William C.Canin no projeto*
 
@@ -503,7 +503,7 @@ Clique na imagem abaixo para te redirecionar aos formulários de doação:
 
 <div class="donate">
   <a href="https://github.com/williamcanin/donations/blob/master/README.md">
-    <img width="160" height="100" src="https://raw.githubusercontent.com/williamcanin/donations/master/svg/donate/donate-hand.svg" alt="Donations"
+    <img width="160" height="100" src="https://raw.githubusercontent.com/williamcanin/donations/master/svg/donate/donate-hand.svg" alt="Donations"/>
   </a>
 </div>
 
