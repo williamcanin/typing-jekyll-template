@@ -507,8 +507,8 @@ License: [MIT License (MIT)](https://github.com/williamcanin/typing-jekyll-templ
 Click on the image below to be redirected the donation forms:
 
 <div class="donate">
-  <a href="https://github.com/williamcanin/donations/blob/master/README.md">
-    <img width="160" height="100" src="https://raw.githubusercontent.com/williamcanin/donations/master/svg/donate/donate-hand.svg" alt="Donations"/>
+  <a href="https://williamcanin.github.io/donate/" target="_blank">
+    <img width="160" height="100" src="https://williamcanin.github.io/assets/images/icons/donate.svg" alt="Donate"/>
   </a>
 </div>
 
