@@ -1,5 +1,9 @@
 [Read in English](README.md)
 
+<br/><br/>
+> ⚠️ NOTE: ESSE PROJETO FOI DESCONTINUADO. CASO QUEIRA UM PROJETO SIMILAR, POREM COM MELHORES RECURSOS, SEGURANÇA, RAPIDEZ E FUNCIONALIDADES AVANÇADAS, CONSIDERE VISITAR [https://rawfeed.github.io](https://rawfeed.github.io) E VEJA O PROJETO `rawfeed-jekyll`.
+<br/><br/>
+
 # Typing
 
 [![Typing Jekyll Template Tests](https://github.com/williamcanin/typing-jekyll-template/actions/workflows/jekyll.yml/badge.svg)](https://github.com/williamcanin/typing-jekyll-template/actions/workflows/jekyll.yml)
