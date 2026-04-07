@@ -1,6 +1,8 @@
-> ⚠️ NOTE: THIS PROJECT HAS BEEN DISCONTINUED. IF YOU WANT A SIMILAR PROJECT, BUT WITH BETTER FEATURES, SECURITY, SPEED, AND ADVANCED FUNCTIONS, CONSIDER VISITING [https://rawfeed.github.io](https://rawfeed.github.io) AND SEE THE `rawfeed-jekyll` PROJECT.
-
 [Leia em Português](README-ptbr.md)
+
+<br/><br/>
+> ⚠️ NOTE: THIS PROJECT HAS BEEN DISCONTINUED. IF YOU WANT A SIMILAR PROJECT, BUT WITH BETTER FEATURES, SECURITY, SPEED, AND ADVANCED FUNCTIONS, CONSIDER VISITING [https://rawfeed.github.io](https://rawfeed.github.io) AND SEE THE `rawfeed-jekyll` PROJECT.
+<br/><br/>
 
 # Typing
 
